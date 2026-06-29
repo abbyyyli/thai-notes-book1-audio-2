@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thai Speaking 1 - Day 18 Study Guide</title>
+<style>
+    :root {
+      --text: var(--color-text-primary, #1f2937);
+      --muted: #6b7280;
+      --line: rgba(107,114,128,.28);
+      --card: rgba(255,255,255,.72);
+      --orange: #f97316;
+      --orange-soft: rgba(249,115,22,.13);
+      --green: #16a34a;
+      --green-soft: rgba(22,163,74,.13);
+      --blue: #2563eb;
+      --blue-soft: rgba(37,99,235,.12);
+      --red: #dc2626;
+      --red-soft: rgba(220,38,38,.11);
+      --purple: #7c3aed;
+      --purple-soft: rgba(124,58,237,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      color: var(--text);
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .hero {
+      padding: 28px;
+      border: .5px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(249,115,22,.10), rgba(22,163,74,.08), rgba(37,99,235,.06));
+      box-shadow: 0 12px 34px rgba(0,0,0,.05);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.02em; }
+    h2 { margin-top: 0; font-size: 22px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    h3 { margin-top: 28px; font-size: 18px; }
+    p { margin: 8px 0; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+      padding: 10px;
+      border: .5px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.45);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .tab-btn {
+      border: .5px solid var(--line);
+      background: rgba(255,255,255,.65);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .tab-btn:hover { transform: translateY(-1px); background: rgba(249,250,251,.95); }
+
+    .tab-btn.active {
+      border-color: rgba(249,115,22,.55);
+      background: var(--orange-soft);
+      color: #9a3412;
+      font-weight: 700;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px;
+      border: .5px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.52);
+      box-shadow: 0 10px 28px rgba(0,0,0,.04);
+      margin-bottom: 20px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 4px 2px 0;
+    }
+
+    .label.textbook { background: var(--orange-soft); color: #c2410c; border: .5px solid rgba(249,115,22,.3); }
+    .label.local { background: var(--green-soft); color: #15803d; border: .5px solid rgba(22,163,74,.3); }
+    .label.review { background: var(--blue-soft); color: #1d4ed8; border: .5px solid rgba(37,99,235,.3); }
+    .label.warn { background: var(--red-soft); color: #b91c1c; border: .5px solid rgba(220,38,38,.3); }
+
+    .thai { font-size: 15px; font-weight: 500; letter-spacing: .01em; }
+    .roman { color: #6b7280; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .eng { font-size: 13px; color: var(--text); }
+
+    .triad { display: grid; gap: 2px; margin: 4px 0; }
+    .triad .thai::before { content: "Thai: "; color: var(--muted); font-weight: 400; }
+    .triad .roman::before { content: "Romanization: "; color: var(--muted); font-family: inherit; }
+    .triad .eng::before { content: "English: "; color: var(--muted); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 24px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: .5px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: rgba(243,244,246,.72); font-weight: 700; }
+    tbody tr:nth-child(even) { background: rgba(249,250,251,.55); }
+
+    .tip {
+      border-left: 4px solid var(--green);
+      padding: 12px 14px;
+      background: var(--green-soft);
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+
+    .tip.orange { border-left-color: var(--orange); background: var(--orange-soft); }
+    .tip.blue { border-left-color: var(--blue); background: var(--blue-soft); }
+    .tip.red { border-left-color: var(--red); background: var(--red-soft); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .card {
+      border: .5px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--card);
+    }
+
+    .mini-title {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .bubble-wrap { display: grid; gap: 10px; margin: 14px 0 24px; }
+
+    .bubble {
+      border: .5px solid var(--line);
+      border-radius: 18px;
+      padding: 13px 15px;
+      max-width: 84%;
+      background: rgba(255,255,255,.72);
+    }
+
+    .bubble.a { justify-self: start; border-left: 5px solid var(--blue); }
+    .bubble.b { justify-self: end; border-right: 5px solid var(--green); }
+
+    .speaker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .speaker.a { background: var(--blue-soft); color: #1d4ed8; }
+    .speaker.b { background: var(--green-soft); color: #15803d; }
+
+    .pattern {
+      padding: 12px;
+      border: .5px dashed rgba(107,114,128,.45);
+      border-radius: 12px;
+      background: rgba(255,255,255,.5);
+      margin: 12px 0;
+    }
+
+    .classifier-chip {
+      display: inline-block;
+      border: .5px solid rgba(124,58,237,.3);
+      background: var(--purple-soft);
+      color: #5b21b6;
+      padding: 3px 9px;
+      border-radius: 9px;
+      font-weight: 800;
+      margin: 2px 4px 2px 0;
+    }
+
+    details {
+      border: .5px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      background: rgba(255,255,255,.45);
+    }
+
+    summary { cursor: pointer; font-weight: 700; }
+
+        .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: .5px solid rgba(37,99,235,.3);
+      background: var(--blue-soft);
+      color: #1d4ed8;
+      font-size: 11px;
+      cursor: pointer;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+      transition: all .15s ease;
+      line-height: 1;
+      padding: 0;
+    }
+    .speak-btn:hover {
+      background: rgba(37,99,235,.22);
+      transform: scale(1.12);
+    }
+    .speak-btn.speaking {
+      background: var(--orange-soft);
+      border-color: rgba(249,115,22,.4);
+      color: #c2410c;
+      animation: pulse .6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.18); }
+    }
+    div.thai {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .thai-text { flex: 1; }
+
+@media (max-width: 720px) {
+      body { padding: 14px; }
+      .tab-content { padding: 16px; }
+      table { font-size: 13px; }
+      .bubble { max-width: 100%; }
+    }
+  </style>
+<style id="book1-content-rebuild-style">
+/* ── Book 1 content rebuild layer ───────────────────── */
+#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+#vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
+.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
+.vocab-group-title:first-of-type{border-top:0;padding-top:0}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
+.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
+#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
+#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
+#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
+#supplement .vocab-scroll table{min-width:760px}
+.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
+.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+.muted{color:var(--muted)}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
+</style><style id="book1-book2-vocab-pattern">
+/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
+.triad .thai::before,
+.triad .roman::before,
+.triad .eng::before { content:none !important; }
+
+#vocab .vocab-scroll{
+  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  margin:14px 0 24px; border-radius:12px;
+}
+#vocab .vocab-scroll table{
+  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
+}
+#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
+#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
+#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
+#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
+#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
+#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
+
+#vocab .favorite-col, #vocab .fav-cell{
+  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
+  padding-left:7px !important; padding-right:7px !important;
+}
+#vocab .fav-btn{
+  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
+  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
+  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
+}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
+
+.classifier-note{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  font-size:12px; color:var(--muted);
+}
+.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
+.colloc-chip{
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
+  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
+  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
+  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
+  box-shadow:none !important; transform:none !important; animation:none !important;
+}
+.colloc-chip:hover,.colloc-chip:focus-visible{
+  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
+  transform:none !important; animation:none !important; outline:none !important;
+}
+.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
+.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
+.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
+
+#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
+.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
+.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
+.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
+.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
+.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
+.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
+.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
+.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
+.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
+.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
+.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
+.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
+.favorite-speak{margin-left:0;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:720px){
+  #vocab .vocab-scroll table{min-width:1120px !important;}
+  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
+  .favorites-list{grid-template-columns:1fr;}
+}
+</style><style id="book1-semantic-refinement-style">
+/* ── Semantic refinement: real collocation buttons ── */
+button.colloc-chip{
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  font:inherit !important;
+  text-align:left !important;
+  touch-action:manipulation;
+  user-select:none;
+}
+button.colloc-chip:focus-visible{
+  outline:2px solid rgba(22,163,74,.55) !important;
+  outline-offset:2px;
+}
+</style><style id="book1-classifier-audio-refine-style">
+/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
+#vocab .classifier-note.classifier-short{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
+}
+#vocab .classifier-label{font-weight:700; color:var(--muted);}
+button.classifier-audio-pill{
+  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
+  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
+  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
+  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
+}
+button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-detail-style">
+/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
+#vocab .classifier-note.classifier-detail{
+  margin-top:7px;
+  padding-top:7px;
+  border-top:.5px dashed var(--line);
+  display:grid;
+  gap:3px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+#vocab .classifier-label{
+  color:var(--muted);
+  font-weight:700;
+}
+#vocab .classifier-entries{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+#vocab .classifier-entry{
+  min-width:0;
+  display:grid;
+  gap:1px;
+}
+#vocab button.classifier-audio-pill{
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  width:max-content;
+  max-width:100%;
+  border:.5px solid rgba(124,58,237,.34);
+  background:var(--purple-soft);
+  color:#5b21b6;
+  border-radius:999px;
+  padding:4px 9px;
+  margin:0;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  cursor:pointer;
+  touch-action:manipulation;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+#vocab button.classifier-audio-pill:hover,
+#vocab button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18);
+  border-color:rgba(124,58,237,.52);
+  outline:none;
+  transform:translateY(-1px);
+}
+#vocab button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.25);
+  border-color:rgba(124,58,237,.60);
+}
+#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
+#vocab .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:11.5px;
+}
+#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
+/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-inline-style">
+/* Vocabulary classifier format｜量詞：ใบ bai */
+#vocab .classifier-note.classifier-inline{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:7px 0 0;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.45;
+}
+#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
+#vocab .classifier-inline button.classifier-audio-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:1px 6px;
+  margin:0;
+  border:.5px solid rgba(124,58,237,.34);
+  border-radius:999px;
+  background:var(--purple-soft);
+  color:#5b21b6;
+  font:inherit;
+  font-weight:800;
+  line-height:1.35;
+  cursor:pointer;
+}
+#vocab .classifier-inline button.classifier-audio-pill:hover,
+#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
+#vocab .classifier-inline button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.20);
+  border-color:rgba(124,58,237,.50);
+  outline:none;
+}
+#vocab .classifier-inline .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:12px;
+}
+#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
+</style></head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>Thai Speaking 1｜Day 18 學習指南</h1>
+<p class="subtitle">主題：為什麼/因為、探望、送禮、幫某人做某事、今天有空嗎、一起吃飯、邀請、請客、禮物與朋友類型</p>
+<p>
+<span class="label textbook">Textbook-based</span>
+<span class="label local">Supplement / Local usage</span>
+<span class="label review">Review</span>
+<span class="label warn">Common mistake</span>
+</p>
+</section>
+<nav class="tabs"><button class="tab-btn active" onclick="openTab(event, 'overview')" type="button">Overview</button><button class="tab-btn" onclick="openTab(event, 'vocab')" type="button">Vocabulary</button><button class="tab-btn" onclick="openTab(event, 'supplement')" type="button">Supplement</button><button class="tab-btn" onclick="openTab(event, 'structures')" type="button">Structures</button><button class="tab-btn" onclick="openTab(event, 'street')" type="button">Textbook vs Street</button><button class="tab-btn" onclick="openTab(event, 'bangkok')" type="button">Bangkok Expansion</button><button class="tab-btn" onclick="openTab(event, 'dialogues')" type="button">Dialogues</button><button class="tab-btn" onclick="openTab(event, 'mistakes')" type="button">Mistakes</button><button class="tab-btn" onclick="openTab(event, 'practice')" type="button">Practice</button><button class="tab-btn" onclick="openTab(event, 'top10')" type="button">Top 10</button><button aria-label="收藏" class="tab-btn" id="favoritesTab" onclick="openTab(event, 'favorites')" title="收藏" type="button">♥</button></nav>
+<section class="tab-content active" id="overview">
+<h2>Lesson Overview</h2>
+<p>
+<span class="label textbook">Textbook-based</span>
+      Day 18 的核心是「為某人做某事」和「社交邀請」。教材前半部練習
+      <span class="thai">ทำไม</span> / <span class="roman">tham-mai</span> / <span class="eng">why</span>、
+      <span class="thai">เพราะว่า</span> / <span class="roman">phrɔ́-wâa</span> / <span class="eng">because</span>，
+      以及 <span class="thai">มาเยี่ยม</span> / <span class="roman">maa yîam</span> / <span class="eng">come to visit</span>、
+      <span class="thai">ไปเยี่ยม</span> / <span class="roman">bpai yîam</span> / <span class="eng">go to visit</span>。後半部練習邀約吃飯、去哪裡吃好、我想邀請你去……、我請客、幫我請客。
+    </p>
+<div class="cards">
+<div class="card">
+<div class="mini-title">Why / Because</div>
+<div class="triad">
+<div class="thai">ทำไมมาเมืองไทยคะ</div>
+<div class="roman">tham-mai maa mʉang thai khá</div>
+<div class="eng">Why did you come to Thailand?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Visit someone</div>
+<div class="triad">
+<div class="thai">มาเยี่ยมเพื่อนค่ะ</div>
+<div class="roman">maa yîam phʉ̂an khâ</div>
+<div class="eng">I came to visit a friend.</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Give something to someone</div>
+<div class="triad">
+<div class="thai">ลูกให้ของขวัญพ่อหนึ่งอันค่ะ</div>
+<div class="roman">lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ nʉ̀ng an khâ</div>
+<div class="eng">The child gives father one gift.</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Invite to eat</div>
+<div class="triad">
+<div class="thai">ไปกินข้าวด้วยกันไหมคะ</div>
+<div class="roman">bpai gin khâaw dûai gan mái khá</div>
+<div class="eng">Do you want to go eat together?</div>
+</div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 16 學過 <span class="thai">ไปหา</span> / <span class="roman">bpai hǎa</span> / <span class="eng">go to see</span> 和
+      <span class="thai">มาหา</span> / <span class="roman">maa hǎa</span> / <span class="eng">come to see</span>。Day 18 新增
+      <span class="thai">ไปเยี่ยม</span> / <span class="roman">bpai yîam</span> / <span class="eng">go to visit</span>，通常更偏「探望」，例如探病、探望產婦、久未見的朋友。
+    </div>
+<div class="tip">
+<strong>Bangkok Practical Focus：</strong>
+      這課很適合用在曼谷真實社交：朋友問你為什麼來泰國、邀朋友吃飯、拒絕邀約、約去哪間餐廳、生日送禮、探病帶花、買伴手禮給朋友、跟同學或同事一起聚餐。
+    </div>
+<div class="tip blue"><h3>本課學習路線</h3><ol><li>能問為什麼並用因為回答。</li><li>能說探望、送禮、替某人做事。</li><li>能自然邀人吃飯、表達誰請客。</li></ol></div></section>
+<section class="tab-content" id="vocab">
+<h2>Vocabulary Table</h2>
+<h3>Core Social Verbs</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ทำไม</div><div class="roman">tham-mai</div><div class="eng">why</div></div></td><td>Question word</td><td>放句首問原因。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทำไมมาเมืองไทย" aria-pressed="false" class="colloc-chip" data-thai="ทำไมมาเมืองไทย" type="button"><span class="thai">ทำไมมาเมืองไทย</span><span class="en-colloc">why come to Thailand</span></button></div></td><td><div class="triad"><div class="thai">ทำไมมาเมืองไทยคะ</div><div class="roman">tham-mai maa mʉang thai khá</div><div class="eng">Why did you come to Thailand?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Question word" data-colloc='[{"thai": "ทำไมมาเมืองไทย", "en": "why come to Thailand"}]' data-eng="why" data-ex-eng="Why did you come to Thailand?" data-ex-rom="tham-mai maa mʉang thai khá" data-ex-thai="ทำไมมาเมืองไทยคะ" data-grammar="放句首問原因。" data-rom="tham-mai" data-thai="ทำไม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เพราะว่า</div><div class="roman">phrɔ́-wâa</div><div class="eng">because</div></div></td><td>Reason connector</td><td>回答原因。口語可簡化成 <span class="thai">เพราะ</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เพราะว่าอยากเรียนภาษาไทย" aria-pressed="false" class="colloc-chip" data-thai="เพราะว่าอยากเรียนภาษาไทย" type="button"><span class="thai">เพราะว่าอยากเรียนภาษาไทย</span><span class="en-colloc">because I want to study Thai</span></button></div></td><td><div class="triad"><div class="thai">มาเมืองไทยเพราะว่าอยากเรียนภาษาไทยค่ะ</div><div class="roman">maa mʉang thai phrɔ́-wâa yàak riian phaa-sǎa thai khâ</div><div class="eng">I came to Thailand because I want to study Thai.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Reason connector" data-colloc='[{"thai": "เพราะว่าอยากเรียนภาษาไทย", "en": "because I want to study Thai"}]' data-eng="because" data-ex-eng="I came to Thailand because I want to study Thai." data-ex-rom="maa mʉang thai phrɔ́-wâa yàak riian phaa-sǎa thai khâ" data-ex-thai="มาเมืองไทยเพราะว่าอยากเรียนภาษาไทยค่ะ" data-grammar='回答原因。口語可簡化成 &lt;span class="thai"&gt;เพราะ&lt;/span&gt;。' data-rom="phrɔ́-wâa" data-thai="เพราะว่า" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ให้</div><div class="roman">hâi</div><div class="eng">give / for</div></div></td><td>Giving / doing for someone</td><td>本課最重要功能：給某人東西、為某人做事。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ให้ของขวัญ" aria-pressed="false" class="colloc-chip" data-thai="ให้ของขวัญ" type="button"><span class="thai">ให้ของขวัญ</span><span class="en-colloc">give a gift</span></button></div></td><td><div class="triad"><div class="thai">ลูกให้ของขวัญพ่อค่ะ</div><div class="roman">lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ khâ</div><div class="eng">The child gives father a gift.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Giving / doing for someone" data-colloc='[{"thai": "ให้ของขวัญ", "en": "give a gift"}]' data-eng="give / for" data-ex-eng="The child gives father a gift." data-ex-rom="lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ khâ" data-ex-thai="ลูกให้ของขวัญพ่อค่ะ" data-grammar="本課最重要功能：給某人東西、為某人做事。" data-rom="hâi" data-thai="ให้" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มาเยี่ยม</div><div class="roman">maa yîam</div><div class="eng">come to visit</div></div></td><td>Visit</td><td>來探望某人。常用於探病、探親、久未見朋友。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มาเยี่ยมเพื่อน" aria-pressed="false" class="colloc-chip" data-thai="มาเยี่ยมเพื่อน" type="button"><span class="thai">มาเยี่ยมเพื่อน</span><span class="en-colloc">come to visit a friend</span></button></div></td><td><div class="triad"><div class="thai">มาเยี่ยมเพื่อนค่ะ</div><div class="roman">maa yîam phʉ̂an khâ</div><div class="eng">I came to visit a friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Visit" data-colloc='[{"thai": "มาเยี่ยมเพื่อน", "en": "come to visit a friend"}]' data-eng="come to visit" data-ex-eng="I came to visit a friend." data-ex-rom="maa yîam phʉ̂an khâ" data-ex-thai="มาเยี่ยมเพื่อนค่ะ" data-grammar="來探望某人。常用於探病、探親、久未見朋友。" data-rom="maa yîam" data-thai="มาเยี่ยม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ไปเยี่ยม</div><div class="roman">bpai yîam</div><div class="eng">go to visit</div></div></td><td>Visit</td><td>去探望某人。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปเยี่ยมคนป่วย" aria-pressed="false" class="colloc-chip" data-thai="ไปเยี่ยมคนป่วย" type="button"><span class="thai">ไปเยี่ยมคนป่วย</span><span class="en-colloc">go visit a sick person</span></button></div></td><td><div class="triad"><div class="thai">จะไปเยี่ยมเพื่อนค่ะ</div><div class="roman">jà bpai yîam phʉ̂an khâ</div><div class="eng">I will go visit my friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Visit" data-colloc='[{"thai": "ไปเยี่ยมคนป่วย", "en": "go visit a sick person"}]' data-eng="go to visit" data-ex-eng="I will go visit my friend." data-ex-rom="jà bpai yîam phʉ̂an khâ" data-ex-thai="จะไปเยี่ยมเพื่อนค่ะ" data-grammar="去探望某人。" data-rom="bpai yîam" data-thai="ไปเยี่ยม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ว่าง</div><div class="roman">wâang</div><div class="eng">free / available</div></div></td><td>Schedule</td><td>邀約前先問是否有空。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันนี้ว่างไหม" aria-pressed="false" class="colloc-chip" data-thai="วันนี้ว่างไหม" type="button"><span class="thai">วันนี้ว่างไหม</span><span class="en-colloc">Are you free today?</span></button></div></td><td><div class="triad"><div class="thai">วันนี้ว่างไหมคะ</div><div class="roman">wan-níi wâang mái khá</div><div class="eng">Are you free today?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Schedule" data-colloc='[{"thai": "วันนี้ว่างไหม", "en": "Are you free today?"}]' data-eng="free / available" data-ex-eng="Are you free today?" data-ex-rom="wan-níi wâang mái khá" data-ex-thai="วันนี้ว่างไหมคะ" data-grammar="邀約前先問是否有空。" data-rom="wâang" data-thai="ว่าง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เลี้ยง</div><div class="roman">líang</div><div class="eng">treat / host / pay for someone</div></div></td><td>Social payment</td><td>本課是「請客」。不是養小孩/養寵物的用法。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เลี้ยงข้าว" aria-pressed="false" class="colloc-chip" data-thai="เลี้ยงข้าว" type="button"><span class="thai">เลี้ยงข้าว</span><span class="en-colloc">treat someone to a meal</span></button></div></td><td><div class="triad"><div class="thai">วันนี้ฉันเลี้ยงข้าวค่ะ</div><div class="roman">wan-níi chǎn líang khâaw khâ</div><div class="eng">Today I’ll treat you to a meal.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Social payment" data-colloc='[{"thai": "เลี้ยงข้าว", "en": "treat someone to a meal"}]' data-eng="treat / host / pay for someone" data-ex-eng="Today I’ll treat you to a meal." data-ex-rom="wan-níi chǎn líang khâaw khâ" data-ex-thai="วันนี้ฉันเลี้ยงข้าวค่ะ" data-grammar="本課是「請客」。不是養小孩/養寵物的用法。" data-rom="líang" data-thai="เลี้ยง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เชิญ</div><div class="roman">chəən</div><div class="eng">invite / please</div></div></td><td>Invitation</td><td><span class="label review">Review</span> Day 16 請進/請坐；Day 18 用於邀請去某處。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เชิญไปกินข้าว" aria-pressed="false" class="colloc-chip" data-thai="เชิญไปกินข้าว" type="button"><span class="thai">เชิญไปกินข้าว</span><span class="en-colloc">invite someone to eat</span></button></div></td><td><div class="triad"><div class="thai">อยากจะเชิญคุณไปกินข้าวค่ะ</div><div class="roman">yàak jà chəən khun bpai gin khâaw khâ</div><div class="eng">I would like to invite you to eat.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Invitation" data-colloc='[{"thai": "เชิญไปกินข้าว", "en": "invite someone to eat"}]' data-eng="invite / please" data-ex-eng="I would like to invite you to eat." data-ex-rom="yàak jà chəən khun bpai gin khâaw khâ" data-ex-thai="อยากจะเชิญคุณไปกินข้าวค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 16 請進/請坐；Day 18 用於邀請去某處。' data-rom="chəən" data-thai="เชิญ" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div><h3 class="vocab-group-title">Invitations, Gifts &amp; Responses｜邀約、禮物與回應</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">ของขวัญ</div><div class="roman">khɔ̌ɔng-khwǎn</div><div class="eng">gift</div></div></td><td>Noun</td><td>禮物。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button">ชิ้น</button><span class="classifier-roman">chín</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ให้ของขวัญ" aria-pressed="false" class="colloc-chip" data-thai="ให้ของขวัญ" type="button"><span class="thai">ให้ของขวัญ</span><span class="en-colloc">give a gift</span></button><button aria-label="播放搭配詞：ของขวัญวันเกิด" aria-pressed="false" class="colloc-chip" data-thai="ของขวัญวันเกิด" type="button"><span class="thai">ของขวัญวันเกิด</span><span class="en-colloc">birthday gift</span></button></div></td><td><div class="triad"><div class="thai">ฉันซื้อของขวัญให้เพื่อนค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi phʉ̂an khâ</div><div class="eng">I bought a gift for my friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "ให้ของขวัญ", "en": "give a gift"}, {"thai": "ของขวัญวันเกิด", "en": "birthday gift"}]' data-eng="gift" data-ex-eng="I bought a gift for my friend." data-ex-rom="chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi phʉ̂an khâ" data-ex-thai="ฉันซื้อของขวัญให้เพื่อนค่ะ" data-grammar='禮物。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button"&gt;ชิ้น&lt;/button&gt;&lt;span class="classifier-roman"&gt;chín&lt;/span&gt;&lt;/span&gt;' data-rom="khɔ̌ɔng-khwǎn" data-thai="ของขวัญ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ชวน</div><div class="roman">chuan</div><div class="eng">invite</div></div></td><td>Verb</td><td>邀請朋友一起做某事。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ชวนไปกินข้าว" aria-pressed="false" class="colloc-chip" data-thai="ชวนไปกินข้าว" type="button"><span class="thai">ชวนไปกินข้าว</span><span class="en-colloc">invite to eat</span></button><button aria-label="播放搭配詞：ชวนเพื่อนไปเที่ยว" aria-pressed="false" class="colloc-chip" data-thai="ชวนเพื่อนไปเที่ยว" type="button"><span class="thai">ชวนเพื่อนไปเที่ยว</span><span class="en-colloc">invite a friend out</span></button></div></td><td><div class="triad"><div class="thai">ฉันอยากชวนคุณไปกินข้าวค่ะ</div><div class="roman">chǎn yàak chuan khun bpai gin khâaw khâ</div><div class="eng">I want to invite you to go eat.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb" data-colloc='[{"thai": "ชวนไปกินข้าว", "en": "invite to eat"}, {"thai": "ชวนเพื่อนไปเที่ยว", "en": "invite a friend out"}]' data-eng="invite" data-ex-eng="I want to invite you to go eat." data-ex-rom="chǎn yàak chuan khun bpai gin khâaw khâ" data-ex-thai="ฉันอยากชวนคุณไปกินข้าวค่ะ" data-grammar="邀請朋友一起做某事。" data-rom="chuan" data-thai="ชวน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหม</div><div class="roman">bpai gin khâaw dûai gan mái</div><div class="eng">shall we go eat together?</div></div></td><td>Invitation phrase</td><td>最自然、初級也安全的邀約句。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกินข้าวกันไหม" aria-pressed="false" class="colloc-chip" data-thai="ไปกินข้าวกันไหม" type="button"><span class="thai">ไปกินข้าวกันไหม</span><span class="en-colloc">shall we go eat</span></button><button aria-label="播放搭配詞：กินข้าวด้วยกัน" aria-pressed="false" class="colloc-chip" data-thai="กินข้าวด้วยกัน" type="button"><span class="thai">กินข้าวด้วยกัน</span><span class="en-colloc">eat together</span></button></div></td><td><div class="triad"><div class="thai">เย็นนี้ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">yen níi bpai gin khâaw dûai gan mái khá</div><div class="eng">Shall we go eat together this evening?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Invitation phrase" data-colloc='[{"thai": "ไปกินข้าวกันไหม", "en": "shall we go eat"}, {"thai": "กินข้าวด้วยกัน", "en": "eat together"}]' data-eng="shall we go eat together?" data-ex-eng="Shall we go eat together this evening?" data-ex-rom="yen níi bpai gin khâaw dûai gan mái khá" data-ex-thai="เย็นนี้ไปกินข้าวด้วยกันไหมคะ" data-grammar="最自然、初級也安全的邀約句。" data-rom="bpai gin khâaw dûai gan mái" data-thai="ไปกินข้าวด้วยกันไหม" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันเกิด</div><div class="roman">wan-gə̀ət</div><div class="eng">birthday</div></div></td><td>Noun</td><td>生日送禮、邀約常用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ของขวัญวันเกิด" aria-pressed="false" class="colloc-chip" data-thai="ของขวัญวันเกิด" type="button"><span class="thai">ของขวัญวันเกิด</span><span class="en-colloc">birthday gift</span></button><button aria-label="播放搭配詞：วันเกิดเพื่อน" aria-pressed="false" class="colloc-chip" data-thai="วันเกิดเพื่อน" type="button"><span class="thai">วันเกิดเพื่อน</span><span class="en-colloc">friend’s birthday</span></button></div></td><td><div class="triad"><div class="thai">วันเกิดเพื่อนฉันอยู่เดือนหน้าค่ะ</div><div class="roman">wan-gə̀ət phʉ̂an chǎn yùu dʉan nâa khâ</div><div class="eng">My friend’s birthday is next month.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "ของขวัญวันเกิด", "en": "birthday gift"}, {"thai": "วันเกิดเพื่อน", "en": "friend’s birthday"}]' data-eng="birthday" data-ex-eng="My friend’s birthday is next month." data-ex-rom="wan-gə̀ət phʉ̂an chǎn yùu dʉan nâa khâ" data-ex-thai="วันเกิดเพื่อนฉันอยู่เดือนหน้าค่ะ" data-grammar="生日送禮、邀約常用。" data-rom="wan-gə̀ət" data-thai="วันเกิด" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ดอกไม้</div><div class="roman">dɔ̀ɔk-máai</div><div class="eng">flower(s)</div></div></td><td>Noun</td><td>送花、探望時實用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ดอก" aria-pressed="false" class="classifier-audio-pill" data-thai="ดอก" title="點擊播放量詞" type="button">ดอก</button><span class="classifier-roman">dɔ̀ɔk</span><span class="classifier-sep"> / </span><button aria-label="播放量詞：ช่อ" aria-pressed="false" class="classifier-audio-pill" data-thai="ช่อ" title="點擊播放量詞" type="button">ช่อ</button><span class="classifier-roman">chɔ̂ɔ</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ช่อดอกไม้" aria-pressed="false" class="colloc-chip" data-thai="ช่อดอกไม้" type="button"><span class="thai">ช่อดอกไม้</span><span class="en-colloc">bouquet</span></button><button aria-label="播放搭配詞：ซื้อดอกไม้" aria-pressed="false" class="colloc-chip" data-thai="ซื้อดอกไม้" type="button"><span class="thai">ซื้อดอกไม้</span><span class="en-colloc">buy flowers</span></button></div></td><td><div class="triad"><div class="thai">ฉันซื้อดอกไม้ไปเยี่ยมเพื่อนค่ะ</div><div class="roman">chǎn sʉ́ʉ dɔ̀ɔk-máai bpai yîam phʉ̂an khâ</div><div class="eng">I bought flowers to visit my friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "ช่อดอกไม้", "en": "bouquet"}, {"thai": "ซื้อดอกไม้", "en": "buy flowers"}]' data-eng="flower(s)" data-ex-eng="I bought flowers to visit my friend." data-ex-rom="chǎn sʉ́ʉ dɔ̀ɔk-máai bpai yîam phʉ̂an khâ" data-ex-thai="ฉันซื้อดอกไม้ไปเยี่ยมเพื่อนค่ะ" data-grammar='送花、探望時實用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ดอก" aria-pressed="false" class="classifier-audio-pill" data-thai="ดอก" title="點擊播放量詞" type="button"&gt;ดอก&lt;/button&gt;&lt;span class="classifier-roman"&gt;dɔ̀ɔk&lt;/span&gt;&lt;span class="classifier-sep"&gt; / &lt;/span&gt;&lt;button aria-label="播放量詞：ช่อ" aria-pressed="false" class="classifier-audio-pill" data-thai="ช่อ" title="點擊播放量詞" type="button"&gt;ช่อ&lt;/button&gt;&lt;span class="classifier-roman"&gt;chɔ̂ɔ&lt;/span&gt;&lt;/span&gt;' data-rom="dɔ̀ɔk-máai" data-thai="ดอกไม้" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ขอโทษ</div><div class="roman">khɔ̌ɔ-thôot</div><div class="eng">sorry / excuse me</div></div></td><td>Polite expression</td><td>婉拒邀約或說抱歉。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขอโทษนะ" aria-pressed="false" class="colloc-chip" data-thai="ขอโทษนะ" type="button"><span class="thai">ขอโทษนะ</span><span class="en-colloc">sorry</span></button><button aria-label="播放搭配詞：ขอโทษที่มาสาย" aria-pressed="false" class="colloc-chip" data-thai="ขอโทษที่มาสาย" type="button"><span class="thai">ขอโทษที่มาสาย</span><span class="en-colloc">sorry for being late</span></button></div></td><td><div class="triad"><div class="thai">ขอโทษนะคะ วันนี้ฉันไม่ว่าง</div><div class="roman">khɔ̌ɔ-thôot ná khá, wan-níi chǎn mâi wâang</div><div class="eng">Sorry, I am not free today.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Polite expression" data-colloc='[{"thai": "ขอโทษนะ", "en": "sorry"}, {"thai": "ขอโทษที่มาสาย", "en": "sorry for being late"}]' data-eng="sorry / excuse me" data-ex-eng="Sorry, I am not free today." data-ex-rom="khɔ̌ɔ-thôot ná khá, wan-níi chǎn mâi wâang" data-ex-thai="ขอโทษนะคะ วันนี้ฉันไม่ว่าง" data-grammar="婉拒邀約或說抱歉。" data-rom="khɔ̌ɔ-thôot" data-thai="ขอโทษ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">คราวหน้า</div><div class="roman">khraao nâa</div><div class="eng">next time</div></div></td><td>Time phrase</td><td>婉拒後可提出下次。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไว้คราวหน้า" aria-pressed="false" class="colloc-chip" data-thai="ไว้คราวหน้า" type="button"><span class="thai">ไว้คราวหน้า</span><span class="en-colloc">another time</span></button><button aria-label="播放搭配詞：เจอกันคราวหน้า" aria-pressed="false" class="colloc-chip" data-thai="เจอกันคราวหน้า" type="button"><span class="thai">เจอกันคราวหน้า</span><span class="en-colloc">see you next time</span></button></div></td><td><div class="triad"><div class="thai">ไว้คราวหน้าเราไปกินข้าวกันนะคะ</div><div class="roman">wái khraao nâa rao bpai gin khâaw gan ná khá</div><div class="eng">Let us go eat together next time.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "ไว้คราวหน้า", "en": "another time"}, {"thai": "เจอกันคราวหน้า", "en": "see you next time"}]' data-eng="next time" data-ex-eng="Let us go eat together next time." data-ex-rom="wái khraao nâa rao bpai gin khâaw gan ná khá" data-ex-thai="ไว้คราวหน้าเราไปกินข้าวกันนะคะ" data-grammar="婉拒後可提出下次。" data-rom="khraao nâa" data-thai="คราวหน้า" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ไม่สะดวก</div><div class="roman">mâi sà-dùuak</div><div class="eng">not convenient / not available</div></div></td><td>Polite refusal phrase</td><td>婉拒邀約時比直接說不去更柔和。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันนี้ไม่สะดวก" aria-pressed="false" class="colloc-chip" data-thai="วันนี้ไม่สะดวก" type="button"><span class="thai">วันนี้ไม่สะดวก</span><span class="en-colloc">not available today</span></button><button aria-label="播放搭配詞：ไม่ค่อยสะดวก" aria-pressed="false" class="colloc-chip" data-thai="ไม่ค่อยสะดวก" type="button"><span class="thai">ไม่ค่อยสะดวก</span><span class="en-colloc">not very convenient</span></button></div></td><td><div class="triad"><div class="thai">ขอโทษนะคะ วันนี้ฉันไม่สะดวกค่ะ</div><div class="roman">khɔ̌ɔ-thôot ná khá, wan-níi chǎn mâi sà-dùuak khâ</div><div class="eng">Sorry, I am not available today.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Polite refusal phrase" data-colloc='[{"thai": "วันนี้ไม่สะดวก", "en": "not available today"}, {"thai": "ไม่ค่อยสะดวก", "en": "not very convenient"}]' data-eng="not convenient / not available" data-ex-eng="Sorry, I am not available today." data-ex-rom="khɔ̌ɔ-thôot ná khá, wan-níi chǎn mâi sà-dùuak khâ" data-ex-thai="ขอโทษนะคะ วันนี้ฉันไม่สะดวกค่ะ" data-grammar="婉拒邀約時比直接說不去更柔和。" data-rom="mâi sà-dùuak" data-thai="ไม่สะดวก" type="button">♡ 收藏</button></td></tr></tbody></table></div><h3>Gift Items｜禮物、伴手禮與花</h3><div class="vocab-scroll"><table><thead><tr><th class="vocab-triad-header">Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">ของเล่น</div><div class="roman">khɔ̌ɔng-lên</div><div class="eng">toy</div></div></td><td>Gift / toy</td><td>送給小孩或當作玩具使用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button">ชิ้น</button><span class="classifier-roman">chín</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ซื้อของเล่น" aria-pressed="false" class="colloc-chip" data-thai="ซื้อของเล่น" type="button"><span class="thai">ซื้อของเล่น</span><span class="en-colloc">buy a toy</span></button><button aria-label="播放搭配詞：ของเล่นเด็ก" aria-pressed="false" class="colloc-chip" data-thai="ของเล่นเด็ก" type="button"><span class="thai">ของเล่นเด็ก</span><span class="en-colloc">children’s toy</span></button></div></td><td><div class="triad"><div class="thai">แม่ให้ของเล่นหนึ่งชิ้นแก่ลูกค่ะ</div><div class="roman">mɛ̂ɛ hâi khɔ̌ɔng-lên nʉ̀ng chín gɛ̀ɛ lûuk khâ</div><div class="eng">The mother gives one toy to the child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Gift / toy" data-colloc='[{"thai": "ซื้อของเล่น", "en": "buy a toy"}, {"thai": "ของเล่นเด็ก", "en": "children’s toy"}]' data-eng="toy" data-ex-eng="The mother gives one toy to the child." data-ex-rom="mɛ̂ɛ hâi khɔ̌ɔng-lên nʉ̀ng chín gɛ̀ɛ lûuk khâ" data-ex-thai="แม่ให้ของเล่นหนึ่งชิ้นแก่ลูกค่ะ" data-grammar='送給小孩或當作玩具使用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button"&gt;ชิ้น&lt;/button&gt;&lt;span class="classifier-roman"&gt;chín&lt;/span&gt;&lt;/span&gt;' data-rom="khɔ̌ɔng-lên" data-thai="ของเล่น" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ของฝาก</div><div class="roman">khɔ̌ɔng-fàak</div><div class="eng">souvenir / gift brought from somewhere</div></div></td><td>Gift / souvenir</td><td>旅行回來帶給人的伴手禮。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button">ชิ้น</button><span class="classifier-roman">chín</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ซื้อของฝาก" aria-pressed="false" class="colloc-chip" data-thai="ซื้อของฝาก" type="button"><span class="thai">ซื้อของฝาก</span><span class="en-colloc">buy souvenirs</span></button><button aria-label="播放搭配詞：ของฝากจากไทย" aria-pressed="false" class="colloc-chip" data-thai="ของฝากจากไทย" type="button"><span class="thai">ของฝากจากไทย</span><span class="en-colloc">souvenir from Thailand</span></button></div></td><td><div class="triad"><div class="thai">ฉันซื้อของฝากให้เพื่อนค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng-fàak hâi phʉ̂an khâ</div><div class="eng">I bought souvenirs for my friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Gift / souvenir" data-colloc='[{"thai": "ซื้อของฝาก", "en": "buy souvenirs"}, {"thai": "ของฝากจากไทย", "en": "souvenir from Thailand"}]' data-eng="souvenir / gift brought from somewhere" data-ex-eng="I bought souvenirs for my friend." data-ex-rom="chǎn sʉ́ʉ khɔ̌ɔng-fàak hâi phʉ̂an khâ" data-ex-thai="ฉันซื้อของฝากให้เพื่อนค่ะ" data-grammar='旅行回來帶給人的伴手禮。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button"&gt;ชิ้น&lt;/button&gt;&lt;span class="classifier-roman"&gt;chín&lt;/span&gt;&lt;/span&gt;' data-rom="khɔ̌ɔng-fàak" data-thai="ของฝาก" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">แหวน</div><div class="roman">wɛ̌ɛn</div><div class="eng">ring</div></div></td><td>Jewelry</td><td>戒指；用於圈狀物。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：วง" aria-pressed="false" class="classifier-audio-pill" data-thai="วง" title="點擊播放量詞" type="button">วง</button><span class="classifier-roman">wong</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ใส่แหวน" aria-pressed="false" class="colloc-chip" data-thai="ใส่แหวน" type="button"><span class="thai">ใส่แหวน</span><span class="en-colloc">wear a ring</span></button><button aria-label="播放搭配詞：แหวนวงนี้" aria-pressed="false" class="colloc-chip" data-thai="แหวนวงนี้" type="button"><span class="thai">แหวนวงนี้</span><span class="en-colloc">this ring</span></button></div></td><td><div class="triad"><div class="thai">เขาให้แหวนหนึ่งวงค่ะ</div><div class="roman">khǎo hâi wɛ̌ɛn nʉ̀ng wong khâ</div><div class="eng">He gave a ring.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Jewelry" data-colloc='[{"thai": "ใส่แหวน", "en": "wear a ring"}, {"thai": "แหวนวงนี้", "en": "this ring"}]' data-eng="ring" data-ex-eng="He gave a ring." data-ex-rom="khǎo hâi wɛ̌ɛn nʉ̀ng wong khâ" data-ex-thai="เขาให้แหวนหนึ่งวงค่ะ" data-grammar='戒指；用於圈狀物。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：วง" aria-pressed="false" class="classifier-audio-pill" data-thai="วง" title="點擊播放量詞" type="button"&gt;วง&lt;/button&gt;&lt;span class="classifier-roman"&gt;wong&lt;/span&gt;&lt;/span&gt;' data-rom="wɛ̌ɛn" data-thai="แหวน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">กล่อง</div><div class="roman">glɔ̀ng</div><div class="eng">box</div></div></td><td>Container</td><td>盒子；禮物包裝、食物外帶都常用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ใบ" aria-pressed="false" class="classifier-audio-pill" data-thai="ใบ" title="點擊播放量詞" type="button">ใบ</button><span class="classifier-roman">bai</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：กล่องของขวัญ" aria-pressed="false" class="colloc-chip" data-thai="กล่องของขวัญ" type="button"><span class="thai">กล่องของขวัญ</span><span class="en-colloc">gift box</span></button><button aria-label="播放搭配詞：หนึ่งกล่อง" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งกล่อง" type="button"><span class="thai">หนึ่งกล่อง</span><span class="en-colloc">one box</span></button></div></td><td><div class="triad"><div class="thai">ของขวัญอยู่ในกล่องค่ะ</div><div class="roman">khɔ̌ɔng-khwǎn yùu nai glɔ̀ng khâ</div><div class="eng">The gift is in a box.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Container" data-colloc='[{"thai": "กล่องของขวัญ", "en": "gift box"}, {"thai": "หนึ่งกล่อง", "en": "one box"}]' data-eng="box" data-ex-eng="The gift is in a box." data-ex-rom="khɔ̌ɔng-khwǎn yùu nai glɔ̀ng khâ" data-ex-thai="ของขวัญอยู่ในกล่องค่ะ" data-grammar='盒子；禮物包裝、食物外帶都常用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ใบ" aria-pressed="false" class="classifier-audio-pill" data-thai="ใบ" title="點擊播放量詞" type="button"&gt;ใบ&lt;/button&gt;&lt;span class="classifier-roman"&gt;bai&lt;/span&gt;&lt;/span&gt;' data-rom="glɔ̀ng" data-thai="กล่อง" type="button">♡ 收藏</button></td></tr></tbody></table></div>
+<h3>Reasons for Visiting</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ไม่สบาย</div><div class="roman">mâi sà-baai</div><div class="eng">sick / not well</div></div></td><td>Health</td><td><span class="label review">Review</span> Day 17 健康主題。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ไปเยี่ยมเพื่อนเพราะว่าเพื่อนไม่สบายค่ะ</div><div class="roman">bpai yîam phʉ̂an phrɔ́-wâa phʉ̂an mâi sà-baai khâ</div><div class="eng">I went to visit my friend because my friend is sick.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Health" data-colloc="[]" data-eng="sick / not well" data-ex-eng="I went to visit my friend because my friend is sick." data-ex-rom="bpai yîam phʉ̂an phrɔ́-wâa phʉ̂an mâi sà-baai khâ" data-ex-thai="ไปเยี่ยมเพื่อนเพราะว่าเพื่อนไม่สบายค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 17 健康主題。' data-rom="mâi sà-baai" data-thai="ไม่สบาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">คลอดลูก</div><div class="roman">khlɔ̂ɔt lûuk</div><div class="eng">give birth</div></div></td><td>Life event</td><td>探望剛生產的人時會用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มาเยี่ยมเพื่อนเพราะว่าเพื่อนคลอดลูกค่ะ</div><div class="roman">maa yîam phʉ̂an phrɔ́-wâa phʉ̂an khlɔ̂ɔt lûuk khâ</div><div class="eng">I came to visit my friend because my friend gave birth.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Life event" data-colloc="[]" data-eng="give birth" data-ex-eng="I came to visit my friend because my friend gave birth." data-ex-rom="maa yîam phʉ̂an phrɔ́-wâa phʉ̂an khlɔ̂ɔt lûuk khâ" data-ex-thai="มาเยี่ยมเพื่อนเพราะว่าเพื่อนคลอดลูกค่ะ" data-grammar="探望剛生產的人時會用。" data-rom="khlɔ̂ɔt lûuk" data-thai="คลอดลูก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ไม่พบกันนาน</div><div class="roman">mâi phóp gan naan</div><div class="eng">haven’t met for a long time</div></div></td><td>Relationship</td><td><span class="thai">พบ</span> 較正式；口語可說 <span class="thai">ไม่เจอกันนาน</span>。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มาเยี่ยมเพื่อนเพราะว่าไม่พบกันนานค่ะ</div><div class="roman">maa yîam phʉ̂an phrɔ́-wâa mâi phóp gan naan khâ</div><div class="eng">I came to visit my friend because we haven’t met for a long time.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Relationship" data-colloc="[]" data-eng="haven’t met for a long time" data-ex-eng="I came to visit my friend because we haven’t met for a long time." data-ex-rom="maa yîam phʉ̂an phrɔ́-wâa mâi phóp gan naan khâ" data-ex-thai="มาเยี่ยมเพื่อนเพราะว่าไม่พบกันนานค่ะ" data-grammar='&lt;span class="thai"&gt;พบ&lt;/span&gt; 較正式；口語可說 &lt;span class="thai"&gt;ไม่เจอกันนาน&lt;/span&gt;。' data-rom="mâi phóp gan naan" data-thai="ไม่พบกันนาน" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+<h3>People Words</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">เพื่อนบ้าน</div><div class="roman">phʉ̂an-bâan</div><div class="eng">neighbor</div></div></td><td>People</td><td><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เพื่อนบ้านให้ของฝากฉันค่ะ</div><div class="roman">phʉ̂an-bâan hâi khɔ̌ɔng-fàak chǎn khâ</div><div class="eng">My neighbor gave me a souvenir/gift.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="People" data-colloc="[]" data-eng="neighbor" data-ex-eng="My neighbor gave me a souvenir/gift." data-ex-rom="phʉ̂an-bâan hâi khɔ̌ɔng-fàak chǎn khâ" data-ex-thai="เพื่อนบ้านให้ของฝากฉันค่ะ" data-grammar='&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phʉ̂an-bâan" data-thai="เพื่อนบ้าน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เพื่อนร่วมงาน</div><div class="roman">phʉ̂an-rûam-ngaan</div><div class="eng">colleague / coworker</div></div></td><td>People</td><td><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ไปกินข้าวกับเพื่อนร่วมงานค่ะ</div><div class="roman">bpai gin khâaw gàp phʉ̂an-rûam-ngaan khâ</div><div class="eng">I went to eat with coworkers.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="People" data-colloc="[]" data-eng="colleague / coworker" data-ex-eng="I went to eat with coworkers." data-ex-rom="bpai gin khâaw gàp phʉ̂an-rûam-ngaan khâ" data-ex-thai="ไปกินข้าวกับเพื่อนร่วมงานค่ะ" data-grammar='&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phʉ̂an-rûam-ngaan" data-thai="เพื่อนร่วมงาน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เพื่อนนักเรียน</div><div class="roman">phʉ̂an-nák-riian</div><div class="eng">classmate / school friend</div></div></td><td>People</td><td><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เพื่อนนักเรียนชวนฉันไปกินข้าวค่ะ</div><div class="roman">phʉ̂an-nák-riian chuan chǎn bpai gin khâaw khâ</div><div class="eng">My classmate invited me to eat.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="People" data-colloc="[]" data-eng="classmate / school friend" data-ex-eng="My classmate invited me to eat." data-ex-rom="phʉ̂an-nák-riian chuan chǎn bpai gin khâaw khâ" data-ex-thai="เพื่อนนักเรียนชวนฉันไปกินข้าวค่ะ" data-grammar='&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phʉ̂an-nák-riian" data-thai="เพื่อนนักเรียน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สามี</div><div class="roman">sǎa-mii</div><div class="eng">husband</div></div></td><td>Family</td><td><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ภรรยาทำงานบ้านให้สามีค่ะ</div><div class="roman">phan-rá-yaa tham ngaan-bâan hâi sǎa-mii khâ</div><div class="eng">The wife does housework for her husband.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Family" data-colloc="[]" data-eng="husband" data-ex-eng="The wife does housework for her husband." data-ex-rom="phan-rá-yaa tham ngaan-bâan hâi sǎa-mii khâ" data-ex-thai="ภรรยาทำงานบ้านให้สามีค่ะ" data-grammar='&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="sǎa-mii" data-thai="สามี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ภรรยา</div><div class="roman">phan-rá-yaa</div><div class="eng">wife</div></div></td><td>Family</td><td><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">สามีให้แหวนภรรยาค่ะ</div><div class="roman">sǎa-mii hâi wɛ̌ɛn phan-rá-yaa khâ</div><div class="eng">The husband gives a ring to his wife.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Family" data-colloc="[]" data-eng="wife" data-ex-eng="The husband gives a ring to his wife." data-ex-rom="sǎa-mii hâi wɛ̌ɛn phan-rá-yaa khâ" data-ex-thai="สามีให้แหวนภรรยาค่ะ" data-grammar='&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phan-rá-yaa" data-thai="ภรรยา" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+</section><section class="tab-content" id="supplement"><h2>Supplement｜本課延伸整理</h2><div class="supplement-section"><h3 class="supplement-section-title">邀約的四步｜問空、提出、回應、收尾</h3><div class="flow"><div class="flow-step"><strong>① 問有沒有空</strong><br/>今天晚上有空嗎？</div><div class="flow-step"><strong>② 說邀約</strong><br/>要不要一起去吃飯？</div><div class="flow-step"><strong>③ 接受或婉拒</strong><br/>好呀／抱歉，今天不方便。</div><div class="flow-step"><strong>④ 保留關係</strong><br/>那下次再約。</div></div></div><div class="supplement-section"><h3 class="supplement-section-title">Gift Classifier Logic｜禮物量詞怎麼選</h3><p>禮物、伴手禮、戒指與花的單字已移進 Vocabulary；這裡只留下挑量詞時的判斷順序。</p><div class="supplement-table-scroll"><table><thead><tr><th>你在數什麼？</th><th>優先量詞</th><th>判斷方式</th></tr></thead><tbody><tr><td>一般禮物／玩具／伴手禮</td><td>ชิ้น</td><td>先把它當一件可數物品。</td></tr><tr><td>戒指、環狀飾品</td><td>วง</td><td>形狀是圓環時用。</td></tr><tr><td>單朵花</td><td>ดอก</td><td>一朵一朵數。</td></tr><tr><td>一束花</td><td>ช่อ</td><td>一整束、可送人的花束。</td></tr></tbody></table></div><div class="tip orange">先看物品本身，再選量詞；不要因為「都是禮物」就一律用同一個量詞。</div></div></section>
+<section class="tab-content" id="structures">
+<h2>Sentence Structures</h2>
+<h3>1. Why...? Because...</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ทำไม + Sentence + คะ</div>
+<div class="roman">tham-mai + Sentence + khá</div>
+<div class="eng">Why + sentence?</div>
+</div>
+<div class="triad">
+<div class="thai">Sentence + เพราะว่า + Reason + ค่ะ</div>
+<div class="roman">Sentence + phrɔ́-wâa + Reason + khâ</div>
+<div class="eng">Sentence because reason.</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Use</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ทำไมมาเมืองไทยคะ</div><div class="roman">tham-mai maa mʉang thai khá</div><div class="eng">Why did you come to Thailand?</div></div></td>
+<td><div class="triad"><div class="thai">มาเมืองไทยเพราะว่าอยากเรียนภาษาไทยค่ะ</div><div class="roman">maa mʉang thai phrɔ́-wâa yàak riian phaa-sǎa thai khâ</div><div class="eng">I came to Thailand because I want to study Thai.</div></div></td>
+<td>自我介紹、聊天。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ทำไมไปเยี่ยมเพื่อนคะ</div><div class="roman">tham-mai bpai yîam phʉ̂an khá</div><div class="eng">Why did you go visit your friend?</div></div></td>
+<td><div class="triad"><div class="thai">ไปเยี่ยมเพื่อนเพราะว่าเพื่อนไม่สบายค่ะ</div><div class="roman">bpai yîam phʉ̂an phrɔ́-wâa phʉ̂an mâi sà-baai khâ</div><div class="eng">I went to visit my friend because my friend is sick.</div></div></td>
+<td>探病。</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Give object to someone</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">Subject + ให้ + Object + Person + Number + Classifier</div>
+<div class="roman">Subject + hâi + Object + Person + Number + Classifier</div>
+<div class="eng">Subject gives object to person.</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Sentence</th><th>Chinese Explanation</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ลูกให้ของขวัญพ่อหนึ่งอันค่ะ</div><div class="roman">lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ nʉ̀ng an khâ</div><div class="eng">The child gives father one gift.</div></div></td>
+<td>教材第 4 頁句型：給某人一個禮物。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ลูกให้ดอกไม้แม่หนึ่งดอกค่ะ</div><div class="roman">lûuk hâi dɔ̀ɔk-máai mɛ̂ɛ nʉ̀ng dɔ̀ɔk khâ</div><div class="eng">The child gives mother one flower.</div></div></td>
+<td>一朵花用 <span class="thai">ดอก</span>。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">สามีให้แหวนภรรยาหนึ่งวงค่ะ</div><div class="roman">sǎa-mii hâi wɛ̌ɛn phan-rá-yaa nʉ̀ng wong khâ</div><div class="eng">The husband gives his wife one ring.</div></div></td>
+<td>戒指用 <span class="thai">วง</span>。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Do something for someone</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">Subject + Verb + Object + ให้ + Person</div>
+<div class="roman">Subject + Verb + Object + hâi + Person</div>
+<div class="eng">Subject does something for Person.</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Sentence</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">แม่ทำอาหารให้ลูกค่ะ</div><div class="roman">mɛ̂ɛ tham aa-hǎan hâi lûuk khâ</div><div class="eng">Mother cooks food for the child.</div></div></td>
+<td>教材第 7 頁。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ภรรยาทำงานบ้านให้สามีค่ะ</div><div class="roman">phan-rá-yaa tham ngaan-bâan hâi sǎa-mii khâ</div><div class="eng">The wife does housework for her husband.</div></div></td>
+<td>教材第 8 頁。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เพื่อนซื้อของฝากให้ฉันค่ะ</div><div class="roman">phʉ̂an sʉ́ʉ khɔ̌ɔng-fàak hâi chǎn khâ</div><div class="eng">My friend bought a souvenir for me.</div></div></td>
+<td>曼谷旅遊/伴手禮情境。</td>
+</tr>
+</tbody>
+</table>
+<h3>4. Ask who did something for you</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ใคร + Verb + Object + ให้ + คุณ + คะ</div>
+<div class="roman">khrai + Verb + Object + hâi + khun + khá</div>
+<div class="eng">Who did something for you?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ใครทำอาหารให้คุณคะ</div><div class="roman">khrai tham aa-hǎan hâi khun khá</div><div class="eng">Who cooked food for you?</div></div></td>
+<td><div class="triad"><div class="thai">แม่ทำอาหารให้ฉันค่ะ</div><div class="roman">mɛ̂ɛ tham aa-hǎan hâi chǎn khâ</div><div class="eng">My mother cooked food for me.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>5. Are you free today?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">วันนี้ว่างไหมคะ</div>
+<div class="roman">wan-níi wâang mái khá</div>
+<div class="eng">Are you free today?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Answer Type</th><th>Thai / Romanization / English</th></tr></thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td><div class="triad"><div class="thai">ว่างค่ะ</div><div class="roman">wâang khâ</div><div class="eng">I’m free.</div></div></td>
+</tr>
+<tr>
+<td>Not free</td>
+<td><div class="triad"><div class="thai">ไม่ว่างค่ะ</div><div class="roman">mâi wâang khâ</div><div class="eng">I’m not free.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>6. Invite someone to eat together</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ไป + Verb + Object + ด้วยกันไหมคะ</div>
+<div class="roman">bpai + Verb + Object + dûai gan mái khá</div>
+<div class="eng">Do you want to go do something together?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Positive</th><th>Negative</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div></td>
+<td><div class="triad"><div class="thai">ไปค่ะ</div><div class="roman">bpai khâ</div><div class="eng">Yes, I’ll go.</div></div></td>
+<td><div class="triad"><div class="thai">ไม่ไปค่ะ ไม่ค่อยสบายค่ะ</div><div class="roman">mâi bpai khâ, mâi khɔ̂i sà-baai khâ</div><div class="eng">I won’t go. I’m not feeling very well.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>7. Where should we eat?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ไปกินข้าวที่ไหนดีคะ</div>
+<div class="roman">bpai gin khâaw thîi-nǎi dii khá</div>
+<div class="eng">Where should we go eat?</div>
+</div>
+<div class="triad">
+<div class="thai">ไปกินข้าวที่ไหนก็ได้ค่ะ</div>
+<div class="roman">bpai gin khâaw thîi-nǎi gɔ̂ɔ dâai khâ</div>
+<div class="eng">Anywhere is fine.</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Natural Use</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ไปกินข้าวที่ไหนดีคะ</div><div class="roman">bpai gin khâaw thîi-nǎi dii khá</div><div class="eng">Where should we go eat?</div></div></td>
+<td><div class="triad"><div class="thai">ไปกินข้าวที่ไหนก็ได้ค่ะ</div><div class="roman">bpai gin khâaw thîi-nǎi gɔ̂ɔ dâai khâ</div><div class="eng">Anywhere is fine.</div></div></td>
+<td>跟朋友約吃飯時非常常用。</td>
+</tr>
+</tbody>
+</table>
+<h3>8. I want to invite you...</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">อยากจะเชิญคุณไป + Verb/Object ไปได้ไหมคะ</div>
+<div class="roman">yàak jà chəən khun bpai + Verb/Object bpai dâai mái khá</div>
+<div class="eng">I would like to invite you to... Can you go?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Invitation</th><th>Positive</th><th>Negative</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">อยากจะเชิญคุณไปกินข้าว ไปได้ไหมคะ</div><div class="roman">yàak jà chəən khun bpai gin khâaw, bpai dâai mái khá</div><div class="eng">I would like to invite you to eat. Can you go?</div></div></td>
+<td><div class="triad"><div class="thai">ไปได้ค่ะ ขอบคุณค่ะ</div><div class="roman">bpai dâai khâ, khɔ̀ɔp-khun khâ</div><div class="eng">I can go. Thank you.</div></div></td>
+<td><div class="triad"><div class="thai">ไปไม่ได้ค่ะ ต้องทำงานค่ะ</div><div class="roman">bpai mâi dâai khâ, dtɔ̂ng tham-ngaan khâ</div><div class="eng">I can’t go. I have to work.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>9. Treat someone / pay for someone</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">จะเลี้ยง + Object + คุณ + ไปไหมคะ</div>
+<div class="roman">jà líang + Object + khun + bpai mái khá</div>
+<div class="eng">I will treat you to object. Do you want to go?</div>
+</div>
+<div class="triad">
+<div class="thai">ช่วยเลี้ยง + Object + หน่อยได้ไหมคะ</div>
+<div class="roman">chûai líang + Object + nɔ̀i dâai mái khá</div>
+<div class="eng">Could you treat me to object?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Sentence</th><th>Meaning</th><th>Use</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">วันนี้จะเลี้ยงข้าวคุณ ไปไหมคะ</div><div class="roman">wan-níi jà líang khâaw khun, bpai mái khá</div><div class="eng">Today I’ll treat you to a meal. Do you want to go?</div></div></td>
+<td>我請你吃飯，要去嗎？</td>
+<td>朋友、約會、同事聚餐。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ช่วยเลี้ยงข้าวหน่อยได้ไหมคะ</div><div class="roman">chûai líang khâaw nɔ̀i dâai mái khá</div><div class="eng">Could you treat me to a meal?</div></div></td>
+<td>可以請我吃飯嗎？</td>
+<td>只適合熟人玩笑，不適合對陌生人。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="street">
+<h2>Textbook vs. Street Thai</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Textbook / Polite</th>
+<th>Street / Local Bangkok</th>
+<th>小撇步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>問為什麼來泰國</td>
+<td><div class="triad"><div class="thai">ทำไมมาเมืองไทยคะ</div><div class="roman">tham-mai maa mʉang thai khá</div><div class="eng">Why did you come to Thailand?</div></div></td>
+<td><div class="triad"><div class="thai">มาไทยทำไมคะ</div><div class="roman">maa thai tham-mai khá</div><div class="eng">Why did you come to Thailand?</div></div></td>
+<td>口語常說 <span class="thai">มาไทย</span>，比 <span class="thai">มาเมืองไทย</span> 更短。</td>
+</tr>
+<tr>
+<td>回答因為想學泰文</td>
+<td><div class="triad"><div class="thai">เพราะว่าอยากเรียนภาษาไทยค่ะ</div><div class="roman">phrɔ́-wâa yàak riian phaa-sǎa thai khâ</div><div class="eng">Because I want to study Thai.</div></div></td>
+<td><div class="triad"><div class="thai">เพราะอยากเรียนไทยค่ะ</div><div class="roman">phrɔ́ yàak riian thai khâ</div><div class="eng">Because I want to study Thai.</div></div></td>
+<td>口語常省略 <span class="thai">ว่า</span> 和 <span class="thai">ภาษา</span>。</td>
+</tr>
+<tr>
+<td>邀約吃飯</td>
+<td><div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div></td>
+<td><div class="triad"><div class="thai">ไปกินข้าวกันไหมคะ</div><div class="roman">bpai gin khâaw gan mái khá</div><div class="eng">Want to go eat together?</div></div></td>
+<td>口語常省略 <span class="thai">ด้วย</span>，但兩句都自然。</td>
+</tr>
+<tr>
+<td>去哪裡吃好</td>
+<td><div class="triad"><div class="thai">ไปกินข้าวที่ไหนดีคะ</div><div class="roman">bpai gin khâaw thîi-nǎi dii khá</div><div class="eng">Where should we eat?</div></div></td>
+<td><div class="triad"><div class="thai">กินร้านไหนดีคะ</div><div class="roman">gin ráan nǎi dii khá</div><div class="eng">Which restaurant should we eat at?</div></div></td>
+<td>曼谷朋友約餐廳時很常問 <span class="thai">ร้านไหนดี</span>。</td>
+</tr>
+<tr>
+<td>我請客</td>
+<td><div class="triad"><div class="thai">วันนี้ฉันเลี้ยงข้าวค่ะ</div><div class="roman">wan-níi chǎn líang khâaw khâ</div><div class="eng">Today I’ll treat you to a meal.</div></div></td>
+<td><div class="triad"><div class="thai">มื้อนี้เราเลี้ยงเองค่ะ</div><div class="roman">mʉ́ʉ níi rao líang eeng khâ</div><div class="eng">This meal is on me.</div></div></td>
+<td><span class="thai">มื้อนี้</span> = this meal；<span class="thai">เอง</span> 表示我來。</td>
+</tr>
+<tr>
+<td>拒絕邀約</td>
+<td><div class="triad"><div class="thai">ไปไม่ได้ค่ะ ต้องทำงานค่ะ</div><div class="roman">bpai mâi dâai khâ, dtɔ̂ng tham-ngaan khâ</div><div class="eng">I can’t go. I have to work.</div></div></td>
+<td><div class="triad"><div class="thai">วันนี้ไม่สะดวกค่ะ ไว้วันหลังนะคะ</div><div class="roman">wan-níi mâi sà-dùak khâ, wái wan-lǎng ná khá</div><div class="eng">Today is not convenient. Maybe another day.</div></div></td>
+<td>更柔和，不會只丟一句不能去。</td>
+</tr>
+<tr>
+<td>探病</td>
+<td><div class="triad"><div class="thai">ไปเยี่ยมเพื่อนเพราะว่าเพื่อนไม่สบายค่ะ</div><div class="roman">bpai yîam phʉ̂an phrɔ́-wâa phʉ̂an mâi sà-baai khâ</div><div class="eng">I went to visit my friend because my friend is sick.</div></div></td>
+<td><div class="triad"><div class="thai">ไปเยี่ยมเพื่อนที่ป่วยค่ะ</div><div class="roman">bpai yîam phʉ̂an thîi bpùai khâ</div><div class="eng">I went to visit my sick friend.</div></div></td>
+<td><span class="thai">ป่วย</span> = sick，是更直接的病人/生病用法。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="bangkok">
+<h2>Bangkok Expansion｜曼谷生活延伸</h2>
+<h3>1. Making dinner plans</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問今天有空嗎</td>
+<td><div class="triad"><div class="thai">วันนี้ว่างไหมคะ</div><div class="roman">wan-níi wâang mái khá</div><div class="eng">Are you free today?</div></div></td>
+<td>邀約前最自然。</td>
+</tr>
+<tr>
+<td>一起去吃飯嗎</td>
+<td><div class="triad"><div class="thai">ไปกินข้าวกันไหมคะ</div><div class="roman">bpai gin khâaw gan mái khá</div><div class="eng">Want to go eat together?</div></div></td>
+<td>比 textbook 的 <span class="thai">ด้วยกัน</span> 更口語。</td>
+</tr>
+<tr>
+<td>哪間店好</td>
+<td><div class="triad"><div class="thai">กินร้านไหนดีคะ</div><div class="roman">gin ráan nǎi dii khá</div><div class="eng">Which restaurant should we eat at?</div></div></td>
+<td>曼谷朋友討論餐廳常用。</td>
+</tr>
+<tr>
+<td>都可以</td>
+<td><div class="triad"><div class="thai">ร้านไหนก็ได้ค่ะ</div><div class="roman">ráan nǎi gɔ̂ɔ dâai khâ</div><div class="eng">Any restaurant is fine.</div></div></td>
+<td><span class="thai">ก็ได้</span> = anything/anywhere is fine。</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Treating a friend</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>我請你吃飯</td>
+<td><div class="triad"><div class="thai">วันนี้ฉันเลี้ยงข้าวคุณค่ะ</div><div class="roman">wan-níi chǎn líang khâaw khun khâ</div><div class="eng">Today I’ll treat you to a meal.</div></div></td>
+<td>清楚禮貌。</td>
+</tr>
+<tr>
+<td>這餐我請</td>
+<td><div class="triad"><div class="thai">มื้อนี้ฉันเลี้ยงเองค่ะ</div><div class="roman">mʉ́ʉ níi chǎn líang eeng khâ</div><div class="eng">This meal is on me.</div></div></td>
+<td>自然口語。</td>
+</tr>
+<tr>
+<td>不用，我今天請</td>
+<td><div class="triad"><div class="thai">ไม่ต้องค่ะ วันนี้ฉันเลี้ยงค่ะ</div><div class="roman">mâi dtɔ̂ng khâ, wan-níi chǎn líang khâ</div><div class="eng">No need. Today I’ll treat.</div></div></td>
+<td>搶付錢時。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Visiting a sick friend / friend who gave birth</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>探病</td>
+<td><div class="triad"><div class="thai">จะไปเยี่ยมเพื่อนที่โรงพยาบาลค่ะ</div><div class="roman">jà bpai yîam phʉ̂an thîi roong-pha-yaa-baan khâ</div><div class="eng">I will go visit my friend at the hospital.</div></div></td>
+<td><span class="label review">Review</span> Day 16–17 醫院/不舒服。</td>
+</tr>
+<tr>
+<td>帶花去探病</td>
+<td><div class="triad"><div class="thai">จะซื้อดอกไม้ไปให้เพื่อนค่ะ</div><div class="roman">jà sʉ́ʉ dɔ̀ɔk-máai bpai hâi phʉ̂an khâ</div><div class="eng">I will buy flowers to give to my friend.</div></div></td>
+<td>送禮 + ไป + ให้。</td>
+</tr>
+<tr>
+<td>探望剛生小孩的朋友</td>
+<td><div class="triad"><div class="thai">จะไปเยี่ยมเพื่อนเพราะว่าเพื่อนคลอดลูกค่ะ</div><div class="roman">jà bpai yîam phʉ̂an phrɔ́-wâa phʉ̂an khlɔ̂ɔt lûuk khâ</div><div class="eng">I will visit my friend because she gave birth.</div></div></td>
+<td>教材主題之一。</td>
+</tr>
+</tbody>
+</table>
+<h3>4. Buying souvenirs in Bangkok</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>買伴手禮給朋友</td>
+<td><div class="triad"><div class="thai">ซื้อของฝากให้เพื่อนค่ะ</div><div class="roman">sʉ́ʉ khɔ̌ɔng-fàak hâi phʉ̂an khâ</div><div class="eng">I bought souvenirs for my friend.</div></div></td>
+<td>曼谷夜市、百貨、旅遊常用。</td>
+</tr>
+<tr>
+<td>這是給你的</td>
+<td><div class="triad"><div class="thai">อันนี้ให้คุณค่ะ</div><div class="roman">an níi hâi khun khâ</div><div class="eng">This is for you.</div></div></td>
+<td>送禮最簡單句。</td>
+</tr>
+<tr>
+<td>不用啦，謝謝</td>
+<td><div class="triad"><div class="thai">ไม่ต้องค่ะ ขอบคุณมากค่ะ</div><div class="roman">mâi dtɔ̂ng khâ, khɔ̀ɔp-khun mâak khâ</div><div class="eng">No need, thank you very much.</div></div></td>
+<td>婉拒禮物或請客。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="dialogues">
+<h2>Dialogues｜情境對話</h2>
+<h3>1. 語言交換：為什麼來泰國？</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span></p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">ทำไมมาไทยคะ</div><div class="roman">tham-mai maa thai khá</div><div class="eng">Why did you come to Thailand?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">มาไทยเพราะว่าอยากเรียนภาษาไทยค่ะ</div><div class="roman">maa thai phrɔ́-wâa yàak riian phaa-sǎa thai khâ</div><div class="eng">I came to Thailand because I want to study Thai.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">มาเที่ยวด้วยไหมคะ</div><div class="roman">maa thîaw dûai mái khá</div><div class="eng">Did you also come to travel?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ใช่ค่ะ มาเที่ยวด้วยค่ะ</div><div class="roman">châi khâ, maa thîaw dûai khâ</div><div class="eng">Yes, I also came to travel.</div></div>
+</div>
+</div>
+<h3>2. 問朋友今天有空嗎：一起吃飯</h3>
+<p><span class="label textbook">Textbook-based</span> 情境：教材第 11–12 頁的邀約吃飯。</p>
+<div class="bubble-wrap">
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">วันนี้ว่างไหมคะ</div><div class="roman">wan-níi wâang mái khá</div><div class="eng">Are you free today?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ว่างค่ะ</div><div class="roman">wâang khâ</div><div class="eng">I’m free.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไปค่ะ</div><div class="roman">bpai khâ</div><div class="eng">Yes, I’ll go.</div></div>
+</div>
+</div>
+<h3>3. 朋友沒空：今天不舒服</h3>
+<p><span class="label review">Review</span> Day 17 不舒服句。</p>
+<div class="bubble-wrap">
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไปกินข้าวกันไหมคะ</div><div class="roman">bpai gin khâaw gan mái khá</div><div class="eng">Want to go eat together?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไม่ไปค่ะ วันนี้ไม่ค่อยสบายค่ะ</div><div class="roman">mâi bpai khâ, wan-níi mâi khɔ̂i sà-baai khâ</div><div class="eng">I won’t go. I’m not feeling very well today.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไม่เป็นไรค่ะ พักผ่อนเยอะ ๆ นะคะ</div><div class="roman">mâi bpen rai khâ, phák-phɔ̀ɔn yóe-yóe ná khá</div><div class="eng">No problem. Get plenty of rest.</div></div>
+</div>
+</div>
+<h3>4. 去哪裡吃好？哪間店都可以</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span></p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">กินร้านไหนดีคะ</div><div class="roman">gin ráan nǎi dii khá</div><div class="eng">Which restaurant should we eat at?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ร้านไหนก็ได้ค่ะ</div><div class="roman">ráan nǎi gɔ̂ɔ dâai khâ</div><div class="eng">Any restaurant is fine.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไปร้านอาหารไทยดีไหมคะ</div><div class="roman">bpai ráan aa-hǎan thai dii mái khá</div><div class="eng">Is going to a Thai restaurant good?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ดีค่ะ</div><div class="roman">dii khâ</div><div class="eng">Good.</div></div>
+</div>
+</div>
+<h3>5. 我請客：這餐我請</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：曼谷跟朋友吃飯，表達你要請客。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">หารกันไหมคะ</div><div class="roman">hǎan gan mái khá</div><div class="eng">Shall we split the bill?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไม่ต้องค่ะ มื้อนี้ฉันเลี้ยงเองค่ะ</div><div class="roman">mâi dtɔ̂ng khâ, mʉ́ʉ níi chǎn líang eeng khâ</div><div class="eng">No need. This meal is on me.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ขอบคุณมากค่ะ</div><div class="roman">khɔ̀ɔp-khun mâak khâ</div><div class="eng">Thank you very much.</div></div>
+</div>
+</div>
+<h3>6. 探病：去醫院看朋友</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label review">Review</span> Day 17 健康/醫院。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend A</span>
+<div class="triad"><div class="thai">ทำไมไปโรงพยาบาลคะ</div><div class="roman">tham-mai bpai roong-pha-yaa-baan khá</div><div class="eng">Why did you go to the hospital?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Friend B</span>
+<div class="triad"><div class="thai">ไปเยี่ยมเพื่อนค่ะ</div><div class="roman">bpai yîam phʉ̂an khâ</div><div class="eng">I went to visit a friend.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend A</span>
+<div class="triad"><div class="thai">ทำไมคะ</div><div class="roman">tham-mai khá</div><div class="eng">Why?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Friend B</span>
+<div class="triad"><div class="thai">เพราะว่าเพื่อนไม่สบายค่ะ</div><div class="roman">phrɔ́-wâa phʉ̂an mâi sà-baai khâ</div><div class="eng">Because my friend is sick.</div></div>
+</div>
+</div>
+<h3>7. 送禮：生日送花/禮物</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span></p>
+<div class="bubble-wrap">
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">สุขสันต์วันเกิดค่ะ</div><div class="roman">sùk-sǎn wan-gə̀ət khâ</div><div class="eng">Happy birthday.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">อันนี้ให้คุณค่ะ</div><div class="roman">an níi hâi khun khâ</div><div class="eng">This is for you.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ขอบคุณค่ะ ดอกไม้สวยมากค่ะ</div><div class="roman">khɔ̀ɔp-khun khâ, dɔ̀ɔk-máai sǔai mâak khâ</div><div class="eng">Thank you. The flowers are very beautiful.</div></div>
+</div>
+</div>
+<h3>8. 幫某人做事：媽媽煮飯給小孩</h3>
+<p><span class="label textbook">Textbook-based</span> 教材練習 <span class="thai">ให้</span> / <span class="roman">hâi</span> / <span class="eng">for</span>。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">ใครทำอาหารให้คุณคะ</div><div class="roman">khrai tham aa-hǎan hâi khun khá</div><div class="eng">Who cooks food for you?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">แม่ทำอาหารให้ฉันค่ะ</div><div class="roman">mɛ̂ɛ tham aa-hǎan hâi chǎn khâ</div><div class="eng">My mother cooks food for me.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">คุณทำอะไรให้แม่คะ</div><div class="roman">khun tham à-rai hâi mɛ̂ɛ khá</div><div class="eng">What do you do for your mother?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">ฉันซื้อของขวัญให้แม่ค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi mɛ̂ɛ khâ</div><div class="eng">I buy a gift for my mother.</div></div>
+</div>
+</div>
+</section>
+<section class="tab-content" id="mistakes">
+<h2>Common Mistakes &amp; Quick Review</h2>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Why It’s Wrong / Risky</th>
+<th>Better Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ให้ = only give</div><div class="roman">hâi</div><div class="eng">give / for</div></div></td>
+<td><span class="thai">ให้</span> 不只「給」，也可以表示「為某人做某事」。</td>
+<td>
+<div class="triad"><div class="thai">ให้ของขวัญพ่อ</div><div class="roman">hâi khɔ̌ɔng-khwǎn phɔ̂ɔ</div><div class="eng">give a gift to father</div></div>
+<div class="triad"><div class="thai">ทำอาหารให้ลูก</div><div class="roman">tham aa-hǎan hâi lûuk</div><div class="eng">cook food for the child</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ไปหา vs ไปเยี่ยม</div><div class="roman">bpai hǎa vs bpai yîam</div><div class="eng">go see vs go visit</div></div></td>
+<td><span class="thai">ไปหา</span> 是一般去找；<span class="thai">ไปเยี่ยม</span> 更像探望，有探病、久未見、探親的感覺。</td>
+<td><div class="triad"><div class="thai">ไปเยี่ยมเพื่อนที่โรงพยาบาลค่ะ</div><div class="roman">bpai yîam phʉ̂an thîi roong-pha-yaa-baan khâ</div><div class="eng">I went to visit my friend at the hospital.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ทำไม... เพราะว่า... word order</div><div class="roman">tham-mai / phrɔ́-wâa</div><div class="eng">why / because</div></div></td>
+<td>問句用 <span class="thai">ทำไม</span>；回答原因用 <span class="thai">เพราะว่า</span>。不要把兩個都塞進同一句問句。</td>
+<td><div class="triad"><div class="thai">ทำไมมาไทยคะ เพราะว่าอยากเรียนไทยค่ะ</div><div class="roman">tham-mai maa thai khá? phrɔ́-wâa yàak riian thai khâ</div><div class="eng">Why did you come to Thailand? Because I want to study Thai.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">แหวนหนึ่งอัน</div><div class="roman">wɛ̌ɛn nʉ̀ng an</div><div class="eng">one ring with general classifier</div></div></td>
+<td>口語可能聽得到，但教材量詞是 <span class="thai">วง</span>。</td>
+<td><div class="triad"><div class="thai">แหวนหนึ่งวง</div><div class="roman">wɛ̌ɛn nʉ̀ng wong</div><div class="eng">one ring</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ดอกไม้หนึ่งดอก vs หนึ่งช่อ</div><div class="roman">dɔ̀ɔk-máai nʉ̀ng dɔ̀ɔk vs nʉ̀ng chɔ̂ɔ</div><div class="eng">one flower vs one bouquet</div></div></td>
+<td>一朵花是 <span class="thai">หนึ่งดอก</span>；一束花是 <span class="thai">หนึ่งช่อ</span>。</td>
+<td>
+<div class="triad"><div class="thai">ดอกไม้หนึ่งดอก</div><div class="roman">dɔ̀ɔk-máai nʉ̀ng dɔ̀ɔk</div><div class="eng">one flower</div></div>
+<div class="triad"><div class="thai">ดอกไม้หนึ่งช่อ</div><div class="roman">dɔ̀ɔk-máai nʉ̀ng chɔ̂ɔ</div><div class="eng">one bouquet</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ช่วยเลี้ยงข้าวหน่อย</div><div class="roman">chûai líang khâaw nɔ̀i</div><div class="eng">please treat me to a meal</div></div></td>
+<td>語法可以，但對不熟的人很突兀，像直接叫人請客。</td>
+<td><div class="triad"><div class="thai">วันนี้หารกันไหมคะ</div><div class="roman">wan-níi hǎan gan mái khá</div><div class="eng">Shall we split the bill today?</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="tip red">
+<strong>本課最重要記憶點：</strong>
+<p>1. 問原因：<span class="thai">ทำไม</span> / <span class="roman">tham-mai</span> / <span class="eng">why</span>；回答原因：<span class="thai">เพราะว่า</span> / <span class="roman">phrɔ́-wâa</span> / <span class="eng">because</span>。</p>
+<p>2. 給/為某人做：<span class="thai">ให้</span> / <span class="roman">hâi</span> / <span class="eng">give / for</span>。</p>
+<p>3. 邀約吃飯：<span class="thai">ไปกินข้าวด้วยกันไหมคะ</span> / <span class="roman">bpai gin khâaw dûai gan mái khá</span> / <span class="eng">Do you want to go eat together?</span></p>
+<p>4. 請客：<span class="thai">เลี้ยงข้าว</span> / <span class="roman">líang khâaw</span> / <span class="eng">treat someone to a meal</span>。</p>
+</div>
+</section>
+<section class="tab-content" id="practice">
+<h2>Practice Questions</h2>
+<h3>A. Vocabulary Recall</h3>
+<details>
+<summary>1. why</summary>
+<div class="triad"><div class="thai">ทำไม</div><div class="roman">tham-mai</div><div class="eng">why</div></div>
+</details>
+<details>
+<summary>2. because</summary>
+<div class="triad"><div class="thai">เพราะว่า</div><div class="roman">phrɔ́-wâa</div><div class="eng">because</div></div>
+</details>
+<details>
+<summary>3. come to visit</summary>
+<div class="triad"><div class="thai">มาเยี่ยม</div><div class="roman">maa yîam</div><div class="eng">come to visit</div></div>
+</details>
+<details>
+<summary>4. go to visit</summary>
+<div class="triad"><div class="thai">ไปเยี่ยม</div><div class="roman">bpai yîam</div><div class="eng">go to visit</div></div>
+</details>
+<details>
+<summary>5. gift</summary>
+<div class="triad"><div class="thai">ของขวัญ</div><div class="roman">khɔ̌ɔng-khwǎn</div><div class="eng">gift / present</div></div>
+</details>
+<details>
+<summary>6. souvenir / gift brought from somewhere</summary>
+<div class="triad"><div class="thai">ของฝาก</div><div class="roman">khɔ̌ɔng-fàak</div><div class="eng">souvenir / gift brought from somewhere</div></div>
+</details>
+<details>
+<summary>7. free / available</summary>
+<div class="triad"><div class="thai">ว่าง</div><div class="roman">wâang</div><div class="eng">free / available</div></div>
+</details>
+<details>
+<summary>8. treat someone to a meal</summary>
+<div class="triad"><div class="thai">เลี้ยงข้าว</div><div class="roman">líang khâaw</div><div class="eng">treat someone to a meal</div></div>
+</details>
+<h3>B. Classifier Recall</h3>
+<details>
+<summary>1. ring classifier</summary>
+<div class="triad"><div class="thai">วง</div><div class="roman">wong</div><div class="eng">classifier for rings / circular things</div></div>
+</details>
+<details>
+<summary>2. one flower</summary>
+<div class="triad"><div class="thai">ดอกไม้หนึ่งดอก</div><div class="roman">dɔ̀ɔk-máai nʉ̀ng dɔ̀ɔk</div><div class="eng">one flower</div></div>
+</details>
+<details>
+<summary>3. one bouquet</summary>
+<div class="triad"><div class="thai">ดอกไม้หนึ่งช่อ</div><div class="roman">dɔ̀ɔk-máai nʉ̀ng chɔ̂ɔ</div><div class="eng">one bouquet</div></div>
+</details>
+<h3>C. Translation Practice</h3>
+<details>
+<summary>1. Why did you come to Thailand?</summary>
+<div class="triad"><div class="thai">ทำไมมาเมืองไทยคะ</div><div class="roman">tham-mai maa mʉang thai khá</div><div class="eng">Why did you come to Thailand?</div></div>
+</details>
+<details>
+<summary>2. I came to Thailand because I want to study Thai.</summary>
+<div class="triad"><div class="thai">มาเมืองไทยเพราะว่าอยากเรียนภาษาไทยค่ะ</div><div class="roman">maa mʉang thai phrɔ́-wâa yàak riian phaa-sǎa thai khâ</div><div class="eng">I came to Thailand because I want to study Thai.</div></div>
+</details>
+<details>
+<summary>3. The child gives father one gift.</summary>
+<div class="triad"><div class="thai">ลูกให้ของขวัญพ่อหนึ่งอันค่ะ</div><div class="roman">lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ nʉ̀ng an khâ</div><div class="eng">The child gives father one gift.</div></div>
+</details>
+<details>
+<summary>4. Mother cooks food for the child.</summary>
+<div class="triad"><div class="thai">แม่ทำอาหารให้ลูกค่ะ</div><div class="roman">mɛ̂ɛ tham aa-hǎan hâi lûuk khâ</div><div class="eng">Mother cooks food for the child.</div></div>
+</details>
+<details>
+<summary>5. Are you free today?</summary>
+<div class="triad"><div class="thai">วันนี้ว่างไหมคะ</div><div class="roman">wan-níi wâang mái khá</div><div class="eng">Are you free today?</div></div>
+</details>
+<details>
+<summary>6. Do you want to go eat together?</summary>
+<div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div>
+</details>
+<details>
+<summary>7. Anywhere is fine.</summary>
+<div class="triad"><div class="thai">ที่ไหนก็ได้ค่ะ</div><div class="roman">thîi-nǎi gɔ̂ɔ dâai khâ</div><div class="eng">Anywhere is fine.</div></div>
+</details>
+<details>
+<summary>8. Today I’ll treat you to a meal.</summary>
+<div class="triad"><div class="thai">วันนี้ฉันเลี้ยงข้าวคุณค่ะ</div><div class="roman">wan-níi chǎn líang khâaw khun khâ</div><div class="eng">Today I’ll treat you to a meal.</div></div>
+</details>
+<h3>D. Real-life Response Practice</h3>
+<details>
+<summary>1. Friend asks: วันนี้ว่างไหมคะ / wan-níi wâang mái khá / Are you free today?</summary>
+<div class="triad"><div class="thai">ว่างค่ะ</div><div class="roman">wâang khâ</div><div class="eng">I’m free.</div></div>
+<div class="triad"><div class="thai">ไม่ว่างค่ะ วันนี้ต้องทำงานค่ะ</div><div class="roman">mâi wâang khâ, wan-níi dtɔ̂ng tham-ngaan khâ</div><div class="eng">I’m not free. I have to work today.</div></div>
+</details>
+<details>
+<summary>2. Friend asks: ไปกินข้าวกันไหมคะ / bpai gin khâaw gan mái khá / Want to go eat together?</summary>
+<div class="triad"><div class="thai">ไปค่ะ กินร้านไหนดีคะ</div><div class="roman">bpai khâ, gin ráan nǎi dii khá</div><div class="eng">Yes. Which restaurant should we eat at?</div></div>
+</details>
+<details>
+<summary>3. Friend asks: ทำไมไปโรงพยาบาลคะ / tham-mai bpai roong-pha-yaa-baan khá / Why did you go to the hospital?</summary>
+<div class="triad"><div class="thai">ไปเยี่ยมเพื่อนค่ะ เพราะว่าเพื่อนไม่สบายค่ะ</div><div class="roman">bpai yîam phʉ̂an khâ, phrɔ́-wâa phʉ̂an mâi sà-baai khâ</div><div class="eng">I went to visit my friend because my friend is sick.</div></div>
+</details>
+<h3>E. Mini Role-play</h3>
+<div class="tip blue">
+      情境：你想約泰國朋友吃飯。你要先問今天有沒有空，邀請對方一起去吃飯，問哪間店好，最後說這餐你請。
+    </div>
+<details>
+<summary>Suggested Answer</summary>
+<div class="bubble-wrap">
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">วันนี้ว่างไหมคะ</div><div class="roman">wan-níi wâang mái khá</div><div class="eng">Are you free today?</div></div></div>
+<div class="bubble a"><span class="speaker a">Friend</span><div class="triad"><div class="thai">ว่างค่ะ</div><div class="roman">wâang khâ</div><div class="eng">I’m free.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div></div>
+<div class="bubble a"><span class="speaker a">Friend</span><div class="triad"><div class="thai">ไปค่ะ</div><div class="roman">bpai khâ</div><div class="eng">Yes, I’ll go.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">กินร้านไหนดีคะ</div><div class="roman">gin ráan nǎi dii khá</div><div class="eng">Which restaurant should we eat at?</div></div></div>
+<div class="bubble a"><span class="speaker a">Friend</span><div class="triad"><div class="thai">ร้านไหนก็ได้ค่ะ</div><div class="roman">ráan nǎi gɔ̂ɔ dâai khâ</div><div class="eng">Any restaurant is fine.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">มื้อนี้ฉันเลี้ยงเองค่ะ</div><div class="roman">mʉ́ʉ níi chǎn líang eeng khâ</div><div class="eng">This meal is on me.</div></div></div>
+</div>
+</details>
+<div class="tip blue">
+      情境：你要去探病。你要說朋友不舒服，所以你會去醫院探望他，並買一束花給他。
+    </div>
+<details>
+<summary>Suggested Answer</summary>
+<div class="bubble-wrap">
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">เพื่อนไม่สบายค่ะ</div><div class="roman">phʉ̂an mâi sà-baai khâ</div><div class="eng">My friend is sick.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">จะไปเยี่ยมเพื่อนที่โรงพยาบาลค่ะ</div><div class="roman">jà bpai yîam phʉ̂an thîi roong-pha-yaa-baan khâ</div><div class="eng">I will go visit my friend at the hospital.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">จะซื้อดอกไม้หนึ่งช่อให้เพื่อนค่ะ</div><div class="roman">jà sʉ́ʉ dɔ̀ɔk-máai nʉ̀ng chɔ̂ɔ hâi phʉ̂an khâ</div><div class="eng">I will buy one bouquet of flowers for my friend.</div></div></div>
+</div>
+</details>
+</section>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">ทำไมมาเมืองไทยคะ</div><div class="roman">tham-mai maa mʉang thai khá</div><div class="eng">Why did you come to Thailand?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">มาเยี่ยมเพื่อนค่ะ</div><div class="roman">maa yîam phʉ̂an khâ</div><div class="eng">I came to visit a friend.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ลูกให้ของขวัญพ่อหนึ่งอันค่ะ</div><div class="roman">lûuk hâi khɔ̌ɔng-khwǎn phɔ̂ɔ nʉ̀ng an khâ</div><div class="eng">The child gives father one gift.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ไปกินข้าวด้วยกันไหมคะ</div><div class="roman">bpai gin khâaw dûai gan mái khá</div><div class="eng">Do you want to go eat together?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ทำไมวันนี้คุณไม่ไปทำงานคะ</div><div class="roman">tham-mai wan-níi khun mâi bpai tham-ngaan khá</div><div class="eng">Why are you not going to work today?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ฉันไม่ไปเพราะว่าไม่ค่อยสบายค่ะ</div><div class="roman">chǎn mâi bpai phrɔ́-wâa mâi khɔ̂i sà-baai khâ</div><div class="eng">I am not going because I am not feeling well.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">พรุ่งนี้ฉันจะไปเยี่ยมเพื่อนค่ะ</div><div class="roman">phrûng-níi chǎn jà bpai yîam phʉ̂an khâ</div><div class="eng">Tomorrow I will visit a friend.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">ฉันซื้อของขวัญให้เพื่อนค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi phʉ̂an khâ</div><div class="eng">I bought a gift for my friend.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ฉันทำอาหารให้แม่ค่ะ</div><div class="roman">chǎn tham aa-hǎan hâi mɛ̂ɛ khâ</div><div class="eng">I cook for my mother.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ฉันอยากชวนคุณไปกินข้าวค่ะ</div><div class="roman">chǎn yàak chuan khun bpai gin khâaw khâ</div><div class="eng">I want to invite you to go eat.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<script>
+  function openTab(event, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    contents.forEach(content => content.classList.remove('active'));
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+// ── TTS ──────────────────────────────────────────────
+let thaiVoice = null;
+let activBtn  = null;
+
+function loadVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  thaiVoice = voices.find(v => v.lang === 'th-TH') ||
+              voices.find(v => v.lang.startsWith('th')) ||
+              null;
+}
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakThai(text, btn) {
+  if (!window.speechSynthesis) {
+    alert('此瀏覽器不支援語音合成。請用 Safari（macOS/iOS）或 Chrome。');
+    return;
+  }
+  if (activBtn === btn && speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+    return;
+  }
+  speechSynthesis.cancel();
+  if (activBtn) {
+    activBtn.classList.remove('speaking');
+    activBtn.textContent = '🔊';
+  }
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang  = 'th-TH';
+  utter.rate  = 0.85;
+  utter.pitch = 1.0;
+  if (thaiVoice) utter.voice = thaiVoice;
+  utter.onstart = () => {
+    btn.classList.add('speaking');
+    btn.textContent = '⏸';
+    activBtn = btn;
+  };
+  utter.onend = utter.onerror = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+  };
+  speechSynthesis.speak(utter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('div.thai').forEach(el => {
+    const rawText = el.textContent.trim();
+    if (!rawText) return;
+    const span = document.createElement('span');
+    span.className = 'thai-text';
+    span.textContent = rawText;
+    const btn = document.createElement('button');
+    btn.className = 'speak-btn';
+    btn.textContent = '🔊';
+    btn.title = '唸出泰文';
+    btn.setAttribute('aria-label', '播放發音');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      speakThai(rawText, btn);
+    });
+    el.textContent = '';
+    el.appendChild(span);
+    el.appendChild(btn);
+  });
+});
+</script>
+<script id="book1-favorites-script">
+(function () {
+  const favoritesKey = 'thai-book1-day18-favorites';
+  const legacyFavoriteKeys = ['thaiBook1_day18_favorites_v1'];
+  const $ = function (selector, root) { return (root || document).querySelector(selector); };
+  const $$ = function (selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); };
+  function readStore(key) { try { const v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v.filter(Boolean) : []; } catch (e) { return []; } }
+  function safeGet() {
+    const current = readStore(favoritesKey);
+    if (current.length) return current;
+    for (let i = 0; i < legacyFavoriteKeys.length; i += 1) {
+      const legacy = readStore(legacyFavoriteKeys[i]);
+      if (legacy.length) { try { localStorage.setItem(favoritesKey, JSON.stringify(legacy)); } catch (e) {} return legacy; }
+    }
+    return [];
+  }
+  function safeSave(items) { try { localStorage.setItem(favoritesKey, JSON.stringify(items)); } catch (e) {} }
+  function idOf(item) { return [item.thai, item.rom, item.eng].join('||'); }
+  function esc(v) { return String(v || '').replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function collocs(item) { try { const data = JSON.parse(item.colloc || '[]'); return Array.isArray(data) ? data : []; } catch (e) { return []; } }
+  function readButton(btn) {
+    return { thai:btn.dataset.thai || '', rom:btn.dataset.rom || '', eng:btn.dataset.eng || '', cat:btn.dataset.cat || '', grammar:btn.dataset.grammar || '', colloc:btn.dataset.colloc || '[]', exThai:btn.dataset.exThai || '', exRom:btn.dataset.exRom || '', exEng:btn.dataset.exEng || '' };
+  }
+  function updateButtons() {
+    const ids = new Set(safeGet().map(idOf));
+    $$('.fav-btn').forEach(function (btn) {
+      const selected = ids.has(idOf(readButton(btn)));
+      btn.classList.toggle('is-favorite', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      btn.textContent = selected ? '★ 已收藏' : '♡ 收藏';
+    });
+  }
+  function makeCard(item) {
+    const c = collocs(item);
+    const collocHtml = c.length ? c.map(function (x) { return '<button type="button" class="colloc-chip" data-thai="' + esc(x.thai) + '" aria-label="播放搭配詞：' + esc(x.thai) + '" aria-pressed="false"><span class="thai">' + esc(x.thai) + '</span><span class="en-colloc">' + esc(x.en) + '</span></button>'; }).join('') : '<span class="muted">—</span>';
+    return '<article class="favorite-card">' +
+      '<div class="favorite-thai"><span>' + esc(item.thai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.thai) + '" aria-label="播放發音">🔊</button></div>' +
+      '<span class="roman">' + esc(item.rom) + '</span><span class="eng">' + esc(item.eng) + '</span>' +
+      '<div class="favorite-category"><span class="label practical">' + esc(item.cat || 'Vocabulary') + '</span></div>' +
+      '<div class="favorite-example"><div class="favorite-example-title">Example</div>' +
+      '<div class="thai"><span class="thai-text">' + esc(item.exThai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.exThai) + '" aria-label="播放例句">🔊</button></div>' +
+      '<div class="roman">' + esc(item.exRom) + '</div><div class="eng">' + esc(item.exEng) + '</div></div>' +
+      '<details class="fav-expand"><summary>Grammar &amp; Collocations</summary><div class="fav-expand-body">' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Grammar Notes</div><div class="fav-expand-usage">' + (item.grammar || '—') + '</div></div>' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Collocations</div><div class="fav-expand-colloc">' + collocHtml + '</div></div>' +
+      '</div></details>' +
+      '<button class="remove-fav" type="button" data-remove-id="' + esc(idOf(item)) + '">移除收藏</button>' +
+      '</article>';
+  }
+  function render() {
+    const box = $('#favoritesList'); if (!box) return;
+    const items = safeGet();
+    box.innerHTML = items.length ? items.map(makeCard).join('') : '<div class="empty-state">還沒有收藏項目。到 Vocabulary 右側點「♡ 收藏」即可加入。</div>';
+    updateButtons();
+  }
+  document.addEventListener('click', function (event) {
+    const fav = event.target.closest && event.target.closest('.fav-btn');
+    if (fav) {
+      const item = readButton(fav); const key = idOf(item); let items = safeGet();
+      items = items.some(function (x) { return idOf(x) === key; }) ? items.filter(function (x) { return idOf(x) !== key; }) : items.concat(item);
+      safeSave(items); render(); return;
+    }
+    const remove = event.target.closest && event.target.closest('[data-remove-id]');
+    if (remove) { safeSave(safeGet().filter(function (x) { return idOf(x) !== remove.dataset.removeId; })); render(); return; }
+    const speak = event.target.closest && event.target.closest('[data-fav-speech]');
+    if (speak && typeof window.speakThai === 'function') { event.preventDefault(); window.speakThai(speak.dataset.favSpeech, speak); }
+  });
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+<script id="book1-collocations-audio-script">
+(function () {
+  var activeButton = null;
+  function thaiVoice() {
+    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
+           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
+  }
+  function reset(button) {
+    if (!button) return;
+    button.classList.remove('speaking');
+    button.setAttribute('aria-pressed', 'false');
+  }
+  function speak(button) {
+    var text = (button.dataset.thai || '').trim();
+    if (!text) return;
+    if (!('speechSynthesis' in window)) {
+      alert('此瀏覽器不支援語音合成。');
+      return;
+    }
+    var synth = window.speechSynthesis;
+    if (activeButton === button && synth.speaking) {
+      synth.cancel();
+      reset(button);
+      activeButton = null;
+      return;
+    }
+    synth.cancel();
+    reset(activeButton);
+    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'th-TH';
+    utterance.rate = 0.82;
+    var voice = thaiVoice();
+    if (voice) utterance.voice = voice;
+    button.classList.add('speaking');
+    button.setAttribute('aria-pressed', 'true');
+    activeButton = button;
+    utterance.onend = utterance.onerror = function () {
+      reset(button);
+      if (activeButton === button) activeButton = null;
+    };
+    try {
+      synth.resume();
+      synth.speak(utterance);
+    } catch (error) {
+      reset(button);
+      activeButton = null;
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
+    if (!button) return;
+    event.preventDefault();
+    event.stopPropagation();
+    speak(button);
+  });
+})();
+</script></body>
+</html>

@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thai Speaking 1 - Day 14 Study Guide</title>
+<style>
+    :root {
+      --text: var(--color-text-primary, #1f2937);
+      --muted: #6b7280;
+      --line: rgba(107,114,128,.28);
+      --card: rgba(255,255,255,.72);
+      --orange: #f97316;
+      --orange-soft: rgba(249,115,22,.13);
+      --green: #16a34a;
+      --green-soft: rgba(22,163,74,.13);
+      --blue: #2563eb;
+      --blue-soft: rgba(37,99,235,.12);
+      --red: #dc2626;
+      --red-soft: rgba(220,38,38,.11);
+      --purple: #7c3aed;
+      --purple-soft: rgba(124,58,237,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      color: var(--text);
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .hero {
+      padding: 28px;
+      border: .5px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(249,115,22,.10), rgba(22,163,74,.08), rgba(37,99,235,.06));
+      box-shadow: 0 12px 34px rgba(0,0,0,.05);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.02em; }
+    h2 { margin-top: 0; font-size: 22px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    h3 { margin-top: 28px; font-size: 18px; }
+    p { margin: 8px 0; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+      padding: 10px;
+      border: .5px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.45);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .tab-btn {
+      border: .5px solid var(--line);
+      background: rgba(255,255,255,.65);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .tab-btn:hover { transform: translateY(-1px); background: rgba(249,250,251,.95); }
+
+    .tab-btn.active {
+      border-color: rgba(249,115,22,.55);
+      background: var(--orange-soft);
+      color: #9a3412;
+      font-weight: 700;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px;
+      border: .5px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.52);
+      box-shadow: 0 10px 28px rgba(0,0,0,.04);
+      margin-bottom: 20px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 4px 2px 0;
+    }
+
+    .label.textbook { background: var(--orange-soft); color: #c2410c; border: .5px solid rgba(249,115,22,.3); }
+    .label.local { background: var(--green-soft); color: #15803d; border: .5px solid rgba(22,163,74,.3); }
+    .label.review { background: var(--blue-soft); color: #1d4ed8; border: .5px solid rgba(37,99,235,.3); }
+    .label.warn { background: var(--red-soft); color: #b91c1c; border: .5px solid rgba(220,38,38,.3); }
+
+    .thai { font-size: 15px; font-weight: 500; letter-spacing: .01em; }
+    .roman { color: #6b7280; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .eng { font-size: 13px; color: var(--text); }
+
+    .triad { display: grid; gap: 2px; margin: 4px 0; }
+    .triad .thai::before { content: "Thai: "; color: var(--muted); font-weight: 400; }
+    .triad .roman::before { content: "Romanization: "; color: var(--muted); font-family: inherit; }
+    .triad .eng::before { content: "English: "; color: var(--muted); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 24px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: .5px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: rgba(243,244,246,.72); font-weight: 700; }
+    tbody tr:nth-child(even) { background: rgba(249,250,251,.55); }
+
+    .tip {
+      border-left: 4px solid var(--green);
+      padding: 12px 14px;
+      background: var(--green-soft);
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+
+    .tip.orange { border-left-color: var(--orange); background: var(--orange-soft); }
+    .tip.blue { border-left-color: var(--blue); background: var(--blue-soft); }
+    .tip.red { border-left-color: var(--red); background: var(--red-soft); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .card {
+      border: .5px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--card);
+    }
+
+    .mini-title {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .bubble-wrap { display: grid; gap: 10px; margin: 14px 0 24px; }
+
+    .bubble {
+      border: .5px solid var(--line);
+      border-radius: 18px;
+      padding: 13px 15px;
+      max-width: 84%;
+      background: rgba(255,255,255,.72);
+    }
+
+    .bubble.a { justify-self: start; border-left: 5px solid var(--blue); }
+    .bubble.b { justify-self: end; border-right: 5px solid var(--green); }
+
+    .speaker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .speaker.a { background: var(--blue-soft); color: #1d4ed8; }
+    .speaker.b { background: var(--green-soft); color: #15803d; }
+
+    .pattern {
+      padding: 12px;
+      border: .5px dashed rgba(107,114,128,.45);
+      border-radius: 12px;
+      background: rgba(255,255,255,.5);
+      margin: 12px 0;
+    }
+
+    .classifier-chip {
+      display: inline-block;
+      border: .5px solid rgba(124,58,237,.3);
+      background: var(--purple-soft);
+      color: #5b21b6;
+      padding: 3px 9px;
+      border-radius: 9px;
+      font-weight: 800;
+      margin: 2px 4px 2px 0;
+    }
+
+    details {
+      border: .5px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      background: rgba(255,255,255,.45);
+    }
+
+    summary { cursor: pointer; font-weight: 700; }
+
+        .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: .5px solid rgba(37,99,235,.3);
+      background: var(--blue-soft);
+      color: #1d4ed8;
+      font-size: 11px;
+      cursor: pointer;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+      transition: all .15s ease;
+      line-height: 1;
+      padding: 0;
+    }
+    .speak-btn:hover {
+      background: rgba(37,99,235,.22);
+      transform: scale(1.12);
+    }
+    .speak-btn.speaking {
+      background: var(--orange-soft);
+      border-color: rgba(249,115,22,.4);
+      color: #c2410c;
+      animation: pulse .6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.18); }
+    }
+    div.thai {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .thai-text { flex: 1; }
+
+@media (max-width: 720px) {
+      body { padding: 14px; }
+      .tab-content { padding: 16px; }
+      table { font-size: 13px; }
+      .bubble { max-width: 100%; }
+    }
+  </style>
+<style id="book1-content-rebuild-style">
+/* ── Book 1 content rebuild layer ───────────────────── */
+#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+#vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
+.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
+.vocab-group-title:first-of-type{border-top:0;padding-top:0}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
+.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
+#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
+#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
+#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
+#supplement .vocab-scroll table{min-width:760px}
+.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
+.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+.muted{color:var(--muted)}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
+</style><style id="book1-book2-vocab-pattern">
+/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
+.triad .thai::before,
+.triad .roman::before,
+.triad .eng::before { content:none !important; }
+
+#vocab .vocab-scroll{
+  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  margin:14px 0 24px; border-radius:12px;
+}
+#vocab .vocab-scroll table{
+  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
+}
+#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
+#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
+#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
+#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
+#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
+#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
+
+#vocab .favorite-col, #vocab .fav-cell{
+  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
+  padding-left:7px !important; padding-right:7px !important;
+}
+#vocab .fav-btn{
+  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
+  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
+  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
+}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
+
+.classifier-note{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  font-size:12px; color:var(--muted);
+}
+.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
+.colloc-chip{
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
+  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
+  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
+  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
+  box-shadow:none !important; transform:none !important; animation:none !important;
+}
+.colloc-chip:hover,.colloc-chip:focus-visible{
+  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
+  transform:none !important; animation:none !important; outline:none !important;
+}
+.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
+.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
+.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
+
+#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
+.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
+.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
+.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
+.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
+.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
+.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
+.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
+.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
+.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
+.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
+.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
+.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
+.favorite-speak{margin-left:0;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:720px){
+  #vocab .vocab-scroll table{min-width:1120px !important;}
+  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
+  .favorites-list{grid-template-columns:1fr;}
+}
+</style><style id="book1-semantic-refinement-style">
+/* ── Semantic refinement: real collocation buttons ── */
+button.colloc-chip{
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  font:inherit !important;
+  text-align:left !important;
+  touch-action:manipulation;
+  user-select:none;
+}
+button.colloc-chip:focus-visible{
+  outline:2px solid rgba(22,163,74,.55) !important;
+  outline-offset:2px;
+}
+</style><style id="book1-classifier-audio-refine-style">
+/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
+#vocab .classifier-note.classifier-short{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
+}
+#vocab .classifier-label{font-weight:700; color:var(--muted);}
+button.classifier-audio-pill{
+  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
+  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
+  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
+  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
+}
+button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-detail-style">
+/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
+#vocab .classifier-note.classifier-detail{
+  margin-top:7px;
+  padding-top:7px;
+  border-top:.5px dashed var(--line);
+  display:grid;
+  gap:3px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+#vocab .classifier-label{
+  color:var(--muted);
+  font-weight:700;
+}
+#vocab .classifier-entries{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+#vocab .classifier-entry{
+  min-width:0;
+  display:grid;
+  gap:1px;
+}
+#vocab button.classifier-audio-pill{
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  width:max-content;
+  max-width:100%;
+  border:.5px solid rgba(124,58,237,.34);
+  background:var(--purple-soft);
+  color:#5b21b6;
+  border-radius:999px;
+  padding:4px 9px;
+  margin:0;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  cursor:pointer;
+  touch-action:manipulation;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+#vocab button.classifier-audio-pill:hover,
+#vocab button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18);
+  border-color:rgba(124,58,237,.52);
+  outline:none;
+  transform:translateY(-1px);
+}
+#vocab button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.25);
+  border-color:rgba(124,58,237,.60);
+}
+#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
+#vocab .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:11.5px;
+}
+#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
+/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-inline-style">
+/* Vocabulary classifier format｜量詞：ใบ bai */
+#vocab .classifier-note.classifier-inline{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:7px 0 0;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.45;
+}
+#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
+#vocab .classifier-inline button.classifier-audio-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:1px 6px;
+  margin:0;
+  border:.5px solid rgba(124,58,237,.34);
+  border-radius:999px;
+  background:var(--purple-soft);
+  color:#5b21b6;
+  font:inherit;
+  font-weight:800;
+  line-height:1.35;
+  cursor:pointer;
+}
+#vocab .classifier-inline button.classifier-audio-pill:hover,
+#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
+#vocab .classifier-inline button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.20);
+  border-color:rgba(124,58,237,.50);
+  outline:none;
+}
+#vocab .classifier-inline .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:12px;
+}
+#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
+</style></head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>Thai Speaking 1｜Day 14 學習指南</h1>
+<p class="subtitle">主題：家庭成員、父母、子女、排行、兄弟姊妹、祖父母、外祖父母、孫子孫女、年齡與年齡比較</p>
+<p>
+<span class="label textbook">Textbook-based</span>
+<span class="label local">Supplement / Local usage</span>
+<span class="label review">Review</span>
+<span class="label warn">Common mistake</span>
+</p>
+</section>
+<nav class="tabs"><button class="tab-btn active" onclick="openTab(event, 'overview')" type="button">Overview</button><button class="tab-btn" onclick="openTab(event, 'vocab')" type="button">Vocabulary</button><button class="tab-btn" onclick="openTab(event, 'supplement')" type="button">Supplement</button><button class="tab-btn" onclick="openTab(event, 'structures')" type="button">Structures</button><button class="tab-btn" onclick="openTab(event, 'street')" type="button">Textbook vs Street</button><button class="tab-btn" onclick="openTab(event, 'bangkok')" type="button">Bangkok Expansion</button><button class="tab-btn" onclick="openTab(event, 'dialogues')" type="button">Dialogues</button><button class="tab-btn" onclick="openTab(event, 'mistakes')" type="button">Mistakes</button><button class="tab-btn" onclick="openTab(event, 'practice')" type="button">Practice</button><button class="tab-btn" onclick="openTab(event, 'top10')" type="button">Top 10</button><button aria-label="收藏" class="tab-btn" id="favoritesTab" onclick="openTab(event, 'favorites')" title="收藏" type="button">♥</button></nav>
+<section class="tab-content active" id="overview">
+<h2>Lesson Overview</h2>
+<p>
+<span class="label textbook">Textbook-based</span>
+      Day 14 的核心是「家庭與年齡」。教材先整理家庭成員，例如父母、兒子、女兒、老大、老二、老么、獨生子女、兄弟姊妹、哥哥/弟弟/姊姊/妹妹、孫子/孫女、祖父母與外祖父母。接著練習「你有幾個兄弟姊妹」、「你家有幾個人」、「你幾歲」、「誰年紀比較大/比較小」、「差幾歲」、「年紀一樣」。
+    </p>
+<div class="cards">
+<div class="card">
+<div class="mini-title">Family size</div>
+<div class="triad">
+<div class="thai">ครอบครัวคุณมีกี่คนคะ</div>
+<div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div>
+<div class="eng">How many people are in your family?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Siblings</div>
+<div class="triad">
+<div class="thai">คุณมีพี่น้องกี่คนคะ</div>
+<div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div>
+<div class="eng">How many siblings do you have?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Only child</div>
+<div class="triad">
+<div class="thai">เป็นลูกคนเดียวค่ะ</div>
+<div class="roman">bpen lûuk khon diaw khâ</div>
+<div class="eng">I am an only child.</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Age comparison</div>
+<div class="triad">
+<div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div>
+<div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div>
+<div class="eng">My older sister is five years older than me.</div>
+</div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 13 已學比較句 <span class="thai">กว่า</span> / <span class="roman">gwàa</span> / <span class="eng">than</span>。Day 14 把它放到年齡裡：<span class="thai">อายุมากกว่า</span> / <span class="roman">aa-yú mâak gwàa</span> / <span class="eng">older than</span>、<span class="thai">อายุน้อยกว่า</span> / <span class="roman">aa-yú nɔ́ɔi gwàa</span> / <span class="eng">younger than</span>。
+    </div>
+<div class="tip">
+<strong>Bangkok Practical Focus：</strong>
+      這課很適合用在泰國朋友、老師、男友家人、語言交換、初次聊天。泰國人聊天常問家庭、兄弟姊妹、排行與年齡，但如果不熟，年齡問題可以用比較柔和的問法。
+    </div>
+<div class="tip blue"><h3>本課學習路線</h3><ol><li>能介紹家庭有幾個人、自己排行與兄弟姊妹。</li><li>能說年齡、誰比較大或小。</li><li>能避免把泰文的哥哥/姊姊/弟弟/妹妹混用。</li></ol></div></section>
+<section class="tab-content" id="vocab">
+<h2>Vocabulary Table</h2>
+<h3>Core Family Vocabulary</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ครอบครัว</div><div class="roman">khrɔ̂ɔp-khrua</div><div class="eng">family</div></div></td><td>家庭</td><td>問家庭人數時說 <span class="thai">มีกี่คน</span>。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ครอบครัวฉันมีสี่คนค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn mii sìi khon khâ</div><div class="eng">My family has four people.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="家庭" data-colloc="[]" data-eng="family" data-ex-eng="My family has four people." data-ex-rom="khrɔ̂ɔp-khrua chǎn mii sìi khon khâ" data-ex-thai="ครอบครัวฉันมีสี่คนค่ะ" data-grammar='問家庭人數時說 &lt;span class="thai"&gt;มีกี่คน&lt;/span&gt;。' data-rom="khrɔ̂ɔp-khrua" data-thai="ครอบครัว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">พ่อ</div><div class="roman">phɔ̂ɔ</div><div class="eng">father / dad</div></div></td><td>父母</td><td>口語很常用，正式可說 <span class="thai">บิดา</span>。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">พ่อฉันอายุห้าสิบปีค่ะ</div><div class="roman">phɔ̂ɔ chǎn aa-yú hâa-sìp bpii khâ</div><div class="eng">My father is fifty years old.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="父母" data-colloc="[]" data-eng="father / dad" data-ex-eng="My father is fifty years old." data-ex-rom="phɔ̂ɔ chǎn aa-yú hâa-sìp bpii khâ" data-ex-thai="พ่อฉันอายุห้าสิบปีค่ะ" data-grammar='口語很常用，正式可說 &lt;span class="thai"&gt;บิดา&lt;/span&gt;。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phɔ̂ɔ" data-thai="พ่อ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">แม่</div><div class="roman">mɛ̂ɛ</div><div class="eng">mother / mom</div></div></td><td>父母</td><td>口語很常用，正式可說 <span class="thai">มารดา</span>。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">แม่ฉันใจดีค่ะ</div><div class="roman">mɛ̂ɛ chǎn jai-dii khâ</div><div class="eng">My mother is kind.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="父母" data-colloc="[]" data-eng="mother / mom" data-ex-eng="My mother is kind." data-ex-rom="mɛ̂ɛ chǎn jai-dii khâ" data-ex-thai="แม่ฉันใจดีค่ะ" data-grammar='口語很常用，正式可說 &lt;span class="thai"&gt;มารดา&lt;/span&gt;。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="mɛ̂ɛ" data-thai="แม่" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกสาว</div><div class="roman">lûuk-sǎaw</div><div class="eng">daughter</div></div></td><td>子女</td><td><span class="thai">ลูก</span> = child；<span class="thai">สาว</span> = female。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เขามีลูกสาวหนึ่งคนค่ะ</div><div class="roman">khǎo mii lûuk-sǎaw nʉ̀ng khon khâ</div><div class="eng">They have one daughter.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="子女" data-colloc="[]" data-eng="daughter" data-ex-eng="They have one daughter." data-ex-rom="khǎo mii lûuk-sǎaw nʉ̀ng khon khâ" data-ex-thai="เขามีลูกสาวหนึ่งคนค่ะ" data-grammar='&lt;span class="thai"&gt;ลูก&lt;/span&gt; = child；&lt;span class="thai"&gt;สาว&lt;/span&gt; = female。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk-sǎaw" data-thai="ลูกสาว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกชาย</div><div class="roman">lûuk-chaai</div><div class="eng">son</div></div></td><td>子女</td><td><span class="thai">ชาย</span> = male。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เขามีลูกชายสองคนค่ะ</div><div class="roman">khǎo mii lûuk-chaai sɔ̌ɔng khon khâ</div><div class="eng">They have two sons.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="子女" data-colloc="[]" data-eng="son" data-ex-eng="They have two sons." data-ex-rom="khǎo mii lûuk-chaai sɔ̌ɔng khon khâ" data-ex-thai="เขามีลูกชายสองคนค่ะ" data-grammar='&lt;span class="thai"&gt;ชาย&lt;/span&gt; = male。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk-chaai" data-thai="ลูกชาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกคนโต</div><div class="roman">lûuk khon dtoo</div><div class="eng">oldest child</div></div></td><td>排行</td><td>教材第 13 頁用圖示說明老大、老二、老么。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันเป็นลูกคนโตค่ะ</div><div class="roman">chǎn bpen lûuk khon dtoo khâ</div><div class="eng">I am the oldest child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="排行" data-colloc="[]" data-eng="oldest child" data-ex-eng="I am the oldest child." data-ex-rom="chǎn bpen lûuk khon dtoo khâ" data-ex-thai="ฉันเป็นลูกคนโตค่ะ" data-grammar='教材第 13 頁用圖示說明老大、老二、老么。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk khon dtoo" data-thai="ลูกคนโต" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกคนกลาง</div><div class="roman">lûuk khon glaang</div><div class="eng">middle child</div></div></td><td>排行</td><td>排行中間的小孩。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">น้องสาวฉันเป็นลูกคนกลางค่ะ</div><div class="roman">nɔ́ɔng-sǎaw chǎn bpen lûuk khon glaang khâ</div><div class="eng">My younger sister is the middle child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="排行" data-colloc="[]" data-eng="middle child" data-ex-eng="My younger sister is the middle child." data-ex-rom="nɔ́ɔng-sǎaw chǎn bpen lûuk khon glaang khâ" data-ex-thai="น้องสาวฉันเป็นลูกคนกลางค่ะ" data-grammar='排行中間的小孩。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk khon glaang" data-thai="ลูกคนกลาง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกคนเล็ก</div><div class="roman">lûuk khon lék</div><div class="eng">youngest child</div></div></td><td>排行</td><td>家中最小的孩子。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เขาเป็นลูกคนเล็กค่ะ</div><div class="roman">khǎo bpen lûuk khon lék khâ</div><div class="eng">He is the youngest child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="排行" data-colloc="[]" data-eng="youngest child" data-ex-eng="He is the youngest child." data-ex-rom="khǎo bpen lûuk khon lék khâ" data-ex-thai="เขาเป็นลูกคนเล็กค่ะ" data-grammar='家中最小的孩子。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk khon lék" data-thai="ลูกคนเล็ก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกคนที่หนึ่ง / ที่สอง / ที่สาม</div><div class="roman">lûuk khon thîi nʉ̀ng / thîi sɔ̌ɔng / thîi sǎam</div><div class="eng">first / second / third child</div></div></td><td>排行</td><td>教材第 14 頁出現 <span class="thai">ลูกคนที่ 1, 2, 3</span>。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันเป็นลูกคนที่สองค่ะ</div><div class="roman">chǎn bpen lûuk khon thîi sɔ̌ɔng khâ</div><div class="eng">I am the second child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="排行" data-colloc="[]" data-eng="first / second / third child" data-ex-eng="I am the second child." data-ex-rom="chǎn bpen lûuk khon thîi sɔ̌ɔng khâ" data-ex-thai="ฉันเป็นลูกคนที่สองค่ะ" data-grammar='教材第 14 頁出現 &lt;span class="thai"&gt;ลูกคนที่ 1, 2, 3&lt;/span&gt;。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk khon thîi nʉ̀ng / thîi sɔ̌ɔng / thîi sǎam" data-thai="ลูกคนที่หนึ่ง / ที่สอง / ที่สาม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลูกคนเดียว</div><div class="roman">lûuk khon diaw</div><div class="eng">only child</div></div></td><td>排行 / 家庭</td><td>回答「沒有兄弟姊妹」時超實用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันเป็นลูกคนเดียวค่ะ</div><div class="roman">chǎn bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="排行 / 家庭" data-colloc="[]" data-eng="only child" data-ex-eng="I am an only child." data-ex-rom="chǎn bpen lûuk khon diaw khâ" data-ex-thai="ฉันเป็นลูกคนเดียวค่ะ" data-grammar='回答「沒有兄弟姊妹」時超實用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lûuk khon diaw" data-thai="ลูกคนเดียว" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+<h3>Siblings &amp; Relatives</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">พี่น้อง</div><div class="roman">phîi-nɔ́ɔng</div><div class="eng">siblings</div></div></td><td>兄弟姊妹總稱</td><td>包含哥哥、姊姊、弟弟、妹妹。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">คุณมีพี่น้องกี่คนคะ</div><div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div><div class="eng">How many siblings do you have?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="兄弟姊妹總稱" data-colloc="[]" data-eng="siblings" data-ex-eng="How many siblings do you have?" data-ex-rom="khun mii phîi-nɔ́ɔng gìi khon khá" data-ex-thai="คุณมีพี่น้องกี่คนคะ" data-grammar='包含哥哥、姊姊、弟弟、妹妹。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phîi-nɔ́ɔng" data-thai="พี่น้อง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">พี่สาว</div><div class="roman">phîi-sǎaw</div><div class="eng">older sister</div></div></td><td>Sibling</td><td><span class="thai">พี่</span> = older sibling；<span class="thai">สาว</span> = female。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันมีพี่สาวหนึ่งคนค่ะ</div><div class="roman">chǎn mii phîi-sǎaw nʉ̀ng khon khâ</div><div class="eng">I have one older sister.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Sibling" data-colloc="[]" data-eng="older sister" data-ex-eng="I have one older sister." data-ex-rom="chǎn mii phîi-sǎaw nʉ̀ng khon khâ" data-ex-thai="ฉันมีพี่สาวหนึ่งคนค่ะ" data-grammar='&lt;span class="thai"&gt;พี่&lt;/span&gt; = older sibling；&lt;span class="thai"&gt;สาว&lt;/span&gt; = female。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phîi-sǎaw" data-thai="พี่สาว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">พี่ชาย</div><div class="roman">phîi-chaai</div><div class="eng">older brother</div></div></td><td>Sibling</td><td><span class="thai">ชาย</span> = male。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันมีพี่ชายหนึ่งคนค่ะ</div><div class="roman">chǎn mii phîi-chaai nʉ̀ng khon khâ</div><div class="eng">I have one older brother.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Sibling" data-colloc="[]" data-eng="older brother" data-ex-eng="I have one older brother." data-ex-rom="chǎn mii phîi-chaai nʉ̀ng khon khâ" data-ex-thai="ฉันมีพี่ชายหนึ่งคนค่ะ" data-grammar='&lt;span class="thai"&gt;ชาย&lt;/span&gt; = male。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="phîi-chaai" data-thai="พี่ชาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">น้องสาว</div><div class="roman">nɔ́ɔng-sǎaw</div><div class="eng">younger sister</div></div></td><td>Sibling</td><td><span class="thai">น้อง</span> = younger sibling / younger person。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันมีน้องสาวสองคนค่ะ</div><div class="roman">chǎn mii nɔ́ɔng-sǎaw sɔ̌ɔng khon khâ</div><div class="eng">I have two younger sisters.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Sibling" data-colloc="[]" data-eng="younger sister" data-ex-eng="I have two younger sisters." data-ex-rom="chǎn mii nɔ́ɔng-sǎaw sɔ̌ɔng khon khâ" data-ex-thai="ฉันมีน้องสาวสองคนค่ะ" data-grammar='&lt;span class="thai"&gt;น้อง&lt;/span&gt; = younger sibling / younger person。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="nɔ́ɔng-sǎaw" data-thai="น้องสาว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">น้องชาย</div><div class="roman">nɔ́ɔng-chaai</div><div class="eng">younger brother</div></div></td><td>Sibling</td><td>弟弟。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันมีน้องชายหนึ่งคนค่ะ</div><div class="roman">chǎn mii nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">I have one younger brother.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Sibling" data-colloc="[]" data-eng="younger brother" data-ex-eng="I have one younger brother." data-ex-rom="chǎn mii nɔ́ɔng-chaai nʉ̀ng khon khâ" data-ex-thai="ฉันมีน้องชายหนึ่งคนค่ะ" data-grammar='弟弟。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="nɔ́ɔng-chaai" data-thai="น้องชาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">หลานสาว</div><div class="roman">lǎan-sǎaw</div><div class="eng">granddaughter / niece</div></div></td><td>親屬</td><td>泰文 <span class="thai">หลาน</span> 可指孫輩，也可指姪甥輩，要看關係。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันมีหลานสาวหนึ่งคนค่ะ</div><div class="roman">chǎn mii lǎan-sǎaw nʉ̀ng khon khâ</div><div class="eng">I have one granddaughter/niece.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="親屬" data-colloc="[]" data-eng="granddaughter / niece" data-ex-eng="I have one granddaughter/niece." data-ex-rom="chǎn mii lǎan-sǎaw nʉ̀ng khon khâ" data-ex-thai="ฉันมีหลานสาวหนึ่งคนค่ะ" data-grammar='泰文 &lt;span class="thai"&gt;หลาน&lt;/span&gt; 可指孫輩，也可指姪甥輩，要看關係。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lǎan-sǎaw" data-thai="หลานสาว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">หลานชาย</div><div class="roman">lǎan-chaai</div><div class="eng">grandson / nephew</div></div></td><td>親屬</td><td>一樣要靠上下文判斷是 grandson 或 nephew。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button">คน</button><span class="classifier-roman">khon</span></span></td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เขามีหลานชายสองคนค่ะ</div><div class="roman">khǎo mii lǎan-chaai sɔ̌ɔng khon khâ</div><div class="eng">They have two grandsons/nephews.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="親屬" data-colloc="[]" data-eng="grandson / nephew" data-ex-eng="They have two grandsons/nephews." data-ex-rom="khǎo mii lǎan-chaai sɔ̌ɔng khon khâ" data-ex-thai="เขามีหลานชายสองคนค่ะ" data-grammar='一樣要靠上下文判斷是 grandson 或 nephew。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คน" aria-pressed="false" class="classifier-audio-pill" data-thai="คน" title="點擊播放量詞" type="button"&gt;คน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khon&lt;/span&gt;&lt;/span&gt;' data-rom="lǎan-chaai" data-thai="หลานชาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">พี่</div><div class="roman">phîi</div><div class="eng">older sibling / older person</div></div></td><td>Kinship / address</td><td>指比自己年長的兄姊，也可禮貌稱呼年長的人。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พี่สาว" aria-pressed="false" class="colloc-chip" data-thai="พี่สาว" type="button"><span class="thai">พี่สาว</span><span class="en-colloc">older sister</span></button><button aria-label="播放搭配詞：พี่ชาย" aria-pressed="false" class="colloc-chip" data-thai="พี่ชาย" type="button"><span class="thai">พี่ชาย</span><span class="en-colloc">older brother</span></button></div></td><td><div class="triad"><div class="thai">พี่ฉันอยู่กรุงเทพฯ ค่ะ</div><div class="roman">phîi chǎn yùu grung-thêep khâ</div><div class="eng">My older sibling lives in Bangkok.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Kinship / address" data-colloc='[{"thai": "พี่สาว", "en": "older sister"}, {"thai": "พี่ชาย", "en": "older brother"}]' data-eng="older sibling / older person" data-ex-eng="My older sibling lives in Bangkok." data-ex-rom="phîi chǎn yùu grung-thêep khâ" data-ex-thai="พี่ฉันอยู่กรุงเทพฯ ค่ะ" data-grammar="指比自己年長的兄姊，也可禮貌稱呼年長的人。" data-rom="phîi" data-thai="พี่" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">น้อง</div><div class="roman">nɔ́ɔng</div><div class="eng">younger sibling / younger person</div></div></td><td>Kinship / address</td><td>指比自己年幼的弟妹，也可稱呼較年輕的人。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：น้องสาว" aria-pressed="false" class="colloc-chip" data-thai="น้องสาว" type="button"><span class="thai">น้องสาว</span><span class="en-colloc">younger sister</span></button><button aria-label="播放搭配詞：น้องชาย" aria-pressed="false" class="colloc-chip" data-thai="น้องชาย" type="button"><span class="thai">น้องชาย</span><span class="en-colloc">younger brother</span></button></div></td><td><div class="triad"><div class="thai">น้องฉันยังเรียนอยู่ค่ะ</div><div class="roman">nɔ́ɔng chǎn yang riian yùu khâ</div><div class="eng">My younger sibling is still studying.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Kinship / address" data-colloc='[{"thai": "น้องสาว", "en": "younger sister"}, {"thai": "น้องชาย", "en": "younger brother"}]' data-eng="younger sibling / younger person" data-ex-eng="My younger sibling is still studying." data-ex-rom="nɔ́ɔng chǎn yang riian yùu khâ" data-ex-thai="น้องฉันยังเรียนอยู่ค่ะ" data-grammar="指比自己年幼的弟妹，也可稱呼較年輕的人。" data-rom="nɔ́ɔng" data-thai="น้อง" type="button">♡ 收藏</button></td></tr></tbody>
+</table></div><h3 class="vocab-group-title">Age, Order &amp; Comparison｜年齡、排行與比較</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">พ่อแม่</div><div class="roman">phɔ̂ɔ-mɛ̂ɛ</div><div class="eng">parents</div></div></td><td>Noun</td><td>父母的合稱。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อยู่กับพ่อแม่" aria-pressed="false" class="colloc-chip" data-thai="อยู่กับพ่อแม่" type="button"><span class="thai">อยู่กับพ่อแม่</span><span class="en-colloc">live with parents</span></button><button aria-label="播放搭配詞：พ่อแม่ของฉัน" aria-pressed="false" class="colloc-chip" data-thai="พ่อแม่ของฉัน" type="button"><span class="thai">พ่อแม่ของฉัน</span><span class="en-colloc">my parents</span></button></div></td><td><div class="triad"><div class="thai">พ่อแม่ของฉันอยู่ไต้หวันค่ะ</div><div class="roman">phɔ̂ɔ-mɛ̂ɛ khɔ̌ɔng chǎn yùu dtâai-wan khâ</div><div class="eng">My parents live in Taiwan.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "อยู่กับพ่อแม่", "en": "live with parents"}, {"thai": "พ่อแม่ของฉัน", "en": "my parents"}]' data-eng="parents" data-ex-eng="My parents live in Taiwan." data-ex-rom="phɔ̂ɔ-mɛ̂ɛ khɔ̌ɔng chǎn yùu dtâai-wan khâ" data-ex-thai="พ่อแม่ของฉันอยู่ไต้หวันค่ะ" data-grammar="父母的合稱。" data-rom="phɔ̂ɔ-mɛ̂ɛ" data-thai="พ่อแม่" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">คนโต</div><div class="roman">khon dtoo</div><div class="eng">eldest child</div></div></td><td>Noun phrase</td><td>家中排行第一。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พี่คนโต" aria-pressed="false" class="colloc-chip" data-thai="พี่คนโต" type="button"><span class="thai">พี่คนโต</span><span class="en-colloc">eldest sibling</span></button><button aria-label="播放搭配詞：ลูกคนโต" aria-pressed="false" class="colloc-chip" data-thai="ลูกคนโต" type="button"><span class="thai">ลูกคนโต</span><span class="en-colloc">eldest child</span></button></div></td><td><div class="triad"><div class="thai">พี่สาวเป็นลูกคนโตค่ะ</div><div class="roman">phîi-sǎaw bpen lûuk khon dtoo khâ</div><div class="eng">My older sister is the eldest child.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun phrase" data-colloc='[{"thai": "พี่คนโต", "en": "eldest sibling"}, {"thai": "ลูกคนโต", "en": "eldest child"}]' data-eng="eldest child" data-ex-eng="My older sister is the eldest child." data-ex-rom="phîi-sǎaw bpen lûuk khon dtoo khâ" data-ex-thai="พี่สาวเป็นลูกคนโตค่ะ" data-grammar="家中排行第一。" data-rom="khon dtoo" data-thai="คนโต" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">คนสุดท้อง</div><div class="roman">khon sùt-tháawng</div><div class="eng">youngest child</div></div></td><td>Noun phrase</td><td>家中最小。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：น้องคนสุดท้อง" aria-pressed="false" class="colloc-chip" data-thai="น้องคนสุดท้อง" type="button"><span class="thai">น้องคนสุดท้อง</span><span class="en-colloc">youngest sibling</span></button><button aria-label="播放搭配詞：ลูกคนสุดท้อง" aria-pressed="false" class="colloc-chip" data-thai="ลูกคนสุดท้อง" type="button"><span class="thai">ลูกคนสุดท้อง</span><span class="en-colloc">youngest child</span></button></div></td><td><div class="triad"><div class="thai">น้องชายเป็นคนสุดท้องค่ะ</div><div class="roman">nɔ́ɔng-chaai bpen khon sùt-tháawng khâ</div><div class="eng">My younger brother is the youngest.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun phrase" data-colloc='[{"thai": "น้องคนสุดท้อง", "en": "youngest sibling"}, {"thai": "ลูกคนสุดท้อง", "en": "youngest child"}]' data-eng="youngest child" data-ex-eng="My younger brother is the youngest." data-ex-rom="nɔ́ɔng-chaai bpen khon sùt-tháawng khâ" data-ex-thai="น้องชายเป็นคนสุดท้องค่ะ" data-grammar="家中最小。" data-rom="khon sùt-tháawng" data-thai="คนสุดท้อง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">อายุ</div><div class="roman">aa-yú</div><div class="eng">age</div></div></td><td>Noun / verb</td><td>問年齡或說幾歲。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ปี" aria-pressed="false" class="classifier-audio-pill" data-thai="ปี" title="點擊播放量詞" type="button">ปี</button><span class="classifier-roman">bpii</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อายุกี่ปี" aria-pressed="false" class="colloc-chip" data-thai="อายุกี่ปี" type="button"><span class="thai">อายุกี่ปี</span><span class="en-colloc">how old</span></button><button aria-label="播放搭配詞：อายุเท่ากัน" aria-pressed="false" class="colloc-chip" data-thai="อายุเท่ากัน" type="button"><span class="thai">อายุเท่ากัน</span><span class="en-colloc">same age</span></button></div></td><td><div class="triad"><div class="thai">คุณอายุกี่ปีคะ</div><div class="roman">khun aa-yú gìi bpii khá</div><div class="eng">How old are you?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun / verb" data-colloc='[{"thai": "อายุกี่ปี", "en": "how old"}, {"thai": "อายุเท่ากัน", "en": "same age"}]' data-eng="age" data-ex-eng="How old are you?" data-ex-rom="khun aa-yú gìi bpii khá" data-ex-thai="คุณอายุกี่ปีคะ" data-grammar='問年齡或說幾歲。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ปี" aria-pressed="false" class="classifier-audio-pill" data-thai="ปี" title="點擊播放量詞" type="button"&gt;ปี&lt;/button&gt;&lt;span class="classifier-roman"&gt;bpii&lt;/span&gt;&lt;/span&gt;' data-rom="aa-yú" data-thai="อายุ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">อายุมากกว่า</div><div class="roman">aa-yú mâak gwàa</div><div class="eng">older than</div></div></td><td>Comparison phrase</td><td>直接接對象。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มากกว่าฉัน" aria-pressed="false" class="colloc-chip" data-thai="มากกว่าฉัน" type="button"><span class="thai">มากกว่าฉัน</span><span class="en-colloc">older than me</span></button><button aria-label="播放搭配詞：สองปีมากกว่า" aria-pressed="false" class="colloc-chip" data-thai="สองปีมากกว่า" type="button"><span class="thai">สองปีมากกว่า</span><span class="en-colloc">two years older</span></button></div></td><td><div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันสามปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn sǎam bpii khâ</div><div class="eng">My older sister is three years older than me.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Comparison phrase" data-colloc='[{"thai": "มากกว่าฉัน", "en": "older than me"}, {"thai": "สองปีมากกว่า", "en": "two years older"}]' data-eng="older than" data-ex-eng="My older sister is three years older than me." data-ex-rom="phîi-sǎaw aa-yú mâak gwàa chǎn sǎam bpii khâ" data-ex-thai="พี่สาวอายุมากกว่าฉันสามปีค่ะ" data-grammar="直接接對象。" data-rom="aa-yú mâak gwàa" data-thai="อายุมากกว่า" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">อายุน้อยกว่า</div><div class="roman">aa-yú nɔ́ɔi gwàa</div><div class="eng">younger than</div></div></td><td>Comparison phrase</td><td>直接接對象。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：น้อยกว่าฉัน" aria-pressed="false" class="colloc-chip" data-thai="น้อยกว่าฉัน" type="button"><span class="thai">น้อยกว่าฉัน</span><span class="en-colloc">younger than me</span></button><button aria-label="播放搭配詞：หนึ่งปีน้อยกว่า" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งปีน้อยกว่า" type="button"><span class="thai">หนึ่งปีน้อยกว่า</span><span class="en-colloc">one year younger</span></button></div></td><td><div class="triad"><div class="thai">น้องชายอายุน้อยกว่าฉันสองปีค่ะ</div><div class="roman">nɔ́ɔng-chaai aa-yú nɔ́ɔi gwàa chǎn sɔ̌ɔng bpii khâ</div><div class="eng">My younger brother is two years younger than me.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Comparison phrase" data-colloc='[{"thai": "น้อยกว่าฉัน", "en": "younger than me"}, {"thai": "หนึ่งปีน้อยกว่า", "en": "one year younger"}]' data-eng="younger than" data-ex-eng="My younger brother is two years younger than me." data-ex-rom="nɔ́ɔng-chaai aa-yú nɔ́ɔi gwàa chǎn sɔ̌ɔng bpii khâ" data-ex-thai="น้องชายอายุน้อยกว่าฉันสองปีค่ะ" data-grammar="直接接對象。" data-rom="aa-yú nɔ́ɔi gwàa" data-thai="อายุน้อยกว่า" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห่างกัน</div><div class="roman">hàang gan</div><div class="eng">be ... years apart</div></div></td><td>Verb phrase</td><td>說年齡差距。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อายุห่างกัน" aria-pressed="false" class="colloc-chip" data-thai="อายุห่างกัน" type="button"><span class="thai">อายุห่างกัน</span><span class="en-colloc">have an age gap</span></button><button aria-label="播放搭配詞：ห่างกันสองปี" aria-pressed="false" class="colloc-chip" data-thai="ห่างกันสองปี" type="button"><span class="thai">ห่างกันสองปี</span><span class="en-colloc">two years apart</span></button></div></td><td><div class="triad"><div class="thai">เราอายุห่างกันสองปีค่ะ</div><div class="roman">rao aa-yú hàang gan sɔ̌ɔng bpii khâ</div><div class="eng">We are two years apart in age.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "อายุห่างกัน", "en": "have an age gap"}, {"thai": "ห่างกันสองปี", "en": "two years apart"}]' data-eng="be ... years apart" data-ex-eng="We are two years apart in age." data-ex-rom="rao aa-yú hàang gan sɔ̌ɔng bpii khâ" data-ex-thai="เราอายุห่างกันสองปีค่ะ" data-grammar="說年齡差距。" data-rom="hàang gan" data-thai="ห่างกัน" type="button">♡ 收藏</button></td></tr></tbody></table></div>
+<h3>Grandparents &amp; Life Status</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ปู่</div><div class="roman">bpùu</div><div class="eng">paternal grandfather</div></div></td><td>Father’s side</td><td>爸爸的爸爸。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ปู่ฉันอายุแปดสิบปีค่ะ</div><div class="roman">bpùu chǎn aa-yú bpɛ̀ɛt-sìp bpii khâ</div><div class="eng">My paternal grandfather is eighty years old.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Father’s side" data-colloc="[]" data-eng="paternal grandfather" data-ex-eng="My paternal grandfather is eighty years old." data-ex-rom="bpùu chǎn aa-yú bpɛ̀ɛt-sìp bpii khâ" data-ex-thai="ปู่ฉันอายุแปดสิบปีค่ะ" data-grammar="爸爸的爸爸。" data-rom="bpùu" data-thai="ปู่" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ย่า</div><div class="roman">yâa</div><div class="eng">paternal grandmother</div></div></td><td>Father’s side</td><td>爸爸的媽媽。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ย่าฉันใจดีค่ะ</div><div class="roman">yâa chǎn jai-dii khâ</div><div class="eng">My paternal grandmother is kind.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Father’s side" data-colloc="[]" data-eng="paternal grandmother" data-ex-eng="My paternal grandmother is kind." data-ex-rom="yâa chǎn jai-dii khâ" data-ex-thai="ย่าฉันใจดีค่ะ" data-grammar="爸爸的媽媽。" data-rom="yâa" data-thai="ย่า" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตา</div><div class="roman">dtaa</div><div class="eng">maternal grandfather</div></div></td><td>Mother’s side</td><td>媽媽的爸爸。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ตาฉันอยู่ต่างจังหวัดค่ะ</div><div class="roman">dtaa chǎn yùu dtàang jang-wàt khâ</div><div class="eng">My maternal grandfather lives in another province.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Mother’s side" data-colloc="[]" data-eng="maternal grandfather" data-ex-eng="My maternal grandfather lives in another province." data-ex-rom="dtaa chǎn yùu dtàang jang-wàt khâ" data-ex-thai="ตาฉันอยู่ต่างจังหวัดค่ะ" data-grammar="媽媽的爸爸。" data-rom="dtaa" data-thai="ตา" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ยาย</div><div class="roman">yaai</div><div class="eng">maternal grandmother</div></div></td><td>Mother’s side</td><td>媽媽的媽媽。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ยายฉันทำอาหารเก่งค่ะ</div><div class="roman">yaai chǎn tham aa-hǎan gèng khâ</div><div class="eng">My maternal grandmother is good at cooking.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Mother’s side" data-colloc="[]" data-eng="maternal grandmother" data-ex-eng="My maternal grandmother is good at cooking." data-ex-rom="yaai chǎn tham aa-hǎan gèng khâ" data-ex-thai="ยายฉันทำอาหารเก่งค่ะ" data-grammar="媽媽的媽媽。" data-rom="yaai" data-thai="ยาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เสีย</div><div class="roman">sǐa</div><div class="eng">to pass away / die</div></div></td><td>Life status</td><td>教材第 18 頁標示 <span class="thai">เสีย = ตาย</span>。日常講家人過世時，<span class="thai">เสีย</span> 比 <span class="thai">ตาย</span> 更委婉。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ปู่เสียแล้วค่ะ</div><div class="roman">bpùu sǐa lɛ́ɛw khâ</div><div class="eng">My paternal grandfather has passed away.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Life status" data-colloc="[]" data-eng="to pass away / die" data-ex-eng="My paternal grandfather has passed away." data-ex-rom="bpùu sǐa lɛ́ɛw khâ" data-ex-thai="ปู่เสียแล้วค่ะ" data-grammar='教材第 18 頁標示 &lt;span class="thai"&gt;เสีย = ตาย&lt;/span&gt;。日常講家人過世時，&lt;span class="thai"&gt;เสีย&lt;/span&gt; 比 &lt;span class="thai"&gt;ตาย&lt;/span&gt; 更委婉。' data-rom="sǐa" data-thai="เสีย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตาย</div><div class="roman">dtaai</div><div class="eng">die / dead</div></div></td><td>Life status</td><td>比較直接，提到家人時通常不如 <span class="thai">เสีย</span> 禮貌。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">สัตว์ตัวนี้ตายแล้วค่ะ</div><div class="roman">sàt dtua níi dtaai lɛ́ɛw khâ</div><div class="eng">This animal is dead.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Life status" data-colloc="[]" data-eng="die / dead" data-ex-eng="This animal is dead." data-ex-rom="sàt dtua níi dtaai lɛ́ɛw khâ" data-ex-thai="สัตว์ตัวนี้ตายแล้วค่ะ" data-grammar='比較直接，提到家人時通常不如 &lt;span class="thai"&gt;เสีย&lt;/span&gt; 禮貌。' data-rom="dtaai" data-thai="ตาย" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+</section><section class="tab-content" id="supplement"><h2>Supplement｜本課延伸整理</h2><div class="supplement-section"><h3 class="supplement-section-title">家庭稱謂邏輯｜泰文先看年紀，再看性別</h3><div class="tip blue"><strong>核心：</strong>中文說「哥哥、弟弟、姊姊、妹妹」也看年齡；泰文更常把這個資訊直接放進稱呼裡。先判斷對方比你大還是小，再選 พี่ 或 น้อง。</div></div><div class="supplement-section"><h3 class="supplement-section-title">Family Map｜家庭關係圖解</h3>
+<div class="tip blue">
+<strong>核心邏輯：</strong>
+      泰文家庭稱謂很重視「年齡大小」與「父系/母系」。<span class="thai">พี่</span> / <span class="roman">phîi</span> / <span class="eng">older sibling</span> 和 <span class="thai">น้อง</span> / <span class="roman">nɔ́ɔng</span> / <span class="eng">younger sibling</span> 不只是家人，也常用來稱呼比你年長或年輕的人。
+    </div>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Thai / Romanization / English</th>
+<th>How to Remember</th>
+<th>Real-life Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>父母</td>
+<td><div class="triad"><div class="thai">พ่อ แม่</div><div class="roman">phɔ̂ɔ, mɛ̂ɛ</div><div class="eng">father, mother</div></div></td>
+<td>最基本家庭詞。</td>
+<td><div class="triad"><div class="thai">พ่อแม่อยู่ไต้หวันค่ะ</div><div class="roman">phɔ̂ɔ-mɛ̂ɛ yùu Tâi-wan khâ</div><div class="eng">My parents are in Taiwan.</div></div></td>
+</tr>
+<tr>
+<td>哥哥/姊姊</td>
+<td><div class="triad"><div class="thai">พี่ชาย พี่สาว</div><div class="roman">phîi-chaai, phîi-sǎaw</div><div class="eng">older brother, older sister</div></div></td>
+<td><span class="thai">พี่</span> = 比你大。</td>
+<td><div class="triad"><div class="thai">มีพี่สาวหนึ่งคนค่ะ</div><div class="roman">mii phîi-sǎaw nʉ̀ng khon khâ</div><div class="eng">I have one older sister.</div></div></td>
+</tr>
+<tr>
+<td>弟弟/妹妹</td>
+<td><div class="triad"><div class="thai">น้องชาย น้องสาว</div><div class="roman">nɔ́ɔng-chaai, nɔ́ɔng-sǎaw</div><div class="eng">younger brother, younger sister</div></div></td>
+<td><span class="thai">น้อง</span> = 比你小。</td>
+<td><div class="triad"><div class="thai">มีน้องชายหนึ่งคนค่ะ</div><div class="roman">mii nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">I have one younger brother.</div></div></td>
+</tr>
+<tr>
+<td>爸爸那邊祖父母</td>
+<td><div class="triad"><div class="thai">ปู่ ย่า</div><div class="roman">bpùu, yâa</div><div class="eng">paternal grandfather, paternal grandmother</div></div></td>
+<td>爸爸的父母。</td>
+<td><div class="triad"><div class="thai">ปู่กับย่าอยู่เชียงใหม่ค่ะ</div><div class="roman">bpùu gàp yâa yùu Chiang Mai khâ</div><div class="eng">My paternal grandparents live in Chiang Mai.</div></div></td>
+</tr>
+<tr>
+<td>媽媽那邊祖父母</td>
+<td><div class="triad"><div class="thai">ตา ยาย</div><div class="roman">dtaa, yaai</div><div class="eng">maternal grandfather, maternal grandmother</div></div></td>
+<td>媽媽的父母。</td>
+<td><div class="triad"><div class="thai">ตากับยายอยู่กรุงเทพฯค่ะ</div><div class="roman">dtaa gàp yaai yùu grung-thêep khâ</div><div class="eng">My maternal grandparents live in Bangkok.</div></div></td>
+</tr>
+<tr>
+<td>孫女/姪女；孫子/姪子</td>
+<td><div class="triad"><div class="thai">หลานสาว หลานชาย</div><div class="roman">lǎan-sǎaw, lǎan-chaai</div><div class="eng">granddaughter/niece, grandson/nephew</div></div></td>
+<td><span class="thai">หลาน</span> 同時涵蓋孫輩和姪甥輩。</td>
+<td><div class="triad"><div class="thai">หลานชายฉันน่ารักค่ะ</div><div class="roman">lǎan-chaai chǎn nâa-rák khâ</div><div class="eng">My grandson/nephew is cute.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>Ranking in the family</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Thai / Romanization / English</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>老大</td>
+<td><div class="triad"><div class="thai">ลูกคนโต</div><div class="roman">lûuk khon dtoo</div><div class="eng">oldest child</div></div></td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนโตค่ะ</div><div class="roman">chǎn bpen lûuk khon dtoo khâ</div><div class="eng">I am the oldest child.</div></div></td>
+</tr>
+<tr>
+<td>中間小孩</td>
+<td><div class="triad"><div class="thai">ลูกคนกลาง</div><div class="roman">lûuk khon glaang</div><div class="eng">middle child</div></div></td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนกลางค่ะ</div><div class="roman">chǎn bpen lûuk khon glaang khâ</div><div class="eng">I am the middle child.</div></div></td>
+</tr>
+<tr>
+<td>老么</td>
+<td><div class="triad"><div class="thai">ลูกคนเล็ก</div><div class="roman">lûuk khon lék</div><div class="eng">youngest child</div></div></td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนเล็กค่ะ</div><div class="roman">chǎn bpen lûuk khon lék khâ</div><div class="eng">I am the youngest child.</div></div></td>
+</tr>
+<tr>
+<td>獨生子女</td>
+<td><div class="triad"><div class="thai">ลูกคนเดียว</div><div class="roman">lûuk khon diaw</div><div class="eng">only child</div></div></td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนเดียวค่ะ</div><div class="roman">chǎn bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="tab-content" id="structures">
+<h2>Sentence Structures</h2>
+<h3>1. Have you already done something?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + แล้วหรือยังคะ</div>
+<div class="roman">khun + V. + Object + lɛ́ɛw rʉ̌ʉ yang khá</div>
+<div class="eng">Have you done something yet?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Positive</th><th>Negative</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณกินข้าวแล้วหรือยังคะ</div><div class="roman">khun gin khâaw lɛ́ɛw rʉ̌ʉ yang khá</div><div class="eng">Have you eaten yet?</div></div></td>
+<td><div class="triad"><div class="thai">กินแล้วค่ะ</div><div class="roman">gin lɛ́ɛw khâ</div><div class="eng">I have eaten.</div></div></td>
+<td><div class="triad"><div class="thai">ยังไม่กินค่ะ</div><div class="roman">yang mâi gin khâ</div><div class="eng">I haven’t eaten yet.</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 12 已學 <span class="thai">แล้ว</span> / <span class="roman">lɛ́ɛw</span> / <span class="eng">already</span>。Day 14 新增 <span class="thai">แล้วหรือยัง</span> / <span class="roman">lɛ́ɛw rʉ̌ʉ yang</span> / <span class="eng">already or not yet?</span>，是泰國人每天都會問的句型。
+    </div>
+<h3>2. How many people are in your family?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ครอบครัวคุณมีกี่คนคะ</div>
+<div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div>
+<div class="eng">How many people are in your family?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Chinese Explanation</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ครอบครัวคุณมีกี่คนคะ</div><div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div></td>
+<td><div class="triad"><div class="thai">ครอบครัวฉันมีสี่คนค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn mii sìi khon khâ</div><div class="eng">My family has four people.</div></div></td>
+<td><span class="thai">คน</span> / <span class="roman">khon</span> / <span class="eng">person</span> 是人的量詞。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. How many siblings do you have?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณมีพี่น้องกี่คนคะ</div>
+<div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div>
+<div class="eng">How many siblings do you have?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Answer Type</th><th>Thai / Romanization / English</th><th>Chinese Note</th></tr></thead>
+<tbody>
+<tr>
+<td>有三個兄弟姊妹</td>
+<td><div class="triad"><div class="thai">มีพี่น้องสามคนค่ะ</div><div class="roman">mii phîi-nɔ́ɔng sǎam khon khâ</div><div class="eng">I have three siblings.</div></div></td>
+<td>總數回答。</td>
+</tr>
+<tr>
+<td>細分哥哥姊姊弟妹</td>
+<td><div class="triad"><div class="thai">มีพี่สาวหนึ่งคนกับน้องชายหนึ่งคนค่ะ</div><div class="roman">mii phîi-sǎaw nʉ̀ng khon gàp nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">I have one older sister and one younger brother.</div></div></td>
+<td><span class="thai">กับ</span> / <span class="roman">gàp</span> / <span class="eng">with / and</span> 連接兩個名詞。</td>
+</tr>
+<tr>
+<td>獨生子女</td>
+<td><div class="triad"><div class="thai">เป็นลูกคนเดียวค่ะ</div><div class="roman">bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td>
+<td>不要說 <span class="thai">ไม่มีพี่น้อง</span> 也可以，這句更自然。</td>
+</tr>
+</tbody>
+</table>
+<h3>4. Asking age</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณอายุเท่าไรคะ</div>
+<div class="roman">khun aa-yú thâo-rài khá</div>
+<div class="eng">How old are you?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณอายุเท่าไรคะ</div><div class="roman">khun aa-yú thâo-rài khá</div><div class="eng">How old are you?</div></div></td>
+<td><div class="triad"><div class="thai">ฉันอายุยี่สิบห้าปีค่ะ</div><div class="roman">chǎn aa-yú yîi-sìp-hâa bpii khâ</div><div class="eng">I am twenty-five years old.</div></div></td>
+<td>一般成人用 <span class="thai">ปี</span> / <span class="roman">bpii</span> / <span class="eng">year</span>。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ลูกคุณอายุเท่าไรคะ</div><div class="roman">lûuk khun aa-yú thâo-rài khá</div><div class="eng">How old is your child?</div></div></td>
+<td><div class="triad"><div class="thai">ลูกอายุสิบขวบค่ะ</div><div class="roman">lûuk aa-yú sìp khùap khâ</div><div class="eng">My child is ten years old.</div></div></td>
+<td>教材第 5 頁提示 1–12 歲可用 <span class="thai">ขวบ</span>，13 歲以上多用 <span class="thai">ปี</span>。</td>
+</tr>
+</tbody>
+</table>
+<h3>5. Older than / younger than / same age</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">A + อายุมากกว่า + B + number + ปี</div>
+<div class="roman">A + aa-yú mâak gwàa + B + number + bpii</div>
+<div class="eng">A is number years older than B.</div>
+</div>
+<div class="triad">
+<div class="thai">A + อายุน้อยกว่า + B + number + ปี</div>
+<div class="roman">A + aa-yú nɔ́ɔi gwàa + B + number + bpii</div>
+<div class="eng">A is number years younger than B.</div>
+</div>
+<div class="triad">
+<div class="thai">A + กับ + B + อายุเท่ากัน</div>
+<div class="roman">A + gàp + B + aa-yú thâo gan</div>
+<div class="eng">A and B are the same age.</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Case</th><th>Sentence</th><th>Chinese Explanation</th></tr></thead>
+<tbody>
+<tr>
+<td>A 30, B 25</td>
+<td><div class="triad"><div class="thai">A อายุมากกว่า B ห้าปีค่ะ</div><div class="roman">A aa-yú mâak gwàa B hâa bpii khâ</div><div class="eng">A is five years older than B.</div></div></td>
+<td><span class="thai">มากกว่า</span> = more than，用在年齡就是比較大。</td>
+</tr>
+<tr>
+<td>B 25, A 30</td>
+<td><div class="triad"><div class="thai">B อายุน้อยกว่า A ห้าปีค่ะ</div><div class="roman">B aa-yú nɔ́ɔi gwàa A hâa bpii khâ</div><div class="eng">B is five years younger than A.</div></div></td>
+<td><span class="thai">น้อยกว่า</span> = less than，用在年齡就是比較小。</td>
+</tr>
+<tr>
+<td>C 20, D 20</td>
+<td><div class="triad"><div class="thai">C กับ D อายุเท่ากันค่ะ</div><div class="roman">C gàp D aa-yú thâo gan khâ</div><div class="eng">C and D are the same age.</div></div></td>
+<td><span class="thai">เท่ากัน</span> = equal / the same。</td>
+</tr>
+</tbody>
+</table>
+<h3>6. Who is older / younger?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">A + กับ + B + ใครอายุมากกว่ากันคะ</div>
+<div class="roman">A + gàp + B + khrai aa-yú mâak gwàa gan khá</div>
+<div class="eng">Between A and B, who is older?</div>
+</div>
+<div class="triad">
+<div class="thai">A + กับ + B + ใครอายุน้อยกว่ากันคะ</div>
+<div class="roman">A + gàp + B + khrai aa-yú nɔ́ɔi gwàa gan khá</div>
+<div class="eng">Between A and B, who is younger?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">พี่สาวกับพี่ชาย ใครอายุมากกว่ากันคะ</div><div class="roman">phîi-sǎaw gàp phîi-chaai, khrai aa-yú mâak gwàa gan khá</div><div class="eng">Between your older sister and older brother, who is older?</div></div></td>
+<td><div class="triad"><div class="thai">พี่สาวอายุมากกว่าพี่ชายค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa phîi-chaai khâ</div><div class="eng">My older sister is older than my older brother.</div></div></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="street">
+<h2>Textbook vs. Street Thai</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Textbook / Polite</th>
+<th>Street / Local Bangkok</th>
+<th>小撇步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>問家裡幾個人</td>
+<td><div class="triad"><div class="thai">ครอบครัวคุณมีกี่คนคะ</div><div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div></td>
+<td><div class="triad"><div class="thai">ที่บ้านมีกี่คนคะ</div><div class="roman">thîi bâan mii gìi khon khá</div><div class="eng">How many people are at home / in your family?</div></div></td>
+<td><span class="thai">ที่บ้าน</span> 比較像自然聊天。</td>
+</tr>
+<tr>
+<td>問兄弟姊妹</td>
+<td><div class="triad"><div class="thai">คุณมีพี่น้องกี่คนคะ</div><div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div><div class="eng">How many siblings do you have?</div></div></td>
+<td><div class="triad"><div class="thai">มีพี่น้องไหมคะ</div><div class="roman">mii phîi-nɔ́ɔng mái khá</div><div class="eng">Do you have siblings?</div></div></td>
+<td>先問有沒有，再問幾個，比較自然。</td>
+</tr>
+<tr>
+<td>回答獨生子女</td>
+<td><div class="triad"><div class="thai">เป็นลูกคนเดียวค่ะ</div><div class="roman">bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td>
+<td><div class="triad"><div class="thai">ไม่มีพี่น้องค่ะ เป็นลูกคนเดียว</div><div class="roman">mâi mii phîi-nɔ́ɔng khâ, bpen lûuk khon diaw</div><div class="eng">I don’t have siblings. I’m an only child.</div></div></td>
+<td>補一句「沒有兄弟姊妹」對初學者更清楚。</td>
+</tr>
+<tr>
+<td>問年齡</td>
+<td><div class="triad"><div class="thai">คุณอายุเท่าไรคะ</div><div class="roman">khun aa-yú thâo-rài khá</div><div class="eng">How old are you?</div></div></td>
+<td><div class="triad"><div class="thai">ขอถามได้ไหมคะ อายุเท่าไรคะ</div><div class="roman">khɔ̌ɔ thǎam dâai mái khá, aa-yú thâo-rài khá</div><div class="eng">May I ask, how old are you?</div></div></td>
+<td>對不熟的人問年齡，先加 <span class="thai">ขอถามได้ไหมคะ</span> 比較柔和。</td>
+</tr>
+<tr>
+<td>說誰比較大</td>
+<td><div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div></td>
+<td><div class="triad"><div class="thai">พี่สาวแก่กว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw gɛ̀ɛ gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div></td>
+<td><span class="thai">แก่กว่า</span> 很口語，但對本人說可能敏感；初學先用 <span class="thai">อายุมากกว่า</span> 更安全。</td>
+</tr>
+<tr>
+<td>說年紀一樣</td>
+<td><div class="triad"><div class="thai">อายุเท่ากันค่ะ</div><div class="roman">aa-yú thâo gan khâ</div><div class="eng">We are the same age.</div></div></td>
+<td><div class="triad"><div class="thai">รุ่นเดียวกันค่ะ</div><div class="roman">rûn diaw gan khâ</div><div class="eng">We are in the same generation / age group.</div></div></td>
+<td><span class="thai">รุ่นเดียวกัน</span> 不一定精準同歲，但聊天很常用。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="bangkok">
+<h2>Bangkok Expansion｜曼谷生活延伸</h2>
+<h3>1. Talking about your family</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>說家人在台灣</td>
+<td><div class="triad"><div class="thai">ครอบครัวฉันอยู่ไต้หวันค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn yùu Tâi-wan khâ</div><div class="eng">My family is in Taiwan.</div></div></td>
+<td>很適合自我介紹。</td>
+</tr>
+<tr>
+<td>說家裡四個人</td>
+<td><div class="triad"><div class="thai">ที่บ้านมีสี่คนค่ะ</div><div class="roman">thîi bâan mii sìi khon khâ</div><div class="eng">There are four people in my family.</div></div></td>
+<td>比完整的 <span class="thai">ครอบครัว</span> 更口語。</td>
+</tr>
+<tr>
+<td>說父母和妹妹</td>
+<td><div class="triad"><div class="thai">มีพ่อ แม่ แล้วก็น้องสาวค่ะ</div><div class="roman">mii phɔ̂ɔ, mɛ̂ɛ, lɛ́ɛw gɔ̂ɔ nɔ́ɔng-sǎaw khâ</div><div class="eng">There are my father, mother, and younger sister.</div></div></td>
+<td><span class="label review">Review</span> Day 8 的 <span class="thai">แล้วก็</span>。</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Talking about siblings naturally</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>有一個姊姊一個弟弟</td>
+<td><div class="triad"><div class="thai">มีพี่สาวหนึ่งคนกับน้องชายหนึ่งคนค่ะ</div><div class="roman">mii phîi-sǎaw nʉ̀ng khon gàp nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">I have one older sister and one younger brother.</div></div></td>
+<td>完整且清楚。</td>
+</tr>
+<tr>
+<td>沒有兄弟姊妹</td>
+<td><div class="triad"><div class="thai">ไม่มีพี่น้องค่ะ เป็นลูกคนเดียว</div><div class="roman">mâi mii phîi-nɔ́ɔng khâ, bpen lûuk khon diaw</div><div class="eng">I don’t have siblings. I’m an only child.</div></div></td>
+<td>自然聊天很常見。</td>
+</tr>
+<tr>
+<td>我是老大</td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนโตค่ะ</div><div class="roman">chǎn bpen lûuk khon dtoo khâ</div><div class="eng">I am the oldest child.</div></div></td>
+<td>聊家庭排行。</td>
+</tr>
+<tr>
+<td>我是老么</td>
+<td><div class="triad"><div class="thai">ฉันเป็นลูกคนเล็กค่ะ</div><div class="roman">chǎn bpen lûuk khon lék khâ</div><div class="eng">I am the youngest child.</div></div></td>
+<td>泰國人很容易接著問排行。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Age comparison in real conversation</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>姊姊大我五歲</td>
+<td><div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div></td>
+<td>安全、禮貌、清楚。</td>
+</tr>
+<tr>
+<td>弟弟小我三歲</td>
+<td><div class="triad"><div class="thai">น้องชายอายุน้อยกว่าฉันสามปีค่ะ</div><div class="roman">nɔ́ɔng-chaai aa-yú nɔ́ɔi gwàa chǎn sǎam bpii khâ</div><div class="eng">My younger brother is three years younger than me.</div></div></td>
+<td>用 <span class="thai">น้อยกว่า</span>。</td>
+</tr>
+<tr>
+<td>我們同歲</td>
+<td><div class="triad"><div class="thai">เราอายุเท่ากันค่ะ</div><div class="roman">rao aa-yú thâo gan khâ</div><div class="eng">We are the same age.</div></div></td>
+<td>同歲。</td>
+</tr>
+<tr>
+<td>年齡差不多</td>
+<td><div class="triad"><div class="thai">อายุใกล้ ๆ กันค่ะ</div><div class="roman">aa-yú glâi-glâi gan khâ</div><div class="eng">Our ages are close.</div></div></td>
+<td><span class="label local">Local</span> 不想講精準年紀時很自然。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="dialogues">
+<h2>Dialogues｜情境對話</h2>
+<h3>1. 語言交換初次聊天：你家有幾個人？</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span> 情境：和泰國朋友語言交換，聊家庭。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">ที่บ้านมีกี่คนคะ</div><div class="roman">thîi bâan mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ที่บ้านมีสี่คนค่ะ</div><div class="roman">thîi bâan mii sìi khon khâ</div><div class="eng">There are four people in my family.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">มีใครบ้างคะ</div><div class="roman">mii khrai bâang khá</div><div class="eng">Who are they?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">มีพ่อ แม่ ฉัน แล้วก็น้องสาวค่ะ</div><div class="roman">mii phɔ̂ɔ, mɛ̂ɛ, chǎn, lɛ́ɛw gɔ̂ɔ nɔ́ɔng-sǎaw khâ</div><div class="eng">There are my father, mother, me, and my younger sister.</div></div>
+</div>
+</div>
+<div class="tip blue">
+<strong>Beginner Survival Phrases：</strong>
+<div class="triad"><div class="thai">ที่บ้านมีกี่คนคะ</div><div class="roman">thîi bâan mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div>
+<div class="triad"><div class="thai">มีใครบ้างคะ</div><div class="roman">mii khrai bâang khá</div><div class="eng">Who are they?</div></div>
+<div class="triad"><div class="thai">ครอบครัวฉันอยู่ไต้หวันค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn yùu Tâi-wan khâ</div><div class="eng">My family is in Taiwan.</div></div>
+</div>
+<h3>2. 問兄弟姊妹：你是獨生女嗎？</h3>
+<p><span class="label textbook">Textbook-based</span> 情境：朋友問你有沒有兄弟姊妹。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">คุณมีพี่น้องกี่คนคะ</div><div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div><div class="eng">How many siblings do you have?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไม่มีพี่น้องค่ะ เป็นลูกคนเดียว</div><div class="roman">mâi mii phîi-nɔ́ɔng khâ, bpen lûuk khon diaw</div><div class="eng">I don’t have siblings. I’m an only child.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">จริงเหรอคะ</div><div class="roman">jing rə̌ə khá</div><div class="eng">Really?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">จริงค่ะ แต่มีญาติเยอะค่ะ</div><div class="roman">jing khâ, dtɛ̀ɛ mii yâat yóe khâ</div><div class="eng">Yes. But I have many relatives.</div></div>
+</div>
+</div>
+<h3>3. 介紹兄弟姊妹：一個姊姊一個弟弟</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：和朋友自然介紹自己的排行和兄弟姊妹。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">มีพี่น้องไหมคะ</div><div class="roman">mii phîi-nɔ́ɔng mái khá</div><div class="eng">Do you have siblings?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">มีค่ะ มีพี่สาวหนึ่งคนกับน้องชายหนึ่งคนค่ะ</div><div class="roman">mii khâ, mii phîi-sǎaw nʉ̀ng khon gàp nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">Yes. I have one older sister and one younger brother.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">คุณเป็นลูกคนที่เท่าไรคะ</div><div class="roman">khun bpen lûuk khon thîi thâo-rài khá</div><div class="eng">Which child are you?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ฉันเป็นลูกคนกลางค่ะ</div><div class="roman">chǎn bpen lûuk khon glaang khâ</div><div class="eng">I am the middle child.</div></div>
+</div>
+</div>
+<h3>4. 年齡比較：誰比較大？差幾歲？</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label review">Review</span> Day 13 比較句。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">พี่สาวกับคุณ ใครอายุมากกว่ากันคะ</div><div class="roman">phîi-sǎaw gàp khun, khrai aa-yú mâak gwàa gan khá</div><div class="eng">Between your older sister and you, who is older?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn khâ</div><div class="eng">My older sister is older than me.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">มากกว่ากี่ปีคะ</div><div class="roman">mâak gwàa gìi bpii khá</div><div class="eng">Older by how many years?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div>
+</div>
+</div>
+<h3>5. 問小孩年齡：幾歲？用 ขวบ 還是 ปี？</h3>
+<p><span class="label textbook">Textbook-based</span> 情境：朋友有小孩，你問小孩幾歲。</p>
+<div class="bubble-wrap">
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ลูกคุณอายุเท่าไรคะ</div><div class="roman">lûuk khun aa-yú thâo-rài khá</div><div class="eng">How old is your child?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Parent</span>
+<div class="triad"><div class="thai">ลูกสาวอายุห้าขวบค่ะ</div><div class="roman">lûuk-sǎaw aa-yú hâa khùap khâ</div><div class="eng">My daughter is five years old.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">น่ารักมากค่ะ</div><div class="roman">nâa-rák mâak khâ</div><div class="eng">She is very cute.</div></div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 13 學過 <span class="thai">น่ารัก</span> / <span class="roman">nâa-rák</span> / <span class="eng">cute</span>。看到小孩、寵物、可愛物品都可以用。
+    </div>
+<h3>6. 提到家人過世：比較委婉的說法</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：對方問祖父母，你需要自然又禮貌地說已過世。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ปู่กับย่ายังอยู่ไหมคะ</div><div class="roman">bpùu gàp yâa yang yùu mái khá</div><div class="eng">Are your paternal grandparents still alive?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ปู่เสียแล้วค่ะ แต่ย่ายังอยู่ค่ะ</div><div class="roman">bpùu sǐa lɛ́ɛw khâ, dtɛ̀ɛ yâa yang yùu khâ</div><div class="eng">My paternal grandfather has passed away, but my paternal grandmother is still alive.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">เสียใจด้วยนะคะ</div><div class="roman">sǐa-jai dûai ná khá</div><div class="eng">I’m sorry for your loss.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ขอบคุณค่ะ</div><div class="roman">khɔ̀ɔp-khun khâ</div><div class="eng">Thank you.</div></div>
+</div>
+</div>
+</section>
+<section class="tab-content" id="mistakes">
+<h2>Common Mistakes &amp; Quick Review</h2>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Why It’s Wrong / Risky</th>
+<th>Better Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">พี่ = older brother only</div><div class="roman">phîi</div><div class="eng">older sibling / older person</div></div></td>
+<td><span class="thai">พี่</span> 不只哥哥，也可以是姊姊，甚至稱呼比你年長的人。</td>
+<td>
+<div class="triad"><div class="thai">พี่ชาย</div><div class="roman">phîi-chaai</div><div class="eng">older brother</div></div>
+<div class="triad"><div class="thai">พี่สาว</div><div class="roman">phîi-sǎaw</div><div class="eng">older sister</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">น้อง = younger brother only</div><div class="roman">nɔ́ɔng</div><div class="eng">younger sibling / younger person</div></div></td>
+<td><span class="thai">น้อง</span> 不只弟弟，也可以是妹妹，或稱呼年輕的人。</td>
+<td>
+<div class="triad"><div class="thai">น้องชาย</div><div class="roman">nɔ́ɔng-chaai</div><div class="eng">younger brother</div></div>
+<div class="triad"><div class="thai">น้องสาว</div><div class="roman">nɔ́ɔng-sǎaw</div><div class="eng">younger sister</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">มีพี่น้องสาม</div><div class="roman">mii phîi-nɔ́ɔng sǎam</div><div class="eng">wrong: have siblings three</div></div></td>
+<td>人要加量詞 <span class="thai">คน</span>。</td>
+<td><div class="triad"><div class="thai">มีพี่น้องสามคนค่ะ</div><div class="roman">mii phîi-nɔ́ɔng sǎam khon khâ</div><div class="eng">I have three siblings.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">อายุยี่สิบห้าขวบ</div><div class="roman">aa-yú yîi-sìp-hâa khùap</div><div class="eng">twenty-five years old using child-age word</div></div></td>
+<td><span class="thai">ขวบ</span> 常用於 1–12 歲小孩，成人用 <span class="thai">ปี</span> 比較自然。</td>
+<td><div class="triad"><div class="thai">อายุยี่สิบห้าปีค่ะ</div><div class="roman">aa-yú yîi-sìp-hâa bpii khâ</div><div class="eng">I am twenty-five years old.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">แก่กว่า</div><div class="roman">gɛ̀ɛ gwàa</div><div class="eng">older than</div></div></td>
+<td>可以用，但對人可能有「老」的感覺；初學者先用 <span class="thai">อายุมากกว่า</span> 更禮貌。</td>
+<td><div class="triad"><div class="thai">พี่ชายอายุมากกว่าฉันสามปีค่ะ</div><div class="roman">phîi-chaai aa-yú mâak gwàa chǎn sǎam bpii khâ</div><div class="eng">My older brother is three years older than me.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ตายแล้ว</div><div class="roman">dtaai lɛ́ɛw</div><div class="eng">dead / died</div></div></td>
+<td>意思正確但很直接。講家人過世，日常更委婉用 <span class="thai">เสียแล้ว</span>。</td>
+<td><div class="triad"><div class="thai">ปู่เสียแล้วค่ะ</div><div class="roman">bpùu sǐa lɛ́ɛw khâ</div><div class="eng">My paternal grandfather has passed away.</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="tip red">
+<strong>本課最重要記憶點：</strong>
+<p>1. 人的量詞是 <span class="thai">คน</span> / <span class="roman">khon</span> / <span class="eng">person</span>：<span class="thai">พี่น้องสามคน</span> / <span class="roman">phîi-nɔ́ɔng sǎam khon</span> / <span class="eng">three siblings</span>。</p>
+<p>2. 年齡比較：<span class="thai">อายุมากกว่า</span> / <span class="roman">aa-yú mâak gwàa</span> / <span class="eng">older than</span>、<span class="thai">อายุน้อยกว่า</span> / <span class="roman">aa-yú nɔ́ɔi gwàa</span> / <span class="eng">younger than</span>。</p>
+<p>3. 父系祖父母：<span class="thai">ปู่ ย่า</span> / <span class="roman">bpùu, yâa</span> / <span class="eng">paternal grandparents</span>；母系祖父母：<span class="thai">ตา ยาย</span> / <span class="roman">dtaa, yaai</span> / <span class="eng">maternal grandparents</span>。</p>
+</div>
+</section>
+<section class="tab-content" id="practice">
+<h2>Practice Questions</h2>
+<h3>A. Family Vocabulary Recall</h3>
+<details>
+<summary>1. father</summary>
+<div class="triad"><div class="thai">พ่อ</div><div class="roman">phɔ̂ɔ</div><div class="eng">father / dad</div></div>
+</details>
+<details>
+<summary>2. mother</summary>
+<div class="triad"><div class="thai">แม่</div><div class="roman">mɛ̂ɛ</div><div class="eng">mother / mom</div></div>
+</details>
+<details>
+<summary>3. older sister</summary>
+<div class="triad"><div class="thai">พี่สาว</div><div class="roman">phîi-sǎaw</div><div class="eng">older sister</div></div>
+</details>
+<details>
+<summary>4. younger brother</summary>
+<div class="triad"><div class="thai">น้องชาย</div><div class="roman">nɔ́ɔng-chaai</div><div class="eng">younger brother</div></div>
+</details>
+<details>
+<summary>5. only child</summary>
+<div class="triad"><div class="thai">ลูกคนเดียว</div><div class="roman">lûuk khon diaw</div><div class="eng">only child</div></div>
+</details>
+<h3>B. Translation Practice</h3>
+<details>
+<summary>1. How many people are in your family?</summary>
+<div class="triad"><div class="thai">ครอบครัวคุณมีกี่คนคะ</div><div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div>
+</details>
+<details>
+<summary>2. I have one older sister and one younger brother.</summary>
+<div class="triad"><div class="thai">มีพี่สาวหนึ่งคนกับน้องชายหนึ่งคนค่ะ</div><div class="roman">mii phîi-sǎaw nʉ̀ng khon gàp nɔ́ɔng-chaai nʉ̀ng khon khâ</div><div class="eng">I have one older sister and one younger brother.</div></div>
+</details>
+<details>
+<summary>3. I am an only child.</summary>
+<div class="triad"><div class="thai">ฉันเป็นลูกคนเดียวค่ะ</div><div class="roman">chǎn bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div>
+</details>
+<details>
+<summary>4. How old are you?</summary>
+<div class="triad"><div class="thai">คุณอายุเท่าไรคะ</div><div class="roman">khun aa-yú thâo-rài khá</div><div class="eng">How old are you?</div></div>
+</details>
+<details>
+<summary>5. My older sister is five years older than me.</summary>
+<div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div>
+</details>
+<details>
+<summary>6. My younger brother is three years younger than me.</summary>
+<div class="triad"><div class="thai">น้องชายอายุน้อยกว่าฉันสามปีค่ะ</div><div class="roman">nɔ́ɔng-chaai aa-yú nɔ́ɔi gwàa chǎn sǎam bpii khâ</div><div class="eng">My younger brother is three years younger than me.</div></div>
+</details>
+<h3>C. Real-life Response Practice</h3>
+<details>
+<summary>1. Friend asks: ที่บ้านมีกี่คนคะ / thîi bâan mii gìi khon khá / How many people are in your family?</summary>
+<div class="triad"><div class="thai">ที่บ้านมีสี่คนค่ะ มีพ่อ แม่ ฉัน แล้วก็น้องสาวค่ะ</div><div class="roman">thîi bâan mii sìi khon khâ, mii phɔ̂ɔ, mɛ̂ɛ, chǎn, lɛ́ɛw gɔ̂ɔ nɔ́ɔng-sǎaw khâ</div><div class="eng">There are four people in my family: my father, mother, me, and my younger sister.</div></div>
+</details>
+<details>
+<summary>2. Friend asks: มีพี่น้องไหมคะ / mii phîi-nɔ́ɔng mái khá / Do you have siblings?</summary>
+<div class="triad"><div class="thai">ไม่มีพี่น้องค่ะ เป็นลูกคนเดียว</div><div class="roman">mâi mii phîi-nɔ́ɔng khâ, bpen lûuk khon diaw</div><div class="eng">I don’t have siblings. I’m an only child.</div></div>
+</details>
+<details>
+<summary>3. Friend asks: ขอถามได้ไหมคะ อายุเท่าไรคะ / khɔ̌ɔ thǎam dâai mái khá, aa-yú thâo-rài khá / May I ask, how old are you?</summary>
+<div class="triad"><div class="thai">อายุยี่สิบห้าปีค่ะ</div><div class="roman">aa-yú yîi-sìp-hâa bpii khâ</div><div class="eng">I am twenty-five years old.</div></div>
+</details>
+<h3>D. Mini Role-play</h3>
+<div class="tip blue">
+      情境：你和泰國朋友聊天。你要說家人在台灣，家裡有四個人：爸爸、媽媽、你、妹妹。你有一個妹妹，妹妹小你三歲。
+    </div>
+<details>
+<summary>Suggested Answer</summary>
+<div class="bubble-wrap">
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">ครอบครัวฉันอยู่ไต้หวันค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn yùu Tâi-wan khâ</div><div class="eng">My family is in Taiwan.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">ที่บ้านมีสี่คนค่ะ</div><div class="roman">thîi bâan mii sìi khon khâ</div><div class="eng">There are four people in my family.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">มีพ่อ แม่ ฉัน แล้วก็น้องสาวค่ะ</div><div class="roman">mii phɔ̂ɔ, mɛ̂ɛ, chǎn, lɛ́ɛw gɔ̂ɔ nɔ́ɔng-sǎaw khâ</div><div class="eng">There are my father, mother, me, and my younger sister.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">น้องสาวอายุน้อยกว่าฉันสามปีค่ะ</div><div class="roman">nɔ́ɔng-sǎaw aa-yú nɔ́ɔi gwàa chǎn sǎam bpii khâ</div><div class="eng">My younger sister is three years younger than me.</div></div></div>
+</div>
+</details>
+</section>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">ครอบครัวคุณมีกี่คนคะ</div><div class="roman">khrɔ̂ɔp-khrua khun mii gìi khon khá</div><div class="eng">How many people are in your family?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">คุณมีพี่น้องกี่คนคะ</div><div class="roman">khun mii phîi-nɔ́ɔng gìi khon khá</div><div class="eng">How many siblings do you have?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">เป็นลูกคนเดียวค่ะ</div><div class="roman">bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">พี่สาวอายุมากกว่าฉันห้าปีค่ะ</div><div class="roman">phîi-sǎaw aa-yú mâak gwàa chǎn hâa bpii khâ</div><div class="eng">My older sister is five years older than me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ครอบครัวฉันมีสี่คนค่ะ</div><div class="roman">khrɔ̂ɔp-khrua chǎn mii sìi khon khâ</div><div class="eng">There are four people in my family.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">พ่อแม่ของฉันอยู่ไต้หวันค่ะ</div><div class="roman">phɔ̂ɔ-mɛ̂ɛ khɔ̌ɔng chǎn yùu dtâai-wan khâ</div><div class="eng">My parents live in Taiwan.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">พี่ชายฉันอายุมากกว่าฉันค่ะ</div><div class="roman">phîi-chaai chǎn aa-yú mâak gwàa chǎn khâ</div><div class="eng">My older brother is older than me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">ฉันมีน้องสาวหนึ่งคนค่ะ</div><div class="roman">chǎn mii nɔ́ɔng-sǎaw nʉ̀ng khon khâ</div><div class="eng">I have one younger sister.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ฉันเป็นลูกคนเดียวค่ะ</div><div class="roman">chǎn bpen lûuk khon diaw khâ</div><div class="eng">I am an only child.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">พี่สาวเป็นลูกคนโตค่ะ</div><div class="roman">phîi-sǎaw bpen lûuk khon dtoo khâ</div><div class="eng">My older sister is the eldest child.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<script>
+  function openTab(event, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    contents.forEach(content => content.classList.remove('active'));
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+// ── TTS ──────────────────────────────────────────────
+let thaiVoice = null;
+let activBtn  = null;
+
+function loadVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  thaiVoice = voices.find(v => v.lang === 'th-TH') ||
+              voices.find(v => v.lang.startsWith('th')) ||
+              null;
+}
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakThai(text, btn) {
+  if (!window.speechSynthesis) {
+    alert('此瀏覽器不支援語音合成。請用 Safari（macOS/iOS）或 Chrome。');
+    return;
+  }
+  if (activBtn === btn && speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+    return;
+  }
+  speechSynthesis.cancel();
+  if (activBtn) {
+    activBtn.classList.remove('speaking');
+    activBtn.textContent = '🔊';
+  }
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang  = 'th-TH';
+  utter.rate  = 0.85;
+  utter.pitch = 1.0;
+  if (thaiVoice) utter.voice = thaiVoice;
+  utter.onstart = () => {
+    btn.classList.add('speaking');
+    btn.textContent = '⏸';
+    activBtn = btn;
+  };
+  utter.onend = utter.onerror = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+  };
+  speechSynthesis.speak(utter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('div.thai').forEach(el => {
+    const rawText = el.textContent.trim();
+    if (!rawText) return;
+    const span = document.createElement('span');
+    span.className = 'thai-text';
+    span.textContent = rawText;
+    const btn = document.createElement('button');
+    btn.className = 'speak-btn';
+    btn.textContent = '🔊';
+    btn.title = '唸出泰文';
+    btn.setAttribute('aria-label', '播放發音');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      speakThai(rawText, btn);
+    });
+    el.textContent = '';
+    el.appendChild(span);
+    el.appendChild(btn);
+  });
+});
+</script>
+<script id="book1-favorites-script">
+(function () {
+  const favoritesKey = 'thai-book1-day14-favorites';
+  const legacyFavoriteKeys = ['thaiBook1_day14_favorites_v1'];
+  const $ = function (selector, root) { return (root || document).querySelector(selector); };
+  const $$ = function (selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); };
+  function readStore(key) { try { const v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v.filter(Boolean) : []; } catch (e) { return []; } }
+  function safeGet() {
+    const current = readStore(favoritesKey);
+    if (current.length) return current;
+    for (let i = 0; i < legacyFavoriteKeys.length; i += 1) {
+      const legacy = readStore(legacyFavoriteKeys[i]);
+      if (legacy.length) { try { localStorage.setItem(favoritesKey, JSON.stringify(legacy)); } catch (e) {} return legacy; }
+    }
+    return [];
+  }
+  function safeSave(items) { try { localStorage.setItem(favoritesKey, JSON.stringify(items)); } catch (e) {} }
+  function idOf(item) { return [item.thai, item.rom, item.eng].join('||'); }
+  function esc(v) { return String(v || '').replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function collocs(item) { try { const data = JSON.parse(item.colloc || '[]'); return Array.isArray(data) ? data : []; } catch (e) { return []; } }
+  function readButton(btn) {
+    return { thai:btn.dataset.thai || '', rom:btn.dataset.rom || '', eng:btn.dataset.eng || '', cat:btn.dataset.cat || '', grammar:btn.dataset.grammar || '', colloc:btn.dataset.colloc || '[]', exThai:btn.dataset.exThai || '', exRom:btn.dataset.exRom || '', exEng:btn.dataset.exEng || '' };
+  }
+  function updateButtons() {
+    const ids = new Set(safeGet().map(idOf));
+    $$('.fav-btn').forEach(function (btn) {
+      const selected = ids.has(idOf(readButton(btn)));
+      btn.classList.toggle('is-favorite', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      btn.textContent = selected ? '★ 已收藏' : '♡ 收藏';
+    });
+  }
+  function makeCard(item) {
+    const c = collocs(item);
+    const collocHtml = c.length ? c.map(function (x) { return '<button type="button" class="colloc-chip" data-thai="' + esc(x.thai) + '" aria-label="播放搭配詞：' + esc(x.thai) + '" aria-pressed="false"><span class="thai">' + esc(x.thai) + '</span><span class="en-colloc">' + esc(x.en) + '</span></button>'; }).join('') : '<span class="muted">—</span>';
+    return '<article class="favorite-card">' +
+      '<div class="favorite-thai"><span>' + esc(item.thai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.thai) + '" aria-label="播放發音">🔊</button></div>' +
+      '<span class="roman">' + esc(item.rom) + '</span><span class="eng">' + esc(item.eng) + '</span>' +
+      '<div class="favorite-category"><span class="label practical">' + esc(item.cat || 'Vocabulary') + '</span></div>' +
+      '<div class="favorite-example"><div class="favorite-example-title">Example</div>' +
+      '<div class="thai"><span class="thai-text">' + esc(item.exThai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.exThai) + '" aria-label="播放例句">🔊</button></div>' +
+      '<div class="roman">' + esc(item.exRom) + '</div><div class="eng">' + esc(item.exEng) + '</div></div>' +
+      '<details class="fav-expand"><summary>Grammar &amp; Collocations</summary><div class="fav-expand-body">' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Grammar Notes</div><div class="fav-expand-usage">' + (item.grammar || '—') + '</div></div>' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Collocations</div><div class="fav-expand-colloc">' + collocHtml + '</div></div>' +
+      '</div></details>' +
+      '<button class="remove-fav" type="button" data-remove-id="' + esc(idOf(item)) + '">移除收藏</button>' +
+      '</article>';
+  }
+  function render() {
+    const box = $('#favoritesList'); if (!box) return;
+    const items = safeGet();
+    box.innerHTML = items.length ? items.map(makeCard).join('') : '<div class="empty-state">還沒有收藏項目。到 Vocabulary 右側點「♡ 收藏」即可加入。</div>';
+    updateButtons();
+  }
+  document.addEventListener('click', function (event) {
+    const fav = event.target.closest && event.target.closest('.fav-btn');
+    if (fav) {
+      const item = readButton(fav); const key = idOf(item); let items = safeGet();
+      items = items.some(function (x) { return idOf(x) === key; }) ? items.filter(function (x) { return idOf(x) !== key; }) : items.concat(item);
+      safeSave(items); render(); return;
+    }
+    const remove = event.target.closest && event.target.closest('[data-remove-id]');
+    if (remove) { safeSave(safeGet().filter(function (x) { return idOf(x) !== remove.dataset.removeId; })); render(); return; }
+    const speak = event.target.closest && event.target.closest('[data-fav-speech]');
+    if (speak && typeof window.speakThai === 'function') { event.preventDefault(); window.speakThai(speak.dataset.favSpeech, speak); }
+  });
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+<script id="book1-collocations-audio-script">
+(function () {
+  var activeButton = null;
+  function thaiVoice() {
+    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
+           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
+  }
+  function reset(button) {
+    if (!button) return;
+    button.classList.remove('speaking');
+    button.setAttribute('aria-pressed', 'false');
+  }
+  function speak(button) {
+    var text = (button.dataset.thai || '').trim();
+    if (!text) return;
+    if (!('speechSynthesis' in window)) {
+      alert('此瀏覽器不支援語音合成。');
+      return;
+    }
+    var synth = window.speechSynthesis;
+    if (activeButton === button && synth.speaking) {
+      synth.cancel();
+      reset(button);
+      activeButton = null;
+      return;
+    }
+    synth.cancel();
+    reset(activeButton);
+    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'th-TH';
+    utterance.rate = 0.82;
+    var voice = thaiVoice();
+    if (voice) utterance.voice = voice;
+    button.classList.add('speaking');
+    button.setAttribute('aria-pressed', 'true');
+    activeButton = button;
+    utterance.onend = utterance.onerror = function () {
+      reset(button);
+      if (activeButton === button) activeButton = null;
+    };
+    try {
+      synth.resume();
+      synth.speak(utterance);
+    } catch (error) {
+      reset(button);
+      activeButton = null;
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
+    if (!button) return;
+    event.preventDefault();
+    event.stopPropagation();
+    speak(button);
+  });
+})();
+</script></body>
+</html>

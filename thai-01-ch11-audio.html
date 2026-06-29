@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thai Speaking 1 - Day 11 Study Guide</title>
+<style>
+    :root {
+      --text: var(--color-text-primary, #1f2937);
+      --muted: #6b7280;
+      --line: rgba(107, 114, 128, 0.28);
+      --card: rgba(255, 255, 255, 0.72);
+      --orange: #f97316;
+      --orange-soft: rgba(249, 115, 22, 0.13);
+      --green: #16a34a;
+      --green-soft: rgba(22, 163, 74, 0.13);
+      --blue: #2563eb;
+      --blue-soft: rgba(37, 99, 235, 0.12);
+      --red: #dc2626;
+      --red-soft: rgba(220, 38, 38, 0.11);
+      --purple: #7c3aed;
+      --purple-soft: rgba(124, 58, 237, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      color: var(--text);
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .hero {
+      padding: 28px;
+      border: 0.5px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(249,115,22,0.10), rgba(22,163,74,0.08), rgba(37,99,235,0.06));
+      box-shadow: 0 12px 34px rgba(0,0,0,0.05);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.02em; }
+    h2 { margin-top: 0; font-size: 22px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    h3 { margin-top: 28px; font-size: 18px; }
+    p { margin: 8px 0; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+      padding: 10px;
+      border: 0.5px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.45);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .tab-btn {
+      border: 0.5px solid var(--line);
+      background: rgba(255,255,255,0.65);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .tab-btn:hover { transform: translateY(-1px); background: rgba(249,250,251,0.95); }
+
+    .tab-btn.active {
+      border-color: rgba(249, 115, 22, 0.55);
+      background: var(--orange-soft);
+      color: #9a3412;
+      font-weight: 700;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px;
+      border: 0.5px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.52);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+      margin-bottom: 20px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 4px 2px 0;
+    }
+
+    .label.textbook { background: var(--orange-soft); color: #c2410c; border: 0.5px solid rgba(249,115,22,0.3); }
+    .label.local { background: var(--green-soft); color: #15803d; border: 0.5px solid rgba(22,163,74,0.3); }
+    .label.review { background: var(--blue-soft); color: #1d4ed8; border: 0.5px solid rgba(37,99,235,0.3); }
+    .label.warn { background: var(--red-soft); color: #b91c1c; border: 0.5px solid rgba(220,38,38,0.3); }
+
+    .thai { font-size: 15px; font-weight: 500; letter-spacing: 0.01em; }
+    .roman { color: #6b7280; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .eng { font-size: 13px; color: var(--text); }
+
+    .triad { display: grid; gap: 2px; margin: 4px 0; }
+    .triad .thai::before { content: "Thai: "; color: var(--muted); font-weight: 400; }
+    .triad .roman::before { content: "Romanization: "; color: var(--muted); font-family: inherit; }
+    .triad .eng::before { content: "English: "; color: var(--muted); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 24px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 0.5px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: rgba(243,244,246,0.72); font-weight: 700; }
+    tbody tr:nth-child(even) { background: rgba(249,250,251,0.55); }
+
+    .tip {
+      border-left: 4px solid var(--green);
+      padding: 12px 14px;
+      background: var(--green-soft);
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+
+    .tip.orange { border-left-color: var(--orange); background: var(--orange-soft); }
+    .tip.blue { border-left-color: var(--blue); background: var(--blue-soft); }
+    .tip.red { border-left-color: var(--red); background: var(--red-soft); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .card {
+      border: 0.5px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--card);
+    }
+
+    .mini-title {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .bubble-wrap { display: grid; gap: 10px; margin: 14px 0 24px; }
+
+    .bubble {
+      border: 0.5px solid var(--line);
+      border-radius: 18px;
+      padding: 13px 15px;
+      max-width: 84%;
+      background: rgba(255,255,255,0.72);
+    }
+
+    .bubble.a { justify-self: start; border-left: 5px solid var(--blue); }
+    .bubble.b { justify-self: end; border-right: 5px solid var(--green); }
+
+    .speaker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .speaker.a { background: var(--blue-soft); color: #1d4ed8; }
+    .speaker.b { background: var(--green-soft); color: #15803d; }
+
+    .pattern {
+      padding: 12px;
+      border: 0.5px dashed rgba(107,114,128,0.45);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.5);
+      margin: 12px 0;
+    }
+
+    .classifier-chip {
+      display: inline-block;
+      border: 0.5px solid rgba(124,58,237,0.3);
+      background: var(--purple-soft);
+      color: #5b21b6;
+      padding: 3px 9px;
+      border-radius: 9px;
+      font-weight: 800;
+      margin: 2px 4px 2px 0;
+    }
+
+    details {
+      border: 0.5px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      background: rgba(255,255,255,0.45);
+    }
+
+    summary { cursor: pointer; font-weight: 700; }
+
+        .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: .5px solid rgba(37,99,235,.3);
+      background: var(--blue-soft);
+      color: #1d4ed8;
+      font-size: 11px;
+      cursor: pointer;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+      transition: all .15s ease;
+      line-height: 1;
+      padding: 0;
+    }
+    .speak-btn:hover {
+      background: rgba(37,99,235,.22);
+      transform: scale(1.12);
+    }
+    .speak-btn.speaking {
+      background: var(--orange-soft);
+      border-color: rgba(249,115,22,.4);
+      color: #c2410c;
+      animation: pulse .6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.18); }
+    }
+    div.thai {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .thai-text { flex: 1; }
+
+@media (max-width: 720px) {
+      body { padding: 14px; }
+      .tab-content { padding: 16px; }
+      table { font-size: 13px; }
+      .bubble { max-width: 100%; }
+    }
+  </style>
+<style id="book1-content-rebuild-style">
+/* ── Book 1 content rebuild layer ───────────────────── */
+#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+#vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
+.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
+.vocab-group-title:first-of-type{border-top:0;padding-top:0}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
+.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
+#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
+#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
+#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
+#supplement .vocab-scroll table{min-width:760px}
+.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
+.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+.muted{color:var(--muted)}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
+</style><style id="book1-book2-vocab-pattern">
+/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
+.triad .thai::before,
+.triad .roman::before,
+.triad .eng::before { content:none !important; }
+
+#vocab .vocab-scroll{
+  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  margin:14px 0 24px; border-radius:12px;
+}
+#vocab .vocab-scroll table{
+  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
+}
+#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
+#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
+#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
+#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
+#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
+#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
+
+#vocab .favorite-col, #vocab .fav-cell{
+  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
+  padding-left:7px !important; padding-right:7px !important;
+}
+#vocab .fav-btn{
+  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
+  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
+  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
+}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
+
+.classifier-note{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  font-size:12px; color:var(--muted);
+}
+.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
+.colloc-chip{
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
+  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
+  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
+  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
+  box-shadow:none !important; transform:none !important; animation:none !important;
+}
+.colloc-chip:hover,.colloc-chip:focus-visible{
+  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
+  transform:none !important; animation:none !important; outline:none !important;
+}
+.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
+.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
+.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
+
+#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
+.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
+.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
+.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
+.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
+.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
+.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
+.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
+.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
+.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
+.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
+.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
+.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
+.favorite-speak{margin-left:0;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:720px){
+  #vocab .vocab-scroll table{min-width:1120px !important;}
+  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
+  .favorites-list{grid-template-columns:1fr;}
+}
+</style><style id="book1-semantic-refinement-style">
+/* ── Semantic refinement: real collocation buttons ── */
+button.colloc-chip{
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  font:inherit !important;
+  text-align:left !important;
+  touch-action:manipulation;
+  user-select:none;
+}
+button.colloc-chip:focus-visible{
+  outline:2px solid rgba(22,163,74,.55) !important;
+  outline-offset:2px;
+}
+</style><style id="book1-classifier-audio-refine-style">
+/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
+#vocab .classifier-note.classifier-short{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
+}
+#vocab .classifier-label{font-weight:700; color:var(--muted);}
+button.classifier-audio-pill{
+  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
+  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
+  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
+  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
+}
+button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-detail-style">
+/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
+#vocab .classifier-note.classifier-detail{
+  margin-top:7px;
+  padding-top:7px;
+  border-top:.5px dashed var(--line);
+  display:grid;
+  gap:3px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+#vocab .classifier-label{
+  color:var(--muted);
+  font-weight:700;
+}
+#vocab .classifier-entries{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+#vocab .classifier-entry{
+  min-width:0;
+  display:grid;
+  gap:1px;
+}
+#vocab button.classifier-audio-pill{
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  width:max-content;
+  max-width:100%;
+  border:.5px solid rgba(124,58,237,.34);
+  background:var(--purple-soft);
+  color:#5b21b6;
+  border-radius:999px;
+  padding:4px 9px;
+  margin:0;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  cursor:pointer;
+  touch-action:manipulation;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+#vocab button.classifier-audio-pill:hover,
+#vocab button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18);
+  border-color:rgba(124,58,237,.52);
+  outline:none;
+  transform:translateY(-1px);
+}
+#vocab button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.25);
+  border-color:rgba(124,58,237,.60);
+}
+#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
+#vocab .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:11.5px;
+}
+#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
+/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-inline-style">
+/* Vocabulary classifier format｜量詞：ใบ bai */
+#vocab .classifier-note.classifier-inline{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:7px 0 0;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.45;
+}
+#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
+#vocab .classifier-inline button.classifier-audio-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:1px 6px;
+  margin:0;
+  border:.5px solid rgba(124,58,237,.34);
+  border-radius:999px;
+  background:var(--purple-soft);
+  color:#5b21b6;
+  font:inherit;
+  font-weight:800;
+  line-height:1.35;
+  cursor:pointer;
+}
+#vocab .classifier-inline button.classifier-audio-pill:hover,
+#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
+#vocab .classifier-inline button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.20);
+  border-color:rgba(124,58,237,.50);
+  outline:none;
+}
+#vocab .classifier-inline .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:12px;
+}
+#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
+</style></head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>Thai Speaking 1｜Day 11 學習指南</h1>
+<p class="subtitle">主題：時間單位、多久、還要多久、星期、日期、生日、節日、地點、跟誰、活動安排</p>
+<p>
+<span class="label textbook">Textbook-based</span>
+<span class="label local">Supplement / Local usage</span>
+<span class="label review">Review</span>
+<span class="label warn">Common mistake</span>
+</p>
+</section>
+<nav class="tabs"><button class="tab-btn active" onclick="openTab(event, 'overview')" type="button">Overview</button><button class="tab-btn" onclick="openTab(event, 'vocab')" type="button">Vocabulary</button><button class="tab-btn" onclick="openTab(event, 'supplement')" type="button">Supplement</button><button class="tab-btn" onclick="openTab(event, 'structures')" type="button">Structures</button><button class="tab-btn" onclick="openTab(event, 'street')" type="button">Textbook vs Street</button><button class="tab-btn" onclick="openTab(event, 'bangkok')" type="button">Bangkok Expansion</button><button class="tab-btn" onclick="openTab(event, 'dialogues')" type="button">Dialogues</button><button class="tab-btn" onclick="openTab(event, 'mistakes')" type="button">Mistakes</button><button class="tab-btn" onclick="openTab(event, 'practice')" type="button">Practice</button><button class="tab-btn" onclick="openTab(event, 'top10')" type="button">Top 10</button><button aria-label="收藏" class="tab-btn" id="favoritesTab" onclick="openTab(event, 'favorites')" title="收藏" type="button">♥</button></nav>
+<section class="tab-content active" id="overview">
+<h2>Lesson Overview</h2>
+<p>
+<span class="label textbook">Textbook-based</span>
+      Day 11 的核心是「時間與活動」。你會學到一個年有幾個月、一週有幾天、一天有幾小時、一小時有幾分鐘，以及如何問「做某事多久」、「已經做多久」、「還要做多久」、「什麼時候做」、「星期幾做」、「生日是幾月幾日」。
+    </p>
+<div class="cards">
+<div class="card">
+<div class="mini-title">Time units</div>
+<div class="triad">
+<div class="thai">หนึ่งปีมีสิบสองเดือน</div>
+<div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan</div>
+<div class="eng">One year has twelve months.</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Duration</div>
+<div class="triad">
+<div class="thai">เรียนภาษาไทยนานเท่าไรคะ</div>
+<div class="roman">riian phaa-sǎa thai naan thâo-rài khá</div>
+<div class="eng">How long do you study Thai?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Birthday</div>
+<div class="triad">
+<div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div>
+<div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div>
+<div class="eng">What date is your birthday?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Activity schedule</div>
+<div class="triad">
+<div class="thai">คุณเรียนวันอะไรคะ</div>
+<div class="roman">khun riian wan à-rai khá</div>
+<div class="eng">What day do you study?</div>
+</div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 8 學過 <span class="thai">แล้วก็</span> / <span class="roman">lɛ́ɛw gɔ̂ɔ</span> / <span class="eng">and then</span> 串接動作；Day 11 會把動作放進「星期、日期、多久」裡，變成真的能約時間、講行程、說生日。
+    </div>
+<div class="tip">
+<strong>Bangkok Practical Focus：</strong>
+      這課可以用在：跟老師約課、問課上多久、安排語言交換、約朋友逛街、問生日、聊節日、問活動是星期幾、在曼谷看演出、唱歌、聽音樂、買東西、逛店。
+    </div>
+<div class="tip blue"><h3>本課學習路線</h3><ol><li>能問多久、從什麼時候到什麼時候。</li><li>能說星期、日期、生日與節日。</li><li>能把時間資訊放進約課與行程安排。</li></ol></div></section>
+<section class="tab-content" id="vocab">
+<h2>Vocabulary Table</h2>
+<h3>Time Units</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ปี</div><div class="roman">bpii</div><div class="eng">year</div></div></td><td>時間單位</td><td>可用於年、年齡、每年。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ปี" aria-pressed="false" class="classifier-audio-pill" data-thai="ปี" title="點擊播放量詞" type="button">ปี</button><span class="classifier-roman">bpii</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งปี" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งปี" type="button"><span class="thai">หนึ่งปี</span><span class="en-colloc">one year</span></button></div></td><td><div class="triad"><div class="thai">หนึ่งปีมีสิบสองเดือนค่ะ</div><div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan khâ</div><div class="eng">One year has twelve months.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "หนึ่งปี", "en": "one year"}]' data-eng="year" data-ex-eng="One year has twelve months." data-ex-rom="nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan khâ" data-ex-thai="หนึ่งปีมีสิบสองเดือนค่ะ" data-grammar='可用於年、年齡、每年。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ปี" aria-pressed="false" class="classifier-audio-pill" data-thai="ปี" title="點擊播放量詞" type="button"&gt;ปี&lt;/button&gt;&lt;span class="classifier-roman"&gt;bpii&lt;/span&gt;&lt;/span&gt;' data-rom="bpii" data-thai="ปี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เดือน</div><div class="roman">dʉan</div><div class="eng">month</div></div></td><td>時間單位</td><td>也用於月份。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：เดือน" aria-pressed="false" class="classifier-audio-pill" data-thai="เดือน" title="點擊播放量詞" type="button">เดือน</button><span class="classifier-roman">dʉan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เดือนที่แปด" aria-pressed="false" class="colloc-chip" data-thai="เดือนที่แปด" type="button"><span class="thai">เดือนที่แปด</span><span class="en-colloc">the eighth month / August</span></button></div></td><td><div class="triad"><div class="thai">เดือนที่แปดคือเดือนสิงหาคมค่ะ</div><div class="roman">dʉan thîi bpɛ̀ɛt khʉʉ dʉan sǐng-hǎa-khom khâ</div><div class="eng">The eighth month is August.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "เดือนที่แปด", "en": "the eighth month / August"}]' data-eng="month" data-ex-eng="The eighth month is August." data-ex-rom="dʉan thîi bpɛ̀ɛt khʉʉ dʉan sǐng-hǎa-khom khâ" data-ex-thai="เดือนที่แปดคือเดือนสิงหาคมค่ะ" data-grammar='也用於月份。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：เดือน" aria-pressed="false" class="classifier-audio-pill" data-thai="เดือน" title="點擊播放量詞" type="button"&gt;เดือน&lt;/button&gt;&lt;span class="classifier-roman"&gt;dʉan&lt;/span&gt;&lt;/span&gt;' data-rom="dʉan" data-thai="เดือน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อาทิตย์</div><div class="roman">aa-thít</div><div class="eng">week / Sunday, depending on context</div></div></td><td>時間單位</td><td>單獨可指 week；<span class="thai">วันอาทิตย์</span> 是 Sunday。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：อาทิตย์" aria-pressed="false" class="classifier-audio-pill" data-thai="อาทิตย์" title="點擊播放量詞" type="button">อาทิตย์</button><span class="classifier-roman">aa-thít</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งอาทิตย์" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งอาทิตย์" type="button"><span class="thai">หนึ่งอาทิตย์</span><span class="en-colloc">one week</span></button></div></td><td><div class="triad"><div class="thai">หนึ่งอาทิตย์มีเจ็ดวันค่ะ</div><div class="roman">nʉ̀ng aa-thít mii jèt wan khâ</div><div class="eng">One week has seven days.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "หนึ่งอาทิตย์", "en": "one week"}]' data-eng="week / Sunday, depending on context" data-ex-eng="One week has seven days." data-ex-rom="nʉ̀ng aa-thít mii jèt wan khâ" data-ex-thai="หนึ่งอาทิตย์มีเจ็ดวันค่ะ" data-grammar='單獨可指 week；&lt;span class="thai"&gt;วันอาทิตย์&lt;/span&gt; 是 Sunday。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：อาทิตย์" aria-pressed="false" class="classifier-audio-pill" data-thai="อาทิตย์" title="點擊播放量詞" type="button"&gt;อาทิตย์&lt;/button&gt;&lt;span class="classifier-roman"&gt;aa-thít&lt;/span&gt;&lt;/span&gt;' data-rom="aa-thít" data-thai="อาทิตย์" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">วัน</div><div class="roman">wan</div><div class="eng">day</div></div></td><td>時間單位</td><td>可指 day，也可接星期。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：วัน" aria-pressed="false" class="classifier-audio-pill" data-thai="วัน" title="點擊播放量詞" type="button">วัน</button><span class="classifier-roman">wan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันนี้" aria-pressed="false" class="colloc-chip" data-thai="วันนี้" type="button"><span class="thai">วันนี้</span><span class="en-colloc">today</span></button></div></td><td><div class="triad"><div class="thai">หนึ่งวันมียี่สิบสี่ชั่วโมงค่ะ</div><div class="roman">nʉ̀ng wan mii yîi-sìp-sìi chûa-moong khâ</div><div class="eng">One day has twenty-four hours.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "วันนี้", "en": "today"}]' data-eng="day" data-ex-eng="One day has twenty-four hours." data-ex-rom="nʉ̀ng wan mii yîi-sìp-sìi chûa-moong khâ" data-ex-thai="หนึ่งวันมียี่สิบสี่ชั่วโมงค่ะ" data-grammar='可指 day，也可接星期。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：วัน" aria-pressed="false" class="classifier-audio-pill" data-thai="วัน" title="點擊播放量詞" type="button"&gt;วัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;wan&lt;/span&gt;&lt;/span&gt;' data-rom="wan" data-thai="วัน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ชั่วโมง</div><div class="roman">chûa-moong</div><div class="eng">hour</div></div></td><td>時間單位</td><td>問多久很常用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ชั่วโมง" aria-pressed="false" class="classifier-audio-pill" data-thai="ชั่วโมง" title="點擊播放量詞" type="button">ชั่วโมง</button><span class="classifier-roman">chûa-moong</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สองชั่วโมง" aria-pressed="false" class="colloc-chip" data-thai="สองชั่วโมง" type="button"><span class="thai">สองชั่วโมง</span><span class="en-colloc">two hours</span></button></div></td><td><div class="triad"><div class="thai">ฉันเรียนภาษาไทยสองชั่วโมงค่ะ</div><div class="roman">chǎn riian phaa-sǎa thai sɔ̌ɔng chûa-moong khâ</div><div class="eng">I study Thai for two hours.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "สองชั่วโมง", "en": "two hours"}]' data-eng="hour" data-ex-eng="I study Thai for two hours." data-ex-rom="chǎn riian phaa-sǎa thai sɔ̌ɔng chûa-moong khâ" data-ex-thai="ฉันเรียนภาษาไทยสองชั่วโมงค่ะ" data-grammar='問多久很常用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ชั่วโมง" aria-pressed="false" class="classifier-audio-pill" data-thai="ชั่วโมง" title="點擊播放量詞" type="button"&gt;ชั่วโมง&lt;/button&gt;&lt;span class="classifier-roman"&gt;chûa-moong&lt;/span&gt;&lt;/span&gt;' data-rom="chûa-moong" data-thai="ชั่วโมง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">นาที</div><div class="roman">naa-thii</div><div class="eng">minute</div></div></td><td>時間單位</td><td>1 小時 60 分鐘。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：นาที" aria-pressed="false" class="classifier-audio-pill" data-thai="นาที" title="點擊播放量詞" type="button">นาที</button><span class="classifier-roman">naa-thii</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สามสิบนาที" aria-pressed="false" class="colloc-chip" data-thai="สามสิบนาที" type="button"><span class="thai">สามสิบนาที</span><span class="en-colloc">thirty minutes</span></button></div></td><td><div class="triad"><div class="thai">หนึ่งชั่วโมงมีหกสิบนาทีค่ะ</div><div class="roman">nʉ̀ng chûa-moong mii hòk-sìp naa-thii khâ</div><div class="eng">One hour has sixty minutes.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "สามสิบนาที", "en": "thirty minutes"}]' data-eng="minute" data-ex-eng="One hour has sixty minutes." data-ex-rom="nʉ̀ng chûa-moong mii hòk-sìp naa-thii khâ" data-ex-thai="หนึ่งชั่วโมงมีหกสิบนาทีค่ะ" data-grammar='1 小時 60 分鐘。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：นาที" aria-pressed="false" class="classifier-audio-pill" data-thai="นาที" title="點擊播放量詞" type="button"&gt;นาที&lt;/button&gt;&lt;span class="classifier-roman"&gt;naa-thii&lt;/span&gt;&lt;/span&gt;' data-rom="naa-thii" data-thai="นาที" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">วินาที</div><div class="roman">wí-naa-thii</div><div class="eng">second</div></div></td><td>時間單位</td><td>1 分鐘 60 秒。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：วินาที" aria-pressed="false" class="classifier-audio-pill" data-thai="วินาที" title="點擊播放量詞" type="button">วินาที</button><span class="classifier-roman">wí-naa-thii</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หกสิบวินาที" aria-pressed="false" class="colloc-chip" data-thai="หกสิบวินาที" type="button"><span class="thai">หกสิบวินาที</span><span class="en-colloc">sixty seconds</span></button></div></td><td><div class="triad"><div class="thai">หนึ่งนาทีมีหกสิบวินาทีค่ะ</div><div class="roman">nʉ̀ng naa-thii mii hòk-sìp wí-naa-thii khâ</div><div class="eng">One minute has sixty seconds.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間單位" data-colloc='[{"thai": "หกสิบวินาที", "en": "sixty seconds"}]' data-eng="second" data-ex-eng="One minute has sixty seconds." data-ex-rom="nʉ̀ng naa-thii mii hòk-sìp wí-naa-thii khâ" data-ex-thai="หนึ่งนาทีมีหกสิบวินาทีค่ะ" data-grammar='1 分鐘 60 秒。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：วินาที" aria-pressed="false" class="classifier-audio-pill" data-thai="วินาที" title="點擊播放量詞" type="button"&gt;วินาที&lt;/button&gt;&lt;span class="classifier-roman"&gt;wí-naa-thii&lt;/span&gt;&lt;/span&gt;' data-rom="wí-naa-thii" data-thai="วินาที" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ครึ่ง</div><div class="roman">khrʉ̂ng</div><div class="eng">half</div></div></td><td>時間 / 數量</td><td>時間裡可說半小時、一個半小時。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ครึ่งชั่วโมง" aria-pressed="false" class="colloc-chip" data-thai="ครึ่งชั่วโมง" type="button"><span class="thai">ครึ่งชั่วโมง</span><span class="en-colloc">half an hour</span></button></div></td><td><div class="triad"><div class="thai">เรียนครึ่งชั่วโมงค่ะ</div><div class="roman">riian khrʉ̂ng chûa-moong khâ</div><div class="eng">I study for half an hour.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間 / 數量" data-colloc='[{"thai": "ครึ่งชั่วโมง", "en": "half an hour"}]' data-eng="half" data-ex-eng="I study for half an hour." data-ex-rom="riian khrʉ̂ng chûa-moong khâ" data-ex-thai="เรียนครึ่งชั่วโมงค่ะ" data-grammar="時間裡可說半小時、一個半小時。" data-rom="khrʉ̂ng" data-thai="ครึ่ง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สัปดาห์</div><div class="roman">sàp-daa</div><div class="eng">week</div></div></td><td>Noun</td><td>一週的正式說法；日常也常直接說 อาทิตย์。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：สัปดาห์" aria-pressed="false" class="classifier-audio-pill" data-thai="สัปดาห์" title="點擊播放量詞" type="button">สัปดาห์</button><span class="classifier-roman">sàp-daa</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สัปดาห์นี้" aria-pressed="false" class="colloc-chip" data-thai="สัปดาห์นี้" type="button"><span class="thai">สัปดาห์นี้</span><span class="en-colloc">this week</span></button><button aria-label="播放搭配詞：ทุกสัปดาห์" aria-pressed="false" class="colloc-chip" data-thai="ทุกสัปดาห์" type="button"><span class="thai">ทุกสัปดาห์</span><span class="en-colloc">every week</span></button></div></td><td><div class="triad"><div class="thai">ฉันเรียนภาษาไทยสองครั้งต่อสัปดาห์ค่ะ</div><div class="roman">chǎn riian phaa-sǎa thai sɔ̌ɔng khráng dtɔ̀ɔ sàp-daa khâ</div><div class="eng">I study Thai twice a week.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "สัปดาห์นี้", "en": "this week"}, {"thai": "ทุกสัปดาห์", "en": "every week"}]' data-eng="week" data-ex-eng="I study Thai twice a week." data-ex-rom="chǎn riian phaa-sǎa thai sɔ̌ɔng khráng dtɔ̀ɔ sàp-daa khâ" data-ex-thai="ฉันเรียนภาษาไทยสองครั้งต่อสัปดาห์ค่ะ" data-grammar='一週的正式說法；日常也常直接說 อาทิตย์。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：สัปดาห์" aria-pressed="false" class="classifier-audio-pill" data-thai="สัปดาห์" title="點擊播放量詞" type="button"&gt;สัปดาห์&lt;/button&gt;&lt;span class="classifier-roman"&gt;sàp-daa&lt;/span&gt;&lt;/span&gt;' data-rom="sàp-daa" data-thai="สัปดาห์" type="button">♡ 收藏</button></td></tr></tbody>
+</table></div><h3 class="vocab-group-title">Calendar, Duration &amp; Scheduling｜日期、時長與約時間</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">นาน</div><div class="roman">naan</div><div class="eng">long time / for a long time</div></div></td><td>Adjective / adverb</td><td>問持續時間常搭配 เท่าไร。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นานเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="นานเท่าไร" type="button"><span class="thai">นานเท่าไร</span><span class="en-colloc">how long</span></button><button aria-label="播放搭配詞：ไม่นาน" aria-pressed="false" class="colloc-chip" data-thai="ไม่นาน" type="button"><span class="thai">ไม่นาน</span><span class="en-colloc">not long</span></button></div></td><td><div class="triad"><div class="thai">คุณเรียนภาษาไทยมานานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai maa naan thâo-rài khá</div><div class="eng">How long have you studied Thai?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Adjective / adverb" data-colloc='[{"thai": "นานเท่าไร", "en": "how long"}, {"thai": "ไม่นาน", "en": "not long"}]' data-eng="long time / for a long time" data-ex-eng="How long have you studied Thai?" data-ex-rom="khun riian phaa-sǎa thai maa naan thâo-rài khá" data-ex-thai="คุณเรียนภาษาไทยมานานเท่าไรคะ" data-grammar="問持續時間常搭配 เท่าไร。" data-rom="naan" data-thai="นาน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ตั้งแต่...ถึง...</div><div class="roman">dtâng-dtɛ̀ɛ...thʉ̌ng...</div><div class="eng">from...to...</div></div></td><td>Time range phrase</td><td>表示明確開始與結束範圍。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ตั้งแต่วันจันทร์ถึงวันศุกร์" aria-pressed="false" class="colloc-chip" data-thai="ตั้งแต่วันจันทร์ถึงวันศุกร์" type="button"><span class="thai">ตั้งแต่วันจันทร์ถึงวันศุกร์</span><span class="en-colloc">from Monday to Friday</span></button><button aria-label="播放搭配詞：ตั้งแต่เก้าโมงถึงห้าโมง" aria-pressed="false" class="colloc-chip" data-thai="ตั้งแต่เก้าโมงถึงห้าโมง" type="button"><span class="thai">ตั้งแต่เก้าโมงถึงห้าโมง</span><span class="en-colloc">from 9 to 5</span></button></div></td><td><div class="triad"><div class="thai">ร้านเปิดตั้งแต่สิบโมงถึงสองทุ่มค่ะ</div><div class="roman">ráan bpə̀ət dtâng-dtɛ̀ɛ sìp moong thʉ̌ng sɔ̌ɔng thûm khâ</div><div class="eng">The shop is open from 10 a.m. to 8 p.m.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time range phrase" data-colloc='[{"thai": "ตั้งแต่วันจันทร์ถึงวันศุกร์", "en": "from Monday to Friday"}, {"thai": "ตั้งแต่เก้าโมงถึงห้าโมง", "en": "from 9 to 5"}]' data-eng="from...to..." data-ex-eng="The shop is open from 10 a.m. to 8 p.m." data-ex-rom="ráan bpə̀ət dtâng-dtɛ̀ɛ sìp moong thʉ̌ng sɔ̌ɔng thûm khâ" data-ex-thai="ร้านเปิดตั้งแต่สิบโมงถึงสองทุ่มค่ะ" data-grammar="表示明確開始與結束範圍。" data-rom="dtâng-dtɛ̀ɛ...thʉ̌ng..." data-thai="ตั้งแต่...ถึง..." type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันเกิด</div><div class="roman">wan-gə̀ət</div><div class="eng">birthday</div></div></td><td>Noun</td><td>生日可直接問日期。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันเกิดคุณ" aria-pressed="false" class="colloc-chip" data-thai="วันเกิดคุณ" type="button"><span class="thai">วันเกิดคุณ</span><span class="en-colloc">your birthday</span></button><button aria-label="播放搭配詞：สุขสันต์วันเกิด" aria-pressed="false" class="colloc-chip" data-thai="สุขสันต์วันเกิด" type="button"><span class="thai">สุขสันต์วันเกิด</span><span class="en-colloc">happy birthday</span></button></div></td><td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "วันเกิดคุณ", "en": "your birthday"}, {"thai": "สุขสันต์วันเกิด", "en": "happy birthday"}]' data-eng="birthday" data-ex-eng="What date is your birthday?" data-ex-rom="wan-gə̀ət khun wan-thîi thâo-rài khá" data-ex-thai="วันเกิดคุณวันที่เท่าไรคะ" data-grammar="生日可直接問日期。" data-rom="wan-gə̀ət" data-thai="วันเกิด" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">นัด</div><div class="roman">nát</div><div class="eng">appointment / arrange to meet</div></div></td><td>Noun / verb</td><td>約課、約人、約醫生都可用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นัดกับเพื่อน" aria-pressed="false" class="colloc-chip" data-thai="นัดกับเพื่อน" type="button"><span class="thai">นัดกับเพื่อน</span><span class="en-colloc">make plans with a friend</span></button><button aria-label="播放搭配詞：นัดเรียน" aria-pressed="false" class="colloc-chip" data-thai="นัดเรียน" type="button"><span class="thai">นัดเรียน</span><span class="en-colloc">schedule a lesson</span></button></div></td><td><div class="triad"><div class="thai">เรานัดเรียนวันเสาร์ได้ไหมคะ</div><div class="roman">rao nát riian wan-sǎo dâai mái khá</div><div class="eng">Can we schedule a lesson on Saturday?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun / verb" data-colloc='[{"thai": "นัดกับเพื่อน", "en": "make plans with a friend"}, {"thai": "นัดเรียน", "en": "schedule a lesson"}]' data-eng="appointment / arrange to meet" data-ex-eng="Can we schedule a lesson on Saturday?" data-ex-rom="rao nát riian wan-sǎo dâai mái khá" data-ex-thai="เรานัดเรียนวันเสาร์ได้ไหมคะ" data-grammar="約課、約人、約醫生都可用。" data-rom="nát" data-thai="นัด" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันธรรมดา</div><div class="roman">wan tham-má-daa</div><div class="eng">weekday</div></div></td><td>Noun phrase</td><td>平日，通常對比週末。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันธรรมดา" aria-pressed="false" class="colloc-chip" data-thai="วันธรรมดา" type="button"><span class="thai">วันธรรมดา</span><span class="en-colloc">weekdays</span></button><button aria-label="播放搭配詞：เสาร์อาทิตย์" aria-pressed="false" class="colloc-chip" data-thai="เสาร์อาทิตย์" type="button"><span class="thai">เสาร์อาทิตย์</span><span class="en-colloc">weekend</span></button></div></td><td><div class="triad"><div class="thai">วันธรรมดาฉันว่างตอนเย็นค่ะ</div><div class="roman">wan tham-má-daa chǎn wâang dtɔɔn yen khâ</div><div class="eng">I am free in the evenings on weekdays.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun phrase" data-colloc='[{"thai": "วันธรรมดา", "en": "weekdays"}, {"thai": "เสาร์อาทิตย์", "en": "weekend"}]' data-eng="weekday" data-ex-eng="I am free in the evenings on weekdays." data-ex-rom="wan tham-má-daa chǎn wâang dtɔɔn yen khâ" data-ex-thai="วันธรรมดาฉันว่างตอนเย็นค่ะ" data-grammar="平日，通常對比週末。" data-rom="wan tham-má-daa" data-thai="วันธรรมดา" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันหยุด</div><div class="roman">wan-yùt</div><div class="eng">day off / holiday</div></div></td><td>Noun phrase</td><td>休假日、假日。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันหยุดนี้" aria-pressed="false" class="colloc-chip" data-thai="วันหยุดนี้" type="button"><span class="thai">วันหยุดนี้</span><span class="en-colloc">this holiday</span></button><button aria-label="播放搭配詞：หยุดงาน" aria-pressed="false" class="colloc-chip" data-thai="หยุดงาน" type="button"><span class="thai">หยุดงาน</span><span class="en-colloc">take leave from work</span></button></div></td><td><div class="triad"><div class="thai">วันหยุดนี้เราไปเที่ยวกันไหมคะ</div><div class="roman">wan-yùt níi rao bpai thîao gan mái khá</div><div class="eng">Shall we go out this holiday?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun phrase" data-colloc='[{"thai": "วันหยุดนี้", "en": "this holiday"}, {"thai": "หยุดงาน", "en": "take leave from work"}]' data-eng="day off / holiday" data-ex-eng="Shall we go out this holiday?" data-ex-rom="wan-yùt níi rao bpai thîao gan mái khá" data-ex-thai="วันหยุดนี้เราไปเที่ยวกันไหมคะ" data-grammar="休假日、假日。" data-rom="wan-yùt" data-thai="วันหยุด" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันจันทร์</div><div class="roman">wan-jan</div><div class="eng">Monday</div></div></td><td>Day of week</td><td>星期詞要能直接放在行程句中。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันจันทร์หน้า" aria-pressed="false" class="colloc-chip" data-thai="วันจันทร์หน้า" type="button"><span class="thai">วันจันทร์หน้า</span><span class="en-colloc">next Monday</span></button><button aria-label="播放搭配詞：ทุกวันจันทร์" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันจันทร์" type="button"><span class="thai">ทุกวันจันทร์</span><span class="en-colloc">every Monday</span></button></div></td><td><div class="triad"><div class="thai">ฉันมีเรียนวันจันทร์ค่ะ</div><div class="roman">chǎn mii riian wan-jan khâ</div><div class="eng">I have class on Monday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Day of week" data-colloc='[{"thai": "วันจันทร์หน้า", "en": "next Monday"}, {"thai": "ทุกวันจันทร์", "en": "every Monday"}]' data-eng="Monday" data-ex-eng="I have class on Monday." data-ex-rom="chǎn mii riian wan-jan khâ" data-ex-thai="ฉันมีเรียนวันจันทร์ค่ะ" data-grammar="星期詞要能直接放在行程句中。" data-rom="wan-jan" data-thai="วันจันทร์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันที่</div><div class="roman">wan-thîi</div><div class="eng">date / day of the month</div></div></td><td>Noun</td><td>日期中的「日」。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันที่หนึ่ง" aria-pressed="false" class="colloc-chip" data-thai="วันที่หนึ่ง" type="button"><span class="thai">วันที่หนึ่ง</span><span class="en-colloc">the first</span></button><button aria-label="播放搭配詞：วันที่สิบห้า" aria-pressed="false" class="colloc-chip" data-thai="วันที่สิบห้า" type="button"><span class="thai">วันที่สิบห้า</span><span class="en-colloc">the fifteenth</span></button></div></td><td><div class="triad"><div class="thai">วันนี้วันที่ยี่สิบเก้าค่ะ</div><div class="roman">wan-níi wan-thîi yîi-sìp-gâo khâ</div><div class="eng">Today is the twenty-ninth.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "วันที่หนึ่ง", "en": "the first"}, {"thai": "วันที่สิบห้า", "en": "the fifteenth"}]' data-eng="date / day of the month" data-ex-eng="Today is the twenty-ninth." data-ex-rom="wan-níi wan-thîi yîi-sìp-gâo khâ" data-ex-thai="วันนี้วันที่ยี่สิบเก้าค่ะ" data-grammar="日期中的「日」。" data-rom="wan-thîi" data-thai="วันที่" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">กี่โมง</div><div class="roman">gìi moong</div><div class="eng">what time</div></div></td><td>Question phrase</td><td>問具體時刻，不是問持續多久。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เริ่มกี่โมง" aria-pressed="false" class="colloc-chip" data-thai="เริ่มกี่โมง" type="button"><span class="thai">เริ่มกี่โมง</span><span class="en-colloc">what time does it start</span></button><button aria-label="播放搭配詞：ถึงกี่โมง" aria-pressed="false" class="colloc-chip" data-thai="ถึงกี่โมง" type="button"><span class="thai">ถึงกี่โมง</span><span class="en-colloc">until what time</span></button></div></td><td><div class="triad"><div class="thai">คลาสเริ่มกี่โมงคะ</div><div class="roman">khláat rə̂əm gìi moong khá</div><div class="eng">What time does the class start?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Question phrase" data-colloc='[{"thai": "เริ่มกี่โมง", "en": "what time does it start"}, {"thai": "ถึงกี่โมง", "en": "until what time"}]' data-eng="what time" data-ex-eng="What time does the class start?" data-ex-rom="khláat rə̂əm gìi moong khá" data-ex-thai="คลาสเริ่มกี่โมงคะ" data-grammar="問具體時刻，不是問持續多久。" data-rom="gìi moong" data-thai="กี่โมง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">นานเท่าไร</div><div class="roman">naan thâo-rài</div><div class="eng">how long?</div></div></td><td>Duration question</td><td>問持續時間；不要和問鐘點的 กี่โมง 混用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เรียนมานานเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="เรียนมานานเท่าไร" type="button"><span class="thai">เรียนมานานเท่าไร</span><span class="en-colloc">study for how long</span></button><button aria-label="播放搭配詞：รอนานเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="รอนานเท่าไร" type="button"><span class="thai">รอนานเท่าไร</span><span class="en-colloc">wait how long</span></button></div></td><td><div class="triad"><div class="thai">คุณเรียนภาษาไทยมานานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai maa naan thâo-rài khá</div><div class="eng">How long have you studied Thai?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Duration question" data-colloc='[{"thai": "เรียนมานานเท่าไร", "en": "study for how long"}, {"thai": "รอนานเท่าไร", "en": "wait how long"}]' data-eng="how long?" data-ex-eng="How long have you studied Thai?" data-ex-rom="khun riian phaa-sǎa thai maa naan thâo-rài khá" data-ex-thai="คุณเรียนภาษาไทยมานานเท่าไรคะ" data-grammar="問持續時間；不要和問鐘點的 กี่โมง 混用。" data-rom="naan thâo-rài" data-thai="นานเท่าไร" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันอะไร</div><div class="roman">wan à-rai</div><div class="eng">what day?</div></div></td><td>Date question</td><td>問星期幾；問日期幾號則用 วันที่เท่าไร。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันนี้วันอะไร" aria-pressed="false" class="colloc-chip" data-thai="วันนี้วันอะไร" type="button"><span class="thai">วันนี้วันอะไร</span><span class="en-colloc">what day is today</span></button><button aria-label="播放搭配詞：เรียนวันอะไร" aria-pressed="false" class="colloc-chip" data-thai="เรียนวันอะไร" type="button"><span class="thai">เรียนวันอะไร</span><span class="en-colloc">study on what day</span></button></div></td><td><div class="triad"><div class="thai">วันนี้วันอะไรคะ</div><div class="roman">wan-níi wan à-rai khá</div><div class="eng">What day is today?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Date question" data-colloc='[{"thai": "วันนี้วันอะไร", "en": "what day is today"}, {"thai": "เรียนวันอะไร", "en": "study on what day"}]' data-eng="what day?" data-ex-eng="What day is today?" data-ex-rom="wan-níi wan à-rai khá" data-ex-thai="วันนี้วันอะไรคะ" data-grammar="問星期幾；問日期幾號則用 วันที่เท่าไร。" data-rom="wan à-rai" data-thai="วันอะไร" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เริ่ม</div><div class="roman">rôoem</div><div class="eng">to start / begin</div></div></td><td>Time verb</td><td>問活動、課程或店家幾點開始。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เริ่มกี่โมง" aria-pressed="false" class="colloc-chip" data-thai="เริ่มกี่โมง" type="button"><span class="thai">เริ่มกี่โมง</span><span class="en-colloc">start at what time</span></button><button aria-label="播放搭配詞：เริ่มเรียน" aria-pressed="false" class="colloc-chip" data-thai="เริ่มเรียน" type="button"><span class="thai">เริ่มเรียน</span><span class="en-colloc">start class</span></button></div></td><td><div class="triad"><div class="thai">เรียนเริ่มกี่โมงคะ</div><div class="roman">riian rôoem gìi moong khá</div><div class="eng">What time does class start?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time verb" data-colloc='[{"thai": "เริ่มกี่โมง", "en": "start at what time"}, {"thai": "เริ่มเรียน", "en": "start class"}]' data-eng="to start / begin" data-ex-eng="What time does class start?" data-ex-rom="riian rôoem gìi moong khá" data-ex-thai="เรียนเริ่มกี่โมงคะ" data-grammar="問活動、課程或店家幾點開始。" data-rom="rôoem" data-thai="เริ่ม" type="button">♡ 收藏</button></td></tr></tbody></table></div><h3>Weekdays &amp; Dates｜星期、日期與節日</h3><div class="vocab-scroll"><table><thead><tr><th class="vocab-triad-header">Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">วันอังคาร</div><div class="roman">wan ang-khaan</div><div class="eng">Tuesday</div></div></td><td>Weekday</td><td>星期名稱前通常保留 วัน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันอังคารนี้" aria-pressed="false" class="colloc-chip" data-thai="วันอังคารนี้" type="button"><span class="thai">วันอังคารนี้</span><span class="en-colloc">this Tuesday</span></button><button aria-label="播放搭配詞：ทุกวันอังคาร" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันอังคาร" type="button"><span class="thai">ทุกวันอังคาร</span><span class="en-colloc">every Tuesday</span></button></div></td><td><div class="triad"><div class="thai">ฉันซื้อของวันอังคารค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng wan ang-khaan khâ</div><div class="eng">I shop on Tuesday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันอังคารนี้", "en": "this Tuesday"}, {"thai": "ทุกวันอังคาร", "en": "every Tuesday"}]' data-eng="Tuesday" data-ex-eng="I shop on Tuesday." data-ex-rom="chǎn sʉ́ʉ khɔ̌ɔng wan ang-khaan khâ" data-ex-thai="ฉันซื้อของวันอังคารค่ะ" data-grammar="星期名稱前通常保留 วัน。" data-rom="wan ang-khaan" data-thai="วันอังคาร" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันพุธ</div><div class="roman">wan phút</div><div class="eng">Wednesday</div></div></td><td>Weekday</td><td>星期名稱前通常保留 วัน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันพุธนี้" aria-pressed="false" class="colloc-chip" data-thai="วันพุธนี้" type="button"><span class="thai">วันพุธนี้</span><span class="en-colloc">this Wednesday</span></button><button aria-label="播放搭配詞：ทุกวันพุธ" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันพุธ" type="button"><span class="thai">ทุกวันพุธ</span><span class="en-colloc">every Wednesday</span></button></div></td><td><div class="triad"><div class="thai">ฉันอ่านหนังสือวันพุธค่ะ</div><div class="roman">chǎn àan năng-sʉ̌ʉ wan phút khâ</div><div class="eng">I read on Wednesday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันพุธนี้", "en": "this Wednesday"}, {"thai": "ทุกวันพุธ", "en": "every Wednesday"}]' data-eng="Wednesday" data-ex-eng="I read on Wednesday." data-ex-rom="chǎn àan năng-sʉ̌ʉ wan phút khâ" data-ex-thai="ฉันอ่านหนังสือวันพุธค่ะ" data-grammar="星期名稱前通常保留 วัน。" data-rom="wan phút" data-thai="วันพุธ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันพฤหัสบดี</div><div class="roman">wan phá-rʉ́-hàt-sà-bɔɔ-dii</div><div class="eng">Thursday</div></div></td><td>Weekday</td><td>星期四字比較長，先整塊背。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันพฤหัสบดีนี้" aria-pressed="false" class="colloc-chip" data-thai="วันพฤหัสบดีนี้" type="button"><span class="thai">วันพฤหัสบดีนี้</span><span class="en-colloc">this Thursday</span></button><button aria-label="播放搭配詞：ทุกวันพฤหัสบดี" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันพฤหัสบดี" type="button"><span class="thai">ทุกวันพฤหัสบดี</span><span class="en-colloc">every Thursday</span></button></div></td><td><div class="triad"><div class="thai">ฉันฟังเพลงวันพฤหัสบดีค่ะ</div><div class="roman">chǎn fang phleeng wan phá-rʉ́-hàt-sà-bɔɔ-dii khâ</div><div class="eng">I listen to music on Thursday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันพฤหัสบดีนี้", "en": "this Thursday"}, {"thai": "ทุกวันพฤหัสบดี", "en": "every Thursday"}]' data-eng="Thursday" data-ex-eng="I listen to music on Thursday." data-ex-rom="chǎn fang phleeng wan phá-rʉ́-hàt-sà-bɔɔ-dii khâ" data-ex-thai="ฉันฟังเพลงวันพฤหัสบดีค่ะ" data-grammar="星期四字比較長，先整塊背。" data-rom="wan phá-rʉ́-hàt-sà-bɔɔ-dii" data-thai="วันพฤหัสบดี" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันศุกร์</div><div class="roman">wan sùk</div><div class="eng">Friday</div></div></td><td>Weekday</td><td>星期名稱前通常保留 วัน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันศุกร์นี้" aria-pressed="false" class="colloc-chip" data-thai="วันศุกร์นี้" type="button"><span class="thai">วันศุกร์นี้</span><span class="en-colloc">this Friday</span></button><button aria-label="播放搭配詞：ทุกวันศุกร์" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันศุกร์" type="button"><span class="thai">ทุกวันศุกร์</span><span class="en-colloc">every Friday</span></button></div></td><td><div class="triad"><div class="thai">ฉันร้องเพลงวันศุกร์ค่ะ</div><div class="roman">chǎn rɔ́ɔng phleeng wan sùk khâ</div><div class="eng">I sing on Friday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันศุกร์นี้", "en": "this Friday"}, {"thai": "ทุกวันศุกร์", "en": "every Friday"}]' data-eng="Friday" data-ex-eng="I sing on Friday." data-ex-rom="chǎn rɔ́ɔng phleeng wan sùk khâ" data-ex-thai="ฉันร้องเพลงวันศุกร์ค่ะ" data-grammar="星期名稱前通常保留 วัน。" data-rom="wan sùk" data-thai="วันศุกร์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันเสาร์</div><div class="roman">wan sǎo</div><div class="eng">Saturday</div></div></td><td>Weekday</td><td>星期名稱前通常保留 วัน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันเสาร์นี้" aria-pressed="false" class="colloc-chip" data-thai="วันเสาร์นี้" type="button"><span class="thai">วันเสาร์นี้</span><span class="en-colloc">this Saturday</span></button><button aria-label="播放搭配詞：ทุกวันเสาร์" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันเสาร์" type="button"><span class="thai">ทุกวันเสาร์</span><span class="en-colloc">every Saturday</span></button></div></td><td><div class="triad"><div class="thai">ฉันจะไปห้างวันเสาร์ค่ะ</div><div class="roman">chǎn jà bpai hâang wan sǎo khâ</div><div class="eng">I will go to the mall on Saturday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันเสาร์นี้", "en": "this Saturday"}, {"thai": "ทุกวันเสาร์", "en": "every Saturday"}]' data-eng="Saturday" data-ex-eng="I will go to the mall on Saturday." data-ex-rom="chǎn jà bpai hâang wan sǎo khâ" data-ex-thai="ฉันจะไปห้างวันเสาร์ค่ะ" data-grammar="星期名稱前通常保留 วัน。" data-rom="wan sǎo" data-thai="วันเสาร์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันอาทิตย์</div><div class="roman">wan aa-thít</div><div class="eng">Sunday</div></div></td><td>Weekday</td><td>อาทิตย์ 單獨也可指「星期／週」；加 วัน 是星期日。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันอาทิตย์นี้" aria-pressed="false" class="colloc-chip" data-thai="วันอาทิตย์นี้" type="button"><span class="thai">วันอาทิตย์นี้</span><span class="en-colloc">this Sunday</span></button><button aria-label="播放搭配詞：ทุกวันอาทิตย์" aria-pressed="false" class="colloc-chip" data-thai="ทุกวันอาทิตย์" type="button"><span class="thai">ทุกวันอาทิตย์</span><span class="en-colloc">every Sunday</span></button></div></td><td><div class="triad"><div class="thai">ฉันพักวันอาทิตย์ค่ะ</div><div class="roman">chǎn phák wan aa-thít khâ</div><div class="eng">I rest on Sunday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weekday" data-colloc='[{"thai": "วันอาทิตย์นี้", "en": "this Sunday"}, {"thai": "ทุกวันอาทิตย์", "en": "every Sunday"}]' data-eng="Sunday" data-ex-eng="I rest on Sunday." data-ex-rom="chǎn phák wan aa-thít khâ" data-ex-thai="ฉันพักวันอาทิตย์ค่ะ" data-grammar="อาทิตย์ 單獨也可指「星期／週」；加 วัน 是星期日。" data-rom="wan aa-thít" data-thai="วันอาทิตย์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เดือนที่</div><div class="roman">dʉan thîi</div><div class="eng">month number / the ... month</div></div></td><td>Date phrase</td><td>用於第幾個月；正式說法可接數字。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เดือนที่แปด" aria-pressed="false" class="colloc-chip" data-thai="เดือนที่แปด" type="button"><span class="thai">เดือนที่แปด</span><span class="en-colloc">the eighth month</span></button><button aria-label="播放搭配詞：เดือนที่สิบสอง" aria-pressed="false" class="colloc-chip" data-thai="เดือนที่สิบสอง" type="button"><span class="thai">เดือนที่สิบสอง</span><span class="en-colloc">the twelfth month</span></button></div></td><td><div class="triad"><div class="thai">เดือนที่แปดคือเดือนสิงหาคมค่ะ</div><div class="roman">dʉan thîi bpɛ̀ɛt khʉʉ dʉan sǐng-hǎa-khom khâ</div><div class="eng">The eighth month is August.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Date phrase" data-colloc='[{"thai": "เดือนที่แปด", "en": "the eighth month"}, {"thai": "เดือนที่สิบสอง", "en": "the twelfth month"}]' data-eng="month number / the ... month" data-ex-eng="The eighth month is August." data-ex-rom="dʉan thîi bpɛ̀ɛt khʉʉ dʉan sǐng-hǎa-khom khâ" data-ex-thai="เดือนที่แปดคือเดือนสิงหาคมค่ะ" data-grammar="用於第幾個月；正式說法可接數字。" data-rom="dʉan thîi" data-thai="เดือนที่" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันปีใหม่</div><div class="roman">wan bpii-mài</div><div class="eng">New Year’s Day</div></div></td><td>Holiday</td><td>新年第一天；也可說 ปีใหม่ 表示新年。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สุขสันต์วันปีใหม่" aria-pressed="false" class="colloc-chip" data-thai="สุขสันต์วันปีใหม่" type="button"><span class="thai">สุขสันต์วันปีใหม่</span><span class="en-colloc">Happy New Year</span></button><button aria-label="播放搭配詞：วันปีใหม่นี้" aria-pressed="false" class="colloc-chip" data-thai="วันปีใหม่นี้" type="button"><span class="thai">วันปีใหม่นี้</span><span class="en-colloc">this New Year’s Day</span></button></div></td><td><div class="triad"><div class="thai">วันปีใหม่อยู่วันที่หนึ่งเดือนที่หนึ่งค่ะ</div><div class="roman">wan bpii-mài yùu wan-thîi nʉ̀ng dʉan-thîi nʉ̀ng khâ</div><div class="eng">New Year’s Day is on the first day of the first month.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Holiday" data-colloc='[{"thai": "สุขสันต์วันปีใหม่", "en": "Happy New Year"}, {"thai": "วันปีใหม่นี้", "en": "this New Year’s Day"}]' data-eng="New Year’s Day" data-ex-eng="New Year’s Day is on the first day of the first month." data-ex-rom="wan bpii-mài yùu wan-thîi nʉ̀ng dʉan-thîi nʉ̀ng khâ" data-ex-thai="วันปีใหม่อยู่วันที่หนึ่งเดือนที่หนึ่งค่ะ" data-grammar="新年第一天；也可說 ปีใหม่ 表示新年。" data-rom="wan bpii-mài" data-thai="วันปีใหม่" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันคริสต์มาส</div><div class="roman">wan khrít-sà-mâat</div><div class="eng">Christmas Day</div></div></td><td>Holiday</td><td>外來節日名稱。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สุขสันต์วันคริสต์มาส" aria-pressed="false" class="colloc-chip" data-thai="สุขสันต์วันคริสต์มาส" type="button"><span class="thai">สุขสันต์วันคริสต์มาส</span><span class="en-colloc">Merry Christmas</span></button><button aria-label="播放搭配詞：วันคริสต์มาสนี้" aria-pressed="false" class="colloc-chip" data-thai="วันคริสต์มาสนี้" type="button"><span class="thai">วันคริสต์มาสนี้</span><span class="en-colloc">this Christmas</span></button></div></td><td><div class="triad"><div class="thai">วันคริสต์มาสอยู่วันที่ยี่สิบห้าเดือนที่สิบสองค่ะ</div><div class="roman">wan khrít-sà-mâat yùu wan-thîi yîi-sìp-hâa dʉan-thîi sìp-sɔ̌ɔng khâ</div><div class="eng">Christmas is on the 25th day of the twelfth month.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Holiday" data-colloc='[{"thai": "สุขสันต์วันคริสต์มาส", "en": "Merry Christmas"}, {"thai": "วันคริสต์มาสนี้", "en": "this Christmas"}]' data-eng="Christmas Day" data-ex-eng="Christmas is on the 25th day of the twelfth month." data-ex-rom="wan khrít-sà-mâat yùu wan-thîi yîi-sìp-hâa dʉan-thîi sìp-sɔ̌ɔng khâ" data-ex-thai="วันคริสต์มาสอยู่วันที่ยี่สิบห้าเดือนที่สิบสองค่ะ" data-grammar="外來節日名稱。" data-rom="wan khrít-sà-mâat" data-thai="วันคริสต์มาส" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">วันสงกรานต์</div><div class="roman">wan sǒng-graan</div><div class="eng">Songkran / Thai New Year festival</div></div></td><td>Thai holiday</td><td>泰國新年節日；常用於四月行程與問候。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ช่วงสงกรานต์" aria-pressed="false" class="colloc-chip" data-thai="ช่วงสงกรานต์" type="button"><span class="thai">ช่วงสงกรานต์</span><span class="en-colloc">during Songkran</span></button><button aria-label="播放搭配詞：เที่ยวสงกรานต์" aria-pressed="false" class="colloc-chip" data-thai="เที่ยวสงกรานต์" type="button"><span class="thai">เที่ยวสงกรานต์</span><span class="en-colloc">travel during Songkran</span></button></div></td><td><div class="triad"><div class="thai">วันสงกรานต์อยู่วันที่สิบสามถึงสิบห้าเดือนที่สี่ค่ะ</div><div class="roman">wan sǒng-graan yùu wan-thîi sìp-sǎam thʉ̌ng sìp-hâa dʉan-thîi sìi khâ</div><div class="eng">Songkran is from April 13th to 15th.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Thai holiday" data-colloc='[{"thai": "ช่วงสงกรานต์", "en": "during Songkran"}, {"thai": "เที่ยวสงกรานต์", "en": "travel during Songkran"}]' data-eng="Songkran / Thai New Year festival" data-ex-eng="Songkran is from April 13th to 15th." data-ex-rom="wan sǒng-graan yùu wan-thîi sìp-sǎam thʉ̌ng sìp-hâa dʉan-thîi sìi khâ" data-ex-thai="วันสงกรานต์อยู่วันที่สิบสามถึงสิบห้าเดือนที่สี่ค่ะ" data-grammar="泰國新年節日；常用於四月行程與問候。" data-rom="wan sǒng-graan" data-thai="วันสงกรานต์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ตลอดชีวิต</div><div class="roman">dtà-lɔ̀ɔt chii-wít</div><div class="eng">for life / throughout life</div></div></td><td>Time phrase</td><td>表示很長、持續一生的時間。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เรียนตลอดชีวิต" aria-pressed="false" class="colloc-chip" data-thai="เรียนตลอดชีวิต" type="button"><span class="thai">เรียนตลอดชีวิต</span><span class="en-colloc">learn for life</span></button><button aria-label="播放搭配詞：จำตลอดชีวิต" aria-pressed="false" class="colloc-chip" data-thai="จำตลอดชีวิต" type="button"><span class="thai">จำตลอดชีวิต</span><span class="en-colloc">remember for life</span></button></div></td><td><div class="triad"><div class="thai">ฉันอยากเรียนภาษาไทยตลอดชีวิตค่ะ</div><div class="roman">chǎn yàak riian phaa-sǎa thai dtà-lɔ̀ɔt chii-wít khâ</div><div class="eng">I want to study Thai for life.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "เรียนตลอดชีวิต", "en": "learn for life"}, {"thai": "จำตลอดชีวิต", "en": "remember for life"}]' data-eng="for life / throughout life" data-ex-eng="I want to study Thai for life." data-ex-rom="chǎn yàak riian phaa-sǎa thai dtà-lɔ̀ɔt chii-wít khâ" data-ex-thai="ฉันอยากเรียนภาษาไทยตลอดชีวิตค่ะ" data-grammar="表示很長、持續一生的時間。" data-rom="dtà-lɔ̀ɔt chii-wít" data-thai="ตลอดชีวิต" type="button">♡ 收藏</button></td></tr></tbody></table></div>
+<h3>Activities &amp; Life Events</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">เรียน</div><div class="roman">riian</div><div class="eng">study / learn</div></div></td><td>活動</td><td><span class="label review">Review</span> 之前已出現，Day 11 用來練多久、星期幾。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เรียนภาษาไทย" aria-pressed="false" class="colloc-chip" data-thai="เรียนภาษาไทย" type="button"><span class="thai">เรียนภาษาไทย</span><span class="en-colloc">study Thai</span></button></div></td><td><div class="triad"><div class="thai">คุณเรียนภาษาไทยวันอะไรคะ</div><div class="roman">khun riian phaa-sǎa thai wan à-rai khá</div><div class="eng">What day do you study Thai?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "เรียนภาษาไทย", "en": "study Thai"}]' data-eng="study / learn" data-ex-eng="What day do you study Thai?" data-ex-rom="khun riian phaa-sǎa thai wan à-rai khá" data-ex-thai="คุณเรียนภาษาไทยวันอะไรคะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; 之前已出現，Day 11 用來練多久、星期幾。' data-rom="riian" data-thai="เรียน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เกิด</div><div class="roman">gə̀ət</div><div class="eng">be born</div></div></td><td>人生事件</td><td>生日是 <span class="thai">วันเกิด</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันเกิด" aria-pressed="false" class="colloc-chip" data-thai="วันเกิด" type="button"><span class="thai">วันเกิด</span><span class="en-colloc">birthday</span></button></div></td><td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人生事件" data-colloc='[{"thai": "วันเกิด", "en": "birthday"}]' data-eng="be born" data-ex-eng="What date is your birthday?" data-ex-rom="wan-gə̀ət khun wan-thîi thâo-rài khá" data-ex-thai="วันเกิดคุณวันที่เท่าไรคะ" data-grammar='生日是 &lt;span class="thai"&gt;วันเกิด&lt;/span&gt;。' data-rom="gə̀ət" data-thai="เกิด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">แต่งงาน</div><div class="roman">dtɛ̀ɛng-ngaan</div><div class="eng">get married</div></div></td><td>人生事件</td><td>教材用於婚禮/結婚。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：วันแต่งงาน" aria-pressed="false" class="colloc-chip" data-thai="วันแต่งงาน" type="button"><span class="thai">วันแต่งงาน</span><span class="en-colloc">wedding day</span></button></div></td><td><div class="triad"><div class="thai">เขาจะแต่งงานเดือนหน้าค่ะ</div><div class="roman">khǎo jà dtɛ̀ɛng-ngaan dʉan nâa khâ</div><div class="eng">They will get married next month.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人生事件" data-colloc='[{"thai": "วันแต่งงาน", "en": "wedding day"}]' data-eng="get married" data-ex-eng="They will get married next month." data-ex-rom="khǎo jà dtɛ̀ɛng-ngaan dʉan nâa khâ" data-ex-thai="เขาจะแต่งงานเดือนหน้าค่ะ" data-grammar="教材用於婚禮/結婚。" data-rom="dtɛ̀ɛng-ngaan" data-thai="แต่งงาน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">รัก</div><div class="roman">rák</div><div class="eng">love</div></div></td><td>感情</td><td>日常中比較強烈，對情人/家人使用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：รักแฟน" aria-pressed="false" class="colloc-chip" data-thai="รักแฟน" type="button"><span class="thai">รักแฟน</span><span class="en-colloc">love one's partner</span></button></div></td><td><div class="triad"><div class="thai">ฉันรักแฟนค่ะ</div><div class="roman">chǎn rák fɛɛn khâ</div><div class="eng">I love my partner.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="感情" data-colloc="[{&quot;thai&quot;: &quot;รักแฟน&quot;, &quot;en&quot;: &quot;love one's partner&quot;}]" data-eng="love" data-ex-eng="I love my partner." data-ex-rom="chǎn rák fɛɛn khâ" data-ex-thai="ฉันรักแฟนค่ะ" data-grammar="日常中比較強烈，對情人/家人使用。" data-rom="rák" data-thai="รัก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อธิษฐาน</div><div class="roman">à-thít-thǎan</div><div class="eng">pray / make a wish</div></div></td><td>宗教 / 節日</td><td>在寺廟、生日、節日都可能用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อธิษฐานที่วัด" aria-pressed="false" class="colloc-chip" data-thai="อธิษฐานที่วัด" type="button"><span class="thai">อธิษฐานที่วัด</span><span class="en-colloc">pray at a temple</span></button></div></td><td><div class="triad"><div class="thai">ฉันอธิษฐานที่วัดค่ะ</div><div class="roman">chǎn à-thít-thǎan thîi wát khâ</div><div class="eng">I pray at a temple.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="宗教 / 節日" data-colloc='[{"thai": "อธิษฐานที่วัด", "en": "pray at a temple"}]' data-eng="pray / make a wish" data-ex-eng="I pray at a temple." data-ex-rom="chǎn à-thít-thǎan thîi wát khâ" data-ex-thai="ฉันอธิษฐานที่วัดค่ะ" data-grammar="在寺廟、生日、節日都可能用。" data-rom="à-thít-thǎan" data-thai="อธิษฐาน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ร้องเพลง</div><div class="roman">rɔ́ɔng phleeng</div><div class="eng">sing a song</div></div></td><td>活動</td><td><span class="thai">ร้อง</span> = sing；<span class="thai">เพลง</span> = song。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ร้องเพลงวันศุกร์" aria-pressed="false" class="colloc-chip" data-thai="ร้องเพลงวันศุกร์" type="button"><span class="thai">ร้องเพลงวันศุกร์</span><span class="en-colloc">sing on Friday</span></button></div></td><td><div class="triad"><div class="thai">ฉันร้องเพลงวันศุกร์ค่ะ</div><div class="roman">chǎn rɔ́ɔng phleeng wan sùk khâ</div><div class="eng">I sing on Friday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "ร้องเพลงวันศุกร์", "en": "sing on Friday"}]' data-eng="sing a song" data-ex-eng="I sing on Friday." data-ex-rom="chǎn rɔ́ɔng phleeng wan sùk khâ" data-ex-thai="ฉันร้องเพลงวันศุกร์ค่ะ" data-grammar='&lt;span class="thai"&gt;ร้อง&lt;/span&gt; = sing；&lt;span class="thai"&gt;เพลง&lt;/span&gt; = song。' data-rom="rɔ́ɔng phleeng" data-thai="ร้องเพลง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ฟังเพลง</div><div class="roman">fang phleeng</div><div class="eng">listen to music</div></div></td><td>活動</td><td><span class="thai">ฟัง</span> = listen。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ฟังเพลงทุกวัน" aria-pressed="false" class="colloc-chip" data-thai="ฟังเพลงทุกวัน" type="button"><span class="thai">ฟังเพลงทุกวัน</span><span class="en-colloc">listen to music every day</span></button></div></td><td><div class="triad"><div class="thai">ฉันฟังเพลงทุกวันค่ะ</div><div class="roman">chǎn fang phleeng thúk wan khâ</div><div class="eng">I listen to music every day.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "ฟังเพลงทุกวัน", "en": "listen to music every day"}]' data-eng="listen to music" data-ex-eng="I listen to music every day." data-ex-rom="chǎn fang phleeng thúk wan khâ" data-ex-thai="ฉันฟังเพลงทุกวันค่ะ" data-grammar='&lt;span class="thai"&gt;ฟัง&lt;/span&gt; = listen。' data-rom="fang phleeng" data-thai="ฟังเพลง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เล่นดนตรี</div><div class="roman">lên don-dtrii</div><div class="eng">play music / play an instrument</div></div></td><td>活動</td><td><span class="thai">เล่น</span> 用於玩、演奏。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เล่นดนตรีทุกอาทิตย์" aria-pressed="false" class="colloc-chip" data-thai="เล่นดนตรีทุกอาทิตย์" type="button"><span class="thai">เล่นดนตรีทุกอาทิตย์</span><span class="en-colloc">play music every week</span></button></div></td><td><div class="triad"><div class="thai">คุณเล่นดนตรีวันอะไรคะ</div><div class="roman">khun lên don-dtrii wan à-rai khá</div><div class="eng">What day do you play music?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "เล่นดนตรีทุกอาทิตย์", "en": "play music every week"}]' data-eng="play music / play an instrument" data-ex-eng="What day do you play music?" data-ex-rom="khun lên don-dtrii wan à-rai khá" data-ex-thai="คุณเล่นดนตรีวันอะไรคะ" data-grammar='&lt;span class="thai"&gt;เล่น&lt;/span&gt; 用於玩、演奏。' data-rom="lên don-dtrii" data-thai="เล่นดนตรี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ฟังดนตรี</div><div class="roman">fang don-dtrii</div><div class="eng">listen to music</div></div></td><td>活動</td><td>意思接近 <span class="thai">ฟังเพลง</span>，但較像聽音樂整體。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ฟังดนตรีที่บ้าน" aria-pressed="false" class="colloc-chip" data-thai="ฟังดนตรีที่บ้าน" type="button"><span class="thai">ฟังดนตรีที่บ้าน</span><span class="en-colloc">listen to music at home</span></button></div></td><td><div class="triad"><div class="thai">ฉันฟังดนตรีที่บ้านค่ะ</div><div class="roman">chǎn fang don-dtrii thîi bâan khâ</div><div class="eng">I listen to music at home.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "ฟังดนตรีที่บ้าน", "en": "listen to music at home"}]' data-eng="listen to music" data-ex-eng="I listen to music at home." data-ex-rom="chǎn fang don-dtrii thîi bâan khâ" data-ex-thai="ฉันฟังดนตรีที่บ้านค่ะ" data-grammar='意思接近 &lt;span class="thai"&gt;ฟังเพลง&lt;/span&gt;，但較像聽音樂整體。' data-rom="fang don-dtrii" data-thai="ฟังดนตรี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อ่านหนังสือ</div><div class="roman">àan năng-sʉ̌ʉ</div><div class="eng">read a book / study</div></div></td><td>活動</td><td>可指讀書，也可指準備功課。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อ่านหนังสือทุกวัน" aria-pressed="false" class="colloc-chip" data-thai="อ่านหนังสือทุกวัน" type="button"><span class="thai">อ่านหนังสือทุกวัน</span><span class="en-colloc">read every day</span></button></div></td><td><div class="triad"><div class="thai">ฉันอ่านหนังสือทุกคืนค่ะ</div><div class="roman">chǎn àan năng-sʉ̌ʉ thúk khʉʉn khâ</div><div class="eng">I read every night.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "อ่านหนังสือทุกวัน", "en": "read every day"}]' data-eng="read a book / study" data-ex-eng="I read every night." data-ex-rom="chǎn àan năng-sʉ̌ʉ thúk khʉʉn khâ" data-ex-thai="ฉันอ่านหนังสือทุกคืนค่ะ" data-grammar="可指讀書，也可指準備功課。" data-rom="àan năng-sʉ̌ʉ" data-thai="อ่านหนังสือ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ซื้อของ</div><div class="roman">sʉ́ʉ khɔ̌ɔng</div><div class="eng">shop / buy things</div></div></td><td>活動</td><td><span class="label review">Review</span> Day 10 買水果；這裡是買東西總稱。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ซื้อของที่ห้าง" aria-pressed="false" class="colloc-chip" data-thai="ซื้อของที่ห้าง" type="button"><span class="thai">ซื้อของที่ห้าง</span><span class="en-colloc">shop at the mall</span></button></div></td><td><div class="triad"><div class="thai">ฉันจะซื้อของวันเสาร์ค่ะ</div><div class="roman">chǎn jà sʉ́ʉ khɔ̌ɔng wan sǎo khâ</div><div class="eng">I will shop on Saturday.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "ซื้อของที่ห้าง", "en": "shop at the mall"}]' data-eng="shop / buy things" data-ex-eng="I will shop on Saturday." data-ex-rom="chǎn jà sʉ́ʉ khɔ̌ɔng wan sǎo khâ" data-ex-thai="ฉันจะซื้อของวันเสาร์ค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 10 買水果；這裡是買東西總稱。' data-rom="sʉ́ʉ khɔ̌ɔng" data-thai="ซื้อของ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ดูของ</div><div class="roman">duu khɔ̌ɔng</div><div class="eng">look around / browse things</div></div></td><td>活動</td><td>逛店不一定買東西時很實用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ดูของก่อน" aria-pressed="false" class="colloc-chip" data-thai="ดูของก่อน" type="button"><span class="thai">ดูของก่อน</span><span class="en-colloc">browse first</span></button></div></td><td><div class="triad"><div class="thai">ขอดูของก่อนค่ะ</div><div class="roman">khɔ̌ɔ duu khɔ̌ɔng gɔ̀ɔn khâ</div><div class="eng">Let me look around first.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="活動" data-colloc='[{"thai": "ดูของก่อน", "en": "browse first"}]' data-eng="look around / browse things" data-ex-eng="Let me look around first." data-ex-rom="khɔ̌ɔ duu khɔ̌ɔng gɔ̀ɔn khâ" data-ex-thai="ขอดูของก่อนค่ะ" data-grammar="逛店不一定買東西時很實用。" data-rom="duu khɔ̌ɔng" data-thai="ดูของ" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+</section><section class="tab-content" id="supplement"><h2>Supplement｜本課延伸整理</h2><div class="supplement-section"><h3 class="supplement-section-title">時間系統整理｜先分「多久」與「幾點」</h3><table><thead><tr><th>你想問的事</th><th>核心問法</th><th>例子</th></tr></thead><tbody><tr><td>持續多久</td><td>นานเท่าไร</td><td>เรียน...นานเท่าไร</td></tr><tr><td>具體幾點</td><td>กี่โมง</td><td>เริ่มกี่โมง</td></tr><tr><td>哪一天</td><td>วันอะไร / วันที่เท่าไร</td><td>เรียนวันอะไร</td></tr><tr><td>時間範圍</td><td>ตั้งแต่...ถึง...</td><td>ตั้งแต่เก้าโมงถึงห้าโมง</td></tr></tbody></table></div><div class="supplement-section"><h3 class="supplement-section-title">Time Unit Logic｜時間單位的關係</h3><p>星期、日期、節日與長時間片語已移到 Vocabulary；這裡只保留「單位怎麼互相連結」與選問句的邏輯。</p><div class="supplement-table-scroll"><table><thead><tr><th>Core relationship</th><th>Thai / Romanization / English</th><th>中文提示</th></tr></thead><tbody><tr><td>year → month</td><td><div class="triad"><div class="thai">หนึ่งปีมีสิบสองเดือน</div><div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan</div><div class="eng">One year has twelve months.</div></div></td><td>年、月的基本關係。</td></tr><tr><td>week → day</td><td><div class="triad"><div class="thai">หนึ่งอาทิตย์มีเจ็ดวัน</div><div class="roman">nʉ̀ng aa-thít mii jèt wan</div><div class="eng">One week has seven days.</div></div></td><td>อาทิตย์ 可指週；วันอาทิตย์ 是星期日。</td></tr><tr><td>day → hour</td><td><div class="triad"><div class="thai">หนึ่งวันมียี่สิบสี่ชั่วโมง</div><div class="roman">nʉ̀ng wan mii yîi-sìp-sìi chûa-moong</div><div class="eng">One day has twenty-four hours.</div></div></td><td>持續時間的基本單位。</td></tr><tr><td>hour → minute</td><td><div class="triad"><div class="thai">หนึ่งชั่วโมงมีหกสิบนาที</div><div class="roman">nʉ̀ng chûa-moong mii hòk-sìp naa-thii</div><div class="eng">One hour has sixty minutes.</div></div></td><td>不要和 โมง（鐘點）混用。</td></tr><tr><td>minute → second</td><td><div class="triad"><div class="thai">หนึ่งนาทีมีหกสิบวินาที</div><div class="roman">nʉ̀ng naa-thii mii hòk-sìp wí-naa-thii</div><div class="eng">One minute has sixty seconds.</div></div></td><td>短時間單位。</td></tr></tbody></table></div><div class="tip blue">問持續多久用 นานเท่าไร；問具體鐘點用 กี่โมง；問星期用 วันอะไร；問幾號用 วันที่เท่าไร。</div></div></section>
+<section class="tab-content" id="structures">
+<h2>Sentence Structures</h2>
+<h3>1. A has how many B?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">A + มีกี่ + classifier + คะ</div>
+<div class="roman">A + mii gìi + classifier + khá</div>
+<div class="eng">How many units does A have?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">หนึ่งปีมีกี่เดือนคะ</div><div class="roman">nʉ̀ng bpii mii gìi dʉan khá</div><div class="eng">How many months does one year have?</div></div></td>
+<td><div class="triad"><div class="thai">หนึ่งปีมีสิบสองเดือนค่ะ</div><div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan khâ</div><div class="eng">One year has twelve months.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">หนึ่งวันมีกี่ชั่วโมงคะ</div><div class="roman">nʉ̀ng wan mii gìi chûa-moong khá</div><div class="eng">How many hours does one day have?</div></div></td>
+<td><div class="triad"><div class="thai">หนึ่งวันมียี่สิบสี่ชั่วโมงค่ะ</div><div class="roman">nʉ̀ng wan mii yîi-sìp-sìi chûa-moong khâ</div><div class="eng">One day has twenty-four hours.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>2. How long do you do something?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + นานเท่าไรคะ</div>
+<div class="roman">khun + V. + Object + naan thâo-rài khá</div>
+<div class="eng">How long do you do something?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Usage</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณเรียนภาษาไทยนานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai naan thâo-rài khá</div><div class="eng">How long do you study Thai?</div></div></td>
+<td><div class="triad"><div class="thai">เรียนภาษาไทยหนึ่งชั่วโมงค่ะ</div><div class="roman">riian phaa-sǎa thai nʉ̀ng chûa-moong khâ</div><div class="eng">I study Thai for one hour.</div></div></td>
+<td>單次活動多久。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. How long have you been doing it already?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + กี่ + time unit + แล้วคะ</div>
+<div class="roman">khun + V. + Object + gìi + time unit + lɛ́ɛw khá</div>
+<div class="eng">How long have you been doing it already?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณเรียนภาษาไทยกี่ชั่วโมงแล้วคะ</div><div class="roman">khun riian phaa-sǎa thai gìi chûa-moong lɛ́ɛw khá</div><div class="eng">How many hours have you studied Thai already?</div></div></td>
+<td><div class="triad"><div class="thai">เรียนภาษาไทยหนึ่งชั่วโมงแล้วค่ะ</div><div class="roman">riian phaa-sǎa thai nʉ̀ng chûa-moong lɛ́ɛw khâ</div><div class="eng">I have studied Thai for one hour already.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>4. How much longer will you do it?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณจะ + V. + Object + อีกกี่ + time unit + คะ</div>
+<div class="roman">khun jà + V. + Object + ìik gìi + time unit + khá</div>
+<div class="eng">How much longer will you do it?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณจะเรียนภาษาไทยอีกกี่ชั่วโมงคะ</div><div class="roman">khun jà riian phaa-sǎa thai ìik gìi chûa-moong khá</div><div class="eng">How many more hours will you study Thai?</div></div></td>
+<td><div class="triad"><div class="thai">จะเรียนภาษาไทยอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian phaa-sǎa thai ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I will study Thai for one more hour.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>5. When did you do it? / When will you do it?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + เมื่อไรคะ</div>
+<div class="roman">khun + V. + Object + mʉ̂a-rài khá</div>
+<div class="eng">When did you do it?</div>
+</div>
+<div class="triad">
+<div class="thai">คุณจะ + V. + Object + เมื่อไรคะ</div>
+<div class="roman">khun jà + V. + Object + mʉ̂a-rài khá</div>
+<div class="eng">When will you do it?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Chinese Explanation</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณเรียนภาษาไทยเมื่อไรคะ</div><div class="roman">khun riian phaa-sǎa thai mʉ̂a-rài khá</div><div class="eng">When did you study Thai?</div></div></td>
+<td><div class="triad"><div class="thai">เรียนเมื่อหนึ่งชั่วโมงก่อนค่ะ</div><div class="roman">riian mʉ̂a nʉ̀ng chûa-moong gɔ̀ɔn khâ</div><div class="eng">I studied one hour ago.</div></div></td>
+<td><span class="thai">ก่อน</span> / <span class="roman">gɔ̀ɔn</span> / <span class="eng">before / ago</span> 用於過去。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณจะเรียนภาษาไทยเมื่อไรคะ</div><div class="roman">khun jà riian phaa-sǎa thai mʉ̂a-rài khá</div><div class="eng">When will you study Thai?</div></div></td>
+<td><div class="triad"><div class="thai">จะเรียนเดือนหน้าค่ะ</div><div class="roman">jà riian dʉan nâa khâ</div><div class="eng">I will study next month.</div></div></td>
+<td><span class="thai">หน้า</span> / <span class="roman">nâa</span> / <span class="eng">next</span> 用於未來。</td>
+</tr>
+</tbody>
+</table>
+<h3>6. What day do you do something?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + วันอะไรคะ</div>
+<div class="roman">khun + V. + Object + wan à-rai khá</div>
+<div class="eng">What day do you do something?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณร้องเพลงวันอะไรคะ</div><div class="roman">khun rɔ́ɔng phleeng wan à-rai khá</div><div class="eng">What day do you sing?</div></div></td>
+<td><div class="triad"><div class="thai">ร้องเพลงวันศุกร์ค่ะ</div><div class="roman">rɔ́ɔng phleeng wan sùk khâ</div><div class="eng">I sing on Friday.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>7. Every / From...to...</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">ทุก + time unit</div>
+<div class="roman">thúk + time unit</div>
+<div class="eng">every + time unit</div>
+</div>
+<div class="triad">
+<div class="thai">วันจันทร์ถึงวันศุกร์</div>
+<div class="roman">wan jan thʉ̌ng wan sùk</div>
+<div class="eng">Monday to Friday</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Sentence</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">ฉันเรียนภาษาไทยทุกวันค่ะ</div><div class="roman">chǎn riian phaa-sǎa thai thúk wan khâ</div><div class="eng">I study Thai every day.</div></div></td>
+<td>日常習慣。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ฉันทำงานวันจันทร์ถึงวันศุกร์ค่ะ</div><div class="roman">chǎn tham-ngaan wan jan thʉ̌ng wan sùk khâ</div><div class="eng">I work Monday to Friday.</div></div></td>
+<td>範圍：從星期一到星期五。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="street">
+<h2>Textbook vs. Street Thai</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Textbook / Polite</th>
+<th>Street / Local Bangkok</th>
+<th>小撇步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>問上多久課</td>
+<td><div class="triad"><div class="thai">คุณเรียนภาษาไทยนานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai naan thâo-rài khá</div><div class="eng">How long do you study Thai?</div></div></td>
+<td><div class="triad"><div class="thai">เรียนกี่ชั่วโมงคะ</div><div class="roman">riian gìi chûa-moong khá</div><div class="eng">How many hours do you study?</div></div></td>
+<td>如果情境已清楚，可以省略「ภาษาไทย」。</td>
+</tr>
+<tr>
+<td>問已經多久</td>
+<td><div class="triad"><div class="thai">คุณเรียนภาษาไทยกี่ชั่วโมงแล้วคะ</div><div class="roman">khun riian phaa-sǎa thai gìi chûa-moong lɛ́ɛw khá</div><div class="eng">How many hours have you studied Thai already?</div></div></td>
+<td><div class="triad"><div class="thai">เรียนมานานแค่ไหนแล้วคะ</div><div class="roman">riian maa naan khɛ̂ɛ nǎi lɛ́ɛw khá</div><div class="eng">How long have you been studying?</div></div></td>
+<td><span class="thai">นานแค่ไหนแล้ว</span> 更像自然聊天。</td>
+</tr>
+<tr>
+<td>問生日</td>
+<td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td>
+<td><div class="triad"><div class="thai">เกิดวันที่เท่าไรคะ</div><div class="roman">gə̀ət wan-thîi thâo-rài khá</div><div class="eng">What date were you born?</div></div></td>
+<td>口語常簡化，但對不熟的人完整說更禮貌。</td>
+</tr>
+<tr>
+<td>說約哪一天</td>
+<td><div class="triad"><div class="thai">คุณจะซื้อของวันอะไรคะ</div><div class="roman">khun jà sʉ́ʉ khɔ̌ɔng wan à-rai khá</div><div class="eng">What day will you shop?</div></div></td>
+<td><div class="triad"><div class="thai">ไปวันไหนดีคะ</div><div class="roman">bpai wan nǎi dii khá</div><div class="eng">Which day should we go?</div></div></td>
+<td>朋友約出門更常用 <span class="thai">วันไหนดี</span>。</td>
+</tr>
+<tr>
+<td>在店裡先逛逛</td>
+<td><div class="triad"><div class="thai">ดูของค่ะ</div><div class="roman">duu khɔ̌ɔng khâ</div><div class="eng">I’m looking at things.</div></div></td>
+<td><div class="triad"><div class="thai">ขอดูก่อนค่ะ</div><div class="roman">khɔ̌ɔ duu gɔ̀ɔn khâ</div><div class="eng">Let me look first.</div></div></td>
+<td>店員問要什麼時超實用。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="bangkok">
+<h2>Bangkok Expansion｜曼谷生活延伸</h2>
+<h3>1. Asking about class / lesson duration</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問泰文課多久</td>
+<td><div class="triad"><div class="thai">เรียนภาษาไทยกี่ชั่วโมงคะ</div><div class="roman">riian phaa-sǎa thai gìi chûa-moong khá</div><div class="eng">How many hours do you study Thai?</div></div></td>
+<td>比 <span class="thai">นานเท่าไร</span> 更直接。</td>
+</tr>
+<tr>
+<td>說上兩小時</td>
+<td><div class="triad"><div class="thai">เรียนสองชั่วโมงค่ะ</div><div class="roman">riian sɔ̌ɔng chûa-moong khâ</div><div class="eng">I study for two hours.</div></div></td>
+<td>課程、健身、工作都可替換動詞。</td>
+</tr>
+<tr>
+<td>還要一小時</td>
+<td><div class="triad"><div class="thai">จะเรียนอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I’ll study for one more hour.</div></div></td>
+<td><span class="thai">อีก</span> = more / again。</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Making plans with friends</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問哪一天去</td>
+<td><div class="triad"><div class="thai">ไปวันไหนดีคะ</div><div class="roman">bpai wan nǎi dii khá</div><div class="eng">Which day should we go?</div></div></td>
+<td>曼谷朋友約出門常用。</td>
+</tr>
+<tr>
+<td>約星期六</td>
+<td><div class="triad"><div class="thai">ไปวันเสาร์ได้ไหมคะ</div><div class="roman">bpai wan sǎo dâai mái khá</div><div class="eng">Can we go on Saturday?</div></div></td>
+<td>禮貌提出時間。</td>
+</tr>
+<tr>
+<td>週一到週五不行</td>
+<td><div class="triad"><div class="thai">วันจันทร์ถึงวันศุกร์ไม่ว่างค่ะ</div><div class="roman">wan jan thʉ̌ng wan sùk mâi wâang khâ</div><div class="eng">I’m not free Monday to Friday.</div></div></td>
+<td><span class="thai">ไม่ว่าง</span> = not free。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Birthday and holidays</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問生日</td>
+<td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td>
+<td>教材核心句型。</td>
+</tr>
+<tr>
+<td>回答生日</td>
+<td><div class="triad"><div class="thai">วันเกิดฉันวันที่สามสิบเอ็ดเดือนที่แปดค่ะ</div><div class="roman">wan-gə̀ət chǎn wan-thîi sǎam-sìp-èt dʉan-thîi bpɛ̀ɛt khâ</div><div class="eng">My birthday is August 31.</div></div></td>
+<td>教材格式：วันที่ + เดือนที่。</td>
+</tr>
+<tr>
+<td>說宋干節</td>
+<td><div class="triad"><div class="thai">วันสงกรานต์อยู่วันที่สิบสามถึงสิบห้าเดือนที่สี่ค่ะ</div><div class="roman">wan sǒng-graan yùu wan-thîi sìp-sǎam thʉ̌ng sìp-hâa dʉan-thîi sìi khâ</div><div class="eng">Songkran is from April 13 to 15.</div></div></td>
+<td>泰國生活必懂。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="dialogues">
+<h2>Dialogues｜情境對話</h2>
+<h3>1. 問泰文課上多久、已經上多久、還要多久</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span> 情境：老師或朋友問你今天泰文課的時間。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">วันนี้เรียนภาษาไทยกี่ชั่วโมงคะ</div><div class="roman">wan-níi riian phaa-sǎa thai gìi chûa-moong khá</div><div class="eng">How many hours do you study Thai today?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">เรียนสองชั่วโมงค่ะ</div><div class="roman">riian sɔ̌ɔng chûa-moong khâ</div><div class="eng">I study for two hours.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">เรียนกี่ชั่วโมงแล้วคะ</div><div class="roman">riian gìi chûa-moong lɛ́ɛw khá</div><div class="eng">How many hours have you studied already?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">เรียนหนึ่งชั่วโมงแล้วค่ะ</div><div class="roman">riian nʉ̀ng chûa-moong lɛ́ɛw khâ</div><div class="eng">I have studied for one hour already.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">จะเรียนอีกกี่ชั่วโมงคะ</div><div class="roman">jà riian ìik gìi chûa-moong khá</div><div class="eng">How many more hours will you study?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">จะเรียนอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I’ll study for one more hour.</div></div>
+</div>
+</div>
+<div class="tip blue">
+<strong>Beginner Survival Phrases：</strong>
+<div class="triad"><div class="thai">เรียนกี่ชั่วโมงคะ</div><div class="roman">riian gìi chûa-moong khá</div><div class="eng">How many hours do you study?</div></div>
+<div class="triad"><div class="thai">เรียนหนึ่งชั่วโมงแล้วค่ะ</div><div class="roman">riian nʉ̀ng chûa-moong lɛ́ɛw khâ</div><div class="eng">I have studied for one hour already.</div></div>
+<div class="triad"><div class="thai">จะเรียนอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I’ll study for one more hour.</div></div>
+</div>
+<h3>2. 跟朋友約週末逛街：星期幾去？</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：你和朋友約去曼谷商場買東西、看東西。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">เสาร์นี้ว่างไหมคะ</div><div class="roman">sǎo níi wâang mái khá</div><div class="eng">Are you free this Saturday?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ว่างค่ะ จะไปไหนคะ</div><div class="roman">wâang khâ, jà bpai nǎi khá</div><div class="eng">I’m free. Where are we going?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไปห้างไหมคะ</div><div class="roman">bpai hâang mái khá</div><div class="eng">Do you want to go to the mall?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ได้ค่ะ อยากจะซื้อของ แล้วก็ดูของค่ะ</div><div class="roman">dâai khâ, yàak jà sʉ́ʉ khɔ̌ɔng, lɛ́ɛw gɔ̂ɔ duu khɔ̌ɔng khâ</div><div class="eng">Okay. I want to shop and look around.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไปกี่ชั่วโมงดีคะ</div><div class="roman">bpai gìi chûa-moong dii khá</div><div class="eng">How many hours should we go for?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไปสองชั่วโมงก็ได้ค่ะ</div><div class="roman">bpai sɔ̌ɔng chûa-moong gɔ̂ɔ dâai khâ</div><div class="eng">Two hours is fine.</div></div>
+</div>
+</div>
+<div class="tip">
+<strong>自然用法說明：</strong>
+<p><span class="thai">ว่างไหมคะ</span> / <span class="roman">wâang mái khá</span> / <span class="eng">Are you free?</span> 是真實約朋友時比課本句更常用的開頭。</p>
+</div>
+<h3>3. 問生日：幾月幾日？</h3>
+<p><span class="label textbook">Textbook-based</span> 情境：朋友或同學聊天問生日。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">วันเกิดฉันวันที่สามสิบเอ็ด เดือนที่แปดค่ะ</div><div class="roman">wan-gə̀ət chǎn wan-thîi sǎam-sìp-èt, dʉan-thîi bpɛ̀ɛt khâ</div><div class="eng">My birthday is August 31.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ปีอะไรคะ</div><div class="roman">bpii à-rai khá</div><div class="eng">What year?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ปีหนึ่งพันเก้าร้อยเก้าสิบห้าค่ะ</div><div class="roman">bpii nʉ̀ng-phan gâao-rɔ́ɔy gâao-sìp-hâa khâ</div><div class="eng">The year 1995.</div></div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      數字還不熟時，可以先用較簡單回答：
+      <div class="triad"><div class="thai">วันที่สามสิบเอ็ด เดือนสิงหาคมค่ะ</div><div class="roman">wan-thîi sǎam-sìp-èt dʉan sǐng-hǎa-khom khâ</div><div class="eng">August 31.</div></div>
+</div>
+<h3>4. 討論宋干節：幾號到幾號？去哪裡？</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：在泰國生活一定會遇到 Songkran，這段練日期範圍與活動地點。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">วันสงกรานต์วันที่เท่าไรคะ</div><div class="roman">wan sǒng-graan wan-thîi thâo-rài khá</div><div class="eng">What date is Songkran?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">วันที่สิบสามถึงสิบห้า เดือนที่สี่ค่ะ</div><div class="roman">wan-thîi sìp-sǎam thʉ̌ng sìp-hâa, dʉan-thîi sìi khâ</div><div class="eng">From April 13 to 15.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">คุณจะไปไหนคะ</div><div class="roman">khun jà bpai nǎi khá</div><div class="eng">Where will you go?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">จะไปสีลมกับเพื่อนค่ะ</div><div class="roman">jà bpai Sǐi-lom gàp phʉ̂an khâ</div><div class="eng">I’ll go to Silom with friends.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">สนุกมากค่ะ</div><div class="roman">sà-nùk mâak khâ</div><div class="eng">It’s very fun.</div></div>
+</div>
+</div>
+<h3>5. 語言交換：你星期幾有空？多久？</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：你在曼谷安排 Thai / Mandarin language exchange。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">คุณว่างวันอะไรคะ</div><div class="roman">khun wâang wan à-rai khá</div><div class="eng">What day are you free?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ว่างวันพุธกับวันศุกร์ค่ะ</div><div class="roman">wâang wan phút gàp wan sùk khâ</div><div class="eng">I’m free on Wednesday and Friday.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">เรียนภาษาไทยกี่ชั่วโมงดีคะ</div><div class="roman">riian phaa-sǎa thai gìi chûa-moong dii khá</div><div class="eng">How many hours should we study Thai?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">หนึ่งชั่วโมงครึ่งได้ไหมคะ</div><div class="roman">nʉ̀ng chûa-moong khrʉ̂ng dâai mái khá</div><div class="eng">Is one and a half hours okay?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Thai Friend</span>
+<div class="triad"><div class="thai">ได้ค่ะ</div><div class="roman">dâai khâ</div><div class="eng">Okay.</div></div>
+</div>
+</div>
+<h3>6. 在店裡：先看東西，不一定買</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：店員靠過來問你要什麼，你想先逛逛。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Staff</span>
+<div class="triad"><div class="thai">รับอะไรดีคะ</div><div class="roman">ráp à-rai dii khá</div><div class="eng">What would you like?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">ขอดูของก่อนค่ะ</div><div class="roman">khɔ̌ɔ duu khɔ̌ɔng gɔ̀ɔn khâ</div><div class="eng">Let me look around first.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Staff</span>
+<div class="triad"><div class="thai">ได้ค่ะ</div><div class="roman">dâai khâ</div><div class="eng">Sure.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">ถ้าจะซื้อ จะบอกนะคะ</div><div class="roman">thâa jà sʉ́ʉ, jà bɔ̀ɔk ná khá</div><div class="eng">If I want to buy, I’ll let you know.</div></div>
+</div>
+</div>
+</section>
+<section class="tab-content" id="mistakes">
+<h2>Common Mistakes &amp; Quick Review</h2>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Why It’s Wrong / Risky</th>
+<th>Better Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">หนึ่งอาทิตย์มีเจ็ดอาทิตย์</div><div class="roman">nʉ̀ng aa-thít mii jèt aa-thít</div><div class="eng">wrong: one week has seven weeks</div></div></td>
+<td>單位要對：一週有七天。</td>
+<td><div class="triad"><div class="thai">หนึ่งอาทิตย์มีเจ็ดวัน</div><div class="roman">nʉ̀ng aa-thít mii jèt wan</div><div class="eng">One week has seven days.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เรียนภาษาไทยกี่ชั่วโมง</div><div class="roman">riian phaa-sǎa thai gìi chûa-moong</div><div class="eng">How many hours study Thai?</div></div></td>
+<td>對朋友可以，但對老師/店員/陌生人要加禮貌詞。</td>
+<td><div class="triad"><div class="thai">เรียนภาษาไทยกี่ชั่วโมงคะ</div><div class="roman">riian phaa-sǎa thai gìi chûa-moong khá</div><div class="eng">How many hours do you study Thai?</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เรียนอีกหนึ่งชั่วโมงแล้ว</div><div class="roman">riian ìik nʉ̀ng chûa-moong lɛ́ɛw</div><div class="eng">wrong mix: one more hour already</div></div></td>
+<td><span class="thai">อีก</span> 是未來還要；<span class="thai">แล้ว</span> 是已經。不要混在同一個意思裡。</td>
+<td>
+<div class="triad"><div class="thai">เรียนหนึ่งชั่วโมงแล้วค่ะ</div><div class="roman">riian nʉ̀ng chûa-moong lɛ́ɛw khâ</div><div class="eng">I have studied for one hour already.</div></div>
+<div class="triad"><div class="thai">จะเรียนอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I will study for one more hour.</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">วันเกิดคุณวันอะไรคะ</div><div class="roman">wan-gə̀ət khun wan à-rai khá</div><div class="eng">What weekday is your birthday?</div></div></td>
+<td>這會偏向問星期幾，不是幾月幾日。</td>
+<td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">วันจันทร์ถึงศุกร์</div><div class="roman">wan jan thʉ̌ng sùk</div><div class="eng">Monday to Friday, shortened</div></div></td>
+<td>可懂，但初學者先完整說比較清楚。</td>
+<td><div class="triad"><div class="thai">วันจันทร์ถึงวันศุกร์</div><div class="roman">wan jan thʉ̌ng wan sùk</div><div class="eng">Monday to Friday</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ดูของ = buy things</div><div class="roman">duu khɔ̌ɔng</div><div class="eng">look at things</div></div></td>
+<td><span class="thai">ดูของ</span> 是看東西/逛逛，不一定買。</td>
+<td>
+<div class="triad"><div class="thai">ดูของ</div><div class="roman">duu khɔ̌ɔng</div><div class="eng">look around / browse</div></div>
+<div class="triad"><div class="thai">ซื้อของ</div><div class="roman">sʉ́ʉ khɔ̌ɔng</div><div class="eng">buy things / shop</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="tip red">
+<strong>本課最重要記憶點：</strong>
+<p>1. <span class="thai">แล้ว</span> / <span class="roman">lɛ́ɛw</span> / <span class="eng">already</span> = 已經；<span class="thai">อีก</span> / <span class="roman">ìik</span> / <span class="eng">more / again</span> = 還要。</p>
+<p>2. <span class="thai">วันอะไร</span> / <span class="roman">wan à-rai</span> / <span class="eng">what day</span> 問星期幾；<span class="thai">วันที่เท่าไร</span> / <span class="roman">wan-thîi thâo-rài</span> / <span class="eng">what date</span> 問幾號。</p>
+<p>3. <span class="thai">ซื้อของ</span> / <span class="roman">sʉ́ʉ khɔ̌ɔng</span> / <span class="eng">shop / buy things</span> 和 <span class="thai">ดูของ</span> / <span class="roman">duu khɔ̌ɔng</span> / <span class="eng">browse</span> 不一樣。</p>
+</div>
+</section>
+<section class="tab-content" id="practice">
+<h2>Practice Questions</h2>
+<h3>A. Time Unit Recall</h3>
+<details>
+<summary>1. One year has twelve months.</summary>
+<div class="triad"><div class="thai">หนึ่งปีมีสิบสองเดือน</div><div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan</div><div class="eng">One year has twelve months.</div></div>
+</details>
+<details>
+<summary>2. One week has seven days.</summary>
+<div class="triad"><div class="thai">หนึ่งอาทิตย์มีเจ็ดวัน</div><div class="roman">nʉ̀ng aa-thít mii jèt wan</div><div class="eng">One week has seven days.</div></div>
+</details>
+<details>
+<summary>3. One hour has sixty minutes.</summary>
+<div class="triad"><div class="thai">หนึ่งชั่วโมงมีหกสิบนาที</div><div class="roman">nʉ̀ng chûa-moong mii hòk-sìp naa-thii</div><div class="eng">One hour has sixty minutes.</div></div>
+</details>
+<h3>B. Weekday Practice</h3>
+<details>
+<summary>1. Monday</summary>
+<div class="triad"><div class="thai">วันจันทร์</div><div class="roman">wan jan</div><div class="eng">Monday</div></div>
+</details>
+<details>
+<summary>2. Friday</summary>
+<div class="triad"><div class="thai">วันศุกร์</div><div class="roman">wan sùk</div><div class="eng">Friday</div></div>
+</details>
+<details>
+<summary>3. Sunday</summary>
+<div class="triad"><div class="thai">วันอาทิตย์</div><div class="roman">wan aa-thít</div><div class="eng">Sunday</div></div>
+</details>
+<h3>C. Translation Practice</h3>
+<details>
+<summary>1. How long do you study Thai?</summary>
+<div class="triad"><div class="thai">คุณเรียนภาษาไทยนานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai naan thâo-rài khá</div><div class="eng">How long do you study Thai?</div></div>
+</details>
+<details>
+<summary>2. I have studied Thai for one hour already.</summary>
+<div class="triad"><div class="thai">เรียนภาษาไทยหนึ่งชั่วโมงแล้วค่ะ</div><div class="roman">riian phaa-sǎa thai nʉ̀ng chûa-moong lɛ́ɛw khâ</div><div class="eng">I have studied Thai for one hour already.</div></div>
+</details>
+<details>
+<summary>3. I will study Thai for one more hour.</summary>
+<div class="triad"><div class="thai">จะเรียนภาษาไทยอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian phaa-sǎa thai ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I will study Thai for one more hour.</div></div>
+</details>
+<details>
+<summary>4. What day do you sing?</summary>
+<div class="triad"><div class="thai">คุณร้องเพลงวันอะไรคะ</div><div class="roman">khun rɔ́ɔng phleeng wan à-rai khá</div><div class="eng">What day do you sing?</div></div>
+</details>
+<details>
+<summary>5. I shop on Saturday.</summary>
+<div class="triad"><div class="thai">ฉันซื้อของวันเสาร์ค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng wan sǎo khâ</div><div class="eng">I shop on Saturday.</div></div>
+</details>
+<details>
+<summary>6. What date is your birthday?</summary>
+<div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div>
+</details>
+<h3>D. Real-life Response Practice</h3>
+<details>
+<summary>1. Friend asks: ว่างวันอะไรคะ / wâang wan à-rai khá / What day are you free?</summary>
+<div class="triad"><div class="thai">ว่างวันพุธกับวันศุกร์ค่ะ</div><div class="roman">wâang wan phút gàp wan sùk khâ</div><div class="eng">I’m free on Wednesday and Friday.</div></div>
+</details>
+<details>
+<summary>2. Staff asks: รับอะไรดีคะ / ráp à-rai dii khá / What would you like?</summary>
+<div class="triad"><div class="thai">ขอดูของก่อนค่ะ</div><div class="roman">khɔ̌ɔ duu khɔ̌ɔng gɔ̀ɔn khâ</div><div class="eng">Let me look around first.</div></div>
+</details>
+<details>
+<summary>3. Teacher asks: จะเรียนอีกกี่ชั่วโมงคะ / jà riian ìik gìi chûa-moong khá / How many more hours will you study?</summary>
+<div class="triad"><div class="thai">จะเรียนอีกหนึ่งชั่วโมงค่ะ</div><div class="roman">jà riian ìik nʉ̀ng chûa-moong khâ</div><div class="eng">I’ll study for one more hour.</div></div>
+</details>
+<h3>E. Mini Role-play</h3>
+<div class="tip blue">
+      情境：你和朋友約星期六去商場。你要說你星期六有空、想買東西和看東西，預計去兩小時。
+    </div>
+<details>
+<summary>Suggested Answer</summary>
+<div class="bubble-wrap">
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">วันเสาร์ว่างค่ะ</div><div class="roman">wan sǎo wâang khâ</div><div class="eng">I’m free on Saturday.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">อยากจะไปห้างค่ะ</div><div class="roman">yàak jà bpai hâang khâ</div><div class="eng">I want to go to the mall.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">อยากจะซื้อของ แล้วก็ดูของค่ะ</div><div class="roman">yàak jà sʉ́ʉ khɔ̌ɔng, lɛ́ɛw gɔ̂ɔ duu khɔ̌ɔng khâ</div><div class="eng">I want to shop and look around.</div></div></div>
+<div class="bubble b"><span class="speaker b">You</span><div class="triad"><div class="thai">จะไปสองชั่วโมงค่ะ</div><div class="roman">jà bpai sɔ̌ɔng chûa-moong khâ</div><div class="eng">I’ll go for two hours.</div></div></div>
+</div>
+</details>
+</section>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">หนึ่งปีมีสิบสองเดือน</div><div class="roman">nʉ̀ng bpii mii sìp-sɔ̌ɔng dʉan</div><div class="eng">One year has twelve months.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">เรียนภาษาไทยนานเท่าไรคะ</div><div class="roman">riian phaa-sǎa thai naan thâo-rài khá</div><div class="eng">How long do you study Thai?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">วันเกิดคุณวันที่เท่าไรคะ</div><div class="roman">wan-gə̀ət khun wan-thîi thâo-rài khá</div><div class="eng">What date is your birthday?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">คุณเรียนวันอะไรคะ</div><div class="roman">khun riian wan à-rai khá</div><div class="eng">What day do you study?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">เดือนหน้าฉันจะเริ่มเรียนค่ะ</div><div class="roman">dʉan nâa chǎn jà rə̂əm riian khâ</div><div class="eng">I will start studying next month.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ฉันเรียนภาษาไทยสองครั้งต่อสัปดาห์ค่ะ</div><div class="roman">chǎn riian phaa-sǎa thai sɔ̌ɔng khráng dtɔ̀ɔ sàp-daa khâ</div><div class="eng">I study Thai twice a week.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">เรียนวันนี้สองชั่วโมงค่ะ</div><div class="roman">riian wan-níi sɔ̌ɔng chûa-moong khâ</div><div class="eng">I study for two hours today.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">รอฉันสิบห้านาทีนะคะ</div><div class="roman">rɔɔ chǎn sìp-hâa naa-thii ná khá</div><div class="eng">Please wait for me fifteen minutes.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">คุณเรียนภาษาไทยมานานเท่าไรคะ</div><div class="roman">khun riian phaa-sǎa thai maa naan thâo-rài khá</div><div class="eng">How long have you studied Thai?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ร้านเปิดตั้งแต่สิบโมงถึงสองทุ่มค่ะ</div><div class="roman">ráan bpə̀ət dtâng-dtɛ̀ɛ sìp moong thʉ̌ng sɔ̌ɔng thûm khâ</div><div class="eng">The shop is open from 10 a.m. to 8 p.m.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<script>
+  function openTab(event, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    contents.forEach(content => content.classList.remove('active'));
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+// ── TTS ──────────────────────────────────────────────
+let thaiVoice = null;
+let activBtn  = null;
+
+function loadVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  thaiVoice = voices.find(v => v.lang === 'th-TH') ||
+              voices.find(v => v.lang.startsWith('th')) ||
+              null;
+}
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakThai(text, btn) {
+  if (!window.speechSynthesis) {
+    alert('此瀏覽器不支援語音合成。請用 Safari（macOS/iOS）或 Chrome。');
+    return;
+  }
+  if (activBtn === btn && speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+    return;
+  }
+  speechSynthesis.cancel();
+  if (activBtn) {
+    activBtn.classList.remove('speaking');
+    activBtn.textContent = '🔊';
+  }
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang  = 'th-TH';
+  utter.rate  = 0.85;
+  utter.pitch = 1.0;
+  if (thaiVoice) utter.voice = thaiVoice;
+  utter.onstart = () => {
+    btn.classList.add('speaking');
+    btn.textContent = '⏸';
+    activBtn = btn;
+  };
+  utter.onend = utter.onerror = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+  };
+  speechSynthesis.speak(utter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('div.thai').forEach(el => {
+    const rawText = el.textContent.trim();
+    if (!rawText) return;
+    const span = document.createElement('span');
+    span.className = 'thai-text';
+    span.textContent = rawText;
+    const btn = document.createElement('button');
+    btn.className = 'speak-btn';
+    btn.textContent = '🔊';
+    btn.title = '唸出泰文';
+    btn.setAttribute('aria-label', '播放發音');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      speakThai(rawText, btn);
+    });
+    el.textContent = '';
+    el.appendChild(span);
+    el.appendChild(btn);
+  });
+});
+</script>
+<script id="book1-favorites-script">
+(function () {
+  const favoritesKey = 'thai-book1-day11-favorites';
+  const legacyFavoriteKeys = ['thaiBook1_day11_favorites_v1'];
+  const $ = function (selector, root) { return (root || document).querySelector(selector); };
+  const $$ = function (selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); };
+  function readStore(key) { try { const v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v.filter(Boolean) : []; } catch (e) { return []; } }
+  function safeGet() {
+    const current = readStore(favoritesKey);
+    if (current.length) return current;
+    for (let i = 0; i < legacyFavoriteKeys.length; i += 1) {
+      const legacy = readStore(legacyFavoriteKeys[i]);
+      if (legacy.length) { try { localStorage.setItem(favoritesKey, JSON.stringify(legacy)); } catch (e) {} return legacy; }
+    }
+    return [];
+  }
+  function safeSave(items) { try { localStorage.setItem(favoritesKey, JSON.stringify(items)); } catch (e) {} }
+  function idOf(item) { return [item.thai, item.rom, item.eng].join('||'); }
+  function esc(v) { return String(v || '').replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function collocs(item) { try { const data = JSON.parse(item.colloc || '[]'); return Array.isArray(data) ? data : []; } catch (e) { return []; } }
+  function readButton(btn) {
+    return { thai:btn.dataset.thai || '', rom:btn.dataset.rom || '', eng:btn.dataset.eng || '', cat:btn.dataset.cat || '', grammar:btn.dataset.grammar || '', colloc:btn.dataset.colloc || '[]', exThai:btn.dataset.exThai || '', exRom:btn.dataset.exRom || '', exEng:btn.dataset.exEng || '' };
+  }
+  function updateButtons() {
+    const ids = new Set(safeGet().map(idOf));
+    $$('.fav-btn').forEach(function (btn) {
+      const selected = ids.has(idOf(readButton(btn)));
+      btn.classList.toggle('is-favorite', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      btn.textContent = selected ? '★ 已收藏' : '♡ 收藏';
+    });
+  }
+  function makeCard(item) {
+    const c = collocs(item);
+    const collocHtml = c.length ? c.map(function (x) { return '<button type="button" class="colloc-chip" data-thai="' + esc(x.thai) + '" aria-label="播放搭配詞：' + esc(x.thai) + '" aria-pressed="false"><span class="thai">' + esc(x.thai) + '</span><span class="en-colloc">' + esc(x.en) + '</span></button>'; }).join('') : '<span class="muted">—</span>';
+    return '<article class="favorite-card">' +
+      '<div class="favorite-thai"><span>' + esc(item.thai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.thai) + '" aria-label="播放發音">🔊</button></div>' +
+      '<span class="roman">' + esc(item.rom) + '</span><span class="eng">' + esc(item.eng) + '</span>' +
+      '<div class="favorite-category"><span class="label practical">' + esc(item.cat || 'Vocabulary') + '</span></div>' +
+      '<div class="favorite-example"><div class="favorite-example-title">Example</div>' +
+      '<div class="thai"><span class="thai-text">' + esc(item.exThai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.exThai) + '" aria-label="播放例句">🔊</button></div>' +
+      '<div class="roman">' + esc(item.exRom) + '</div><div class="eng">' + esc(item.exEng) + '</div></div>' +
+      '<details class="fav-expand"><summary>Grammar &amp; Collocations</summary><div class="fav-expand-body">' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Grammar Notes</div><div class="fav-expand-usage">' + (item.grammar || '—') + '</div></div>' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Collocations</div><div class="fav-expand-colloc">' + collocHtml + '</div></div>' +
+      '</div></details>' +
+      '<button class="remove-fav" type="button" data-remove-id="' + esc(idOf(item)) + '">移除收藏</button>' +
+      '</article>';
+  }
+  function render() {
+    const box = $('#favoritesList'); if (!box) return;
+    const items = safeGet();
+    box.innerHTML = items.length ? items.map(makeCard).join('') : '<div class="empty-state">還沒有收藏項目。到 Vocabulary 右側點「♡ 收藏」即可加入。</div>';
+    updateButtons();
+  }
+  document.addEventListener('click', function (event) {
+    const fav = event.target.closest && event.target.closest('.fav-btn');
+    if (fav) {
+      const item = readButton(fav); const key = idOf(item); let items = safeGet();
+      items = items.some(function (x) { return idOf(x) === key; }) ? items.filter(function (x) { return idOf(x) !== key; }) : items.concat(item);
+      safeSave(items); render(); return;
+    }
+    const remove = event.target.closest && event.target.closest('[data-remove-id]');
+    if (remove) { safeSave(safeGet().filter(function (x) { return idOf(x) !== remove.dataset.removeId; })); render(); return; }
+    const speak = event.target.closest && event.target.closest('[data-fav-speech]');
+    if (speak && typeof window.speakThai === 'function') { event.preventDefault(); window.speakThai(speak.dataset.favSpeech, speak); }
+  });
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+<script id="book1-collocations-audio-script">
+(function () {
+  var activeButton = null;
+  function thaiVoice() {
+    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
+           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
+  }
+  function reset(button) {
+    if (!button) return;
+    button.classList.remove('speaking');
+    button.setAttribute('aria-pressed', 'false');
+  }
+  function speak(button) {
+    var text = (button.dataset.thai || '').trim();
+    if (!text) return;
+    if (!('speechSynthesis' in window)) {
+      alert('此瀏覽器不支援語音合成。');
+      return;
+    }
+    var synth = window.speechSynthesis;
+    if (activeButton === button && synth.speaking) {
+      synth.cancel();
+      reset(button);
+      activeButton = null;
+      return;
+    }
+    synth.cancel();
+    reset(activeButton);
+    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'th-TH';
+    utterance.rate = 0.82;
+    var voice = thaiVoice();
+    if (voice) utterance.voice = voice;
+    button.classList.add('speaking');
+    button.setAttribute('aria-pressed', 'true');
+    activeButton = button;
+    utterance.onend = utterance.onerror = function () {
+      reset(button);
+      if (activeButton === button) activeButton = null;
+    };
+    try {
+      synth.resume();
+      synth.speak(utterance);
+    } catch (error) {
+      reset(button);
+      activeButton = null;
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
+    if (!button) return;
+    event.preventDefault();
+    event.stopPropagation();
+    speak(button);
+  });
+})();
+</script></body>
+</html>

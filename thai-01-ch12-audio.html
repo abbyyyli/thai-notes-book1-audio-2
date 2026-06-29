@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thai Speaking 1 - Day 12 Study Guide</title>
+<style>
+    :root {
+      --text: var(--color-text-primary, #1f2937);
+      --muted: #6b7280;
+      --line: rgba(107, 114, 128, 0.28);
+      --card: rgba(255, 255, 255, 0.72);
+      --orange: #f97316;
+      --orange-soft: rgba(249, 115, 22, 0.13);
+      --green: #16a34a;
+      --green-soft: rgba(22, 163, 74, 0.13);
+      --blue: #2563eb;
+      --blue-soft: rgba(37, 99, 235, 0.12);
+      --red: #dc2626;
+      --red-soft: rgba(220, 38, 38, 0.11);
+      --purple: #7c3aed;
+      --purple-soft: rgba(124, 58, 237, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      color: var(--text);
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .hero {
+      padding: 28px;
+      border: 0.5px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(249,115,22,0.10), rgba(22,163,74,0.08), rgba(37,99,235,0.06));
+      box-shadow: 0 12px 34px rgba(0,0,0,0.05);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.02em; }
+    h2 { margin-top: 0; font-size: 22px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    h3 { margin-top: 28px; font-size: 18px; }
+    p { margin: 8px 0; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+      padding: 10px;
+      border: 0.5px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.45);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .tab-btn {
+      border: 0.5px solid var(--line);
+      background: rgba(255,255,255,0.65);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .tab-btn:hover { transform: translateY(-1px); background: rgba(249,250,251,0.95); }
+
+    .tab-btn.active {
+      border-color: rgba(249, 115, 22, 0.55);
+      background: var(--orange-soft);
+      color: #9a3412;
+      font-weight: 700;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px;
+      border: 0.5px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.52);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+      margin-bottom: 20px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 4px 2px 0;
+    }
+
+    .label.textbook { background: var(--orange-soft); color: #c2410c; border: 0.5px solid rgba(249,115,22,0.3); }
+    .label.local { background: var(--green-soft); color: #15803d; border: 0.5px solid rgba(22,163,74,0.3); }
+    .label.review { background: var(--blue-soft); color: #1d4ed8; border: 0.5px solid rgba(37,99,235,0.3); }
+    .label.warn { background: var(--red-soft); color: #b91c1c; border: 0.5px solid rgba(220,38,38,0.3); }
+
+    .thai { font-size: 15px; font-weight: 500; letter-spacing: 0.01em; }
+    .roman { color: #6b7280; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .eng { font-size: 13px; color: var(--text); }
+
+    .triad { display: grid; gap: 2px; margin: 4px 0; }
+    .triad .thai::before { content: "Thai: "; color: var(--muted); font-weight: 400; }
+    .triad .roman::before { content: "Romanization: "; color: var(--muted); font-family: inherit; }
+    .triad .eng::before { content: "English: "; color: var(--muted); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 24px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 0.5px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: rgba(243,244,246,0.72); font-weight: 700; }
+    tbody tr:nth-child(even) { background: rgba(249,250,251,0.55); }
+
+    .tip {
+      border-left: 4px solid var(--green);
+      padding: 12px 14px;
+      background: var(--green-soft);
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+
+    .tip.orange { border-left-color: var(--orange); background: var(--orange-soft); }
+    .tip.blue { border-left-color: var(--blue); background: var(--blue-soft); }
+    .tip.red { border-left-color: var(--red); background: var(--red-soft); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .card {
+      border: 0.5px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--card);
+    }
+
+    .mini-title {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .bubble-wrap { display: grid; gap: 10px; margin: 14px 0 24px; }
+
+    .bubble {
+      border: 0.5px solid var(--line);
+      border-radius: 18px;
+      padding: 13px 15px;
+      max-width: 84%;
+      background: rgba(255,255,255,0.72);
+    }
+
+    .bubble.a { justify-self: start; border-left: 5px solid var(--blue); }
+    .bubble.b { justify-self: end; border-right: 5px solid var(--green); }
+
+    .speaker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .speaker.a { background: var(--blue-soft); color: #1d4ed8; }
+    .speaker.b { background: var(--green-soft); color: #15803d; }
+
+    .pattern {
+      padding: 12px;
+      border: 0.5px dashed rgba(107,114,128,0.45);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.5);
+      margin: 12px 0;
+    }
+
+    .classifier-chip {
+      display: inline-block;
+      border: 0.5px solid rgba(124,58,237,0.3);
+      background: var(--purple-soft);
+      color: #5b21b6;
+      padding: 3px 9px;
+      border-radius: 9px;
+      font-weight: 800;
+      margin: 2px 4px 2px 0;
+    }
+
+    details {
+      border: 0.5px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      background: rgba(255,255,255,0.45);
+    }
+
+    summary { cursor: pointer; font-weight: 700; }
+
+        .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: .5px solid rgba(37,99,235,.3);
+      background: var(--blue-soft);
+      color: #1d4ed8;
+      font-size: 11px;
+      cursor: pointer;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+      transition: all .15s ease;
+      line-height: 1;
+      padding: 0;
+    }
+    .speak-btn:hover {
+      background: rgba(37,99,235,.22);
+      transform: scale(1.12);
+    }
+    .speak-btn.speaking {
+      background: var(--orange-soft);
+      border-color: rgba(249,115,22,.4);
+      color: #c2410c;
+      animation: pulse .6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.18); }
+    }
+    div.thai {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .thai-text { flex: 1; }
+
+@media (max-width: 720px) {
+      body { padding: 14px; }
+      .tab-content { padding: 16px; }
+      table { font-size: 13px; }
+      .bubble { max-width: 100%; }
+    }
+  </style>
+<style id="book1-content-rebuild-style">
+/* ── Book 1 content rebuild layer ───────────────────── */
+#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+#vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
+.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
+.vocab-group-title:first-of-type{border-top:0;padding-top:0}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
+.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
+#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
+#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
+#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
+#supplement .vocab-scroll table{min-width:760px}
+.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
+.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+.muted{color:var(--muted)}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
+</style><style id="book1-book2-vocab-pattern">
+/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
+.triad .thai::before,
+.triad .roman::before,
+.triad .eng::before { content:none !important; }
+
+#vocab .vocab-scroll{
+  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  margin:14px 0 24px; border-radius:12px;
+}
+#vocab .vocab-scroll table{
+  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
+}
+#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
+#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
+#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
+#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
+#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
+#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
+
+#vocab .favorite-col, #vocab .fav-cell{
+  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
+  padding-left:7px !important; padding-right:7px !important;
+}
+#vocab .fav-btn{
+  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
+  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
+  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
+}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
+
+.classifier-note{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  font-size:12px; color:var(--muted);
+}
+.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
+.colloc-chip{
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
+  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
+  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
+  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
+  box-shadow:none !important; transform:none !important; animation:none !important;
+}
+.colloc-chip:hover,.colloc-chip:focus-visible{
+  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
+  transform:none !important; animation:none !important; outline:none !important;
+}
+.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
+.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
+.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
+
+#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
+.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
+.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
+.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
+.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
+.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
+.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
+.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
+.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
+.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
+.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
+.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
+.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
+.favorite-speak{margin-left:0;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:720px){
+  #vocab .vocab-scroll table{min-width:1120px !important;}
+  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
+  .favorites-list{grid-template-columns:1fr;}
+}
+</style><style id="book1-semantic-refinement-style">
+/* ── Semantic refinement: real collocation buttons ── */
+button.colloc-chip{
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  font:inherit !important;
+  text-align:left !important;
+  touch-action:manipulation;
+  user-select:none;
+}
+button.colloc-chip:focus-visible{
+  outline:2px solid rgba(22,163,74,.55) !important;
+  outline-offset:2px;
+}
+</style><style id="book1-classifier-audio-refine-style">
+/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
+#vocab .classifier-note.classifier-short{
+  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
+}
+#vocab .classifier-label{font-weight:700; color:var(--muted);}
+button.classifier-audio-pill{
+  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
+  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
+  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
+  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
+}
+button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-detail-style">
+/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
+#vocab .classifier-note.classifier-detail{
+  margin-top:7px;
+  padding-top:7px;
+  border-top:.5px dashed var(--line);
+  display:grid;
+  gap:3px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+#vocab .classifier-label{
+  color:var(--muted);
+  font-weight:700;
+}
+#vocab .classifier-entries{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+#vocab .classifier-entry{
+  min-width:0;
+  display:grid;
+  gap:1px;
+}
+#vocab button.classifier-audio-pill{
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  width:max-content;
+  max-width:100%;
+  border:.5px solid rgba(124,58,237,.34);
+  background:var(--purple-soft);
+  color:#5b21b6;
+  border-radius:999px;
+  padding:4px 9px;
+  margin:0;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  cursor:pointer;
+  touch-action:manipulation;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+#vocab button.classifier-audio-pill:hover,
+#vocab button.classifier-audio-pill:focus-visible{
+  background:rgba(124,58,237,.18);
+  border-color:rgba(124,58,237,.52);
+  outline:none;
+  transform:translateY(-1px);
+}
+#vocab button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.25);
+  border-color:rgba(124,58,237,.60);
+}
+#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
+#vocab .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:11.5px;
+}
+#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
+/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
+#classifiers .classifier-chip{display:none !important;}
+</style>
+<style id="book1-vocab-classifier-inline-style">
+/* Vocabulary classifier format｜量詞：ใบ bai */
+#vocab .classifier-note.classifier-inline{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:7px 0 0;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.45;
+}
+#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
+#vocab .classifier-inline button.classifier-audio-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:1px 6px;
+  margin:0;
+  border:.5px solid rgba(124,58,237,.34);
+  border-radius:999px;
+  background:var(--purple-soft);
+  color:#5b21b6;
+  font:inherit;
+  font-weight:800;
+  line-height:1.35;
+  cursor:pointer;
+}
+#vocab .classifier-inline button.classifier-audio-pill:hover,
+#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
+#vocab .classifier-inline button.classifier-audio-pill.speaking{
+  background:rgba(124,58,237,.20);
+  border-color:rgba(124,58,237,.50);
+  outline:none;
+}
+#vocab .classifier-inline .classifier-roman{
+  color:var(--muted);
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-size:12px;
+}
+#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
+</style></head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>Thai Speaking 1｜Day 12 學習指南</h1>
+<p class="subtitle">主題：曾經做過、做過幾次、第一次/最後一次、早中晚時間段、昨晚、幾點鐘、出發/抵達、開門/關門</p>
+<p>
+<span class="label textbook">Textbook-based</span>
+<span class="label local">Supplement / Local usage</span>
+<span class="label review">Review</span>
+<span class="label warn">Common mistake</span>
+</p>
+</section>
+<nav class="tabs"><button class="tab-btn active" onclick="openTab(event, 'overview')" type="button">Overview</button><button class="tab-btn" onclick="openTab(event, 'vocab')" type="button">Vocabulary</button><button class="tab-btn" onclick="openTab(event, 'supplement')" type="button">Supplement</button><button class="tab-btn" onclick="openTab(event, 'structures')" type="button">Structures</button><button class="tab-btn" onclick="openTab(event, 'street')" type="button">Textbook vs Street</button><button class="tab-btn" onclick="openTab(event, 'bangkok')" type="button">Bangkok Expansion</button><button class="tab-btn" onclick="openTab(event, 'dialogues')" type="button">Dialogues</button><button class="tab-btn" onclick="openTab(event, 'mistakes')" type="button">Mistakes</button><button class="tab-btn" onclick="openTab(event, 'practice')" type="button">Practice</button><button class="tab-btn" onclick="openTab(event, 'top10')" type="button">Top 10</button><button aria-label="收藏" class="tab-btn" id="favoritesTab" onclick="openTab(event, 'favorites')" title="收藏" type="button">♥</button></nav>
+<section class="tab-content active" id="overview">
+<h2>Lesson Overview</h2>
+<p>
+<span class="label textbook">Textbook-based</span>
+      Day 12 的核心是兩條線：第一條是「經驗」，例如你曾經去過哪裡、吃過什麼、做過幾次、第一次或最後一次是什麼時候。第二條是「時間」，包含早上、上午、中午、下午、傍晚、晚上、深夜，以及泰式幾點鐘說法。
+    </p>
+<div class="cards">
+<div class="card">
+<div class="mini-title">Experience</div>
+<div class="triad">
+<div class="thai">คุณเคยไปเชียงใหม่ไหมคะ</div>
+<div class="roman">khun khəəy bpai Chiang Mai mái khá</div>
+<div class="eng">Have you ever been to Chiang Mai?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">How many times?</div>
+<div class="triad">
+<div class="thai">คุณเคยไปกี่ครั้งแล้วคะ</div>
+<div class="roman">khun khəəy bpai gìi khráng lɛ́ɛw khá</div>
+<div class="eng">How many times have you been?</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Time of day</div>
+<div class="triad">
+<div class="thai">ตอนเช้า</div>
+<div class="roman">dtɔɔn cháao</div>
+<div class="eng">morning</div>
+</div>
+</div>
+<div class="card">
+<div class="mini-title">Open / close</div>
+<div class="triad">
+<div class="thai">ร้านเปิดกี่โมงคะ</div>
+<div class="roman">ráan bpə̀ət gìi moong khá</div>
+<div class="eng">What time does the shop open?</div>
+</div>
+</div>
+</div>
+<div class="tip orange">
+<strong>Review：</strong>
+      Day 11 已經學過「多久、星期、日期、生日」。Day 12 會把時間變得更口語、更真實：你會開始聽到 <span class="thai">กี่โมง</span> / <span class="roman">gìi moong</span> / <span class="eng">what time</span>、<span class="thai">กี่ทุ่ม</span> / <span class="roman">gìi thûm</span> / <span class="eng">what hour at night</span>、<span class="thai">ตอนเช้า</span> / <span class="roman">dtɔɔn cháao</span> / <span class="eng">morning</span>。
+    </div>
+<div class="tip">
+<strong>Bangkok Practical Focus：</strong>
+      這課最實用的場景是：問朋友去過哪裡、問餐廳幾點開/關、問昨晚幾點吃飯、問 Grab 或朋友幾點出發/到達、說自己第一次去某地、最後一次去某店是什麼時候。
+    </div>
+<div class="tip blue"><h3>本課學習路線</h3><ol><li>能問是否去過、做過幾次。</li><li>能用第一次、最後一次說經驗。</li><li>能問商店開幾點、什麼時候出發或到。</li></ol></div></section>
+<section class="tab-content" id="vocab">
+<h2>Vocabulary Table</h2>
+<h3>Experience &amp; Frequency</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">เคย</div><div class="roman">khəəy</div><div class="eng">have ever / used to</div></div></td><td>經驗助詞</td><td>放在動詞前，表示「曾經做過」。否定是 <span class="thai">ไม่เคย</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เคยไป" aria-pressed="false" class="colloc-chip" data-thai="เคยไป" type="button"><span class="thai">เคยไป</span><span class="en-colloc">have been to / have gone</span></button></div></td><td><div class="triad"><div class="thai">ฉันเคยไปเชียงใหม่ค่ะ</div><div class="roman">chǎn khəəy bpai Chiang Mai khâ</div><div class="eng">I have been to Chiang Mai.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="經驗助詞" data-colloc='[{"thai": "เคยไป", "en": "have been to / have gone"}]' data-eng="have ever / used to" data-ex-eng="I have been to Chiang Mai." data-ex-rom="chǎn khəəy bpai Chiang Mai khâ" data-ex-thai="ฉันเคยไปเชียงใหม่ค่ะ" data-grammar='放在動詞前，表示「曾經做過」。否定是 &lt;span class="thai"&gt;ไม่เคย&lt;/span&gt;。' data-rom="khəəy" data-thai="เคย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ไม่เคย</div><div class="roman">mâi khəəy</div><div class="eng">have never</div></div></td><td>經驗否定</td><td>不是 <span class="thai">เคยไม่</span>，而是 <span class="thai">ไม่เคย + V</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไม่เคยกิน" aria-pressed="false" class="colloc-chip" data-thai="ไม่เคยกิน" type="button"><span class="thai">ไม่เคยกิน</span><span class="en-colloc">have never eaten</span></button></div></td><td><div class="triad"><div class="thai">ฉันไม่เคยกินทุเรียนค่ะ</div><div class="roman">chǎn mâi khəəy gin thú-rian khâ</div><div class="eng">I have never eaten duriian.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="經驗否定" data-colloc='[{"thai": "ไม่เคยกิน", "en": "have never eaten"}]' data-eng="have never" data-ex-eng="I have never eaten duriian." data-ex-rom="chǎn mâi khəəy gin thú-rian khâ" data-ex-thai="ฉันไม่เคยกินทุเรียนค่ะ" data-grammar='不是 &lt;span class="thai"&gt;เคยไม่&lt;/span&gt;，而是 &lt;span class="thai"&gt;ไม่เคย + V&lt;/span&gt;。' data-rom="mâi khəəy" data-thai="ไม่เคย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">แล้ว</div><div class="roman">lɛ́ɛw</div><div class="eng">already</div></div></td><td>時間 / 完成</td><td><span class="label review">Review</span> Day 11 已學已經；Day 12 用在「做過幾次了」。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เคยไปแล้ว" aria-pressed="false" class="colloc-chip" data-thai="เคยไปแล้ว" type="button"><span class="thai">เคยไปแล้ว</span><span class="en-colloc">have been already</span></button></div></td><td><div class="triad"><div class="thai">เคยไปสองครั้งแล้วค่ะ</div><div class="roman">khəəy bpai sɔ̌ɔng khráng lɛ́ɛw khâ</div><div class="eng">I have been there twice already.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="時間 / 完成" data-colloc='[{"thai": "เคยไปแล้ว", "en": "have been already"}]' data-eng="already" data-ex-eng="I have been there twice already." data-ex-rom="khəəy bpai sɔ̌ɔng khráng lɛ́ɛw khâ" data-ex-thai="เคยไปสองครั้งแล้วค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 11 已學已經；Day 12 用在「做過幾次了」。' data-rom="lɛ́ɛw" data-thai="แล้ว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ครั้ง</div><div class="roman">khráng</div><div class="eng">time / occasion</div></div></td><td>次數量詞</td><td>用來算做過幾次。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ครั้ง" aria-pressed="false" class="classifier-audio-pill" data-thai="ครั้ง" title="點擊播放量詞" type="button">ครั้ง</button><span class="classifier-roman">khráng</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งครั้ง" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งครั้ง" type="button"><span class="thai">หนึ่งครั้ง</span><span class="en-colloc">one time</span></button></div></td><td><div class="triad"><div class="thai">เคยไปหนึ่งครั้งค่ะ</div><div class="roman">khəəy bpai nʉ̀ng khráng khâ</div><div class="eng">I have been once.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="次數量詞" data-colloc='[{"thai": "หนึ่งครั้ง", "en": "one time"}]' data-eng="time / occasion" data-ex-eng="I have been once." data-ex-rom="khəəy bpai nʉ̀ng khráng khâ" data-ex-thai="เคยไปหนึ่งครั้งค่ะ" data-grammar='用來算做過幾次。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ครั้ง" aria-pressed="false" class="classifier-audio-pill" data-thai="ครั้ง" title="點擊播放量詞" type="button"&gt;ครั้ง&lt;/button&gt;&lt;span class="classifier-roman"&gt;khráng&lt;/span&gt;&lt;/span&gt;' data-rom="khráng" data-thai="ครั้ง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">หลายครั้ง</div><div class="roman">lǎai khráng</div><div class="eng">many times</div></div></td><td>次數</td><td>不想講確切次數時很實用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เคยไปหลายครั้ง" aria-pressed="false" class="colloc-chip" data-thai="เคยไปหลายครั้ง" type="button"><span class="thai">เคยไปหลายครั้ง</span><span class="en-colloc">have been many times</span></button></div></td><td><div class="triad"><div class="thai">ฉันเคยไปตลาดนี้หลายครั้งแล้วค่ะ</div><div class="roman">chǎn khəəy bpai tà-làat níi lǎai khráng lɛ́ɛw khâ</div><div class="eng">I have been to this market many times already.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="次數" data-colloc='[{"thai": "เคยไปหลายครั้ง", "en": "have been many times"}]' data-eng="many times" data-ex-eng="I have been to this market many times already." data-ex-rom="chǎn khəəy bpai tà-làat níi lǎai khráng lɛ́ɛw khâ" data-ex-thai="ฉันเคยไปตลาดนี้หลายครั้งแล้วค่ะ" data-grammar="不想講確切次數時很實用。" data-rom="lǎai khráng" data-thai="หลายครั้ง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ครั้งแรก</div><div class="roman">khráng rɛ̂ɛk</div><div class="eng">first time</div></div></td><td>次序</td><td>等於 <span class="thai">ครั้งที่หนึ่ง</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มาครั้งแรก" aria-pressed="false" class="colloc-chip" data-thai="มาครั้งแรก" type="button"><span class="thai">มาครั้งแรก</span><span class="en-colloc">come for the first time</span></button></div></td><td><div class="triad"><div class="thai">นี่เป็นครั้งแรกค่ะ</div><div class="roman">nîi bpen khráng rɛ̂ɛk khâ</div><div class="eng">This is my first time.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="次序" data-colloc='[{"thai": "มาครั้งแรก", "en": "come for the first time"}]' data-eng="first time" data-ex-eng="This is my first time." data-ex-rom="nîi bpen khráng rɛ̂ɛk khâ" data-ex-thai="นี่เป็นครั้งแรกค่ะ" data-grammar='等於 &lt;span class="thai"&gt;ครั้งที่หนึ่ง&lt;/span&gt;。' data-rom="khráng rɛ̂ɛk" data-thai="ครั้งแรก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ครั้งสุดท้าย</div><div class="roman">khráng sùt-tháai</div><div class="eng">last time</div></div></td><td>次序</td><td>問最後一次做某事很常用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปครั้งสุดท้าย" aria-pressed="false" class="colloc-chip" data-thai="ไปครั้งสุดท้าย" type="button"><span class="thai">ไปครั้งสุดท้าย</span><span class="en-colloc">went for the last time</span></button></div></td><td><div class="triad"><div class="thai">คุณไปครั้งสุดท้ายเมื่อไรคะ</div><div class="roman">khun bpai khráng sùt-tháai mʉ̂a-rài khá</div><div class="eng">When did you go last time?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="次序" data-colloc='[{"thai": "ไปครั้งสุดท้าย", "en": "went for the last time"}]' data-eng="last time" data-ex-eng="When did you go last time?" data-ex-rom="khun bpai khráng sùt-tháai mʉ̂a-rài khá" data-ex-thai="คุณไปครั้งสุดท้ายเมื่อไรคะ" data-grammar="問最後一次做某事很常用。" data-rom="khráng sùt-tháai" data-thai="ครั้งสุดท้าย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เท่านั้น</div><div class="roman">thâo-nán</div><div class="eng">only</div></div></td><td>限制語</td><td>教材用於「只做過一次」。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งครั้งเท่านั้น" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งครั้งเท่านั้น" type="button"><span class="thai">หนึ่งครั้งเท่านั้น</span><span class="en-colloc">only once</span></button></div></td><td><div class="triad"><div class="thai">เคยไปหนึ่งครั้งเท่านั้นค่ะ</div><div class="roman">khəəy bpai nʉ̀ng khráng thâo-nán khâ</div><div class="eng">I have been only once.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="限制語" data-colloc='[{"thai": "หนึ่งครั้งเท่านั้น", "en": "only once"}]' data-eng="only" data-ex-eng="I have been only once." data-ex-rom="khəəy bpai nʉ̀ng khráng thâo-nán khâ" data-ex-thai="เคยไปหนึ่งครั้งเท่านั้นค่ะ" data-grammar="教材用於「只做過一次」。" data-rom="thâo-nán" data-thai="เท่านั้น" type="button">♡ 收藏</button></td></tr>
+</tbody>
+</table></div>
+<h3>Time of Day &amp; Meals</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ตอนเช้า</div><div class="roman">dtɔɔn cháao</div><div class="eng">morning</div></div></td><td>6:00–9:59</td><td>早餐、早上出門常用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันกินอาหารเช้าตอนเช้าค่ะ</div><div class="roman">chǎn gin aa-hǎan cháao dtɔɔn cháao khâ</div><div class="eng">I eat breakfast in the morning.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="6:00–9:59" data-colloc="[]" data-eng="morning" data-ex-eng="I eat breakfast in the morning." data-ex-rom="chǎn gin aa-hǎan cháao dtɔɔn cháao khâ" data-ex-thai="ฉันกินอาหารเช้าตอนเช้าค่ะ" data-grammar="早餐、早上出門常用。" data-rom="dtɔɔn cháao" data-thai="ตอนเช้า" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนสาย</div><div class="roman">dtɔɔn sǎai</div><div class="eng">late morning</div></div></td><td>10:00–11:59</td><td>比早上晚，但還沒中午。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันไปตลาดตอนสายค่ะ</div><div class="roman">chǎn bpai tà-làat dtɔɔn sǎai khâ</div><div class="eng">I go to the market in the late morning.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="10:00–11:59" data-colloc="[]" data-eng="late morning" data-ex-eng="I go to the market in the late morning." data-ex-rom="chǎn bpai tà-làat dtɔɔn sǎai khâ" data-ex-thai="ฉันไปตลาดตอนสายค่ะ" data-grammar="比早上晚，但還沒中午。" data-rom="dtɔɔn sǎai" data-thai="ตอนสาย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนเที่ยง</div><div class="roman">dtɔɔn thîang</div><div class="eng">noon</div></div></td><td>12:00–12:59</td><td>中午。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันกินอาหารเที่ยงตอนเที่ยงค่ะ</div><div class="roman">chǎn gin aa-hǎan thîang dtɔɔn thîang khâ</div><div class="eng">I eat lunch at noon.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="12:00–12:59" data-colloc="[]" data-eng="noon" data-ex-eng="I eat lunch at noon." data-ex-rom="chǎn gin aa-hǎan thîang dtɔɔn thîang khâ" data-ex-thai="ฉันกินอาหารเที่ยงตอนเที่ยงค่ะ" data-grammar="中午。" data-rom="dtɔɔn thîang" data-thai="ตอนเที่ยง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนบ่าย</div><div class="roman">dtɔɔn bàai</div><div class="eng">afternoon</div></div></td><td>13:00–15:59</td><td>下午。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันเรียนภาษาไทยตอนบ่ายค่ะ</div><div class="roman">chǎn riian phaa-sǎa thai dtɔɔn bàai khâ</div><div class="eng">I study Thai in the afternoon.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="13:00–15:59" data-colloc="[]" data-eng="afternoon" data-ex-eng="I study Thai in the afternoon." data-ex-rom="chǎn riian phaa-sǎa thai dtɔɔn bàai khâ" data-ex-thai="ฉันเรียนภาษาไทยตอนบ่ายค่ะ" data-grammar="下午。" data-rom="dtɔɔn bàai" data-thai="ตอนบ่าย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนเย็น</div><div class="roman">dtɔɔn yen</div><div class="eng">early evening</div></div></td><td>16:00–18:59</td><td>傍晚、晚餐前後。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันกินอาหารเย็นตอนเย็นค่ะ</div><div class="roman">chǎn gin aa-hǎan yen dtɔɔn yen khâ</div><div class="eng">I eat dinner in the evening.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="16:00–18:59" data-colloc="[]" data-eng="early evening" data-ex-eng="I eat dinner in the evening." data-ex-rom="chǎn gin aa-hǎan yen dtɔɔn yen khâ" data-ex-thai="ฉันกินอาหารเย็นตอนเย็นค่ะ" data-grammar="傍晚、晚餐前後。" data-rom="dtɔɔn yen" data-thai="ตอนเย็น" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนค่ำ</div><div class="roman">dtɔɔn khâm</div><div class="eng">evening / night</div></div></td><td>19:00–21:59</td><td>比較晚的晚上。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันฟังเพลงตอนค่ำค่ะ</div><div class="roman">chǎn fang phleeng dtɔɔn khâm khâ</div><div class="eng">I listen to music in the evening.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="19:00–21:59" data-colloc="[]" data-eng="evening / night" data-ex-eng="I listen to music in the evening." data-ex-rom="chǎn fang phleeng dtɔɔn khâm khâ" data-ex-thai="ฉันฟังเพลงตอนค่ำค่ะ" data-grammar="比較晚的晚上。" data-rom="dtɔɔn khâm" data-thai="ตอนค่ำ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนดึก</div><div class="roman">dtɔɔn dʉ̀k</div><div class="eng">late night</div></div></td><td>22:00–5:59</td><td>深夜到凌晨都可能用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันอ่านหนังสือตอนดึกค่ะ</div><div class="roman">chǎn àan năng-sʉ̌ʉ dtɔɔn dʉ̀k khâ</div><div class="eng">I read late at night.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="22:00–5:59" data-colloc="[]" data-eng="late night" data-ex-eng="I read late at night." data-ex-rom="chǎn àan năng-sʉ̌ʉ dtɔɔn dʉ̀k khâ" data-ex-thai="ฉันอ่านหนังสือตอนดึกค่ะ" data-grammar="深夜到凌晨都可能用。" data-rom="dtɔɔn dʉ̀k" data-thai="ตอนดึก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อาหารเช้า</div><div class="roman">aa-hǎan cháao</div><div class="eng">breakfast</div></div></td><td>morning meal</td><td><span class="label review">Review</span> Day 6 食物主題延伸。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เมื่อคืนนี้คุณกินอาหารเช้ากี่โมงคะ</div><div class="roman">mʉ̂a-khʉʉn níi khun gin aa-hǎan cháao gìi moong khá</div><div class="eng">What time did you eat breakfast last night? / unnatural context example</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="morning meal" data-colloc="[]" data-eng="breakfast" data-ex-eng="What time did you eat breakfast last night? / unnatural context example" data-ex-rom="mʉ̂a-khʉʉn níi khun gin aa-hǎan cháao gìi moong khá" data-ex-thai="เมื่อคืนนี้คุณกินอาหารเช้ากี่โมงคะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 6 食物主題延伸。' data-rom="aa-hǎan cháao" data-thai="อาหารเช้า" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อาหารเที่ยง</div><div class="roman">aa-hǎan thîang</div><div class="eng">lunch</div></div></td><td>midday meal</td><td>也常直接說 <span class="thai">ข้าวเที่ยง</span>。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">กินอาหารเที่ยงกี่โมงคะ</div><div class="roman">gin aa-hǎan thîang gìi moong khá</div><div class="eng">What time do you eat lunch?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="midday meal" data-colloc="[]" data-eng="lunch" data-ex-eng="What time do you eat lunch?" data-ex-rom="gin aa-hǎan thîang gìi moong khá" data-ex-thai="กินอาหารเที่ยงกี่โมงคะ" data-grammar='也常直接說 &lt;span class="thai"&gt;ข้าวเที่ยง&lt;/span&gt;。' data-rom="aa-hǎan thîang" data-thai="อาหารเที่ยง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">อาหารเย็น</div><div class="roman">aa-hǎan yen</div><div class="eng">dinner</div></div></td><td>evening meal</td><td>也常直接說 <span class="thai">ข้าวเย็น</span>。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เมื่อคืนนี้กินอาหารเย็นกี่โมงคะ</div><div class="roman">mʉ̂a-khʉʉn níi gin aa-hǎan yen gìi moong khá</div><div class="eng">What time did you eat dinner last night?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="evening meal" data-colloc="[]" data-eng="dinner" data-ex-eng="What time did you eat dinner last night?" data-ex-rom="mʉ̂a-khʉʉn níi gin aa-hǎan yen gìi moong khá" data-ex-thai="เมื่อคืนนี้กินอาหารเย็นกี่โมงคะ" data-grammar='也常直接說 &lt;span class="thai"&gt;ข้าวเย็น&lt;/span&gt;。' data-rom="aa-hǎan yen" data-thai="อาหารเย็น" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เมื่อคืน</div><div class="roman">mʉ̂a-khʉʉn</div><div class="eng">last night</div></div></td><td>Time phrase</td><td>昨天晚上；口語高頻。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เมื่อคืนนี้" aria-pressed="false" class="colloc-chip" data-thai="เมื่อคืนนี้" type="button"><span class="thai">เมื่อคืนนี้</span><span class="en-colloc">last night</span></button><button aria-label="播放搭配詞：เมื่อคืนนอนดึก" aria-pressed="false" class="colloc-chip" data-thai="เมื่อคืนนอนดึก" type="button"><span class="thai">เมื่อคืนนอนดึก</span><span class="en-colloc">slept late last night</span></button></div></td><td><div class="triad"><div class="thai">เมื่อคืนคุณนอนกี่โมงคะ</div><div class="roman">mʉ̂a-khʉʉn khun nɔɔn gìi moong khá</div><div class="eng">What time did you sleep last night?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "เมื่อคืนนี้", "en": "last night"}, {"thai": "เมื่อคืนนอนดึก", "en": "slept late last night"}]' data-eng="last night" data-ex-eng="What time did you sleep last night?" data-ex-rom="mʉ̂a-khʉʉn khun nɔɔn gìi moong khá" data-ex-thai="เมื่อคืนคุณนอนกี่โมงคะ" data-grammar="昨天晚上；口語高頻。" data-rom="mʉ̂a-khʉʉn" data-thai="เมื่อคืน" type="button">♡ 收藏</button></td></tr></tbody>
+</table></div><h3>Thai Clock Markers｜泰式鐘點標記</h3><div class="vocab-scroll"><table><thead><tr><th class="vocab-triad-header">Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">เที่ยง</div><div class="roman">thîang</div><div class="eng">noon</div></div></td><td>Clock time</td><td>中午十二點；不需要加 โมง。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ตอนเที่ยง" aria-pressed="false" class="colloc-chip" data-thai="ตอนเที่ยง" type="button"><span class="thai">ตอนเที่ยง</span><span class="en-colloc">at noon</span></button><button aria-label="播放搭配詞：กินข้าวเที่ยง" aria-pressed="false" class="colloc-chip" data-thai="กินข้าวเที่ยง" type="button"><span class="thai">กินข้าวเที่ยง</span><span class="en-colloc">eat lunch</span></button></div></td><td><div class="triad"><div class="thai">ฉันกินข้าวตอนเที่ยงค่ะ</div><div class="roman">chǎn gin khâaw dtɔɔn thîang khâ</div><div class="eng">I eat lunch at noon.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock time" data-colloc='[{"thai": "ตอนเที่ยง", "en": "at noon"}, {"thai": "กินข้าวเที่ยง", "en": "eat lunch"}]' data-eng="noon" data-ex-eng="I eat lunch at noon." data-ex-rom="chǎn gin khâaw dtɔɔn thîang khâ" data-ex-thai="ฉันกินข้าวตอนเที่ยงค่ะ" data-grammar="中午十二點；不需要加 โมง。" data-rom="thîang" data-thai="เที่ยง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เที่ยงคืน</div><div class="roman">thîang khʉʉn</div><div class="eng">midnight</div></div></td><td>Clock time</td><td>半夜十二點。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หลังเที่ยงคืน" aria-pressed="false" class="colloc-chip" data-thai="หลังเที่ยงคืน" type="button"><span class="thai">หลังเที่ยงคืน</span><span class="en-colloc">after midnight</span></button><button aria-label="播放搭配詞：ถึงเที่ยงคืน" aria-pressed="false" class="colloc-chip" data-thai="ถึงเที่ยงคืน" type="button"><span class="thai">ถึงเที่ยงคืน</span><span class="en-colloc">until midnight</span></button></div></td><td><div class="triad"><div class="thai">ฉันนอนหลังเที่ยงคืนค่ะ</div><div class="roman">chǎn nɔɔn lǎng thîang khʉʉn khâ</div><div class="eng">I sleep after midnight.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock time" data-colloc='[{"thai": "หลังเที่ยงคืน", "en": "after midnight"}, {"thai": "ถึงเที่ยงคืน", "en": "until midnight"}]' data-eng="midnight" data-ex-eng="I sleep after midnight." data-ex-rom="chǎn nɔɔn lǎng thîang khʉʉn khâ" data-ex-thai="ฉันนอนหลังเที่ยงคืนค่ะ" data-grammar="半夜十二點。" data-rom="thîang khʉʉn" data-thai="เที่ยงคืน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">โมงเช้า</div><div class="roman">moong cháao</div><div class="eng">7 a.m. / morning-hour form</div></div></td><td>Clock marker</td><td>教材系統中的早上七點；也常聽到 เจ็ดโมงเช้า。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เจ็ดโมงเช้า" aria-pressed="false" class="colloc-chip" data-thai="เจ็ดโมงเช้า" type="button"><span class="thai">เจ็ดโมงเช้า</span><span class="en-colloc">7 a.m.</span></button><button aria-label="播放搭配詞：สองโมงเช้า" aria-pressed="false" class="colloc-chip" data-thai="สองโมงเช้า" type="button"><span class="thai">สองโมงเช้า</span><span class="en-colloc">8 a.m.</span></button></div></td><td><div class="triad"><div class="thai">ฉันตื่นเจ็ดโมงเช้าค่ะ</div><div class="roman">chǎn dtʉ̀ʉn jèt moong cháao khâ</div><div class="eng">I wake up at 7 a.m.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock marker" data-colloc='[{"thai": "เจ็ดโมงเช้า", "en": "7 a.m."}, {"thai": "สองโมงเช้า", "en": "8 a.m."}]' data-eng="7 a.m. / morning-hour form" data-ex-eng="I wake up at 7 a.m." data-ex-rom="chǎn dtʉ̀ʉn jèt moong cháao khâ" data-ex-thai="ฉันตื่นเจ็ดโมงเช้าค่ะ" data-grammar="教材系統中的早上七點；也常聽到 เจ็ดโมงเช้า。" data-rom="moong cháao" data-thai="โมงเช้า" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">บ่ายโมง</div><div class="roman">bàai moong</div><div class="eng">1 p.m.</div></div></td><td>Clock marker</td><td>下午一點；之後是 บ่ายสองโมง、บ่ายสามโมง。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：บ่ายโมงครึ่ง" aria-pressed="false" class="colloc-chip" data-thai="บ่ายโมงครึ่ง" type="button"><span class="thai">บ่ายโมงครึ่ง</span><span class="en-colloc">1:30 p.m.</span></button><button aria-label="播放搭配詞：บ่ายสองโมง" aria-pressed="false" class="colloc-chip" data-thai="บ่ายสองโมง" type="button"><span class="thai">บ่ายสองโมง</span><span class="en-colloc">2 p.m.</span></button></div></td><td><div class="triad"><div class="thai">นัดกันบ่ายโมงนะคะ</div><div class="roman">nát gan bàai moong ná khá</div><div class="eng">Let’s meet at 1 p.m.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock marker" data-colloc='[{"thai": "บ่ายโมงครึ่ง", "en": "1:30 p.m."}, {"thai": "บ่ายสองโมง", "en": "2 p.m."}]' data-eng="1 p.m." data-ex-eng="Let’s meet at 1 p.m." data-ex-rom="nát gan bàai moong ná khá" data-ex-thai="นัดกันบ่ายโมงนะคะ" data-grammar="下午一點；之後是 บ่ายสองโมง、บ่ายสามโมง。" data-rom="bàai moong" data-thai="บ่ายโมง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห้าโมงเย็น</div><div class="roman">hâa moong yen</div><div class="eng">5 p.m.</div></div></td><td>Clock time</td><td>傍晚五點。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：กลับบ้านห้าโมงเย็น" aria-pressed="false" class="colloc-chip" data-thai="กลับบ้านห้าโมงเย็น" type="button"><span class="thai">กลับบ้านห้าโมงเย็น</span><span class="en-colloc">go home at 5 p.m.</span></button><button aria-label="播放搭配詞：นัดห้าโมงเย็น" aria-pressed="false" class="colloc-chip" data-thai="นัดห้าโมงเย็น" type="button"><span class="thai">นัดห้าโมงเย็น</span><span class="en-colloc">meet at 5 p.m.</span></button></div></td><td><div class="triad"><div class="thai">ฉันเลิกงานห้าโมงเย็นค่ะ</div><div class="roman">chǎn lə̂ək ngaan hâa moong yen khâ</div><div class="eng">I finish work at 5 p.m.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock time" data-colloc='[{"thai": "กลับบ้านห้าโมงเย็น", "en": "go home at 5 p.m."}, {"thai": "นัดห้าโมงเย็น", "en": "meet at 5 p.m."}]' data-eng="5 p.m." data-ex-eng="I finish work at 5 p.m." data-ex-rom="chǎn lə̂ək ngaan hâa moong yen khâ" data-ex-thai="ฉันเลิกงานห้าโมงเย็นค่ะ" data-grammar="傍晚五點。" data-rom="hâa moong yen" data-thai="ห้าโมงเย็น" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ทุ่ม</div><div class="roman">thûm</div><div class="eng">evening-hour marker</div></div></td><td>Clock marker</td><td>晚上七點到十一點常用；หนึ่งทุ่ม = 7 p.m.。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งทุ่ม" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งทุ่ม" type="button"><span class="thai">หนึ่งทุ่ม</span><span class="en-colloc">7 p.m.</span></button><button aria-label="播放搭配詞：สามทุ่ม" aria-pressed="false" class="colloc-chip" data-thai="สามทุ่ม" type="button"><span class="thai">สามทุ่ม</span><span class="en-colloc">9 p.m.</span></button></div></td><td><div class="triad"><div class="thai">เรานัดกันหนึ่งทุ่มค่ะ</div><div class="roman">rao nát gan nʉ̀ng thûm khâ</div><div class="eng">We are meeting at 7 p.m.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock marker" data-colloc='[{"thai": "หนึ่งทุ่ม", "en": "7 p.m."}, {"thai": "สามทุ่ม", "en": "9 p.m."}]' data-eng="evening-hour marker" data-ex-eng="We are meeting at 7 p.m." data-ex-rom="rao nát gan nʉ̀ng thûm khâ" data-ex-thai="เรานัดกันหนึ่งทุ่มค่ะ" data-grammar="晚上七點到十一點常用；หนึ่งทุ่ม = 7 p.m.。" data-rom="thûm" data-thai="ทุ่ม" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ตี</div><div class="roman">dtii</div><div class="eng">early-morning hour marker</div></div></td><td>Clock marker</td><td>凌晨一點到五點常用；ตีหนึ่ง = 1 a.m.。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ตีหนึ่ง" aria-pressed="false" class="colloc-chip" data-thai="ตีหนึ่ง" type="button"><span class="thai">ตีหนึ่ง</span><span class="en-colloc">1 a.m.</span></button><button aria-label="播放搭配詞：ตีห้า" aria-pressed="false" class="colloc-chip" data-thai="ตีห้า" type="button"><span class="thai">ตีห้า</span><span class="en-colloc">5 a.m.</span></button></div></td><td><div class="triad"><div class="thai">เมื่อคืนฉันนอนตีหนึ่งค่ะ</div><div class="roman">mʉ̂a-khʉʉn chǎn nɔɔn dtii nʉ̀ng khâ</div><div class="eng">I slept at 1 a.m. last night.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Clock marker" data-colloc='[{"thai": "ตีหนึ่ง", "en": "1 a.m."}, {"thai": "ตีห้า", "en": "5 a.m."}]' data-eng="early-morning hour marker" data-ex-eng="I slept at 1 a.m. last night." data-ex-rom="mʉ̂a-khʉʉn chǎn nɔɔn dtii nʉ̀ng khâ" data-ex-thai="เมื่อคืนฉันนอนตีหนึ่งค่ะ" data-grammar="凌晨一點到五點常用；ตีหนึ่ง = 1 a.m.。" data-rom="dtii" data-thai="ตี" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">คืนนี้</div><div class="roman">khʉʉn níi</div><div class="eng">tonight</div></div></td><td>Time phrase</td><td>今天晚上；和 今天白天 不同。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：คืนนี้ว่างไหม" aria-pressed="false" class="colloc-chip" data-thai="คืนนี้ว่างไหม" type="button"><span class="thai">คืนนี้ว่างไหม</span><span class="en-colloc">are you free tonight</span></button><button aria-label="播放搭配詞：คืนนี้ไปไหน" aria-pressed="false" class="colloc-chip" data-thai="คืนนี้ไปไหน" type="button"><span class="thai">คืนนี้ไปไหน</span><span class="en-colloc">where are you going tonight</span></button></div></td><td><div class="triad"><div class="thai">คืนนี้คุณว่างไหมคะ</div><div class="roman">khʉʉn níi khun wâang mái khá</div><div class="eng">Are you free tonight?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "คืนนี้ว่างไหม", "en": "are you free tonight"}, {"thai": "คืนนี้ไปไหน", "en": "where are you going tonight"}]' data-eng="tonight" data-ex-eng="Are you free tonight?" data-ex-rom="khʉʉn níi khun wâang mái khá" data-ex-thai="คืนนี้คุณว่างไหมคะ" data-grammar="今天晚上；和 今天白天 不同。" data-rom="khʉʉn níi" data-thai="คืนนี้" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">คืนพรุ่งนี้</div><div class="roman">khʉʉn phrûng-níi</div><div class="eng">tomorrow night</div></div></td><td>Time phrase</td><td>明天晚上；不等於 明天白天。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：คืนพรุ่งนี้ว่างไหม" aria-pressed="false" class="colloc-chip" data-thai="คืนพรุ่งนี้ว่างไหม" type="button"><span class="thai">คืนพรุ่งนี้ว่างไหม</span><span class="en-colloc">free tomorrow night</span></button><button aria-label="播放搭配詞：คืนพรุ่งนี้เจอกัน" aria-pressed="false" class="colloc-chip" data-thai="คืนพรุ่งนี้เจอกัน" type="button"><span class="thai">คืนพรุ่งนี้เจอกัน</span><span class="en-colloc">meet tomorrow night</span></button></div></td><td><div class="triad"><div class="thai">คืนพรุ่งนี้เจอกันได้ไหมคะ</div><div class="roman">khʉʉn phrûng-níi jəə gan dâai mái khá</div><div class="eng">Can we meet tomorrow night?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "คืนพรุ่งนี้ว่างไหม", "en": "free tomorrow night"}, {"thai": "คืนพรุ่งนี้เจอกัน", "en": "meet tomorrow night"}]' data-eng="tomorrow night" data-ex-eng="Can we meet tomorrow night?" data-ex-rom="khʉʉn phrûng-níi jəə gan dâai mái khá" data-ex-thai="คืนพรุ่งนี้เจอกันได้ไหมคะ" data-grammar="明天晚上；不等於 明天白天。" data-rom="khʉʉn phrûng-níi" data-thai="คืนพรุ่งนี้" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ตอนกลางวัน</div><div class="roman">dtɔɔn glaang-wan</div><div class="eng">daytime</div></div></td><td>Time phrase</td><td>白天；常和 ตอนกลางคืน 對比。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทำงานตอนกลางวัน" aria-pressed="false" class="colloc-chip" data-thai="ทำงานตอนกลางวัน" type="button"><span class="thai">ทำงานตอนกลางวัน</span><span class="en-colloc">work in daytime</span></button><button aria-label="播放搭配詞：ร้อนตอนกลางวัน" aria-pressed="false" class="colloc-chip" data-thai="ร้อนตอนกลางวัน" type="button"><span class="thai">ร้อนตอนกลางวัน</span><span class="en-colloc">hot in daytime</span></button></div></td><td><div class="triad"><div class="thai">ตอนกลางวันอากาศร้อนค่ะ</div><div class="roman">dtɔɔn glaang-wan aa-gàat rɔ́ɔn khâ</div><div class="eng">The weather is hot in the daytime.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "ทำงานตอนกลางวัน", "en": "work in daytime"}, {"thai": "ร้อนตอนกลางวัน", "en": "hot in daytime"}]' data-eng="daytime" data-ex-eng="The weather is hot in the daytime." data-ex-rom="dtɔɔn glaang-wan aa-gàat rɔ́ɔn khâ" data-ex-thai="ตอนกลางวันอากาศร้อนค่ะ" data-grammar="白天；常和 ตอนกลางคืน 對比。" data-rom="dtɔɔn glaang-wan" data-thai="ตอนกลางวัน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ตอนกลางคืน</div><div class="roman">dtɔɔn glaang-khʉʉn</div><div class="eng">nighttime</div></div></td><td>Time phrase</td><td>夜晚；常和 ตอนกลางวัน 對比。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทำงานตอนกลางคืน" aria-pressed="false" class="colloc-chip" data-thai="ทำงานตอนกลางคืน" type="button"><span class="thai">ทำงานตอนกลางคืน</span><span class="en-colloc">work at night</span></button><button aria-label="播放搭配詞：กลางคืนเงียบ" aria-pressed="false" class="colloc-chip" data-thai="กลางคืนเงียบ" type="button"><span class="thai">กลางคืนเงียบ</span><span class="en-colloc">quiet at night</span></button></div></td><td><div class="triad"><div class="thai">ตอนกลางคืนเงียบกว่าตอนกลางวันค่ะ</div><div class="roman">dtɔɔn glaang-khʉʉn ngîap gwàa dtɔɔn glaang-wan khâ</div><div class="eng">It is quieter at night than in the daytime.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Time phrase" data-colloc='[{"thai": "ทำงานตอนกลางคืน", "en": "work at night"}, {"thai": "กลางคืนเงียบ", "en": "quiet at night"}]' data-eng="nighttime" data-ex-eng="It is quieter at night than in the daytime." data-ex-rom="dtɔɔn glaang-khʉʉn ngîap gwàa dtɔɔn glaang-wan khâ" data-ex-thai="ตอนกลางคืนเงียบกว่าตอนกลางวันค่ะ" data-grammar="夜晚；常和 ตอนกลางวัน 對比。" data-rom="dtɔɔn glaang-khʉʉn" data-thai="ตอนกลางคืน" type="button">♡ 收藏</button></td></tr></tbody></table></div>
+<h3>Movement, Places &amp; Shop Status</h3>
+<div class="vocab-scroll"><table>
+<thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">ออกจาก</div><div class="roman">ɔ̀ɔk jàak</div><div class="eng">leave from / exit from</div></div></td><td>移動</td><td>後面接地點。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ออกจากบ้านกี่โมงคะ</div><div class="roman">ɔ̀ɔk jàak bâan gìi moong khá</div><div class="eng">What time do you leave home?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="移動" data-colloc="[]" data-eng="leave from / exit from" data-ex-eng="What time do you leave home?" data-ex-rom="ɔ̀ɔk jàak bâan gìi moong khá" data-ex-thai="ออกจากบ้านกี่โมงคะ" data-grammar="後面接地點。" data-rom="ɔ̀ɔk jàak" data-thai="ออกจาก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ไปถึง</div><div class="roman">bpai thʉ̌ng</div><div class="eng">arrive at / go and reach</div></div></td><td>移動</td><td>從說話者方向「去到」。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ไปถึงโรงเรียนกี่โมงคะ</div><div class="roman">bpai thʉ̌ng roong-riian gìi moong khá</div><div class="eng">What time do you arrive at school?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="移動" data-colloc="[]" data-eng="arrive at / go and reach" data-ex-eng="What time do you arrive at school?" data-ex-rom="bpai thʉ̌ng roong-riian gìi moong khá" data-ex-thai="ไปถึงโรงเรียนกี่โมงคะ" data-grammar="從說話者方向「去到」。" data-rom="bpai thʉ̌ng" data-thai="ไปถึง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มาถึง</div><div class="roman">maa thʉ̌ng</div><div class="eng">arrive / come and reach</div></div></td><td>移動</td><td>往說話者或目前位置「來到」。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มาถึงร้านกี่โมงคะ</div><div class="roman">maa thʉ̌ng ráan gìi moong khá</div><div class="eng">What time do you arrive at the shop?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="移動" data-colloc="[]" data-eng="arrive / come and reach" data-ex-eng="What time do you arrive at the shop?" data-ex-rom="maa thʉ̌ng ráan gìi moong khá" data-ex-thai="มาถึงร้านกี่โมงคะ" data-grammar="往說話者或目前位置「來到」。" data-rom="maa thʉ̌ng" data-thai="มาถึง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ไปหา</div><div class="roman">bpai hǎa</div><div class="eng">go to see / visit</div></div></td><td>社交移動</td><td>後面接人或地方。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ฉันไปหาเพื่อนตอนเย็นค่ะ</div><div class="roman">chǎn bpai hǎa phʉ̂an dtɔɔn yen khâ</div><div class="eng">I go see my friend in the evening.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="社交移動" data-colloc="[]" data-eng="go to see / visit" data-ex-eng="I go see my friend in the evening." data-ex-rom="chǎn bpai hǎa phʉ̂an dtɔɔn yen khâ" data-ex-thai="ฉันไปหาเพื่อนตอนเย็นค่ะ" data-grammar="後面接人或地方。" data-rom="bpai hǎa" data-thai="ไปหา" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มาหา</div><div class="roman">maa hǎa</div><div class="eng">come to see / visit</div></div></td><td>社交移動</td><td>往自己方向來。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เพื่อนมาหาฉันตอนค่ำค่ะ</div><div class="roman">phʉ̂an maa hǎa chǎn dtɔɔn khâm khâ</div><div class="eng">My friend comes to see me in the evening.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="社交移動" data-colloc="[]" data-eng="come to see / visit" data-ex-eng="My friend comes to see me in the evening." data-ex-rom="phʉ̂an maa hǎa chǎn dtɔɔn khâm khâ" data-ex-thai="เพื่อนมาหาฉันตอนค่ำค่ะ" data-grammar="往自己方向來。" data-rom="maa hǎa" data-thai="มาหา" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เสร็จ</div><div class="roman">sèt</div><div class="eng">finish / done</div></div></td><td>完成</td><td>說事情做完。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เรียนเสร็จกี่โมงคะ</div><div class="roman">riian sèt gìi moong khá</div><div class="eng">What time do you finish class?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="完成" data-colloc="[]" data-eng="finish / done" data-ex-eng="What time do you finish class?" data-ex-rom="riian sèt gìi moong khá" data-ex-thai="เรียนเสร็จกี่โมงคะ" data-grammar="說事情做完。" data-rom="sèt" data-thai="เสร็จ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เปิด</div><div class="roman">bpə̀ət</div><div class="eng">open / turn on</div></div></td><td>開關</td><td>店開門、開燈、開冷氣都可用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="開關" data-colloc="[]" data-eng="open / turn on" data-ex-eng="What time does the shop open?" data-ex-rom="ráan bpə̀ət gìi moong khá" data-ex-thai="ร้านเปิดกี่โมงคะ" data-grammar="店開門、開燈、開冷氣都可用。" data-rom="bpə̀ət" data-thai="เปิด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ปิด</div><div class="roman">bpìt</div><div class="eng">close / turn off</div></div></td><td>開關</td><td>店關門、關燈、關門都可用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="開關" data-colloc="[]" data-eng="close / turn off" data-ex-eng="What time does the shop close?" data-ex-rom="ráan bpìt gìi moong khá" data-ex-thai="ร้านปิดกี่โมงคะ" data-grammar="店關門、關燈、關門都可用。" data-rom="bpìt" data-thai="ปิด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ออกเดินทาง</div><div class="roman">ɔ̀ɔk dəən-thaang</div><div class="eng">depart / set off</div></div></td><td>Verb phrase</td><td>旅行、航班、車次都可用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ออกเดินทางกี่โมง" aria-pressed="false" class="colloc-chip" data-thai="ออกเดินทางกี่โมง" type="button"><span class="thai">ออกเดินทางกี่โมง</span><span class="en-colloc">depart at what time</span></button><button aria-label="播放搭配詞：วันออกเดินทาง" aria-pressed="false" class="colloc-chip" data-thai="วันออกเดินทาง" type="button"><span class="thai">วันออกเดินทาง</span><span class="en-colloc">departure day</span></button></div></td><td><div class="triad"><div class="thai">รถไฟออกเดินทางกี่โมงคะ</div><div class="roman">rót-fai ɔ̀ɔk dəən-thaang gìi moong khá</div><div class="eng">What time does the train depart?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "ออกเดินทางกี่โมง", "en": "depart at what time"}, {"thai": "วันออกเดินทาง", "en": "departure day"}]' data-eng="depart / set off" data-ex-eng="What time does the train depart?" data-ex-rom="rót-fai ɔ̀ɔk dəən-thaang gìi moong khá" data-ex-thai="รถไฟออกเดินทางกี่โมงคะ" data-grammar="旅行、航班、車次都可用。" data-rom="ɔ̀ɔk dəən-thaang" data-thai="ออกเดินทาง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ถึง</div><div class="roman">thʉ̌ng</div><div class="eng">arrive / reach</div></div></td><td>Verb</td><td>到達地點或時間點。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ถึงบ้าน" aria-pressed="false" class="colloc-chip" data-thai="ถึงบ้าน" type="button"><span class="thai">ถึงบ้าน</span><span class="en-colloc">arrive home</span></button><button aria-label="播放搭配詞：ถึงกี่โมง" aria-pressed="false" class="colloc-chip" data-thai="ถึงกี่โมง" type="button"><span class="thai">ถึงกี่โมง</span><span class="en-colloc">arrive at what time</span></button></div></td><td><div class="triad"><div class="thai">คุณจะถึงกรุงเทพฯ กี่โมงคะ</div><div class="roman">khun jà thʉ̌ng grung-thêep gìi moong khá</div><div class="eng">What time will you arrive in Bangkok?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb" data-colloc='[{"thai": "ถึงบ้าน", "en": "arrive home"}, {"thai": "ถึงกี่โมง", "en": "arrive at what time"}]' data-eng="arrive / reach" data-ex-eng="What time will you arrive in Bangkok?" data-ex-rom="khun jà thʉ̌ng grung-thêep gìi moong khá" data-ex-thai="คุณจะถึงกรุงเทพฯ กี่โมงคะ" data-grammar="到達地點或時間點。" data-rom="thʉ̌ng" data-thai="ถึง" type="button">♡ 收藏</button></td></tr></tbody>
+</table></div>
+</section><section class="tab-content" id="supplement"><h2>Supplement｜本課延伸整理</h2><div class="supplement-section"><h3 class="supplement-section-title">經驗 × 時間｜四種最常問法</h3><div class="cards"><div class="card"><strong>เคย...ไหม</strong><p>問是否有過某經驗。</p></div><div class="card"><strong>กี่ครั้งแล้ว</strong><p>問已經做過幾次。</p></div><div class="card"><strong>ครั้งแรก / ครั้งสุดท้าย</strong><p>鎖定某次經驗的位置。</p></div><div class="card"><strong>กี่โมง / ตอน...</strong><p>補足具體時間或時段。</p></div></div></div><div class="supplement-section"><h3 class="supplement-section-title">Thai Time System｜泰式時間說法</h3>
+<div class="tip blue">
+<strong>Day 12 重點：</strong>
+      課本第 17–18 頁用時鐘圖整理泰式白天/夜晚時間。初學者可以先用「數字 + โมง」問時間，但在曼谷真實生活會聽到 <span class="thai">ทุ่ม</span> / <span class="roman">thûm</span> / <span class="eng">evening hour</span> 和 <span class="thai">ตี</span> / <span class="roman">dtii</span> / <span class="eng">early-morning hour</span>。
+    </div>
+<h3>Daytime Clock</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Thai / Romanization / English</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>6:00 a.m.</td><td><div class="triad"><div class="thai">หกโมงเช้า</div><div class="roman">hòk moong cháao</div><div class="eng">6 a.m.</div></div></td><td>清晨/早上六點。</td></tr>
+<tr><td>7:00 a.m.</td><td><div class="triad"><div class="thai">โมงเช้า</div><div class="roman">moong cháao</div><div class="eng">7 a.m.</div></div></td><td>教材寫法；口語也常說 <span class="thai">เจ็ดโมงเช้า</span>。</td></tr>
+<tr><td>8:00 a.m.</td><td><div class="triad"><div class="thai">สองโมงเช้า</div><div class="roman">sɔ̌ɔng moong cháao</div><div class="eng">8 a.m.</div></div></td><td>泰式白天鐘點從 7 點後數。</td></tr>
+<tr><td>9:00 a.m.</td><td><div class="triad"><div class="thai">สามโมงเช้า</div><div class="roman">sǎam moong cháao</div><div class="eng">9 a.m.</div></div></td><td>有些現代口語也可說เก้าโมง。</td></tr>
+<tr><td>10:00 a.m.</td><td><div class="triad"><div class="thai">สี่โมงเช้า</div><div class="roman">sìi moong cháao</div><div class="eng">10 a.m.</div></div></td><td>教材系統。</td></tr>
+<tr><td>11:00 a.m.</td><td><div class="triad"><div class="thai">ห้าโมงเช้า</div><div class="roman">hâa moong cháao</div><div class="eng">11 a.m.</div></div></td><td>接近中午。</td></tr>
+<tr><td>12:00 p.m.</td><td><div class="triad"><div class="thai">เที่ยง</div><div class="roman">thîang</div><div class="eng">noon</div></div></td><td>中午十二點。</td></tr>
+<tr><td>1:00 p.m.</td><td><div class="triad"><div class="thai">บ่ายโมง</div><div class="roman">bàai moong</div><div class="eng">1 p.m.</div></div></td><td>下午一點。</td></tr>
+<tr><td>2:00 p.m.</td><td><div class="triad"><div class="thai">บ่ายสองโมง</div><div class="roman">bàai sɔ̌ɔng moong</div><div class="eng">2 p.m.</div></div></td><td>下午兩點。</td></tr>
+<tr><td>3:00 p.m.</td><td><div class="triad"><div class="thai">บ่ายสามโมง</div><div class="roman">bàai sǎam moong</div><div class="eng">3 p.m.</div></div></td><td>下午三點。</td></tr>
+<tr><td>4:00 p.m.</td><td><div class="triad"><div class="thai">บ่ายสี่โมง</div><div class="roman">bàai sìi moong</div><div class="eng">4 p.m.</div></div></td><td>下午四點。</td></tr>
+<tr><td>5:00 p.m.</td><td><div class="triad"><div class="thai">ห้าโมงเย็น</div><div class="roman">hâa moong yen</div><div class="eng">5 p.m.</div></div></td><td>傍晚五點。</td></tr>
+</tbody>
+</table>
+<h3>Night Clock</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Thai / Romanization / English</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>6:00 p.m.</td><td><div class="triad"><div class="thai">หกโมงเย็น</div><div class="roman">hòk moong yen</div><div class="eng">6 p.m.</div></div></td><td>傍晚六點。</td></tr>
+<tr><td>7:00 p.m.</td><td><div class="triad"><div class="thai">หนึ่งทุ่ม</div><div class="roman">nʉ̀ng thûm</div><div class="eng">7 p.m.</div></div></td><td>晚上 7 點開始用ทุ่ม。</td></tr>
+<tr><td>8:00 p.m.</td><td><div class="triad"><div class="thai">สองทุ่ม</div><div class="roman">sɔ̌ɔng thûm</div><div class="eng">8 p.m.</div></div></td><td>晚上八點。</td></tr>
+<tr><td>9:00 p.m.</td><td><div class="triad"><div class="thai">สามทุ่ม</div><div class="roman">sǎam thûm</div><div class="eng">9 p.m.</div></div></td><td>晚上九點。</td></tr>
+<tr><td>10:00 p.m.</td><td><div class="triad"><div class="thai">สี่ทุ่ม</div><div class="roman">sìi thûm</div><div class="eng">10 p.m.</div></div></td><td>晚上十點。</td></tr>
+<tr><td>11:00 p.m.</td><td><div class="triad"><div class="thai">ห้าทุ่ม</div><div class="roman">hâa thûm</div><div class="eng">11 p.m.</div></div></td><td>晚上十一點。</td></tr>
+<tr><td>12:00 a.m.</td><td><div class="triad"><div class="thai">เที่ยงคืน</div><div class="roman">thîang khʉʉn</div><div class="eng">midnight</div></div></td><td>半夜十二點。</td></tr>
+<tr><td>1:00 a.m.</td><td><div class="triad"><div class="thai">ตีหนึ่ง</div><div class="roman">dtii nʉ̀ng</div><div class="eng">1 a.m.</div></div></td><td>凌晨一點。</td></tr>
+<tr><td>2:00 a.m.</td><td><div class="triad"><div class="thai">ตีสอง</div><div class="roman">dtii sɔ̌ɔng</div><div class="eng">2 a.m.</div></div></td><td>凌晨兩點。</td></tr>
+<tr><td>3:00 a.m.</td><td><div class="triad"><div class="thai">ตีสาม</div><div class="roman">dtii sǎam</div><div class="eng">3 a.m.</div></div></td><td>凌晨三點。</td></tr>
+<tr><td>4:00 a.m.</td><td><div class="triad"><div class="thai">ตีสี่</div><div class="roman">dtii sìi</div><div class="eng">4 a.m.</div></div></td><td>凌晨四點。</td></tr>
+<tr><td>5:00 a.m.</td><td><div class="triad"><div class="thai">ตีห้า</div><div class="roman">dtii hâa</div><div class="eng">5 a.m.</div></div></td><td>凌晨五點。</td></tr>
+</tbody>
+</table>
+<h3>Yesterday Night, Tonight, Tomorrow Night</h3>
+<table>
+<thead><tr><th>Thai / Romanization / English</th><th>Chinese Note</th></tr></thead>
+<tbody>
+<tr><td><div class="triad"><div class="thai">เมื่อคืนนี้</div><div class="roman">mʉ̂a-khʉʉn níi</div><div class="eng">last night</div></div></td><td>昨天晚上。</td></tr>
+<tr><td><div class="triad"><div class="thai">คืนนี้</div><div class="roman">khʉʉn níi</div><div class="eng">tonight</div></div></td><td>今天晚上。</td></tr>
+<tr><td><div class="triad"><div class="thai">คืนพรุ่งนี้</div><div class="roman">khʉʉn phrûng-níi</div><div class="eng">tomorrow night</div></div></td><td>明天晚上。</td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนกลางวัน</div><div class="roman">dtɔɔn glaang-wan</div><div class="eng">daytime</div></div></td><td>白天。</td></tr>
+<tr><td><div class="triad"><div class="thai">ตอนกลางคืน</div><div class="roman">dtɔɔn glaang-khʉʉn</div><div class="eng">nighttime</div></div></td><td>夜晚。</td></tr>
+</tbody>
+</table>
+</div></section>
+<section class="tab-content" id="structures">
+<h2>Sentence Structures</h2>
+<h3>1. Have you ever...?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณเคย + V. + Object + ไหมคะ</div>
+<div class="roman">khun khəəy + V. + Object + mái khá</div>
+<div class="eng">Have you ever + verb + object?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Positive</th><th>Negative</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณเคยไปเชียงใหม่ไหมคะ</div><div class="roman">khun khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div></td>
+<td><div class="triad"><div class="thai">เคยไปแล้วค่ะ</div><div class="roman">khəəy bpai lɛ́ɛw khâ</div><div class="eng">I have been there already.</div></div></td>
+<td><div class="triad"><div class="thai">ไม่เคยไปค่ะ</div><div class="roman">mâi khəəy bpai khâ</div><div class="eng">I have never been.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>2. How many times have you...?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณเคย + V. + Object + กี่ครั้งแล้วคะ</div>
+<div class="roman">khun khəəy + V. + Object + gìi khráng lɛ́ɛw khá</div>
+<div class="eng">How many times have you done it already?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer Type</th><th>Example</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณเคยกินทุเรียนกี่ครั้งแล้วคะ</div><div class="roman">khun khəəy gin thú-rian gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you eaten duriian?</div></div></td>
+<td>Exact number</td>
+<td><div class="triad"><div class="thai">เคยกินสองครั้งแล้วค่ะ</div><div class="roman">khəəy gin sɔ̌ɔng khráng lɛ́ɛw khâ</div><div class="eng">I have eaten it twice already.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณเคยไปตลาดนี้กี่ครั้งแล้วคะ</div><div class="roman">khun khəəy bpai tà-làat níi gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you been to this market?</div></div></td>
+<td>Many times</td>
+<td><div class="triad"><div class="thai">เคยไปหลายครั้งแล้วค่ะ</div><div class="roman">khəəy bpai lǎai khráng lɛ́ɛw khâ</div><div class="eng">I have been many times already.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณเคยไปภูเก็ตกี่ครั้งแล้วคะ</div><div class="roman">khun khəəy bpai Phuu-gèt gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you been to Phuket?</div></div></td>
+<td>Only once</td>
+<td><div class="triad"><div class="thai">เคยไปหนึ่งครั้งเท่านั้นค่ะ</div><div class="roman">khəəy bpai nʉ̀ng khráng thâo-nán khâ</div><div class="eng">I have been only once.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>3. First time / nth time / last time + when?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + ครั้งแรก / ครั้งที่... / ครั้งสุดท้าย + เมื่อไรคะ</div>
+<div class="roman">khun + V. + Object + khráng rɛ̂ɛk / khráng thîi... / khráng sùt-tháai + mʉ̂a-rài khá</div>
+<div class="eng">When did you do it for the first / nth / last time?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณไปเชียงใหม่ครั้งแรกเมื่อไรคะ</div><div class="roman">khun bpai Chiang Mai khráng rɛ̂ɛk mʉ̂a-rài khá</div><div class="eng">When did you go to Chiang Mai for the first time?</div></div></td>
+<td><div class="triad"><div class="thai">ไปครั้งแรกเมื่อสองปีก่อนค่ะ</div><div class="roman">bpai khráng rɛ̂ɛk mʉ̂a sɔ̌ɔng bpii gɔ̀ɔn khâ</div><div class="eng">I went for the first time two years ago.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณไปครั้งสุดท้ายเมื่อไรคะ</div><div class="roman">khun bpai khráng sùt-tháai mʉ̂a-rài khá</div><div class="eng">When did you go last time?</div></div></td>
+<td><div class="triad"><div class="thai">ไปครั้งสุดท้ายเมื่อเดือนก่อนค่ะ</div><div class="roman">bpai khráng sùt-tháai mʉ̂a dʉan gɔ̀ɔn khâ</div><div class="eng">I went last time one month ago.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>4. What time did you do something last night?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">เมื่อคืนนี้คุณ + V. + Object + กี่โมง / กี่ทุ่มคะ</div>
+<div class="roman">mʉ̂a-khʉʉn níi khun + V. + Object + gìi moong / gìi thûm khá</div>
+<div class="eng">What time did you do something last night?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th><th>Use</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">เมื่อคืนนี้คุณกินอาหารเย็นกี่โมงคะ</div><div class="roman">mʉ̂a-khʉʉn níi khun gin aa-hǎan yen gìi moong khá</div><div class="eng">What time did you eat dinner last night?</div></div></td>
+<td><div class="triad"><div class="thai">เมื่อคืนนี้กินอาหารเย็นหกโมงเย็นค่ะ</div><div class="roman">mʉ̂a-khʉʉn níi gin aa-hǎan yen hòk moong yen khâ</div><div class="eng">Last night I ate dinner at 6 p.m.</div></div></td>
+<td>普通時間問法。</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เมื่อคืนนี้คุณดูหนังซีรีส์กี่ทุ่มคะ</div><div class="roman">mʉ̂a-khʉʉn níi khun duu năng sii-rîi gìi thûm khá</div><div class="eng">What time at night did you watch a series last night?</div></div></td>
+<td><div class="triad"><div class="thai">ดูซีรีส์สองทุ่มค่ะ</div><div class="roman">duu sii-rîi sɔ̌ɔng thûm khâ</div><div class="eng">I watched a series at 8 p.m.</div></div></td>
+<td>晚上 7–11 點可用ทุ่ม。</td>
+</tr>
+</tbody>
+</table>
+<h3>5. At what part of the day?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">คุณ + V. + Object + ตอนไหนคะ</div>
+<div class="roman">khun + V. + Object + dtɔɔn nǎi khá</div>
+<div class="eng">At what time of day do you do something?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณกินอาหารเช้าตอนไหนคะ</div><div class="roman">khun gin aa-hǎan cháao dtɔɔn nǎi khá</div><div class="eng">When do you eat breakfast?</div></div></td>
+<td><div class="triad"><div class="thai">กินอาหารเช้าตอนเช้าค่ะ</div><div class="roman">gin aa-hǎan cháao dtɔɔn cháao khâ</div><div class="eng">I eat breakfast in the morning.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณอ่านหนังสือตอนไหนคะ</div><div class="roman">khun àan năng-sʉ̌ʉ dtɔɔn nǎi khá</div><div class="eng">When do you read?</div></div></td>
+<td><div class="triad"><div class="thai">อ่านหนังสือตอนดึกค่ะ</div><div class="roman">àan năng-sʉ̌ʉ dtɔɔn dʉ̀k khâ</div><div class="eng">I read late at night.</div></div></td>
+</tr>
+</tbody>
+</table>
+<h3>6. Leave / arrive / finish / open / close at what time?</h3>
+<div class="pattern">
+<span class="label textbook">Textbook-based</span>
+<div class="triad">
+<div class="thai">V. + Object / Place + กี่โมงคะ</div>
+<div class="roman">V. + Object / Place + gìi moong khá</div>
+<div class="eng">What time do you do it?</div>
+</div>
+</div>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">คุณออกจากบ้านกี่โมงคะ</div><div class="roman">khun ɔ̀ɔk jàak bâan gìi moong khá</div><div class="eng">What time do you leave home?</div></div></td>
+<td><div class="triad"><div class="thai">ออกจากบ้านแปดโมงเช้าค่ะ</div><div class="roman">ɔ̀ɔk jàak bâan bpɛ̀ɛt moong cháao khâ</div><div class="eng">I leave home at 8 a.m.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">คุณมาถึงโรงเรียนกี่โมงคะ</div><div class="roman">khun maa thʉ̌ng roong-riian gìi moong khá</div><div class="eng">What time do you arrive at school?</div></div></td>
+<td><div class="triad"><div class="thai">มาถึงโรงเรียนเก้าโมงค่ะ</div><div class="roman">maa thʉ̌ng roong-riian gâao moong khâ</div><div class="eng">I arrive at school at 9 a.m.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div></td>
+<td><div class="triad"><div class="thai">ร้านเปิดสิบโมงเช้าค่ะ</div><div class="roman">ráan bpə̀ət sìp moong cháao khâ</div><div class="eng">The shop opens at 10 a.m.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div></td>
+<td><div class="triad"><div class="thai">ร้านปิดสามทุ่มค่ะ</div><div class="roman">ráan bpìt sǎam thûm khâ</div><div class="eng">The shop closes at 9 p.m.</div></div></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="street">
+<h2>Textbook vs. Street Thai</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Textbook / Polite</th>
+<th>Street / Local Bangkok</th>
+<th>小撇步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>問去過嗎</td>
+<td><div class="triad"><div class="thai">คุณเคยไปเชียงใหม่ไหมคะ</div><div class="roman">khun khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div></td>
+<td><div class="triad"><div class="thai">เคยไปเชียงใหม่ไหมคะ</div><div class="roman">khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div></td>
+<td>口語常省略 <span class="thai">คุณ</span>。</td>
+</tr>
+<tr>
+<td>回答只去過一次</td>
+<td><div class="triad"><div class="thai">เคยไปหนึ่งครั้งเท่านั้นค่ะ</div><div class="roman">khəəy bpai nʉ̀ng khráng thâo-nán khâ</div><div class="eng">I have been only once.</div></div></td>
+<td><div class="triad"><div class="thai">เคยไปครั้งเดียวค่ะ</div><div class="roman">khəəy bpai khráng diaw khâ</div><div class="eng">I have been once only.</div></div></td>
+<td><span class="thai">ครั้งเดียว</span> 更像日常口語。</td>
+</tr>
+<tr>
+<td>問做過幾次</td>
+<td><div class="triad"><div class="thai">คุณเคยกินทุเรียนกี่ครั้งแล้วคะ</div><div class="roman">khun khəəy gin thú-rian gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you eaten duriian?</div></div></td>
+<td><div class="triad"><div class="thai">กินทุเรียนมากี่ครั้งแล้วคะ</div><div class="roman">gin thú-rian maa gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you eaten duriian so far?</div></div></td>
+<td>自然聊天常用 <span class="thai">มา...แล้ว</span> 表示一路累積到現在。</td>
+</tr>
+<tr>
+<td>問幾點</td>
+<td><div class="triad"><div class="thai">กี่โมงคะ</div><div class="roman">gìi moong khá</div><div class="eng">What time?</div></div></td>
+<td><div class="triad"><div class="thai">กี่โมงนะคะ</div><div class="roman">gìi moong ná khá</div><div class="eng">What time was it again?</div></div></td>
+<td>加 <span class="thai">นะ</span> 會比較柔和，像再確認。</td>
+</tr>
+<tr>
+<td>問店開門</td>
+<td><div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div></td>
+<td><div class="triad"><div class="thai">เปิดกี่โมงคะ</div><div class="roman">bpə̀ət gìi moong khá</div><div class="eng">What time do you open?</div></div></td>
+<td>你站在店門口或指著店時，可以省略ร้าน。</td>
+</tr>
+<tr>
+<td>問關門</td>
+<td><div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div></td>
+<td><div class="triad"><div class="thai">ปิดกี่ทุ่มคะ</div><div class="roman">bpìt gìi thûm khá</div><div class="eng">What time at night do you close?</div></div></td>
+<td>晚上關門時，很常用 <span class="thai">ทุ่ม</span>。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="bangkok">
+<h2>Bangkok Expansion｜曼谷生活延伸</h2>
+<h3>1. Experiences in Thailand</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問去過清邁嗎</td>
+<td><div class="triad"><div class="thai">เคยไปเชียงใหม่ไหมคะ</div><div class="roman">khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div></td>
+<td>朋友聊天高頻。</td>
+</tr>
+<tr>
+<td>說去過很多次</td>
+<td><div class="triad"><div class="thai">เคยไปหลายครั้งแล้วค่ะ</div><div class="roman">khəəy bpai lǎai khráng lɛ́ɛw khâ</div><div class="eng">I’ve been many times already.</div></div></td>
+<td>不用講精確次數。</td>
+</tr>
+<tr>
+<td>說從來沒吃過榴槤</td>
+<td><div class="triad"><div class="thai">ไม่เคยกินทุเรียนค่ะ</div><div class="roman">mâi khəəy gin thú-rian khâ</div><div class="eng">I’ve never eaten duriian.</div></div></td>
+<td>泰國生活超常聊。</td>
+</tr>
+<tr>
+<td>問第一次何時</td>
+<td><div class="triad"><div class="thai">มาครั้งแรกเมื่อไรคะ</div><div class="roman">maa khráng rɛ̂ɛk mʉ̂a-rài khá</div><div class="eng">When did you first come?</div></div></td>
+<td>聊搬來泰國/來旅行很實用。</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Restaurant / shop opening hours</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>問店幾點開</td>
+<td><div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div></td>
+<td>通用句。</td>
+</tr>
+<tr>
+<td>問店幾點關</td>
+<td><div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div></td>
+<td>通用句。</td>
+</tr>
+<tr>
+<td>問今天有開嗎</td>
+<td><div class="triad"><div class="thai">วันนี้เปิดไหมคะ</div><div class="roman">wan-níi bpə̀ət mái khá</div><div class="eng">Are you open today?</div></div></td>
+<td><span class="label local">Local</span> 比課本更實用。</td>
+</tr>
+<tr>
+<td>問現在還開嗎</td>
+<td><div class="triad"><div class="thai">ตอนนี้ยังเปิดอยู่ไหมคะ</div><div class="roman">dtɔɔn-níi yang bpə̀ət yùu mái khá</div><div class="eng">Are you still open now?</div></div></td>
+<td>晚上找餐廳時必備。</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Daily schedule with exact time</h3>
+<table>
+<thead><tr><th>Situation</th><th>Sentence</th><th>Note</th></tr></thead>
+<tbody>
+<tr>
+<td>幾點出門</td>
+<td><div class="triad"><div class="thai">ออกจากบ้านแปดโมงเช้าค่ะ</div><div class="roman">ɔ̀ɔk jàak bâan bpɛ̀ɛt moong cháao khâ</div><div class="eng">I leave home at 8 a.m.</div></div></td>
+<td>日常行程。</td>
+</tr>
+<tr>
+<td>幾點到學校</td>
+<td><div class="triad"><div class="thai">มาถึงโรงเรียนเก้าโมงค่ะ</div><div class="roman">maa thʉ̌ng roong-riian gâao moong khâ</div><div class="eng">I arrive at school at 9 a.m.</div></div></td>
+<td>抵達目前地點或說話者方向。</td>
+</tr>
+<tr>
+<td>幾點下課</td>
+<td><div class="triad"><div class="thai">เรียนเสร็จบ่ายสามโมงค่ะ</div><div class="roman">riian sèt bàai sǎam moong khâ</div><div class="eng">I finish class at 3 p.m.</div></div></td>
+<td>學校/課程高頻。</td>
+</tr>
+<tr>
+<td>昨晚幾點吃晚餐</td>
+<td><div class="triad"><div class="thai">เมื่อคืนนี้กินอาหารเย็นหนึ่งทุ่มค่ะ</div><div class="roman">mʉ̂a-khʉʉn níi gin aa-hǎan yen nʉ̀ng thûm khâ</div><div class="eng">Last night I ate dinner at 7 p.m.</div></div></td>
+<td>晚上 7 點用หนึ่งทุ่ม。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-content" id="dialogues">
+<h2>Dialogues｜情境對話</h2>
+<h3>1. 跟朋友聊：你去過清邁嗎？去過幾次？</h3>
+<p><span class="label textbook">Textbook-based</span> + <span class="label local">Supplement / Local usage</span> 情境：朋友問你在泰國旅行經驗。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">เคยไปเชียงใหม่ไหมคะ</div><div class="roman">khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">เคยไปแล้วค่ะ</div><div class="roman">khəəy bpai lɛ́ɛw khâ</div><div class="eng">I have been there already.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">เคยไปกี่ครั้งแล้วคะ</div><div class="roman">khəəy bpai gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you been?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">เคยไปสองครั้งแล้วค่ะ</div><div class="roman">khəəy bpai sɔ̌ɔng khráng lɛ́ɛw khâ</div><div class="eng">I have been twice already.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ไปครั้งแรกเมื่อไรคะ</div><div class="roman">bpai khráng rɛ̂ɛk mʉ̂a-rài khá</div><div class="eng">When did you go for the first time?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไปครั้งแรกเมื่อสองปีก่อนค่ะ</div><div class="roman">bpai khráng rɛ̂ɛk mʉ̂a sɔ̌ɔng bpii gɔ̀ɔn khâ</div><div class="eng">I went for the first time two years ago.</div></div>
+</div>
+</div>
+<div class="tip blue">
+<strong>Beginner Survival Phrases：</strong>
+<div class="triad"><div class="thai">เคยไปแล้วค่ะ</div><div class="roman">khəəy bpai lɛ́ɛw khâ</div><div class="eng">I have been there already.</div></div>
+<div class="triad"><div class="thai">ไม่เคยไปค่ะ</div><div class="roman">mâi khəəy bpai khâ</div><div class="eng">I have never been.</div></div>
+<div class="triad"><div class="thai">เคยไปครั้งเดียวค่ะ</div><div class="roman">khəəy bpai khráng diaw khâ</div><div class="eng">I have been once only.</div></div>
+</div>
+<h3>2. 在水果攤聊天：你吃過榴槤嗎？</h3>
+<p><span class="label review">Review</span> Day 10 水果 + Day 12 曾經做過。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Vendor</span>
+<div class="triad"><div class="thai">คุณเคยกินทุเรียนไหมคะ</div><div class="roman">khun khəəy gin thú-rian mái khá</div><div class="eng">Have you ever eaten duriian?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">ไม่เคยกินค่ะ</div><div class="roman">mâi khəəy gin khâ</div><div class="eng">I have never eaten it.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Vendor</span>
+<div class="triad"><div class="thai">ลองไหมคะ อร่อยนะคะ</div><div class="roman">lɔɔng mái khá, à-rɔ̀i ná khá</div><div class="eng">Do you want to try? It’s delicious.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">ขอลองนิดหน่อยได้ไหมคะ</div><div class="roman">khɔ̌ɔ lɔɔng nít-nɔ̀i dâai mái khá</div><div class="eng">Can I try a little?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Vendor</span>
+<div class="triad"><div class="thai">ได้ค่ะ</div><div class="roman">dâai khâ</div><div class="eng">Sure.</div></div>
+</div>
+</div>
+<div class="tip">
+<strong>自然用法說明：</strong>
+<p><span class="thai">ลองไหมคะ</span> / <span class="roman">lɔɔng mái khá</span> / <span class="eng">Do you want to try?</span> 是水果攤、試吃、餐廳推薦時很常聽到的句子。</p>
+</div>
+<h3>3. 問餐廳幾點開、幾點關</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：你想去餐廳，但不知道現在還有沒有開。</p>
+<div class="bubble-wrap">
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">ขอโทษค่ะ วันนี้เปิดไหมคะ</div><div class="roman">khɔ̌ɔ-thôot khâ, wan-níi bpə̀ət mái khá</div><div class="eng">Excuse me, are you open today?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Staff</span>
+<div class="triad"><div class="thai">เปิดค่ะ</div><div class="roman">bpə̀ət khâ</div><div class="eng">Yes, we’re open.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">เปิดกี่โมงคะ</div><div class="roman">bpə̀ət gìi moong khá</div><div class="eng">What time do you open?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Staff</span>
+<div class="triad"><div class="thai">เปิดสิบโมงเช้าค่ะ</div><div class="roman">bpə̀ət sìp moong cháao khâ</div><div class="eng">We open at 10 a.m.</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Customer</span>
+<div class="triad"><div class="thai">แล้วปิดกี่โมงคะ</div><div class="roman">lɛ́ɛw bpìt gìi moong khá</div><div class="eng">And what time do you close?</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Staff</span>
+<div class="triad"><div class="thai">ปิดสามทุ่มค่ะ</div><div class="roman">bpìt sǎam thûm khâ</div><div class="eng">We close at 9 p.m.</div></div>
+</div>
+</div>
+<h3>4. 昨晚幾點吃晚餐？幾點睡？</h3>
+<p><span class="label textbook">Textbook-based</span> 情境：老師用昨晚活動練 <span class="thai">กี่โมง</span> / <span class="roman">gìi moong</span> / <span class="eng">what time</span>。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">เมื่อคืนนี้คุณกินอาหารเย็นกี่โมงคะ</div><div class="roman">mʉ̂a-khʉʉn níi khun gin aa-hǎan yen gìi moong khá</div><div class="eng">What time did you eat dinner last night?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">กินอาหารเย็นหนึ่งทุ่มค่ะ</div><div class="roman">gin aa-hǎan yen nʉ̀ng thûm khâ</div><div class="eng">I ate dinner at 7 p.m.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Teacher</span>
+<div class="triad"><div class="thai">แล้วนอนกี่โมงคะ</div><div class="roman">lɛ́ɛw nɔɔn gìi moong khá</div><div class="eng">And what time did you sleep?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">Student</span>
+<div class="triad"><div class="thai">นอนเที่ยงคืนค่ะ</div><div class="roman">nɔɔn thîang khʉʉn khâ</div><div class="eng">I slept at midnight.</div></div>
+</div>
+</div>
+<h3>5. Grab / 朋友接送：幾點出發、幾點到？</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：你和朋友約見面，或跟司機確認時間。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">ออกจากบ้านกี่โมงคะ</div><div class="roman">ɔ̀ɔk jàak bâan gìi moong khá</div><div class="eng">What time will you leave home?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ออกจากบ้านแปดโมงเช้าค่ะ</div><div class="roman">ɔ̀ɔk jàak bâan bpɛ̀ɛt moong cháao khâ</div><div class="eng">I’ll leave home at 8 a.m.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Friend</span>
+<div class="triad"><div class="thai">มาถึงกี่โมงคะ</div><div class="roman">maa thʉ̌ng gìi moong khá</div><div class="eng">What time will you arrive?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">น่าจะมาถึงเก้าโมงค่ะ</div><div class="roman">nâa-jà maa thʉ̌ng gâao moong khâ</div><div class="eng">I’ll probably arrive at 9 a.m.</div></div>
+</div>
+</div>
+<div class="tip">
+<strong>自然用法說明：</strong>
+<p><span class="thai">น่าจะ</span> / <span class="roman">nâa-jà</span> / <span class="eng">probably</span> 很實用，因為曼谷交通不一定準時。</p>
+</div>
+<h3>6. 第一次來曼谷嗎？</h3>
+<p><span class="label local">Supplement / Local usage</span> 情境：泰國朋友、老師、店員和你聊天。</p>
+<div class="bubble-wrap">
+<div class="bubble a">
+<span class="speaker a">Local</span>
+<div class="triad"><div class="thai">มาเมืองไทยครั้งแรกไหมคะ</div><div class="roman">maa mʉang thai khráng rɛ̂ɛk mái khá</div><div class="eng">Is this your first time coming to Thailand?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">ไม่ใช่ค่ะ เคยมาหลายครั้งแล้วค่ะ</div><div class="roman">mâi châi khâ, khəəy maa lǎai khráng lɛ́ɛw khâ</div><div class="eng">No. I’ve come many times already.</div></div>
+</div>
+<div class="bubble a">
+<span class="speaker a">Local</span>
+<div class="triad"><div class="thai">มาครั้งแรกเมื่อไรคะ</div><div class="roman">maa khráng rɛ̂ɛk mʉ̂a-rài khá</div><div class="eng">When did you first come?</div></div>
+</div>
+<div class="bubble b">
+<span class="speaker b">You</span>
+<div class="triad"><div class="thai">มาครั้งแรกเมื่อปีสองพันยี่สิบสามค่ะ</div><div class="roman">maa khráng rɛ̂ɛk mʉ̂a bpii sɔ̌ɔng-phan yîi-sìp-sǎam khâ</div><div class="eng">I first came in 2023.</div></div>
+</div>
+</div>
+</section>
+<section class="tab-content" id="mistakes">
+<h2>Common Mistakes &amp; Quick Review</h2>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Why It’s Wrong / Risky</th>
+<th>Better Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="triad"><div class="thai">เคยไม่ไปค่ะ</div><div class="roman">khəəy mâi bpai khâ</div><div class="eng">wrong: ever not go</div></div></td>
+<td>「從來沒有」要用 <span class="thai">ไม่เคย</span>，順序不能反。</td>
+<td><div class="triad"><div class="thai">ไม่เคยไปค่ะ</div><div class="roman">mâi khəəy bpai khâ</div><div class="eng">I have never been.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เคยไปหนึ่งครั้งแล้ว</div><div class="roman">khəəy bpai nʉ̀ng khráng lɛ́ɛw</div><div class="eng">I have been once already.</div></div></td>
+<td>不是錯，但口語如果想說「只去一次」，更自然用 <span class="thai">ครั้งเดียว</span>。</td>
+<td><div class="triad"><div class="thai">เคยไปครั้งเดียวค่ะ</div><div class="roman">khəəy bpai khráng diaw khâ</div><div class="eng">I have been once only.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ครั้งแรก = ครั้งสุดท้าย</div><div class="roman">khráng rɛ̂ɛk = khráng sùt-tháai</div><div class="eng">first time = last time</div></div></td>
+<td>兩個完全不同：第一次 vs 最後一次。</td>
+<td>
+<div class="triad"><div class="thai">ครั้งแรก</div><div class="roman">khráng rɛ̂ɛk</div><div class="eng">first time</div></div>
+<div class="triad"><div class="thai">ครั้งสุดท้าย</div><div class="roman">khráng sùt-tháai</div><div class="eng">last time</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">เปิด ≠ ปิด</div><div class="roman">bpə̀ət ≠ bpìt</div><div class="eng">open is not close</div></div></td>
+<td>發音很近，意思相反。開是 <span class="thai">เปิด</span>，關是 <span class="thai">ปิด</span>。</td>
+<td>
+<div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div>
+<div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div>
+</td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">หนึ่งทุ่ม = 1 p.m.</div><div class="roman">nʉ̀ng thûm</div><div class="eng">wrong: 1 p.m.</div></div></td>
+<td><span class="thai">ทุ่ม</span> 是晚上系統，<span class="thai">หนึ่งทุ่ม</span> 是 7 p.m.。</td>
+<td><div class="triad"><div class="thai">หนึ่งทุ่ม</div><div class="roman">nʉ̀ng thûm</div><div class="eng">7 p.m.</div></div></td>
+</tr>
+<tr>
+<td><div class="triad"><div class="thai">ตีหนึ่ง = 1 p.m.</div><div class="roman">dtii nʉ̀ng</div><div class="eng">wrong: 1 p.m.</div></div></td>
+<td><span class="thai">ตี</span> 是凌晨系統，<span class="thai">ตีหนึ่ง</span> 是 1 a.m.。</td>
+<td><div class="triad"><div class="thai">ตีหนึ่ง</div><div class="roman">dtii nʉ̀ng</div><div class="eng">1 a.m.</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="tip red">
+<strong>本課最重要記憶點：</strong>
+<p>1. <span class="thai">เคย</span> / <span class="roman">khəəy</span> / <span class="eng">have ever</span> 問經驗；否定是 <span class="thai">ไม่เคย</span> / <span class="roman">mâi khəəy</span> / <span class="eng">have never</span>。</p>
+<p>2. <span class="thai">ครั้งแรก</span> / <span class="roman">khráng rɛ̂ɛk</span> / <span class="eng">first time</span>；<span class="thai">ครั้งสุดท้าย</span> / <span class="roman">khráng sùt-tháai</span> / <span class="eng">last time</span>。</p>
+<p>3. <span class="thai">กี่โมง</span> / <span class="roman">gìi moong</span> / <span class="eng">what time</span> 是最通用；晚上要慢慢熟悉 <span class="thai">ทุ่ม</span> / <span class="roman">thûm</span> / <span class="eng">evening hour</span> 和 <span class="thai">ตี</span> / <span class="roman">dtii</span> / <span class="eng">early morning hour</span>。</p>
+</div>
+</section>
+<section class="tab-content" id="practice">
+<h2>Practice Questions</h2>
+<h3>A. Experience Recall</h3>
+<details>
+<summary>1. Have you ever been to Chiang Mai?</summary>
+<div class="triad"><div class="thai">คุณเคยไปเชียงใหม่ไหมคะ</div><div class="roman">khun khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div>
+</details>
+<details>
+<summary>2. I have never eaten duriian.</summary>
+<div class="triad"><div class="thai">ฉันไม่เคยกินทุเรียนค่ะ</div><div class="roman">chǎn mâi khəəy gin thú-rian khâ</div><div class="eng">I have never eaten duriian.</div></div>
+</details>
+<details>
+<summary>3. I have been there many times already.</summary>
+<div class="triad"><div class="thai">เคยไปหลายครั้งแล้วค่ะ</div><div class="roman">khəəy bpai lǎai khráng lɛ́ɛw khâ</div><div class="eng">I have been many times already.</div></div>
+</details>
+<h3>B. Time Practice</h3>
+<details>
+<summary>1. 7 p.m.</summary>
+<div class="triad"><div class="thai">หนึ่งทุ่ม</div><div class="roman">nʉ̀ng thûm</div><div class="eng">7 p.m.</div></div>
+</details>
+<details>
+<summary>2. 9 p.m.</summary>
+<div class="triad"><div class="thai">สามทุ่ม</div><div class="roman">sǎam thûm</div><div class="eng">9 p.m.</div></div>
+</details>
+<details>
+<summary>3. 1 a.m.</summary>
+<div class="triad"><div class="thai">ตีหนึ่ง</div><div class="roman">dtii nʉ̀ng</div><div class="eng">1 a.m.</div></div>
+</details>
+<details>
+<summary>4. noon</summary>
+<div class="triad"><div class="thai">เที่ยง</div><div class="roman">thîang</div><div class="eng">noon</div></div>
+</details>
+<details>
+<summary>5. midnight</summary>
+<div class="triad"><div class="thai">เที่ยงคืน</div><div class="roman">thîang khʉʉn</div><div class="eng">midnight</div></div>
+</details>
+<h3>C. Translation Practice</h3>
+<details>
+<summary>1. What time does the shop open?</summary>
+<div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div>
+</details>
+<details>
+<summary>2. What time does the shop close?</summary>
+<div class="triad"><div class="thai">ร้านปิดกี่โมงคะ</div><div class="roman">ráan bpìt gìi moong khá</div><div class="eng">What time does the shop close?</div></div>
+</details>
+<details>
+<summary>3. I ate dinner at 7 p.m. last night.</summary>
+<div class="triad"><div class="thai">เมื่อคืนนี้กินอาหารเย็นหนึ่งทุ่มค่ะ</div><div class="roman">mʉ̂a-khʉʉn níi gin aa-hǎan yen nʉ̀ng thûm khâ</div><div class="eng">Last night I ate dinner at 7 p.m.</div></div>
+</details>
+<details>
+<summary>4. I leave home at 8 a.m.</summary>
+<div class="triad"><div class="thai">ออกจากบ้านแปดโมงเช้าค่ะ</div><div class="roman">ɔ̀ɔk jàak bâan bpɛ̀ɛt moong cháao khâ</div><div class="eng">I leave home at 8 a.m.</div></div>
+</details>
+<details>
+<summary>5. I arrive at school at 9 a.m.</summary>
+<div class="triad"><div class="thai">มาถึงโรงเรียนเก้าโมงค่ะ</div><div class="roman">maa thʉ̌ng roong-riian gâao moong khâ</div><div class="eng">I arrive at school at 9 a.m.</div></div>
+</details>
+<h3>D. Real-life Response Practice</h3>
+<details>
+<summary>1. Friend asks: เคยไปภูเก็ตไหมคะ / khəəy bpai Phuu-gèt mái khá / Have you ever been to Phuket?</summary>
+<div class="triad"><div class="thai">เคยไปหนึ่งครั้งค่ะ</div><div class="roman">khəəy bpai nʉ̀ng khráng khâ</div><div class="eng">I have been once.</div></div>
+</details>
+<details>
+<summary>2. Staff says: ร้านปิดสามทุ่มค่ะ / ráan bpìt sǎam thûm khâ / The shop closes at 9 p.m.</summary>
+<div class="triad"><div class="thai">ขอบคุณค่ะ</div><div class="roman">khɔ̀ɔp-khun khâ</div><div class="eng">Thank you.</div></div>
+</details>
+<details>
+<summary>3. Friend asks: ออกจากบ้านกี่โมงคะ / ɔ̀ɔk jàak bâan gìi moong khá / What time do you leave home?</summary>
+<div class="triad"><div class="thai">ออกจากบ้านแปดโมงเช้าค่ะ</div><div class="roman">ɔ̀ɔk jàak bâan bpɛ̀ɛt moong cháao khâ</div><div class="eng">I leave home at 8 a.m.</div></div>
+</details>
+<h3>E. Mini Role-play</h3>
+<div class="tip blue">
+      情境：你要問一家餐廳今天有沒有開、幾點開、幾點關，然後確認晚上 8 點還能不能去。
+    </div>
+<details>
+<summary>Suggested Answer</summary>
+<div class="bubble-wrap">
+<div class="bubble b"><span class="speaker b">Customer</span><div class="triad"><div class="thai">วันนี้เปิดไหมคะ</div><div class="roman">wan-níi bpə̀ət mái khá</div><div class="eng">Are you open today?</div></div></div>
+<div class="bubble b"><span class="speaker b">Customer</span><div class="triad"><div class="thai">เปิดกี่โมงคะ</div><div class="roman">bpə̀ət gìi moong khá</div><div class="eng">What time do you open?</div></div></div>
+<div class="bubble b"><span class="speaker b">Customer</span><div class="triad"><div class="thai">ปิดกี่โมงคะ</div><div class="roman">bpìt gìi moong khá</div><div class="eng">What time do you close?</div></div></div>
+<div class="bubble b"><span class="speaker b">Customer</span><div class="triad"><div class="thai">สองทุ่มยังเปิดอยู่ไหมคะ</div><div class="roman">sɔ̌ɔng thûm yang bpə̀ət yùu mái khá</div><div class="eng">Are you still open at 8 p.m.?</div></div></div>
+</div>
+</details>
+</section>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">คุณเคยไปเชียงใหม่ไหมคะ</div><div class="roman">khun khəəy bpai Chiang Mai mái khá</div><div class="eng">Have you ever been to Chiang Mai?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">คุณเคยไปกี่ครั้งแล้วคะ</div><div class="roman">khun khəəy bpai gìi khráng lɛ́ɛw khá</div><div class="eng">How many times have you been?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ตอนเช้า</div><div class="roman">dtɔɔn cháao</div><div class="eng">morning</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ร้านเปิดกี่โมงคะ</div><div class="roman">ráan bpə̀ət gìi moong khá</div><div class="eng">What time does the shop open?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">คุณเคยไปอยุธยาไหมคะ</div><div class="roman">khun khəəy bpai à-yút-thá-yaa mái khá</div><div class="eng">Have you ever been to Ayutthaya?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ฉันเคยไปเชียงใหม่สองครั้งค่ะ</div><div class="roman">chǎn khəəy bpai chiiang-mài sɔ̌ɔng khráng khâ</div><div class="eng">I have been to Chiang Mai twice.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">นี่เป็นครั้งแรกที่ฉันมาไทยค่ะ</div><div class="roman">nîi bpen khráng râek thîi chǎn maa thai khâ</div><div class="eng">This is the first time I have come to Thailand.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">คุณไปครั้งสุดท้ายเมื่อไรคะ</div><div class="roman">khun bpai khráng sùt-tháai mʉ̂a-rai khá</div><div class="eng">When did you go last?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">พรุ่งนี้ฉันออกเดินทางตอนเช้าค่ะ</div><div class="roman">phrûng-níi chǎn ɔ̀ɔk dəən-thaang dtɔɔn cháao khâ</div><div class="eng">I will leave tomorrow morning.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">วันนี้ตอนบ่ายคุณว่างไหมคะ</div><div class="roman">wan-níi dtɔɔn bàai khun wâang mái khá</div><div class="eng">Are you free this afternoon?</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<script>
+  function openTab(event, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    contents.forEach(content => content.classList.remove('active'));
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+// ── TTS ──────────────────────────────────────────────
+let thaiVoice = null;
+let activBtn  = null;
+
+function loadVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  thaiVoice = voices.find(v => v.lang === 'th-TH') ||
+              voices.find(v => v.lang.startsWith('th')) ||
+              null;
+}
+loadVoices();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakThai(text, btn) {
+  if (!window.speechSynthesis) {
+    alert('此瀏覽器不支援語音合成。請用 Safari（macOS/iOS）或 Chrome。');
+    return;
+  }
+  if (activBtn === btn && speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+    return;
+  }
+  speechSynthesis.cancel();
+  if (activBtn) {
+    activBtn.classList.remove('speaking');
+    activBtn.textContent = '🔊';
+  }
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang  = 'th-TH';
+  utter.rate  = 0.85;
+  utter.pitch = 1.0;
+  if (thaiVoice) utter.voice = thaiVoice;
+  utter.onstart = () => {
+    btn.classList.add('speaking');
+    btn.textContent = '⏸';
+    activBtn = btn;
+  };
+  utter.onend = utter.onerror = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    activBtn = null;
+  };
+  speechSynthesis.speak(utter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('div.thai').forEach(el => {
+    const rawText = el.textContent.trim();
+    if (!rawText) return;
+    const span = document.createElement('span');
+    span.className = 'thai-text';
+    span.textContent = rawText;
+    const btn = document.createElement('button');
+    btn.className = 'speak-btn';
+    btn.textContent = '🔊';
+    btn.title = '唸出泰文';
+    btn.setAttribute('aria-label', '播放發音');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      speakThai(rawText, btn);
+    });
+    el.textContent = '';
+    el.appendChild(span);
+    el.appendChild(btn);
+  });
+});
+</script>
+<script id="book1-favorites-script">
+(function () {
+  const favoritesKey = 'thai-book1-day12-favorites';
+  const legacyFavoriteKeys = ['thaiBook1_day12_favorites_v1'];
+  const $ = function (selector, root) { return (root || document).querySelector(selector); };
+  const $$ = function (selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); };
+  function readStore(key) { try { const v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v.filter(Boolean) : []; } catch (e) { return []; } }
+  function safeGet() {
+    const current = readStore(favoritesKey);
+    if (current.length) return current;
+    for (let i = 0; i < legacyFavoriteKeys.length; i += 1) {
+      const legacy = readStore(legacyFavoriteKeys[i]);
+      if (legacy.length) { try { localStorage.setItem(favoritesKey, JSON.stringify(legacy)); } catch (e) {} return legacy; }
+    }
+    return [];
+  }
+  function safeSave(items) { try { localStorage.setItem(favoritesKey, JSON.stringify(items)); } catch (e) {} }
+  function idOf(item) { return [item.thai, item.rom, item.eng].join('||'); }
+  function esc(v) { return String(v || '').replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function collocs(item) { try { const data = JSON.parse(item.colloc || '[]'); return Array.isArray(data) ? data : []; } catch (e) { return []; } }
+  function readButton(btn) {
+    return { thai:btn.dataset.thai || '', rom:btn.dataset.rom || '', eng:btn.dataset.eng || '', cat:btn.dataset.cat || '', grammar:btn.dataset.grammar || '', colloc:btn.dataset.colloc || '[]', exThai:btn.dataset.exThai || '', exRom:btn.dataset.exRom || '', exEng:btn.dataset.exEng || '' };
+  }
+  function updateButtons() {
+    const ids = new Set(safeGet().map(idOf));
+    $$('.fav-btn').forEach(function (btn) {
+      const selected = ids.has(idOf(readButton(btn)));
+      btn.classList.toggle('is-favorite', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      btn.textContent = selected ? '★ 已收藏' : '♡ 收藏';
+    });
+  }
+  function makeCard(item) {
+    const c = collocs(item);
+    const collocHtml = c.length ? c.map(function (x) { return '<button type="button" class="colloc-chip" data-thai="' + esc(x.thai) + '" aria-label="播放搭配詞：' + esc(x.thai) + '" aria-pressed="false"><span class="thai">' + esc(x.thai) + '</span><span class="en-colloc">' + esc(x.en) + '</span></button>'; }).join('') : '<span class="muted">—</span>';
+    return '<article class="favorite-card">' +
+      '<div class="favorite-thai"><span>' + esc(item.thai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.thai) + '" aria-label="播放發音">🔊</button></div>' +
+      '<span class="roman">' + esc(item.rom) + '</span><span class="eng">' + esc(item.eng) + '</span>' +
+      '<div class="favorite-category"><span class="label practical">' + esc(item.cat || 'Vocabulary') + '</span></div>' +
+      '<div class="favorite-example"><div class="favorite-example-title">Example</div>' +
+      '<div class="thai"><span class="thai-text">' + esc(item.exThai) + '</span><button class="speak-btn favorite-speak" type="button" data-fav-speech="' + esc(item.exThai) + '" aria-label="播放例句">🔊</button></div>' +
+      '<div class="roman">' + esc(item.exRom) + '</div><div class="eng">' + esc(item.exEng) + '</div></div>' +
+      '<details class="fav-expand"><summary>Grammar &amp; Collocations</summary><div class="fav-expand-body">' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Grammar Notes</div><div class="fav-expand-usage">' + (item.grammar || '—') + '</div></div>' +
+      '<div class="fav-expand-section"><div class="fav-expand-title">Collocations</div><div class="fav-expand-colloc">' + collocHtml + '</div></div>' +
+      '</div></details>' +
+      '<button class="remove-fav" type="button" data-remove-id="' + esc(idOf(item)) + '">移除收藏</button>' +
+      '</article>';
+  }
+  function render() {
+    const box = $('#favoritesList'); if (!box) return;
+    const items = safeGet();
+    box.innerHTML = items.length ? items.map(makeCard).join('') : '<div class="empty-state">還沒有收藏項目。到 Vocabulary 右側點「♡ 收藏」即可加入。</div>';
+    updateButtons();
+  }
+  document.addEventListener('click', function (event) {
+    const fav = event.target.closest && event.target.closest('.fav-btn');
+    if (fav) {
+      const item = readButton(fav); const key = idOf(item); let items = safeGet();
+      items = items.some(function (x) { return idOf(x) === key; }) ? items.filter(function (x) { return idOf(x) !== key; }) : items.concat(item);
+      safeSave(items); render(); return;
+    }
+    const remove = event.target.closest && event.target.closest('[data-remove-id]');
+    if (remove) { safeSave(safeGet().filter(function (x) { return idOf(x) !== remove.dataset.removeId; })); render(); return; }
+    const speak = event.target.closest && event.target.closest('[data-fav-speech]');
+    if (speak && typeof window.speakThai === 'function') { event.preventDefault(); window.speakThai(speak.dataset.favSpeech, speak); }
+  });
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+<script id="book1-collocations-audio-script">
+(function () {
+  var activeButton = null;
+  function thaiVoice() {
+    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
+           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
+  }
+  function reset(button) {
+    if (!button) return;
+    button.classList.remove('speaking');
+    button.setAttribute('aria-pressed', 'false');
+  }
+  function speak(button) {
+    var text = (button.dataset.thai || '').trim();
+    if (!text) return;
+    if (!('speechSynthesis' in window)) {
+      alert('此瀏覽器不支援語音合成。');
+      return;
+    }
+    var synth = window.speechSynthesis;
+    if (activeButton === button && synth.speaking) {
+      synth.cancel();
+      reset(button);
+      activeButton = null;
+      return;
+    }
+    synth.cancel();
+    reset(activeButton);
+    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'th-TH';
+    utterance.rate = 0.82;
+    var voice = thaiVoice();
+    if (voice) utterance.voice = voice;
+    button.classList.add('speaking');
+    button.setAttribute('aria-pressed', 'true');
+    activeButton = button;
+    utterance.onend = utterance.onerror = function () {
+      reset(button);
+      if (activeButton === button) activeButton = null;
+    };
+    try {
+      synth.resume();
+      synth.speak(utterance);
+    } catch (error) {
+      reset(button);
+      activeButton = null;
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
+    if (!button) return;
+    event.preventDefault();
+    event.stopPropagation();
+    speak(button);
+  });
+})();
+</script></body>
+</html>
