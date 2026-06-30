@@ -369,256 +369,41 @@
       .bubble { max-width: 100%; }
     }
   </style>
-<style id="book1-content-rebuild-style">
-/* ── Book 1 content rebuild layer ───────────────────── */
-#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
-#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
-#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
-#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
-#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
-#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+<style id="book1-final-standard-style">
+/* Book 1 final standard: one vocabulary system, one classifier component, resilient tablet layout */
+.triad .thai::before,.triad .roman::before,.triad .eng::before{content:none!important}
+#vocab .vocab-scroll{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{width:100%;min-width:1120px!important;table-layout:fixed;margin:0!important}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:20%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:10%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:27%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:19%}
 #vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
-.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
-.vocab-group-title:first-of-type{border-top:0;padding-top:0}
-.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
-.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
-.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
-#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
-#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
-#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
-#supplement .vocab-scroll table{min-width:760px}
-.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
-.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
-.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+#vocab .vocab-scroll th:nth-child(6),#vocab .vocab-scroll td:nth-child(6){width:7%;min-width:88px}
+#vocab .favorite-col,#vocab .fav-cell{text-align:center!important;vertical-align:middle!important;white-space:nowrap;padding-left:7px!important;padding-right:7px!important}
+#vocab .fav-btn{border:.5px solid rgba(220,38,38,.30);border-radius:999px;padding:5px 8px;background:rgba(220,38,38,.07);color:#b91c1c;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.16s ease}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14);transform:translateY(-1px)}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16);border-color:rgba(202,138,4,.40);color:#854d0e}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0;align-items:flex-start}
+button.colloc-chip{display:inline-flex!important;align-items:center!important;gap:6px!important;border:.5px solid rgba(22,163,74,.24)!important;background:rgba(22,163,74,.10)!important;color:var(--text)!important;border-radius:999px!important;padding:5px 9px!important;margin:3px 3px 3px 0!important;cursor:pointer!important;line-height:1.35!important;font:inherit!important;text-align:left!important;touch-action:manipulation}
+button.colloc-chip:hover,button.colloc-chip:focus-visible{background:rgba(22,163,74,.16)!important;border-color:rgba(22,163,74,.32)!important;outline:none!important}
+button.colloc-chip.speaking{background:rgba(22,163,74,.18)!important;border-color:rgba(22,163,74,.42)!important}
+.colloc-chip .thai{display:inline!important;font-size:15px!important;font-weight:600!important;line-height:1.25!important}.colloc-chip .en-colloc{display:inline!important;font-size:12px!important;color:var(--muted)!important;line-height:1.2!important}
+/* official classifier display in Grammar Notes */
+#vocab .classifier-note.classifier-inline{margin-top:7px;padding-top:7px;border-top:.5px dashed var(--line);display:flex!important;flex-wrap:wrap;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+#vocab .classifier-label{font-weight:700;color:var(--muted)}
+button.classifier-audio-pill{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;gap:5px;border:.5px solid rgba(124,58,237,.32);background:var(--purple-soft);color:#5b21b6;border-radius:999px;padding:4px 9px;margin:0;font:inherit;font-size:13px;font-weight:800;line-height:1.25;cursor:pointer;touch-action:manipulation}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible,button.classifier-audio-pill.speaking{background:rgba(124,58,237,.18);border-color:rgba(124,58,237,.48);outline:none}
+.classifier-roman{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;color:var(--muted);font-size:12px}.classifier-sep{color:var(--muted)}
+/* Top 10 always scrolls inside its tab instead of expanding the page */
+#top10{overflow:hidden}.top10-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}.top10-scroll table{min-width:720px;margin:0!important}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+/* Favorites must never force a page-wide horizontal overflow */
+#favorites{overflow:hidden}.favorites-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;min-width:0}.favorite-card{min-width:0;overflow-wrap:anywhere;word-break:break-word;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card)}.favorite-card *{min-width:0}.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;overflow-wrap:anywhere}.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}.favorite-category{margin-top:8px}.label.practical{background:var(--green-soft);color:#15803d;border:.5px solid rgba(22,163,74,.3)}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);overflow-wrap:anywhere}.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px}.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px}.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);grid-column:1/-1}.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32)}.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none}.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px}.favorite-speak{margin-left:0}
 .muted{color:var(--muted)}
-@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
-</style><style id="book1-book2-vocab-pattern">
-/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
-.triad .thai::before,
-.triad .roman::before,
-.triad .eng::before { content:none !important; }
-
-#vocab .vocab-scroll{
-  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
-  margin:14px 0 24px; border-radius:12px;
-}
-#vocab .vocab-scroll table{
-  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
-}
-#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
-#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
-#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
-#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
-#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
-#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
-
-#vocab .favorite-col, #vocab .fav-cell{
-  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
-  padding-left:7px !important; padding-right:7px !important;
-}
-#vocab .fav-btn{
-  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
-  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
-  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
-}
-#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
-#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
-
-.classifier-note{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  font-size:12px; color:var(--muted);
-}
-.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
-.colloc-chip{
-  display:inline-flex !important; align-items:center !important; justify-content:center !important;
-  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
-  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
-  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
-  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
-  box-shadow:none !important; transform:none !important; animation:none !important;
-}
-.colloc-chip:hover,.colloc-chip:focus-visible{
-  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
-  transform:none !important; animation:none !important; outline:none !important;
-}
-.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
-.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
-.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
-
-#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
-.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
-.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
-.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
-.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
-.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
-.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
-.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
-.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
-.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
-.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
-.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
-.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
-.favorite-speak{margin-left:0;}
-@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:720px){
-  #vocab .vocab-scroll table{min-width:1120px !important;}
-  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
-  .favorites-list{grid-template-columns:1fr;}
-}
-</style><style id="book1-semantic-refinement-style">
-/* ── Semantic refinement: real collocation buttons ── */
-button.colloc-chip{
-  -webkit-appearance:none !important;
-  appearance:none !important;
-  font:inherit !important;
-  text-align:left !important;
-  touch-action:manipulation;
-  user-select:none;
-}
-button.colloc-chip:focus-visible{
-  outline:2px solid rgba(22,163,74,.55) !important;
-  outline-offset:2px;
-}
-</style><style id="book1-classifier-audio-refine-style">
-/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
-#vocab .classifier-note.classifier-short{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
-}
-#vocab .classifier-label{font-weight:700; color:var(--muted);}
-button.classifier-audio-pill{
-  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
-  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
-  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
-  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
-}
-button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
-#classifiers .classifier-chip{display:none !important;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:1120px!important}#vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px}.favorites-list{grid-template-columns:minmax(0,1fr)}.top10-scroll table{min-width:700px}}
 </style>
-<style id="book1-vocab-classifier-detail-style">
-/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
-#vocab .classifier-note.classifier-detail{
-  margin-top:7px;
-  padding-top:7px;
-  border-top:.5px dashed var(--line);
-  display:grid;
-  gap:3px;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.35;
-}
-#vocab .classifier-label{
-  color:var(--muted);
-  font-weight:700;
-}
-#vocab .classifier-entries{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-#vocab .classifier-entry{
-  min-width:0;
-  display:grid;
-  gap:1px;
-}
-#vocab button.classifier-audio-pill{
-  appearance:none;
-  -webkit-appearance:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:5px;
-  width:max-content;
-  max-width:100%;
-  border:.5px solid rgba(124,58,237,.34);
-  background:var(--purple-soft);
-  color:#5b21b6;
-  border-radius:999px;
-  padding:4px 9px;
-  margin:0;
-  font:inherit;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.2;
-  cursor:pointer;
-  touch-action:manipulation;
-  transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-#vocab button.classifier-audio-pill:hover,
-#vocab button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18);
-  border-color:rgba(124,58,237,.52);
-  outline:none;
-  transform:translateY(-1px);
-}
-#vocab button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.25);
-  border-color:rgba(124,58,237,.60);
-}
-#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
-#vocab .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:11.5px;
-}
-#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
-/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
-#classifiers .classifier-chip{display:none !important;}
-</style>
-<style id="book1-vocab-classifier-inline-style">
-/* Vocabulary classifier format｜量詞：ใบ bai */
-#vocab .classifier-note.classifier-inline{
-  display:inline-flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:4px;
-  margin:7px 0 0;
-  padding:0;
-  border:0;
-  background:transparent;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.45;
-}
-#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
-#vocab .classifier-inline button.classifier-audio-pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:1px 6px;
-  margin:0;
-  border:.5px solid rgba(124,58,237,.34);
-  border-radius:999px;
-  background:var(--purple-soft);
-  color:#5b21b6;
-  font:inherit;
-  font-weight:800;
-  line-height:1.35;
-  cursor:pointer;
-}
-#vocab .classifier-inline button.classifier-audio-pill:hover,
-#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
-#vocab .classifier-inline button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.20);
-  border-color:rgba(124,58,237,.50);
-  outline:none;
-}
-#vocab .classifier-inline .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:12px;
-}
-#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
-</style><style id="day10-inline-classifier-fix">
-/* Day 10 inline classifier format */
-.inline-classifier-btn{display:inline-flex;align-items:baseline;gap:5px;border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer;vertical-align:baseline}.inline-classifier-btn .thai{font-weight:700}.inline-classifier-btn .roman{font-size:12px}.inline-classifier-btn:hover .thai{text-decoration:underline;text-decoration-color:rgba(124,58,237,.55);text-underline-offset:2px}
-</style></head>
+</head>
 <body>
 <div class="container">
 <section class="hero">
@@ -711,31 +496,31 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">สับปะรด</div><div class="roman">sàp-bpà-rót</div><div class="eng">pineapple</div></div></td><td>水果</td><td>切好水果常按片或份賣。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">สับปะรดขายเป็นชิ้นค่ะ</div><div class="roman">sàp-bpà-rót khǎai bpen chín khâ</div><div class="eng">Pineapple is sold by piece.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="pineapple" data-ex-eng="Pineapple is sold by piece." data-ex-rom="sàp-bpà-rót khǎai bpen chín khâ" data-ex-thai="สับปะรดขายเป็นชิ้นค่ะ" data-grammar="切好水果常按片或份賣。" data-rom="sàp-bpà-rót" data-thai="สับปะรด" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">มะละกอ</div><div class="roman">má-lá-gɔɔ</div><div class="eng">papaya</div></div></td><td>水果</td><td>可分熟木瓜和青木瓜。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มะละกอสุกอร่อยค่ะ</div><div class="roman">má-lá-gɔɔ sùk à-rɔ̀i khâ</div><div class="eng">Ripe papaya is delicious.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="papaya" data-ex-eng="Ripe papaya is delicious." data-ex-rom="má-lá-gɔɔ sùk à-rɔ̀i khâ" data-ex-thai="มะละกอสุกอร่อยค่ะ" data-grammar="可分熟木瓜和青木瓜。" data-rom="má-lá-gɔɔ" data-thai="มะละกอ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">แตงโม</div><div class="roman">dtɛɛng-moo</div><div class="eng">watermelon</div></div></td><td>水果</td><td>整顆用ลูก；切片用ชิ้น。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">แตงโมขายเป็นชิ้นค่ะ</div><div class="roman">dtɛɛng-moo khǎai bpen chín khâ</div><div class="eng">Watermelon is sold by piece.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="watermelon" data-ex-eng="Watermelon is sold by piece." data-ex-rom="dtɛɛng-moo khǎai bpen chín khâ" data-ex-thai="แตงโมขายเป็นชิ้นค่ะ" data-grammar="整顆用ลูก；切片用ชิ้น。" data-rom="dtɛɛng-moo" data-thai="แตงโม" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">มะม่วง</div><div class="roman">má-mûang</div><div class="eng">mango</div></div></td><td>水果</td><td>市場會問熟的或生的。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มะม่วงสุกกิโลละเท่าไรคะ</div><div class="roman">má-mûang sùk gii-loo lá thâo-rài khá</div><div class="eng">How much are ripe mangoes per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="mango" data-ex-eng="How much are ripe mangoes per kilo?" data-ex-rom="má-mûang sùk gii-loo lá thâo-rài khá" data-ex-thai="มะม่วงสุกกิโลละเท่าไรคะ" data-grammar="市場會問熟的或生的。" data-rom="má-mûang" data-thai="มะม่วง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ส้ม</div><div class="roman">sôm</div><div class="eng">orange</div></div></td><td>水果</td><td><span class="label review">Review</span> Day 5 出現過น้ำส้ม；這裡是水果本身。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ส้มขายเป็นกิโลค่ะ</div><div class="roman">sôm khǎai bpen gii-loo khâ</div><div class="eng">Oranges are sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="orange" data-ex-eng="Oranges are sold by kilo." data-ex-rom="sôm khǎai bpen gii-loo khâ" data-ex-thai="ส้มขายเป็นกิโลค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 5 出現過น้ำส้ม；這裡是水果本身。' data-rom="sôm" data-thai="ส้ม" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ส้มโอ</div><div class="roman">sôm-oo</div><div class="eng">pomelo</div></div></td><td>水果</td><td>名字像「大橘子」，但英文是 pomelo。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขอส้มโอหนึ่งชิ้นค่ะ</div><div class="roman">khɔ̌ɔ sôm-oo nʉ̀ng chín khâ</div><div class="eng">May I have one piece of pomelo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="pomelo" data-ex-eng="May I have one piece of pomelo?" data-ex-rom="khɔ̌ɔ sôm-oo nʉ̀ng chín khâ" data-ex-thai="ขอส้มโอหนึ่งชิ้นค่ะ" data-grammar="名字像「大橘子」，但英文是 pomelo。" data-rom="sôm-oo" data-thai="ส้มโอ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">มังคุด</div><div class="roman">mang-khút</div><div class="eng">mangosteen</div></div></td><td>水果</td><td>泰國常見水果，通常按公斤賣。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มังคุดกิโลละเท่าไรคะ</div><div class="roman">mang-khút gii-loo lá thâo-rài khá</div><div class="eng">How much are mangosteens per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="mangosteen" data-ex-eng="How much are mangosteens per kilo?" data-ex-rom="mang-khút gii-loo lá thâo-rài khá" data-ex-thai="มังคุดกิโลละเท่าไรคะ" data-grammar="泰國常見水果，通常按公斤賣。" data-rom="mang-khút" data-thai="มังคุด" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ทุเรียน</div><div class="roman">thú-rian</div><div class="eng">duriian</div></div></td><td>水果</td><td>可按整顆、公斤、切塊賣。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ทุเรียนขายเป็นกิโลค่ะ</div><div class="roman">thú-rian khǎai bpen gii-loo khâ</div><div class="eng">Duriian is sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="duriian" data-ex-eng="Duriian is sold by kilo." data-ex-rom="thú-rian khǎai bpen gii-loo khâ" data-ex-thai="ทุเรียนขายเป็นกิโลค่ะ" data-grammar="可按整顆、公斤、切塊賣。" data-rom="thú-rian" data-thai="ทุเรียน" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">เงาะ</div><div class="roman">ngɔ́</div><div class="eng">rambutan</div></div></td><td>水果</td><td>通常按公斤賣。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เงาะขายเป็นกิโลค่ะ</div><div class="roman">ngɔ́ khǎai bpen gii-loo khâ</div><div class="eng">Rambutan is sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="rambutan" data-ex-eng="Rambutan is sold by kilo." data-ex-rom="ngɔ́ khǎai bpen gii-loo khâ" data-ex-thai="เงาะขายเป็นกิโลค่ะ" data-grammar="通常按公斤賣。" data-rom="ngɔ́" data-thai="เงาะ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ชมพู่</div><div class="roman">chom-phûu</div><div class="eng">rose apple</div></div></td><td>水果</td><td>泰國市場常見。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ชมพู่กิโลละเท่าไรคะ</div><div class="roman">chom-phûu gii-loo lá thâo-rài khá</div><div class="eng">How much are rose apples per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="rose apple" data-ex-eng="How much are rose apples per kilo?" data-ex-rom="chom-phûu gii-loo lá thâo-rài khá" data-ex-thai="ชมพู่กิโลละเท่าไรคะ" data-grammar="泰國市場常見。" data-rom="chom-phûu" data-thai="ชมพู่" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">องุ่น</div><div class="roman">à-ngùn</div><div class="eng">grapes</div></div></td><td>水果</td><td>一串葡萄用พวง。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">องุ่นขายเป็นพวงค่ะ</div><div class="roman">à-ngùn khǎai bpen phuang khâ</div><div class="eng">Grapes are sold by bunch.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="grapes" data-ex-eng="Grapes are sold by bunch." data-ex-rom="à-ngùn khǎai bpen phuang khâ" data-ex-thai="องุ่นขายเป็นพวงค่ะ" data-grammar="一串葡萄用พวง。" data-rom="à-ngùn" data-thai="องุ่น" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สับปะรด</div><div class="roman">sàp-bpà-rót</div><div class="eng">pineapple</div></div></td><td>水果</td><td>切好水果常按片或份賣。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สับปะรดสด" aria-pressed="false" class="colloc-chip" data-thai="สับปะรดสด" type="button"><span class="thai">สับปะรดสด</span><span class="en-colloc">fresh pineapple</span></button></div></td><td><div class="triad"><div class="thai">สับปะรดขายเป็นชิ้นค่ะ</div><div class="roman">sàp-bpà-rót khǎai bpen chín khâ</div><div class="eng">Pineapple is sold by piece.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "สับปะรดสด", "en": "fresh pineapple"}]' data-eng="pineapple" data-ex-eng="Pineapple is sold by piece." data-ex-rom="sàp-bpà-rót khǎai bpen chín khâ" data-ex-thai="สับปะรดขายเป็นชิ้นค่ะ" data-grammar="切好水果常按片或份賣。" data-rom="sàp-bpà-rót" data-thai="สับปะรด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มะละกอ</div><div class="roman">má-lá-gɔɔ</div><div class="eng">papaya</div></div></td><td>水果</td><td>可分熟木瓜和青木瓜。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มะละกอสุก" aria-pressed="false" class="colloc-chip" data-thai="มะละกอสุก" type="button"><span class="thai">มะละกอสุก</span><span class="en-colloc">ripe papaya</span></button></div></td><td><div class="triad"><div class="thai">มะละกอสุกอร่อยค่ะ</div><div class="roman">má-lá-gɔɔ sùk à-rɔ̀i khâ</div><div class="eng">Ripe papaya is delicious.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "มะละกอสุก", "en": "ripe papaya"}]' data-eng="papaya" data-ex-eng="Ripe papaya is delicious." data-ex-rom="má-lá-gɔɔ sùk à-rɔ̀i khâ" data-ex-thai="มะละกอสุกอร่อยค่ะ" data-grammar="可分熟木瓜和青木瓜。" data-rom="má-lá-gɔɔ" data-thai="มะละกอ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">แตงโม</div><div class="roman">dtɛɛng-moo</div><div class="eng">watermelon</div></div></td><td>水果</td><td>整顆用ลูก；切片用ชิ้น。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：แตงโมเย็น" aria-pressed="false" class="colloc-chip" data-thai="แตงโมเย็น" type="button"><span class="thai">แตงโมเย็น</span><span class="en-colloc">chilled watermelon</span></button></div></td><td><div class="triad"><div class="thai">แตงโมขายเป็นชิ้นค่ะ</div><div class="roman">dtɛɛng-moo khǎai bpen chín khâ</div><div class="eng">Watermelon is sold by piece.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "แตงโมเย็น", "en": "chilled watermelon"}]' data-eng="watermelon" data-ex-eng="Watermelon is sold by piece." data-ex-rom="dtɛɛng-moo khǎai bpen chín khâ" data-ex-thai="แตงโมขายเป็นชิ้นค่ะ" data-grammar="整顆用ลูก；切片用ชิ้น。" data-rom="dtɛɛng-moo" data-thai="แตงโม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มะม่วง</div><div class="roman">má-mûang</div><div class="eng">mango</div></div></td><td>水果</td><td>市場會問熟的或生的。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มะม่วงสุก" aria-pressed="false" class="colloc-chip" data-thai="มะม่วงสุก" type="button"><span class="thai">มะม่วงสุก</span><span class="en-colloc">ripe mango</span></button></div></td><td><div class="triad"><div class="thai">มะม่วงสุกกิโลละเท่าไรคะ</div><div class="roman">má-mûang sùk gii-loo lá thâo-rài khá</div><div class="eng">How much are ripe mangoes per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "มะม่วงสุก", "en": "ripe mango"}]' data-eng="mango" data-ex-eng="How much are ripe mangoes per kilo?" data-ex-rom="má-mûang sùk gii-loo lá thâo-rài khá" data-ex-thai="มะม่วงสุกกิโลละเท่าไรคะ" data-grammar="市場會問熟的或生的。" data-rom="má-mûang" data-thai="มะม่วง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ส้ม</div><div class="roman">sôm</div><div class="eng">orange</div></div></td><td>水果</td><td><span class="label review">Review</span> Day 5 出現過น้ำส้ม；這裡是水果本身。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ส้มสด" aria-pressed="false" class="colloc-chip" data-thai="ส้มสด" type="button"><span class="thai">ส้มสด</span><span class="en-colloc">fresh oranges</span></button></div></td><td><div class="triad"><div class="thai">ส้มขายเป็นกิโลค่ะ</div><div class="roman">sôm khǎai bpen gii-loo khâ</div><div class="eng">Oranges are sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "ส้มสด", "en": "fresh oranges"}]' data-eng="orange" data-ex-eng="Oranges are sold by kilo." data-ex-rom="sôm khǎai bpen gii-loo khâ" data-ex-thai="ส้มขายเป็นกิโลค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 5 出現過น้ำส้ม；這裡是水果本身。' data-rom="sôm" data-thai="ส้ม" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ส้มโอ</div><div class="roman">sôm-oo</div><div class="eng">pomelo</div></div></td><td>水果</td><td>名字像「大橘子」，但英文是 pomelo。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ส้มโอแกะแล้ว" aria-pressed="false" class="colloc-chip" data-thai="ส้มโอแกะแล้ว" type="button"><span class="thai">ส้มโอแกะแล้ว</span><span class="en-colloc">peeled pomelo</span></button></div></td><td><div class="triad"><div class="thai">ขอส้มโอหนึ่งชิ้นค่ะ</div><div class="roman">khɔ̌ɔ sôm-oo nʉ̀ng chín khâ</div><div class="eng">May I have one piece of pomelo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "ส้มโอแกะแล้ว", "en": "peeled pomelo"}]' data-eng="pomelo" data-ex-eng="May I have one piece of pomelo?" data-ex-rom="khɔ̌ɔ sôm-oo nʉ̀ng chín khâ" data-ex-thai="ขอส้มโอหนึ่งชิ้นค่ะ" data-grammar="名字像「大橘子」，但英文是 pomelo。" data-rom="sôm-oo" data-thai="ส้มโอ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มังคุด</div><div class="roman">mang-khút</div><div class="eng">mangosteen</div></div></td><td>水果</td><td>泰國常見水果，通常按公斤賣。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มังคุดสด" aria-pressed="false" class="colloc-chip" data-thai="มังคุดสด" type="button"><span class="thai">มังคุดสด</span><span class="en-colloc">fresh mangosteen</span></button></div></td><td><div class="triad"><div class="thai">มังคุดกิโลละเท่าไรคะ</div><div class="roman">mang-khút gii-loo lá thâo-rài khá</div><div class="eng">How much are mangosteens per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "มังคุดสด", "en": "fresh mangosteen"}]' data-eng="mangosteen" data-ex-eng="How much are mangosteens per kilo?" data-ex-rom="mang-khút gii-loo lá thâo-rài khá" data-ex-thai="มังคุดกิโลละเท่าไรคะ" data-grammar="泰國常見水果，通常按公斤賣。" data-rom="mang-khút" data-thai="มังคุด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ทุเรียน</div><div class="roman">thú-riian</div><div class="eng">duriian</div></div></td><td>水果</td><td>可按整顆、公斤、切塊賣。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทุเรียนสุก" aria-pressed="false" class="colloc-chip" data-thai="ทุเรียนสุก" type="button"><span class="thai">ทุเรียนสุก</span><span class="en-colloc">ripe durian</span></button></div></td><td><div class="triad"><div class="thai">ทุเรียนขายเป็นกิโลค่ะ</div><div class="roman">thú-riian khǎai bpen gii-loo khâ</div><div class="eng">Duriian is sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "ทุเรียนสุก", "en": "ripe durian"}]' data-eng="duriian" data-ex-eng="Duriian is sold by kilo." data-ex-rom="thú-riian khǎai bpen gii-loo khâ" data-ex-thai="ทุเรียนขายเป็นกิโลค่ะ" data-grammar="可按整顆、公斤、切塊賣。" data-rom="thú-riian" data-thai="ทุเรียน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เงาะ</div><div class="roman">ngɔ́</div><div class="eng">rambutan</div></div></td><td>水果</td><td>通常按公斤賣。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เงาะสด" aria-pressed="false" class="colloc-chip" data-thai="เงาะสด" type="button"><span class="thai">เงาะสด</span><span class="en-colloc">fresh rambutan</span></button></div></td><td><div class="triad"><div class="thai">เงาะขายเป็นกิโลค่ะ</div><div class="roman">ngɔ́ khǎai bpen gii-loo khâ</div><div class="eng">Rambutan is sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "เงาะสด", "en": "fresh rambutan"}]' data-eng="rambutan" data-ex-eng="Rambutan is sold by kilo." data-ex-rom="ngɔ́ khǎai bpen gii-loo khâ" data-ex-thai="เงาะขายเป็นกิโลค่ะ" data-grammar="通常按公斤賣。" data-rom="ngɔ́" data-thai="เงาะ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ชมพู่</div><div class="roman">chom-phûu</div><div class="eng">rose apple</div></div></td><td>水果</td><td>泰國市場常見。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ชมพู่สด" aria-pressed="false" class="colloc-chip" data-thai="ชมพู่สด" type="button"><span class="thai">ชมพู่สด</span><span class="en-colloc">fresh rose apple</span></button></div></td><td><div class="triad"><div class="thai">ชมพู่กิโลละเท่าไรคะ</div><div class="roman">chom-phûu gii-loo lá thâo-rài khá</div><div class="eng">How much are rose apples per kilo?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "ชมพู่สด", "en": "fresh rose apple"}]' data-eng="rose apple" data-ex-eng="How much are rose apples per kilo?" data-ex-rom="chom-phûu gii-loo lá thâo-rài khá" data-ex-thai="ชมพู่กิโลละเท่าไรคะ" data-grammar="泰國市場常見。" data-rom="chom-phûu" data-thai="ชมพู่" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">องุ่น</div><div class="roman">à-ngùn</div><div class="eng">grapes</div></div></td><td>水果</td><td>一串葡萄用พวง。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：องุ่นแดง" aria-pressed="false" class="colloc-chip" data-thai="องุ่นแดง" type="button"><span class="thai">องุ่นแดง</span><span class="en-colloc">red grapes</span></button></div></td><td><div class="triad"><div class="thai">องุ่นขายเป็นพวงค่ะ</div><div class="roman">à-ngùn khǎai bpen phuang khâ</div><div class="eng">Grapes are sold by bunch.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "องุ่นแดง", "en": "red grapes"}]' data-eng="grapes" data-ex-eng="Grapes are sold by bunch." data-ex-rom="à-ngùn khǎai bpen phuang khâ" data-ex-thai="องุ่นขายเป็นพวงค่ะ" data-grammar="一串葡萄用พวง。" data-rom="à-ngùn" data-thai="องุ่น" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">ฝรั่ง</div><div class="roman">fà-ràng</div><div class="eng">guava / foreigner</div></div></td><td>水果 / 文化詞</td><td>這裡指「番石榴」；同一個字也可指西方人，要看情境。市場通常按公斤賣。</td><td><div class="colloc-cell"><button class="colloc-chip" data-thai="ขายเป็นกิโล" type="button"><span class="thai">ขายเป็นกิโล</span><span class="en-colloc">sold by kilo</span></button><button class="colloc-chip" data-thai="ฝรั่งสด" type="button"><span class="thai">ฝรั่งสด</span><span class="en-colloc">fresh guava</span></button></div></td><td><div class="triad"><div class="thai">ฝรั่งขายเป็นกิโลค่ะ</div><div class="roman">fà-ràng khǎai bpen gii-loo khâ</div><div class="eng">Guava is sold by kilo.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果 / 文化詞" data-colloc='[{"thai": "ขายเป็นกิโล", "en": "sold by kilo"}, {"thai": "ฝรั่งสด", "en": "fresh guava"}]' data-eng="guava / foreigner" data-ex-eng="Guava is sold by kilo." data-ex-rom="fà-ràng khǎai bpen gii-loo khâ" data-ex-thai="ฝรั่งขายเป็นกิโลค่ะ" data-grammar="這裡指「番石榴」；同一個字也可指西方人，要看情境。市場通常按公斤賣。" data-rom="fà-ràng" data-thai="ฝรั่ง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">มะพร้าว</div><div class="roman">má-phráao</div><div class="eng">coconut</div></div></td><td>水果 / 飲品</td><td>椰子；整顆通常用 <span class="thai">ลูก</span>。量詞：<button class="inline-classifier-btn" data-thai="ลูก" type="button"><span class="thai">ลูก</span><span class="roman">lûuk</span></button></td><td><div class="colloc-cell"><button class="colloc-chip" data-thai="มะพร้าวน้ำหอม" type="button"><span class="thai">มะพร้าวน้ำหอม</span><span class="en-colloc">aromatic coconut</span></button><button class="colloc-chip" data-thai="มะพร้าวหนึ่งลูก" type="button"><span class="thai">มะพร้าวหนึ่งลูก</span><span class="en-colloc">one coconut</span></button></div></td><td><div class="triad"><div class="thai">ขอมะพร้าวหนึ่งลูกค่ะ</div><div class="roman">khɔ̌ɔ má-phráao nʉ̀ng lûuk khâ</div><div class="eng">May I have one coconut.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果 / 飲品" data-colloc='[{"thai": "มะพร้าวน้ำหอม", "en": "aromatic coconut"}, {"thai": "มะพร้าวหนึ่งลูก", "en": "one coconut"}]' data-eng="coconut" data-ex-eng="May I have one coconut." data-ex-rom="khɔ̌ɔ má-phráao nʉ̀ng lûuk khâ" data-ex-thai="ขอมะพร้าวหนึ่งลูกค่ะ" data-grammar='椰子；整顆通常用 &lt;span class="thai"&gt;ลูก&lt;/span&gt;。量詞：&lt;button class="inline-classifier-btn" type="button" data-thai="ลูก"&gt;&lt;span class="thai"&gt;ลูก&lt;/span&gt;&lt;span class="roman"&gt;lûuk&lt;/span&gt;&lt;/button&gt;' data-rom="má-phráao" data-thai="มะพร้าว" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">กล้วย</div><div class="roman">glûai</div><div class="eng">banana</div></div></td><td>水果</td><td>教材後段出現香蕉怎麼賣；市場常見按หวี或公斤。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">กล้วยขายเป็นหวีค่ะ</div><div class="roman">glûai khǎai bpen wǐi khâ</div><div class="eng">Bananas are sold by hand/bunch.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc="[]" data-eng="banana" data-ex-eng="Bananas are sold by hand/bunch." data-ex-rom="glûai khǎai bpen wǐi khâ" data-ex-thai="กล้วยขายเป็นหวีค่ะ" data-grammar="教材後段出現香蕉怎麼賣；市場常見按หวี或公斤。" data-rom="glûai" data-thai="กล้วย" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">มะพร้าว</div><div class="roman">má-phráaw</div><div class="eng">coconut</div></div></td><td>水果 / 飲品</td><td>椰子；整顆通常用 <span class="thai">ลูก</span>。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ลูก" aria-pressed="false" class="classifier-audio-pill" data-thai="ลูก" title="點擊播放量詞" type="button">ลูก</button><span class="classifier-roman">lûuk</span></span></td><td><div class="colloc-cell"><button class="colloc-chip" data-thai="มะพร้าวน้ำหอม" type="button"><span class="thai">มะพร้าวน้ำหอม</span><span class="en-colloc">aromatic coconut</span></button><button class="colloc-chip" data-thai="มะพร้าวหนึ่งลูก" type="button"><span class="thai">มะพร้าวหนึ่งลูก</span><span class="en-colloc">one coconut</span></button></div></td><td><div class="triad"><div class="thai">ขอมะพร้าวหนึ่งลูกค่ะ</div><div class="roman">khɔ̌ɔ má-phráaw nʉ̀ng lûuk khâ</div><div class="eng">May I have one coconut.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果 / 飲品" data-colloc='[{"thai": "มะพร้าวน้ำหอม", "en": "aromatic coconut"}, {"thai": "มะพร้าวหนึ่งลูก", "en": "one coconut"}]' data-eng="coconut" data-ex-eng="May I have one coconut." data-ex-rom="khɔ̌ɔ má-phráaw nʉ̀ng lûuk khâ" data-ex-thai="ขอมะพร้าวหนึ่งลูกค่ะ" data-grammar='椰子；整顆通常用 &lt;span class="thai"&gt;ลูก&lt;/span&gt;。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ลูก" aria-pressed="false" class="classifier-audio-pill" data-thai="ลูก" title="點擊播放量詞" type="button"&gt;ลูก&lt;/button&gt;&lt;span class="classifier-roman"&gt;lûuk&lt;/span&gt;&lt;/span&gt;' data-rom="má-phráaw" data-thai="มะพร้าว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">กล้วย</div><div class="roman">glûai</div><div class="eng">banana</div></div></td><td>水果</td><td>教材後段出現香蕉怎麼賣；市場常見按หวี或公斤。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：กล้วยน้ำว้า" aria-pressed="false" class="colloc-chip" data-thai="กล้วยน้ำว้า" type="button"><span class="thai">กล้วยน้ำว้า</span><span class="en-colloc">Namwa bananas</span></button></div></td><td><div class="triad"><div class="thai">กล้วยขายเป็นหวีค่ะ</div><div class="roman">glûai khǎai bpen wǐi khâ</div><div class="eng">Bananas are sold by hand/bunch.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="水果" data-colloc='[{"thai": "กล้วยน้ำว้า", "en": "Namwa bananas"}]' data-eng="banana" data-ex-eng="Bananas are sold by hand/bunch." data-ex-rom="glûai khǎai bpen wǐi khâ" data-ex-thai="กล้วยขายเป็นหวีค่ะ" data-grammar="教材後段出現香蕉怎麼賣；市場常見按หวี或公斤。" data-rom="glûai" data-thai="กล้วย" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">ผลไม้</div><div class="roman">phǒn-lá-máai</div><div class="eng">fruit</div></div></td><td>Noun</td><td>市場與路邊水果攤高頻。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ซื้อผลไม้" aria-pressed="false" class="colloc-chip" data-thai="ซื้อผลไม้" type="button"><span class="thai">ซื้อผลไม้</span><span class="en-colloc">buy fruit</span></button><button aria-label="播放搭配詞：ผลไม้สด" aria-pressed="false" class="colloc-chip" data-thai="ผลไม้สด" type="button"><span class="thai">ผลไม้สด</span><span class="en-colloc">fresh fruit</span></button></div></td><td><div class="triad"><div class="thai">วันนี้อยากซื้อผลไม้ค่ะ</div><div class="roman">wan-níi yàak sʉ́ʉ phǒn-lá-máai khâ</div><div class="eng">Today I want to buy fruit.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "ซื้อผลไม้", "en": "buy fruit"}, {"thai": "ผลไม้สด", "en": "fresh fruit"}]' data-eng="fruit" data-ex-eng="Today I want to buy fruit." data-ex-rom="wan-níi yàak sʉ́ʉ phǒn-lá-máai khâ" data-ex-thai="วันนี้อยากซื้อผลไม้ค่ะ" data-grammar="市場與路邊水果攤高頻。" data-rom="phǒn-lá-máai" data-thai="ผลไม้" type="button">♡ 收藏</button></td></tr></tbody>
 </table></div>
 <h3>Fruit Condition &amp; Money</h3>
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">สุก</div><div class="roman">sùk</div><div class="eng">ripe / cooked</div></div></td><td>狀態</td><td>水果熟了用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เอามะม่วงสุกค่ะ</div><div class="roman">ao má-mûang sùk khâ</div><div class="eng">I want ripe mangoes.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="狀態" data-colloc="[]" data-eng="ripe / cooked" data-ex-eng="I want ripe mangoes." data-ex-rom="ao má-mûang sùk khâ" data-ex-thai="เอามะม่วงสุกค่ะ" data-grammar="水果熟了用。" data-rom="sùk" data-thai="สุก" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ดิบ</div><div class="roman">dìp</div><div class="eng">unripe / raw</div></div></td><td>狀態</td><td>青木瓜、青芒果常用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เอามะละกอดิบค่ะ</div><div class="roman">ao má-lá-gɔɔ dìp khâ</div><div class="eng">I want unripe papaya.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="狀態" data-colloc="[]" data-eng="unripe / raw" data-ex-eng="I want unripe papaya." data-ex-rom="ao má-lá-gɔɔ dìp khâ" data-ex-thai="เอามะละกอดิบค่ะ" data-grammar="青木瓜、青芒果常用。" data-rom="dìp" data-thai="ดิบ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ลด</div><div class="roman">lót</div><div class="eng">reduce / discount</div></div></td><td>價格</td><td>殺價時用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ</div><div class="roman">lót dâai mái khá</div><div class="eng">Can you reduce the price?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="價格" data-colloc="[]" data-eng="reduce / discount" data-ex-eng="Can you reduce the price?" data-ex-rom="lót dâai mái khá" data-ex-thai="ลดได้ไหมคะ" data-grammar="殺價時用。" data-rom="lót" data-thai="ลด" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สตางค์</div><div class="roman">sà-dtaang</div><div class="eng">money / satang</div></div></td><td>錢</td><td>教材句型裡出現「นี่ค่ะ สตางค์...บาท」。實際口語更常說เงิน。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">นี่ค่ะ เงินหนึ่งร้อยบาท</div><div class="roman">nîi khâ, ngəən nʉ̀ng-rɔ́ɔy bàat</div><div class="eng">Here is 100 baht.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="錢" data-colloc="[]" data-eng="money / satang" data-ex-eng="Here is 100 baht." data-ex-rom="nîi khâ, ngəən nʉ̀ng-rɔ́ɔy bàat" data-ex-thai="นี่ค่ะ เงินหนึ่งร้อยบาท" data-grammar="教材句型裡出現「นี่ค่ะ สตางค์...บาท」。實際口語更常說เงิน。" data-rom="sà-dtaang" data-thai="สตางค์" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ตังค์ทอน</div><div class="roman">dtang-thɔɔn</div><div class="eng">change</div></div></td><td>找零</td><td><span class="label review">Review</span> Day 6 學過เงินทอน；ตลาด口語也會聽到ตังค์ทอน。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">นี่ค่ะ ตังค์ทอนยี่สิบบาท</div><div class="roman">nîi khâ, dtang-thɔɔn yîi-sìp bàat</div><div class="eng">Here is 20 baht change.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="找零" data-colloc="[]" data-eng="change" data-ex-eng="Here is 20 baht change." data-ex-rom="nîi khâ, dtang-thɔɔn yîi-sìp bàat" data-ex-thai="นี่ค่ะ ตังค์ทอนยี่สิบบาท" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 6 學過เงินทอน；ตลาด口語也會聽到ตังค์ทอน。' data-rom="dtang-thɔɔn" data-thai="ตังค์ทอน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สุก</div><div class="roman">sùk</div><div class="eng">ripe / cooked</div></div></td><td>狀態</td><td>水果熟了用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มะม่วงสุก" aria-pressed="false" class="colloc-chip" data-thai="มะม่วงสุก" type="button"><span class="thai">มะม่วงสุก</span><span class="en-colloc">ripe mango</span></button></div></td><td><div class="triad"><div class="thai">เอามะม่วงสุกค่ะ</div><div class="roman">ao má-mûang sùk khâ</div><div class="eng">I want ripe mangoes.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="狀態" data-colloc='[{"thai": "มะม่วงสุก", "en": "ripe mango"}]' data-eng="ripe / cooked" data-ex-eng="I want ripe mangoes." data-ex-rom="ao má-mûang sùk khâ" data-ex-thai="เอามะม่วงสุกค่ะ" data-grammar="水果熟了用。" data-rom="sùk" data-thai="สุก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ดิบ</div><div class="roman">dìp</div><div class="eng">unripe / raw</div></div></td><td>狀態</td><td>青木瓜、青芒果常用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มะม่วงดิบ" aria-pressed="false" class="colloc-chip" data-thai="มะม่วงดิบ" type="button"><span class="thai">มะม่วงดิบ</span><span class="en-colloc">unripe mango</span></button></div></td><td><div class="triad"><div class="thai">เอามะละกอดิบค่ะ</div><div class="roman">ao má-lá-gɔɔ dìp khâ</div><div class="eng">I want unripe papaya.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="狀態" data-colloc='[{"thai": "มะม่วงดิบ", "en": "unripe mango"}]' data-eng="unripe / raw" data-ex-eng="I want unripe papaya." data-ex-rom="ao má-lá-gɔɔ dìp khâ" data-ex-thai="เอามะละกอดิบค่ะ" data-grammar="青木瓜、青芒果常用。" data-rom="dìp" data-thai="ดิบ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลด</div><div class="roman">lót</div><div class="eng">reduce / discount</div></div></td><td>價格</td><td>殺價時用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ลดราคา" aria-pressed="false" class="colloc-chip" data-thai="ลดราคา" type="button"><span class="thai">ลดราคา</span><span class="en-colloc">reduce the price</span></button></div></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ</div><div class="roman">lót dâai mái khá</div><div class="eng">Can you reduce the price?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="價格" data-colloc='[{"thai": "ลดราคา", "en": "reduce the price"}]' data-eng="reduce / discount" data-ex-eng="Can you reduce the price?" data-ex-rom="lót dâai mái khá" data-ex-thai="ลดได้ไหมคะ" data-grammar="殺價時用。" data-rom="lót" data-thai="ลด" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สตางค์</div><div class="roman">sà-dtaang</div><div class="eng">money / satang</div></div></td><td>錢</td><td>教材句型裡出現「นี่ค่ะ สตางค์...บาท」。實際口語更常說เงิน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ห้าสิบสตางค์" aria-pressed="false" class="colloc-chip" data-thai="ห้าสิบสตางค์" type="button"><span class="thai">ห้าสิบสตางค์</span><span class="en-colloc">fifty satang</span></button></div></td><td><div class="triad"><div class="thai">นี่ค่ะ เงินหนึ่งร้อยบาท</div><div class="roman">nîi khâ, ngəən nʉ̀ng-rɔ́ɔy bàat</div><div class="eng">Here is 100 baht.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="錢" data-colloc='[{"thai": "ห้าสิบสตางค์", "en": "fifty satang"}]' data-eng="money / satang" data-ex-eng="Here is 100 baht." data-ex-rom="nîi khâ, ngəən nʉ̀ng-rɔ́ɔy bàat" data-ex-thai="นี่ค่ะ เงินหนึ่งร้อยบาท" data-grammar="教材句型裡出現「นี่ค่ะ สตางค์...บาท」。實際口語更常說เงิน。" data-rom="sà-dtaang" data-thai="สตางค์" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ตังค์ทอน</div><div class="roman">dtang-thɔɔn</div><div class="eng">change</div></div></td><td>找零</td><td><span class="label review">Review</span> Day 6 學過เงินทอน；ตลาด口語也會聽到ตังค์ทอน。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ตังค์ทอนครบ" aria-pressed="false" class="colloc-chip" data-thai="ตังค์ทอนครบ" type="button"><span class="thai">ตังค์ทอนครบ</span><span class="en-colloc">correct change</span></button></div></td><td><div class="triad"><div class="thai">นี่ค่ะ ตังค์ทอนยี่สิบบาท</div><div class="roman">nîi khâ, dtang-thɔɔn yîi-sìp bàat</div><div class="eng">Here is 20 baht change.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="找零" data-colloc='[{"thai": "ตังค์ทอนครบ", "en": "correct change"}]' data-eng="change" data-ex-eng="Here is 20 baht change." data-ex-rom="nîi khâ, dtang-thɔɔn yîi-sìp bàat" data-ex-thai="นี่ค่ะ ตังค์ทอนยี่สิบบาท" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 6 學過เงินทอน；ตลาด口語也會聽到ตังค์ทอน。' data-rom="dtang-thɔɔn" data-thai="ตังค์ทอน" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">ลดได้ไหม</div><div class="roman">lót dâai mái</div><div class="eng">can you lower the price?</div></div></td><td>Request phrase</td><td>市場或小店可用，但語氣要柔和。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ลดหน่อยได้ไหม" aria-pressed="false" class="colloc-chip" data-thai="ลดหน่อยได้ไหม" type="button"><span class="thai">ลดหน่อยได้ไหม</span><span class="en-colloc">could you reduce it a little</span></button><button aria-label="播放搭配詞：ลดราคา" aria-pressed="false" class="colloc-chip" data-thai="ลดราคา" type="button"><span class="thai">ลดราคา</span><span class="en-colloc">reduce the price</span></button></div></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ ถ้าซื้อสองกิโล</div><div class="roman">lót dâai mái khá, thâa sʉ́ʉ sɔ̌ɔng gii-loo</div><div class="eng">Could you reduce the price if I buy two kilos?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Request phrase" data-colloc='[{"thai": "ลดหน่อยได้ไหม", "en": "could you reduce it a little"}, {"thai": "ลดราคา", "en": "reduce the price"}]' data-eng="can you lower the price?" data-ex-eng="Could you reduce the price if I buy two kilos?" data-ex-rom="lót dâai mái khá, thâa sʉ́ʉ sɔ̌ɔng gii-loo" data-ex-thai="ลดได้ไหมคะ ถ้าซื้อสองกิโล" data-grammar="市場或小店可用，但語氣要柔和。" data-rom="lót dâai mái" data-thai="ลดได้ไหม" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เงินทอน</div><div class="roman">ngəən-thɔɔn</div><div class="eng">change</div></div></td><td>Noun</td><td>付款後找回的錢。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มีเงินทอนไหม" aria-pressed="false" class="colloc-chip" data-thai="มีเงินทอนไหม" type="button"><span class="thai">มีเงินทอนไหม</span><span class="en-colloc">do you have change</span></button><button aria-label="播放搭配詞：เงินทอนครบไหม" aria-pressed="false" class="colloc-chip" data-thai="เงินทอนครบไหม" type="button"><span class="thai">เงินทอนครบไหม</span><span class="en-colloc">is the change correct</span></button></div></td><td><div class="triad"><div class="thai">เงินทอนครบไหมคะ</div><div class="roman">ngəən-thɔɔn khróp mái khá</div><div class="eng">Is the change correct?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "มีเงินทอนไหม", "en": "do you have change"}, {"thai": "เงินทอนครบไหม", "en": "is the change correct"}]' data-eng="change" data-ex-eng="Is the change correct?" data-ex-rom="ngəən-thɔɔn khróp mái khá" data-ex-thai="เงินทอนครบไหมคะ" data-grammar="付款後找回的錢。" data-rom="ngəən-thɔɔn" data-thai="เงินทอน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">กิโล</div><div class="roman">gii-loo</div><div class="eng">kilogram</div></div></td><td>Classifier / unit</td><td>市場買水果最常用單位。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：หนึ่งกิโล" aria-pressed="false" class="colloc-chip" data-thai="หนึ่งกิโล" type="button"><span class="thai">หนึ่งกิโล</span><span class="en-colloc">one kilogram</span></button><button aria-label="播放搭配詞：ครึ่งกิโล" aria-pressed="false" class="colloc-chip" data-thai="ครึ่งกิโล" type="button"><span class="thai">ครึ่งกิโล</span><span class="en-colloc">half a kilogram</span></button></div></td><td><div class="triad"><div class="thai">เอามะม่วงหนึ่งกิโลค่ะ</div><div class="roman">ao má-mûang nʉ̀ng gii-loo khâ</div><div class="eng">I will take one kilogram of mangoes.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Classifier / unit" data-colloc='[{"thai": "หนึ่งกิโล", "en": "one kilogram"}, {"thai": "ครึ่งกิโล", "en": "half a kilogram"}]' data-eng="kilogram" data-ex-eng="I will take one kilogram of mangoes." data-ex-rom="ao má-mûang nʉ̀ng gii-loo khâ" data-ex-thai="เอามะม่วงหนึ่งกิโลค่ะ" data-grammar="市場買水果最常用單位。" data-rom="gii-loo" data-thai="กิโล" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">กิโลละ</div><div class="roman">gii-loo lá</div><div class="eng">per kilogram</div></div></td><td>Price unit</td><td>問每公斤價格時放在數字前後都常見。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：กิโลละเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="กิโลละเท่าไร" type="button"><span class="thai">กิโลละเท่าไร</span><span class="en-colloc">how much per kilo</span></button><button aria-label="播放搭配詞：กิโลละห้าสิบบาท" aria-pressed="false" class="colloc-chip" data-thai="กิโลละห้าสิบบาท" type="button"><span class="thai">กิโลละห้าสิบบาท</span><span class="en-colloc">fifty baht per kilo</span></button></div></td><td><div class="triad"><div class="thai">มะม่วงกิโลละเท่าไรคะ</div><div class="roman">má-mûang gii-loo lá thâo-rài khá</div><div class="eng">How much are the mangoes per kilogram?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Price unit" data-colloc='[{"thai": "กิโลละเท่าไร", "en": "how much per kilo"}, {"thai": "กิโลละห้าสิบบาท", "en": "fifty baht per kilo"}]' data-eng="per kilogram" data-ex-eng="How much are the mangoes per kilogram?" data-ex-rom="má-mûang gii-loo lá thâo-rài khá" data-ex-thai="มะม่วงกิโลละเท่าไรคะ" data-grammar="問每公斤價格時放在數字前後都常見。" data-rom="gii-loo lá" data-thai="กิโลละ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ครึ่งกิโล</div><div class="roman">khrʉ̂ng gii-loo</div><div class="eng">half a kilogram</div></div></td><td>Weight amount</td><td>買水果、肉或菜時很常用的份量。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เอาครึ่งกิโล" aria-pressed="false" class="colloc-chip" data-thai="เอาครึ่งกิโล" type="button"><span class="thai">เอาครึ่งกิโล</span><span class="en-colloc">take half a kilo</span></button><button aria-label="播放搭配詞：มะม่วงครึ่งกิโล" aria-pressed="false" class="colloc-chip" data-thai="มะม่วงครึ่งกิโล" type="button"><span class="thai">มะม่วงครึ่งกิโล</span><span class="en-colloc">half a kilo of mangoes</span></button></div></td><td><div class="triad"><div class="thai">เอามะม่วงครึ่งกิโลค่ะ</div><div class="roman">ao má-mûang khrʉ̂ng gii-loo khâ</div><div class="eng">I’ll take half a kilogram of mangoes.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Weight amount" data-colloc='[{"thai": "เอาครึ่งกิโล", "en": "take half a kilo"}, {"thai": "มะม่วงครึ่งกิโล", "en": "half a kilo of mangoes"}]' data-eng="half a kilogram" data-ex-eng="I’ll take half a kilogram of mangoes." data-ex-rom="ao má-mûang khrʉ̂ng gii-loo khâ" data-ex-thai="เอามะม่วงครึ่งกิโลค่ะ" data-grammar="買水果、肉或菜時很常用的份量。" data-rom="khrʉ̂ng gii-loo" data-thai="ครึ่งกิโล" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ราคาเท่าไร</div><div class="roman">raa-khaa thâo-rài</div><div class="eng">how much is it?</div></div></td><td>Price question</td><td>比只說 เท่าไร 更完整，市場、店家都很常用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：อันนี้ราคาเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="อันนี้ราคาเท่าไร" type="button"><span class="thai">อันนี้ราคาเท่าไร</span><span class="en-colloc">how much is this</span></button><button aria-label="播放搭配詞：กิโลละเท่าไร" aria-pressed="false" class="colloc-chip" data-thai="กิโลละเท่าไร" type="button"><span class="thai">กิโลละเท่าไร</span><span class="en-colloc">how much per kilo</span></button></div></td><td><div class="triad"><div class="thai">อันนี้ราคาเท่าไรคะ</div><div class="roman">an níi raa-khaa thâo-rài khá</div><div class="eng">How much is this?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Price question" data-colloc='[{"thai": "อันนี้ราคาเท่าไร", "en": "how much is this"}, {"thai": "กิโลละเท่าไร", "en": "how much per kilo"}]' data-eng="how much is it?" data-ex-eng="How much is this?" data-ex-rom="an níi raa-khaa thâo-rài khá" data-ex-thai="อันนี้ราคาเท่าไรคะ" data-grammar="比只說 เท่าไร 更完整，市場、店家都很常用。" data-rom="raa-khaa thâo-rài" data-thai="ราคาเท่าไร" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">จ่ายเงิน</div><div class="roman">jàai ngəən</div><div class="eng">to pay</div></div></td><td>Payment verb</td><td>買完東西後付款。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：จ่ายเงินสด" aria-pressed="false" class="colloc-chip" data-thai="จ่ายเงินสด" type="button"><span class="thai">จ่ายเงินสด</span><span class="en-colloc">pay cash</span></button><button aria-label="播放搭配詞：จ่ายเงินแล้ว" aria-pressed="false" class="colloc-chip" data-thai="จ่ายเงินแล้ว" type="button"><span class="thai">จ่ายเงินแล้ว</span><span class="en-colloc">have paid</span></button></div></td><td><div class="triad"><div class="thai">จ่ายเงินตรงไหนคะ</div><div class="roman">jàai ngəən dtrong nǎi khá</div><div class="eng">Where do I pay?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Payment verb" data-colloc='[{"thai": "จ่ายเงินสด", "en": "pay cash"}, {"thai": "จ่ายเงินแล้ว", "en": "have paid"}]' data-eng="to pay" data-ex-eng="Where do I pay?" data-ex-rom="jàai ngəən dtrong nǎi khá" data-ex-thai="จ่ายเงินตรงไหนคะ" data-grammar="買完東西後付款。" data-rom="jàai ngəən" data-thai="จ่ายเงิน" type="button">♡ 收藏</button></td></tr></tbody>
 </table></div>
 </section>
@@ -774,7 +559,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <td><div class="triad"><div class="thai">ลูก</div><div class="roman">lûuk</div><div class="eng">classifier for round fruit / item</div></div></td>
 <td>椰子、西瓜、芒果、橘子、山竹、榴槤等一顆一顆的水果。</td>
 <td>多用於圓形或整顆水果。</td>
-<td><div class="triad"><div class="thai">มะพร้าวหนึ่งลูก</div><div class="roman">má-phráao nʉ̀ng lûuk</div><div class="eng">one coconut</div></div></td>
+<td><div class="triad"><div class="thai">มะพร้าวหนึ่งลูก</div><div class="roman">má-phráaw nʉ̀ng lûuk</div><div class="eng">one coconut</div></div></td>
 <td>切好的水果不用ลูก，要用ชิ้น或ชุด/กล่อง。</td>
 </tr>
 <tr>
@@ -1032,7 +817,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <tr>
 <td>付款</td>
 <td><div class="triad"><div class="thai">นี่ค่ะ สตางค์หนึ่งร้อยบาท</div><div class="roman">nîi khâ, sà-dtaang nʉ̀ng-rɔ́ɔy bàat</div><div class="eng">Here is 100 baht.</div></div></td>
-<td><div class="triad"><div class="thai">นี่ค่ะ หนึ่งร้อยบาท</div><div class="roman">nîi khâ, nʉ̀ng-rɔ́ɔy bàat</div><div class="eng">Here, 100 baht.</div></div></td>
+<td><div class="triad"><div class="thai">นี่ค่ะ หนึ่งร้อยบาท</div><div class="roman">nîi khâ, nʉ̀ng rɔ́ɔy bàat</div><div class="eng">Here, 100 baht.</div></div></td>
 <td>真實生活多直接說金額。</td>
 </tr>
 </tbody>
@@ -1094,7 +879,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </table>
 <h3>3. Price &amp; bargaining</h3>
 <table>
-<thead><tr><th>Situation</th><th>Sentence</th><th>Use</th></tr></thead>
+<thead><tr><th>Situation</th><th>Sentence</th><th>情境</th></tr></thead>
 <tbody>
 <tr>
 <td>問一公斤多少</td>
@@ -1234,7 +1019,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="bubble-wrap">
 <div class="bubble b">
 <span class="speaker b">Customer</span>
-<div class="triad"><div class="thai">ทุเรียนขายยังไงคะ</div><div class="roman">thú-rian khǎai yang-ngai khá</div><div class="eng">How is duriian sold?</div></div>
+<div class="triad"><div class="thai">ทุเรียนขายยังไงคะ</div><div class="roman">thú-riian khǎai yang-ngai khá</div><div class="eng">How is duriian sold?</div></div>
 </div>
 <div class="bubble a">
 <span class="speaker a">Vendor</span>
@@ -1388,7 +1173,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </details>
 <details>
 <summary>5. What is “duriian” in Thai?</summary>
-<div class="triad"><div class="thai">ทุเรียน</div><div class="roman">thú-rian</div><div class="eng">duriian</div></div>
+<div class="triad"><div class="thai">ทุเรียน</div><div class="roman">thú-riian</div><div class="eng">duriian</div></div>
 </details>
 <h3>B. Classifier / Unit Practice</h3>
 <details>
@@ -1460,7 +1245,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </div>
 </details>
 </section>
-<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">คุณพูดได้กี่ภาษาคะ</div><div class="roman">khun phûut dâai gìi phaa-sǎa khá</div><div class="eng">How many languages can you speak?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">อยากจะซื้อผลไม้ค่ะ</div><div class="roman">yàak jà sʉ́ʉ phǒn-lá-máai khâ</div><div class="eng">I want to buy fruit.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ขายยังไงคะ</div><div class="roman">khǎai yang-ngai khá</div><div class="eng">How is it sold?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ</div><div class="roman">lót dâai mái khá</div><div class="eng">Can you reduce the price?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ฉันอ่านภาษาไทยได้นิดหน่อยค่ะ</div><div class="roman">chǎn àan phaa-sǎa thai dâai nít-nɔ̀i khâ</div><div class="eng">I can read a little Thai.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ฉันเขียนชื่อเป็นภาษาไทยได้ค่ะ</div><div class="roman">chǎn khǐan chʉ̂ʉ bpen phaa-sǎa thai dâai khâ</div><div class="eng">I can write my name in Thai.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">วันนี้อยากซื้อผลไม้ค่ะ</div><div class="roman">wan-níi yàak sʉ́ʉ phǒn-lá-máai khâ</div><div class="eng">Today I want to buy fruit.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">มะม่วงลูกนี้สุกหรือยังคะ</div><div class="roman">má-mûang lûuk níi sùk rʉ̌ʉ yang khá</div><div class="eng">Is this mango ripe yet?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ขอแบบไม่ดิบมากค่ะ</div><div class="roman">khɔ̌ɔ bɛ̀ɛp mâi dìp mâak khâ</div><div class="eng">I would like one that is not too unripe.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ ถ้าซื้อสองกิโล</div><div class="roman">lót dâai mái khá, thâa sʉ́ʉ sɔ̌ɔng gii-loo</div><div class="eng">Could you reduce the price if I buy two kilos?</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>情境</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">คุณพูดได้กี่ภาษาคะ</div><div class="roman">khun phûut dâai gìi phaa-sǎa khá</div><div class="eng">How many languages can you speak?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">อยากจะซื้อผลไม้ค่ะ</div><div class="roman">yàak jà sʉ́ʉ phǒn-lá-máai khâ</div><div class="eng">I want to buy fruit.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ขายยังไงคะ</div><div class="roman">khǎai yang-ngai khá</div><div class="eng">How is it sold?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ</div><div class="roman">lót dâai mái khá</div><div class="eng">Can you reduce the price?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ฉันอ่านภาษาไทยได้นิดหน่อยค่ะ</div><div class="roman">chǎn àan phaa-sǎa thai dâai nít-nɔ̀i khâ</div><div class="eng">I can read a little Thai.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ฉันเขียนชื่อเป็นภาษาไทยได้ค่ะ</div><div class="roman">chǎn khǐian chʉ̂ʉ bpen phaa-sǎa thai dâai khâ</div><div class="eng">I can write my name in Thai.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">วันนี้อยากซื้อผลไม้ค่ะ</div><div class="roman">wan-níi yàak sʉ́ʉ phǒn-lá-máai khâ</div><div class="eng">Today I want to buy fruit.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">มะม่วงลูกนี้สุกหรือยังคะ</div><div class="roman">má-mûang lûuk níi sùk rʉ̌ʉ yang khá</div><div class="eng">Is this mango ripe yet?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ขอแบบไม่ดิบมากค่ะ</div><div class="roman">khɔ̌ɔ bɛ̀ɛp mâi dìp mâak khâ</div><div class="eng">I would like one that is not too unripe.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ลดได้ไหมคะ ถ้าซื้อสองกิโล</div><div class="roman">lót dâai mái khá, thâa sʉ́ʉ sɔ̌ɔng gii-loo</div><div class="eng">Could you reduce the price if I buy two kilos?</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
 <script>
   function openTab(event, tabId) {
     const contents = document.querySelectorAll('.tab-content');
@@ -1615,64 +1400,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', render);
 })();
 </script>
-<script id="book1-collocations-audio-script">
-(function () {
-  var activeButton = null;
-  function thaiVoice() {
-    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
-    var voices = window.speechSynthesis.getVoices() || [];
-    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
-           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
-  }
-  function reset(button) {
-    if (!button) return;
-    button.classList.remove('speaking');
-    button.setAttribute('aria-pressed', 'false');
-  }
-  function speak(button) {
-    var text = (button.dataset.thai || '').trim();
-    if (!text) return;
-    if (!('speechSynthesis' in window)) {
-      alert('此瀏覽器不支援語音合成。');
-      return;
-    }
-    var synth = window.speechSynthesis;
-    if (activeButton === button && synth.speaking) {
-      synth.cancel();
-      reset(button);
-      activeButton = null;
-      return;
-    }
-    synth.cancel();
-    reset(activeButton);
-    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
-    var utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'th-TH';
-    utterance.rate = 0.82;
-    var voice = thaiVoice();
-    if (voice) utterance.voice = voice;
-    button.classList.add('speaking');
-    button.setAttribute('aria-pressed', 'true');
-    activeButton = button;
-    utterance.onend = utterance.onerror = function () {
-      reset(button);
-      if (activeButton === button) activeButton = null;
-    };
-    try {
-      synth.resume();
-      synth.speak(utterance);
-    } catch (error) {
-      reset(button);
-      activeButton = null;
-    }
-  }
-  document.addEventListener('click', function (event) {
-    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
-    if (!button) return;
-    event.preventDefault();
-    event.stopPropagation();
-    speak(button);
-  });
+<script id="book1-final-classifier-audio-script">
+(function(){
+  var active=null;
+  function reset(btn){if(!btn)return;btn.classList.remove('speaking');btn.setAttribute('aria-pressed','false');}
+  function thaiVoice(){var v=(window.speechSynthesis&&speechSynthesis.getVoices)?speechSynthesis.getVoices():[];return v.find(function(x){return x.lang==='th-TH';})||v.find(function(x){return /^th(?:-|_)/i.test(x.lang||'');})||null;}
+  function speak(btn){var text=(btn.dataset.thai||'').trim();if(!text||!window.speechSynthesis)return;var s=speechSynthesis;if(active===btn&&s.speaking){s.cancel();reset(btn);active=null;return;}s.cancel();reset(active);document.querySelectorAll('button.colloc-chip.speaking,button.classifier-audio-pill.speaking').forEach(reset);var u=new SpeechSynthesisUtterance(text);u.lang='th-TH';u.rate=.82;var v=thaiVoice();if(v)u.voice=v;btn.classList.add('speaking');btn.setAttribute('aria-pressed','true');active=btn;u.onend=u.onerror=function(){reset(btn);if(active===btn)active=null;};try{s.resume();s.speak(u);}catch(e){reset(btn);active=null;}}
+  function target(e){return e.target&&e.target.closest?e.target.closest('button.colloc-chip[data-thai],button.classifier-audio-pill[data-thai]'):null;}
+  document.addEventListener('click',function(e){var b=target(e);if(!b)return;e.preventDefault();e.stopPropagation();speak(b);});
+  document.addEventListener('keydown',function(e){var b=target(e);if(!b||(e.key!=='Enter'&&e.key!==' '))return;e.preventDefault();e.stopPropagation();speak(b);});
 })();
-</script></body>
+</script>
+</body>
 </html>

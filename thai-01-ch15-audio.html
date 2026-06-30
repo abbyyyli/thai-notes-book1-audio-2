@@ -275,253 +275,41 @@
       .bubble { max-width: 100%; }
     }
   </style>
-<style id="book1-content-rebuild-style">
-/* ── Book 1 content rebuild layer ───────────────────── */
-#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
-#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
-#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
-#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
-#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
-#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+<style id="book1-final-standard-style">
+/* Book 1 final standard: one vocabulary system, one classifier component, resilient tablet layout */
+.triad .thai::before,.triad .roman::before,.triad .eng::before{content:none!important}
+#vocab .vocab-scroll{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{width:100%;min-width:1120px!important;table-layout:fixed;margin:0!important}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:20%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:10%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:27%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:19%}
 #vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
-.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
-.vocab-group-title:first-of-type{border-top:0;padding-top:0}
-.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
-.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
-.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
-#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
-#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
-#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
-#supplement .vocab-scroll table{min-width:760px}
-.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
-.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
-.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+#vocab .vocab-scroll th:nth-child(6),#vocab .vocab-scroll td:nth-child(6){width:7%;min-width:88px}
+#vocab .favorite-col,#vocab .fav-cell{text-align:center!important;vertical-align:middle!important;white-space:nowrap;padding-left:7px!important;padding-right:7px!important}
+#vocab .fav-btn{border:.5px solid rgba(220,38,38,.30);border-radius:999px;padding:5px 8px;background:rgba(220,38,38,.07);color:#b91c1c;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.16s ease}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14);transform:translateY(-1px)}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16);border-color:rgba(202,138,4,.40);color:#854d0e}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0;align-items:flex-start}
+button.colloc-chip{display:inline-flex!important;align-items:center!important;gap:6px!important;border:.5px solid rgba(22,163,74,.24)!important;background:rgba(22,163,74,.10)!important;color:var(--text)!important;border-radius:999px!important;padding:5px 9px!important;margin:3px 3px 3px 0!important;cursor:pointer!important;line-height:1.35!important;font:inherit!important;text-align:left!important;touch-action:manipulation}
+button.colloc-chip:hover,button.colloc-chip:focus-visible{background:rgba(22,163,74,.16)!important;border-color:rgba(22,163,74,.32)!important;outline:none!important}
+button.colloc-chip.speaking{background:rgba(22,163,74,.18)!important;border-color:rgba(22,163,74,.42)!important}
+.colloc-chip .thai{display:inline!important;font-size:15px!important;font-weight:600!important;line-height:1.25!important}.colloc-chip .en-colloc{display:inline!important;font-size:12px!important;color:var(--muted)!important;line-height:1.2!important}
+/* official classifier display in Grammar Notes */
+#vocab .classifier-note.classifier-inline{margin-top:7px;padding-top:7px;border-top:.5px dashed var(--line);display:flex!important;flex-wrap:wrap;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+#vocab .classifier-label{font-weight:700;color:var(--muted)}
+button.classifier-audio-pill{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;gap:5px;border:.5px solid rgba(124,58,237,.32);background:var(--purple-soft);color:#5b21b6;border-radius:999px;padding:4px 9px;margin:0;font:inherit;font-size:13px;font-weight:800;line-height:1.25;cursor:pointer;touch-action:manipulation}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible,button.classifier-audio-pill.speaking{background:rgba(124,58,237,.18);border-color:rgba(124,58,237,.48);outline:none}
+.classifier-roman{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;color:var(--muted);font-size:12px}.classifier-sep{color:var(--muted)}
+/* Top 10 always scrolls inside its tab instead of expanding the page */
+#top10{overflow:hidden}.top10-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}.top10-scroll table{min-width:720px;margin:0!important}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+/* Favorites must never force a page-wide horizontal overflow */
+#favorites{overflow:hidden}.favorites-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;min-width:0}.favorite-card{min-width:0;overflow-wrap:anywhere;word-break:break-word;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card)}.favorite-card *{min-width:0}.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;overflow-wrap:anywhere}.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}.favorite-category{margin-top:8px}.label.practical{background:var(--green-soft);color:#15803d;border:.5px solid rgba(22,163,74,.3)}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);overflow-wrap:anywhere}.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px}.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px}.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);grid-column:1/-1}.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32)}.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none}.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px}.favorite-speak{margin-left:0}
 .muted{color:var(--muted)}
-@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
-</style><style id="book1-book2-vocab-pattern">
-/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
-.triad .thai::before,
-.triad .roman::before,
-.triad .eng::before { content:none !important; }
-
-#vocab .vocab-scroll{
-  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
-  margin:14px 0 24px; border-radius:12px;
-}
-#vocab .vocab-scroll table{
-  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
-}
-#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
-#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
-#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
-#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
-#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
-#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
-
-#vocab .favorite-col, #vocab .fav-cell{
-  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
-  padding-left:7px !important; padding-right:7px !important;
-}
-#vocab .fav-btn{
-  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
-  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
-  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
-}
-#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
-#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
-
-.classifier-note{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  font-size:12px; color:var(--muted);
-}
-.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
-.colloc-chip{
-  display:inline-flex !important; align-items:center !important; justify-content:center !important;
-  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
-  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
-  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
-  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
-  box-shadow:none !important; transform:none !important; animation:none !important;
-}
-.colloc-chip:hover,.colloc-chip:focus-visible{
-  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
-  transform:none !important; animation:none !important; outline:none !important;
-}
-.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
-.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
-.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
-
-#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
-.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
-.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
-.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
-.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
-.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
-.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
-.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
-.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
-.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
-.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
-.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
-.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
-.favorite-speak{margin-left:0;}
-@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:720px){
-  #vocab .vocab-scroll table{min-width:1120px !important;}
-  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
-  .favorites-list{grid-template-columns:1fr;}
-}
-</style><style id="book1-semantic-refinement-style">
-/* ── Semantic refinement: real collocation buttons ── */
-button.colloc-chip{
-  -webkit-appearance:none !important;
-  appearance:none !important;
-  font:inherit !important;
-  text-align:left !important;
-  touch-action:manipulation;
-  user-select:none;
-}
-button.colloc-chip:focus-visible{
-  outline:2px solid rgba(22,163,74,.55) !important;
-  outline-offset:2px;
-}
-</style><style id="book1-classifier-audio-refine-style">
-/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
-#vocab .classifier-note.classifier-short{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
-}
-#vocab .classifier-label{font-weight:700; color:var(--muted);}
-button.classifier-audio-pill{
-  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
-  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
-  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
-  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
-}
-button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
-#classifiers .classifier-chip{display:none !important;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:1120px!important}#vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px}.favorites-list{grid-template-columns:minmax(0,1fr)}.top10-scroll table{min-width:700px}}
 </style>
-<style id="book1-vocab-classifier-detail-style">
-/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
-#vocab .classifier-note.classifier-detail{
-  margin-top:7px;
-  padding-top:7px;
-  border-top:.5px dashed var(--line);
-  display:grid;
-  gap:3px;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.35;
-}
-#vocab .classifier-label{
-  color:var(--muted);
-  font-weight:700;
-}
-#vocab .classifier-entries{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-#vocab .classifier-entry{
-  min-width:0;
-  display:grid;
-  gap:1px;
-}
-#vocab button.classifier-audio-pill{
-  appearance:none;
-  -webkit-appearance:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:5px;
-  width:max-content;
-  max-width:100%;
-  border:.5px solid rgba(124,58,237,.34);
-  background:var(--purple-soft);
-  color:#5b21b6;
-  border-radius:999px;
-  padding:4px 9px;
-  margin:0;
-  font:inherit;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.2;
-  cursor:pointer;
-  touch-action:manipulation;
-  transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-#vocab button.classifier-audio-pill:hover,
-#vocab button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18);
-  border-color:rgba(124,58,237,.52);
-  outline:none;
-  transform:translateY(-1px);
-}
-#vocab button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.25);
-  border-color:rgba(124,58,237,.60);
-}
-#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
-#vocab .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:11.5px;
-}
-#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
-/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
-#classifiers .classifier-chip{display:none !important;}
-</style>
-<style id="book1-vocab-classifier-inline-style">
-/* Vocabulary classifier format｜量詞：ใบ bai */
-#vocab .classifier-note.classifier-inline{
-  display:inline-flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:4px;
-  margin:7px 0 0;
-  padding:0;
-  border:0;
-  background:transparent;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.45;
-}
-#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
-#vocab .classifier-inline button.classifier-audio-pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:1px 6px;
-  margin:0;
-  border:.5px solid rgba(124,58,237,.34);
-  border-radius:999px;
-  background:var(--purple-soft);
-  color:#5b21b6;
-  font:inherit;
-  font-weight:800;
-  line-height:1.35;
-  cursor:pointer;
-}
-#vocab .classifier-inline button.classifier-audio-pill:hover,
-#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
-#vocab .classifier-inline button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.20);
-  border-color:rgba(124,58,237,.50);
-  outline:none;
-}
-#vocab .classifier-inline .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:12px;
-}
-#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
-</style></head>
+</head>
 <body>
 <div class="container">
 <section class="hero">
@@ -597,7 +385,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <tr><td><div class="triad"><div class="thai">มาก</div><div class="roman">mâak</div><div class="eng">a lot / very</div></div></td><td>程度 / 數量</td><td><span class="label review">Review</span> 已多次出現；可表示 very，也可表示 many/much。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มากกว่า" aria-pressed="false" class="colloc-chip" data-thai="มากกว่า" type="button"><span class="thai">มากกว่า</span><span class="en-colloc">more than</span></button></div></td><td><div class="triad"><div class="thai">คนเยอะมากค่ะ</div><div class="roman">khon yóe mâak khâ</div><div class="eng">There are a lot of people.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="程度 / 數量" data-colloc='[{"thai": "มากกว่า", "en": "more than"}]' data-eng="a lot / very" data-ex-eng="There are a lot of people." data-ex-rom="khon yóe mâak khâ" data-ex-thai="คนเยอะมากค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; 已多次出現；可表示 very，也可表示 many/much。' data-rom="mâak" data-thai="มาก" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">น้อย</div><div class="roman">nɔ́ɔi</div><div class="eng">little / few</div></div></td><td>程度 / 數量</td><td>也出現在 <span class="thai">หน่อย</span> 的禮貌請求中，但意思不完全一樣。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：น้อยกว่า" aria-pressed="false" class="colloc-chip" data-thai="น้อยกว่า" type="button"><span class="thai">น้อยกว่า</span><span class="en-colloc">less than</span></button></div></td><td><div class="triad"><div class="thai">วันนี้คนไม่เยอะ น้อยค่ะ</div><div class="roman">wan-níi khon mâi yóe, nɔ́ɔi khâ</div><div class="eng">There are not many people today; only a few.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="程度 / 數量" data-colloc='[{"thai": "น้อยกว่า", "en": "less than"}]' data-eng="little / few" data-ex-eng="There are not many people today; only a few." data-ex-rom="wan-níi khon mâi yóe, nɔ́ɔi khâ" data-ex-thai="วันนี้คนไม่เยอะ น้อยค่ะ" data-grammar='也出現在 &lt;span class="thai"&gt;หน่อย&lt;/span&gt; 的禮貌請求中，但意思不完全一樣。' data-rom="nɔ́ɔi" data-thai="น้อย" type="button">♡ 收藏</button></td></tr>
 </tbody>
-</table></div><h3 class="vocab-group-title">Listening, Requests &amp; Home Controls｜聽不清、請求與居家控制</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">ไม่ได้ยิน</div><div class="roman">mâi dâai-yin</div><div class="eng">cannot hear</div></div></td><td>Verb phrase</td><td>聽不到或沒聽清楚。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พูดเบาไป" aria-pressed="false" class="colloc-chip" data-thai="พูดเบาไป" type="button"><span class="thai">พูดเบาไป</span><span class="en-colloc">speak too softly</span></button><button aria-label="播放搭配詞：ไม่ได้ยินเลย" aria-pressed="false" class="colloc-chip" data-thai="ไม่ได้ยินเลย" type="button"><span class="thai">ไม่ได้ยินเลย</span><span class="en-colloc">cannot hear at all</span></button></div></td><td><div class="triad"><div class="thai">ขอโทษค่ะ ฉันไม่ได้ยิน</div><div class="roman">khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin</div><div class="eng">Sorry, I cannot hear you.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "พูดเบาไป", "en": "speak too softly"}, {"thai": "ไม่ได้ยินเลย", "en": "cannot hear at all"}]' data-eng="cannot hear" data-ex-eng="Sorry, I cannot hear you." data-ex-rom="khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin" data-ex-thai="ขอโทษค่ะ ฉันไม่ได้ยิน" data-grammar="聽不到或沒聽清楚。" data-rom="mâi dâai-yin" data-thai="ไม่ได้ยิน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">พูดอีกที</div><div class="roman">phûut ìik thii</div><div class="eng">say it again</div></div></td><td>Request phrase</td><td>請對方重說；加 หน่อย/ได้ไหม 更柔和。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พูดอีกทีได้ไหม" aria-pressed="false" class="colloc-chip" data-thai="พูดอีกทีได้ไหม" type="button"><span class="thai">พูดอีกทีได้ไหม</span><span class="en-colloc">can you say it again</span></button><button aria-label="播放搭配詞：พูดอีกครั้ง" aria-pressed="false" class="colloc-chip" data-thai="พูดอีกครั้ง" type="button"><span class="thai">พูดอีกครั้ง</span><span class="en-colloc">say it once more</span></button></div></td><td><div class="triad"><div class="thai">ช่วยพูดอีกทีได้ไหมคะ</div><div class="roman">chûai phûut ìik thii dâai mái khá</div><div class="eng">Could you say it again, please?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Request phrase" data-colloc='[{"thai": "พูดอีกทีได้ไหม", "en": "can you say it again"}, {"thai": "พูดอีกครั้ง", "en": "say it once more"}]' data-eng="say it again" data-ex-eng="Could you say it again, please?" data-ex-rom="chûai phûut ìik thii dâai mái khá" data-ex-thai="ช่วยพูดอีกทีได้ไหมคะ" data-grammar="請對方重說；加 หน่อย/ได้ไหม 更柔和。" data-rom="phûut ìik thii" data-thai="พูดอีกที" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ประตู</div><div class="roman">bprà-dtuu</div><div class="eng">door</div></div></td><td>Noun</td><td>可搭開、關、鎖。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button">บาน</button><span class="classifier-roman">baan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดประตู" aria-pressed="false" class="colloc-chip" data-thai="เปิดประตู" type="button"><span class="thai">เปิดประตู</span><span class="en-colloc">open the door</span></button><button aria-label="播放搭配詞：ล็อกประตู" aria-pressed="false" class="colloc-chip" data-thai="ล็อกประตู" type="button"><span class="thai">ล็อกประตู</span><span class="en-colloc">lock the door</span></button></div></td><td><div class="triad"><div class="thai">ประตูห้องน้ำอยู่ไหนคะ</div><div class="roman">bprà-dtuu hɔ̂ng-náam yùu nǎi khá</div><div class="eng">Where is the bathroom door?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดประตู", "en": "open the door"}, {"thai": "ล็อกประตู", "en": "lock the door"}]' data-eng="door" data-ex-eng="Where is the bathroom door?" data-ex-rom="bprà-dtuu hɔ̂ng-náam yùu nǎi khá" data-ex-thai="ประตูห้องน้ำอยู่ไหนคะ" data-grammar='可搭開、關、鎖。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button"&gt;บาน&lt;/button&gt;&lt;span class="classifier-roman"&gt;baan&lt;/span&gt;&lt;/span&gt;' data-rom="bprà-dtuu" data-thai="ประตู" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">แอร์</div><div class="roman">ɛɛ</div><div class="eng">air conditioner</div></div></td><td>Noun</td><td>口語最常用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button">เครื่อง</button><span class="classifier-roman">khrʉ̂ang</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดแอร์" aria-pressed="false" class="colloc-chip" data-thai="เปิดแอร์" type="button"><span class="thai">เปิดแอร์</span><span class="en-colloc">turn on the AC</span></button><button aria-label="播放搭配詞：แอร์เย็นไป" aria-pressed="false" class="colloc-chip" data-thai="แอร์เย็นไป" type="button"><span class="thai">แอร์เย็นไป</span><span class="en-colloc">the AC is too cold</span></button></div></td><td><div class="triad"><div class="thai">แอร์เย็นไป ช่วยปรับหน่อยค่ะ</div><div class="roman">ɛɛ yen bpai, chûai bpràp nɔ̀i khâ</div><div class="eng">The AC is too cold. Please adjust it.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดแอร์", "en": "turn on the AC"}, {"thai": "แอร์เย็นไป", "en": "the AC is too cold"}]' data-eng="air conditioner" data-ex-eng="The AC is too cold. Please adjust it." data-ex-rom="ɛɛ yen bpai, chûai bpràp nɔ̀i khâ" data-ex-thai="แอร์เย็นไป ช่วยปรับหน่อยค่ะ" data-grammar='口語最常用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button"&gt;เครื่อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;khrʉ̂ang&lt;/span&gt;&lt;/span&gt;' data-rom="ɛɛ" data-thai="แอร์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">พัดลม</div><div class="roman">phát-lom</div><div class="eng">fan</div></div></td><td>Noun</td><td>電風扇。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button">เครื่อง</button><span class="classifier-roman">khrʉ̂ang</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดพัดลม" aria-pressed="false" class="colloc-chip" data-thai="เปิดพัดลม" type="button"><span class="thai">เปิดพัดลม</span><span class="en-colloc">turn on the fan</span></button><button aria-label="播放搭配詞：พัดลมแรงไป" aria-pressed="false" class="colloc-chip" data-thai="พัดลมแรงไป" type="button"><span class="thai">พัดลมแรงไป</span><span class="en-colloc">fan is too strong</span></button></div></td><td><div class="triad"><div class="thai">ช่วยเปิดพัดลมให้หน่อยค่ะ</div><div class="roman">chûai bpə̀ət phát-lom hâi nɔ̀i khâ</div><div class="eng">Please turn on the fan for me.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดพัดลม", "en": "turn on the fan"}, {"thai": "พัดลมแรงไป", "en": "fan is too strong"}]' data-eng="fan" data-ex-eng="Please turn on the fan for me." data-ex-rom="chûai bpə̀ət phát-lom hâi nɔ̀i khâ" data-ex-thai="ช่วยเปิดพัดลมให้หน่อยค่ะ" data-grammar='電風扇。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button"&gt;เครื่อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;khrʉ̂ang&lt;/span&gt;&lt;/span&gt;' data-rom="phát-lom" data-thai="พัดลม" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เอง</div><div class="roman">eeng</div><div class="eng">oneself / by oneself</div></div></td><td>Reflexive marker</td><td>放在動詞後表示自己做。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทำเอง" aria-pressed="false" class="colloc-chip" data-thai="ทำเอง" type="button"><span class="thai">ทำเอง</span><span class="en-colloc">do it yourself</span></button><button aria-label="播放搭配詞：ไปเอง" aria-pressed="false" class="colloc-chip" data-thai="ไปเอง" type="button"><span class="thai">ไปเอง</span><span class="en-colloc">go by oneself</span></button></div></td><td><div class="triad"><div class="thai">ไม่เป็นไรค่ะ ฉันทำเองได้</div><div class="roman">mâi bpen-rai khâ, chǎn tham eeng dâai</div><div class="eng">It is okay; I can do it myself.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Reflexive marker" data-colloc='[{"thai": "ทำเอง", "en": "do it yourself"}, {"thai": "ไปเอง", "en": "go by oneself"}]' data-eng="oneself / by oneself" data-ex-eng="It is okay; I can do it myself." data-ex-rom="mâi bpen-rai khâ, chǎn tham eeng dâai" data-ex-thai="ไม่เป็นไรค่ะ ฉันทำเองได้" data-grammar="放在動詞後表示自己做。" data-rom="eeng" data-thai="เอง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ช่วย...หน่อย</div><div class="roman">chûai...nɔ̀i</div><div class="eng">please help...</div></div></td><td>Polite request</td><td>初級最穩定的請求骨架。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ช่วยเปิด...หน่อย" aria-pressed="false" class="colloc-chip" data-thai="ช่วยเปิด...หน่อย" type="button"><span class="thai">ช่วยเปิด...หน่อย</span><span class="en-colloc">please open...</span></button><button aria-label="播放搭配詞：ช่วยพูด...หน่อย" aria-pressed="false" class="colloc-chip" data-thai="ช่วยพูด...หน่อย" type="button"><span class="thai">ช่วยพูด...หน่อย</span><span class="en-colloc">please speak...</span></button></div></td><td><div class="triad"><div class="thai">ช่วยพูดช้าลงหน่อยค่ะ</div><div class="roman">chûai phûut cháa long nɔ̀i khâ</div><div class="eng">Please speak more slowly.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Polite request" data-colloc='[{"thai": "ช่วยเปิด...หน่อย", "en": "please open..."}, {"thai": "ช่วยพูด...หน่อย", "en": "please speak..."}]' data-eng="please help..." data-ex-eng="Please speak more slowly." data-ex-rom="chûai phûut cháa long nɔ̀i khâ" data-ex-thai="ช่วยพูดช้าลงหน่อยค่ะ" data-grammar="初級最穩定的請求骨架。" data-rom="chûai...nɔ̀i" data-thai="ช่วย...หน่อย" type="button">♡ 收藏</button></td></tr></tbody></table></div>
+</table></div><h3 class="vocab-group-title">Listening, Requests &amp; Home Controls｜聽不清、請求與居家控制</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">ไม่ได้ยิน</div><div class="roman">mâi dâai-yin</div><div class="eng">cannot hear</div></div></td><td>Verb phrase</td><td>聽不到或沒聽清楚。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พูดเบาไป" aria-pressed="false" class="colloc-chip" data-thai="พูดเบาไป" type="button"><span class="thai">พูดเบาไป</span><span class="en-colloc">speak too softly</span></button><button aria-label="播放搭配詞：ไม่ได้ยินเลย" aria-pressed="false" class="colloc-chip" data-thai="ไม่ได้ยินเลย" type="button"><span class="thai">ไม่ได้ยินเลย</span><span class="en-colloc">cannot hear at all</span></button></div></td><td><div class="triad"><div class="thai">ขอโทษค่ะ ฉันไม่ได้ยิน</div><div class="roman">khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin</div><div class="eng">Sorry, I cannot hear you.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "พูดเบาไป", "en": "speak too softly"}, {"thai": "ไม่ได้ยินเลย", "en": "cannot hear at all"}]' data-eng="cannot hear" data-ex-eng="Sorry, I cannot hear you." data-ex-rom="khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin" data-ex-thai="ขอโทษค่ะ ฉันไม่ได้ยิน" data-grammar="聽不到或沒聽清楚。" data-rom="mâi dâai-yin" data-thai="ไม่ได้ยิน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">พูดอีกที</div><div class="roman">phûut ìik thii</div><div class="eng">say it again</div></div></td><td>Request phrase</td><td>請對方重說；加 หน่อย/ได้ไหม 更柔和。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：พูดอีกทีได้ไหม" aria-pressed="false" class="colloc-chip" data-thai="พูดอีกทีได้ไหม" type="button"><span class="thai">พูดอีกทีได้ไหม</span><span class="en-colloc">can you say it again</span></button><button aria-label="播放搭配詞：พูดอีกครั้ง" aria-pressed="false" class="colloc-chip" data-thai="พูดอีกครั้ง" type="button"><span class="thai">พูดอีกครั้ง</span><span class="en-colloc">say it once more</span></button></div></td><td><div class="triad"><div class="thai">ช่วยพูดอีกทีได้ไหมคะ</div><div class="roman">chûai phûut ìik thii dâai mái khá</div><div class="eng">Could you say it again, please?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Request phrase" data-colloc='[{"thai": "พูดอีกทีได้ไหม", "en": "can you say it again"}, {"thai": "พูดอีกครั้ง", "en": "say it once more"}]' data-eng="say it again" data-ex-eng="Could you say it again, please?" data-ex-rom="chûai phûut ìik thii dâai mái khá" data-ex-thai="ช่วยพูดอีกทีได้ไหมคะ" data-grammar="請對方重說；加 หน่อย/ได้ไหม 更柔和。" data-rom="phûut ìik thii" data-thai="พูดอีกที" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ประตู</div><div class="roman">bprà-dtuu</div><div class="eng">door</div></div></td><td>Noun</td><td>可搭開、關、鎖。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button">บาน</button><span class="classifier-roman">baan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดประตู" aria-pressed="false" class="colloc-chip" data-thai="เปิดประตู" type="button"><span class="thai">เปิดประตู</span><span class="en-colloc">open the door</span></button><button aria-label="播放搭配詞：ล็อกประตู" aria-pressed="false" class="colloc-chip" data-thai="ล็อกประตู" type="button"><span class="thai">ล็อกประตู</span><span class="en-colloc">lock the door</span></button></div></td><td><div class="triad"><div class="thai">ประตูห้องน้ำอยู่ไหนคะ</div><div class="roman">bprà-dtuu hɔ̂ɔng-náam yùu nǎi khá</div><div class="eng">Where is the bathroom door?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดประตู", "en": "open the door"}, {"thai": "ล็อกประตู", "en": "lock the door"}]' data-eng="door" data-ex-eng="Where is the bathroom door?" data-ex-rom="bprà-dtuu hɔ̂ɔng-náam yùu nǎi khá" data-ex-thai="ประตูห้องน้ำอยู่ไหนคะ" data-grammar='可搭開、關、鎖。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button"&gt;บาน&lt;/button&gt;&lt;span class="classifier-roman"&gt;baan&lt;/span&gt;&lt;/span&gt;' data-rom="bprà-dtuu" data-thai="ประตู" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">แอร์</div><div class="roman">ɛɛ</div><div class="eng">air conditioner</div></div></td><td>Noun</td><td>口語最常用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button">เครื่อง</button><span class="classifier-roman">khrʉ̂ang</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดแอร์" aria-pressed="false" class="colloc-chip" data-thai="เปิดแอร์" type="button"><span class="thai">เปิดแอร์</span><span class="en-colloc">turn on the AC</span></button><button aria-label="播放搭配詞：แอร์เย็นไป" aria-pressed="false" class="colloc-chip" data-thai="แอร์เย็นไป" type="button"><span class="thai">แอร์เย็นไป</span><span class="en-colloc">the AC is too cold</span></button></div></td><td><div class="triad"><div class="thai">แอร์เย็นไป ช่วยปรับหน่อยค่ะ</div><div class="roman">ɛɛ yen bpai, chûai bpràp nɔ̀i khâ</div><div class="eng">The AC is too cold. Please adjust it.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดแอร์", "en": "turn on the AC"}, {"thai": "แอร์เย็นไป", "en": "the AC is too cold"}]' data-eng="air conditioner" data-ex-eng="The AC is too cold. Please adjust it." data-ex-rom="ɛɛ yen bpai, chûai bpràp nɔ̀i khâ" data-ex-thai="แอร์เย็นไป ช่วยปรับหน่อยค่ะ" data-grammar='口語最常用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button"&gt;เครื่อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;khrʉ̂ang&lt;/span&gt;&lt;/span&gt;' data-rom="ɛɛ" data-thai="แอร์" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">พัดลม</div><div class="roman">phát-lom</div><div class="eng">fan</div></div></td><td>Noun</td><td>電風扇。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button">เครื่อง</button><span class="classifier-roman">khrʉ̂ang</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดพัดลม" aria-pressed="false" class="colloc-chip" data-thai="เปิดพัดลม" type="button"><span class="thai">เปิดพัดลม</span><span class="en-colloc">turn on the fan</span></button><button aria-label="播放搭配詞：พัดลมแรงไป" aria-pressed="false" class="colloc-chip" data-thai="พัดลมแรงไป" type="button"><span class="thai">พัดลมแรงไป</span><span class="en-colloc">fan is too strong</span></button></div></td><td><div class="triad"><div class="thai">ช่วยเปิดพัดลมให้หน่อยค่ะ</div><div class="roman">chûai bpə̀ət phát-lom hâi nɔ̀i khâ</div><div class="eng">Please turn on the fan for me.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Noun" data-colloc='[{"thai": "เปิดพัดลม", "en": "turn on the fan"}, {"thai": "พัดลมแรงไป", "en": "fan is too strong"}]' data-eng="fan" data-ex-eng="Please turn on the fan for me." data-ex-rom="chûai bpə̀ət phát-lom hâi nɔ̀i khâ" data-ex-thai="ช่วยเปิดพัดลมให้หน่อยค่ะ" data-grammar='電風扇。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：เครื่อง" aria-pressed="false" class="classifier-audio-pill" data-thai="เครื่อง" title="點擊播放量詞" type="button"&gt;เครื่อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;khrʉ̂ang&lt;/span&gt;&lt;/span&gt;' data-rom="phát-lom" data-thai="พัดลม" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">เอง</div><div class="roman">eeng</div><div class="eng">oneself / by oneself</div></div></td><td>Reflexive marker</td><td>放在動詞後表示自己做。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ทำเอง" aria-pressed="false" class="colloc-chip" data-thai="ทำเอง" type="button"><span class="thai">ทำเอง</span><span class="en-colloc">do it yourself</span></button><button aria-label="播放搭配詞：ไปเอง" aria-pressed="false" class="colloc-chip" data-thai="ไปเอง" type="button"><span class="thai">ไปเอง</span><span class="en-colloc">go by oneself</span></button></div></td><td><div class="triad"><div class="thai">ไม่เป็นไรค่ะ ฉันทำเองได้</div><div class="roman">mâi bpen-rai khâ, chǎn tham eeng dâai</div><div class="eng">It is okay; I can do it myself.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Reflexive marker" data-colloc='[{"thai": "ทำเอง", "en": "do it yourself"}, {"thai": "ไปเอง", "en": "go by oneself"}]' data-eng="oneself / by oneself" data-ex-eng="It is okay; I can do it myself." data-ex-rom="mâi bpen-rai khâ, chǎn tham eeng dâai" data-ex-thai="ไม่เป็นไรค่ะ ฉันทำเองได้" data-grammar="放在動詞後表示自己做。" data-rom="eeng" data-thai="เอง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ช่วย...หน่อย</div><div class="roman">chûai...nɔ̀i</div><div class="eng">please help...</div></div></td><td>Polite request</td><td>初級最穩定的請求骨架。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ช่วยเปิด...หน่อย" aria-pressed="false" class="colloc-chip" data-thai="ช่วยเปิด...หน่อย" type="button"><span class="thai">ช่วยเปิด...หน่อย</span><span class="en-colloc">please open...</span></button><button aria-label="播放搭配詞：ช่วยพูด...หน่อย" aria-pressed="false" class="colloc-chip" data-thai="ช่วยพูด...หน่อย" type="button"><span class="thai">ช่วยพูด...หน่อย</span><span class="en-colloc">please speak...</span></button></div></td><td><div class="triad"><div class="thai">ช่วยพูดช้าลงหน่อยค่ะ</div><div class="roman">chûai phûut cháa long nɔ̀i khâ</div><div class="eng">Please speak more slowly.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Polite request" data-colloc='[{"thai": "ช่วยเปิด...หน่อย", "en": "please open..."}, {"thai": "ช่วยพูด...หน่อย", "en": "please speak..."}]' data-eng="please help..." data-ex-eng="Please speak more slowly." data-ex-rom="chûai phûut cháa long nɔ̀i khâ" data-ex-thai="ช่วยพูดช้าลงหน่อยค่ะ" data-grammar="初級最穩定的請求骨架。" data-rom="chûai...nɔ̀i" data-thai="ช่วย...หน่อย" type="button">♡ 收藏</button></td></tr></tbody></table></div>
 <div class="day15-objects-vocab-group"><h3>Objects &amp; Rooms｜物品與房間</h3><div class="vocab-scroll"><table><thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead><tbody><tr><td><div class="triad"><div class="thai">ไฟ</div><div class="roman">fai</div><div class="eng">light / electricity</div></div></td><td>Utility noun</td><td><span>用於開／關燈；也可指電力。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ดวง" aria-pressed="false" class="classifier-audio-pill" data-thai="ดวง" title="點擊播放量詞" type="button">ดวง</button><span class="classifier-roman">duang</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดไฟ" aria-pressed="false" class="colloc-chip" data-thai="เปิดไฟ" type="button"><span class="thai">เปิดไฟ</span><span class="en-colloc">turn on the light</span></button><button aria-label="播放搭配詞：ปิดไฟ" aria-pressed="false" class="colloc-chip" data-thai="ปิดไฟ" type="button"><span class="thai">ปิดไฟ</span><span class="en-colloc">turn off the light</span></button><button aria-label="播放搭配詞：ไฟดับ" aria-pressed="false" class="colloc-chip" data-thai="ไฟดับ" type="button"><span class="thai">ไฟดับ</span><span class="en-colloc">power is out</span></button></div></td><td><div class="triad"><div class="thai">ช่วยเปิดไฟในห้องเรียนหน่อยค่ะ</div><div class="roman">chûai bpə̀ət fai nai hɔ̂ɔng-riian nɔ̀i khâ</div><div class="eng">Please turn on the light in the classroom.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Utility noun" data-colloc='[{"thai": "เปิดไฟ", "en": "turn on the light"}, {"thai": "ปิดไฟ", "en": "turn off the light"}, {"thai": "ไฟดับ", "en": "power is out"}]' data-eng="light / electricity" data-ex-eng="Please turn on the light in the classroom." data-ex-rom="chûai bpə̀ət fai nai hɔ̂ɔng-riian nɔ̀i khâ" data-ex-thai="ช่วยเปิดไฟในห้องเรียนหน่อยค่ะ" data-grammar='&lt;span&gt;用於開／關燈；也可指電力。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ดวง" aria-pressed="false" class="classifier-audio-pill" data-thai="ดวง" title="點擊播放量詞" type="button"&gt;ดวง&lt;/button&gt;&lt;span class="classifier-roman"&gt;duang&lt;/span&gt;&lt;/span&gt;' data-rom="fai" data-thai="ไฟ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">หน้าต่าง</div><div class="roman">nâa-dtàang</div><div class="eng">window</div></div></td><td>Object</td><td><span>窗戶；常搭配 เปิด／ปิด。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button">บาน</button><span class="classifier-roman">baan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เปิดหน้าต่าง" aria-pressed="false" class="colloc-chip" data-thai="เปิดหน้าต่าง" type="button"><span class="thai">เปิดหน้าต่าง</span><span class="en-colloc">open the window</span></button><button aria-label="播放搭配詞：ปิดหน้าต่าง" aria-pressed="false" class="colloc-chip" data-thai="ปิดหน้าต่าง" type="button"><span class="thai">ปิดหน้าต่าง</span><span class="en-colloc">close the window</span></button></div></td><td><div class="triad"><div class="thai">ช่วยปิดหน้าต่างหน่อยค่ะ</div><div class="roman">chûai bpìt nâa-dtàang nɔ̀i khâ</div><div class="eng">Please close the window.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Object" data-colloc='[{"thai": "เปิดหน้าต่าง", "en": "open the window"}, {"thai": "ปิดหน้าต่าง", "en": "close the window"}]' data-eng="window" data-ex-eng="Please close the window." data-ex-rom="chûai bpìt nâa-dtàang nɔ̀i khâ" data-ex-thai="ช่วยปิดหน้าต่างหน่อยค่ะ" data-grammar='&lt;span&gt;窗戶；常搭配 เปิด／ปิด。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：บาน" aria-pressed="false" class="classifier-audio-pill" data-thai="บาน" title="點擊播放量詞" type="button"&gt;บาน&lt;/button&gt;&lt;span class="classifier-roman"&gt;baan&lt;/span&gt;&lt;/span&gt;' data-rom="nâa-dtàang" data-thai="หน้าต่าง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ของขวัญ</div><div class="roman">khɔ̌ɔng-khwǎn</div><div class="eng">gift</div></div></td><td>Object</td><td><span>送禮、生日、探望時常用。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button">ชิ้น</button><span class="classifier-roman">chín</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ให้ของขวัญ" aria-pressed="false" class="colloc-chip" data-thai="ให้ของขวัญ" type="button"><span class="thai">ให้ของขวัญ</span><span class="en-colloc">give a gift</span></button><button aria-label="播放搭配詞：ของขวัญวันเกิด" aria-pressed="false" class="colloc-chip" data-thai="ของขวัญวันเกิด" type="button"><span class="thai">ของขวัญวันเกิด</span><span class="en-colloc">birthday gift</span></button></div></td><td><div class="triad"><div class="thai">ฉันซื้อของขวัญให้เพื่อนค่ะ</div><div class="roman">chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi phʉ̂an khâ</div><div class="eng">I bought a gift for my friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Object" data-colloc='[{"thai": "ให้ของขวัญ", "en": "give a gift"}, {"thai": "ของขวัญวันเกิด", "en": "birthday gift"}]' data-eng="gift" data-ex-eng="I bought a gift for my friend." data-ex-rom="chǎn sʉ́ʉ khɔ̌ɔng-khwǎn hâi phʉ̂an khâ" data-ex-thai="ฉันซื้อของขวัญให้เพื่อนค่ะ" data-grammar='&lt;span&gt;送禮、生日、探望時常用。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ชิ้น" aria-pressed="false" class="classifier-audio-pill" data-thai="ชิ้น" title="點擊播放量詞" type="button"&gt;ชิ้น&lt;/button&gt;&lt;span class="classifier-roman"&gt;chín&lt;/span&gt;&lt;/span&gt;' data-rom="khɔ̌ɔng-khwǎn" data-thai="ของขวัญ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">โต๊ะ</div><div class="roman">dtó</div><div class="eng">table</div></div></td><td>Furniture</td><td><span>桌子；搬動、訂位時都常用。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ตัว" aria-pressed="false" class="classifier-audio-pill" data-thai="ตัว" title="點擊播放量詞" type="button">ตัว</button><span class="classifier-roman">dtua</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ยกโต๊ะ" aria-pressed="false" class="colloc-chip" data-thai="ยกโต๊ะ" type="button"><span class="thai">ยกโต๊ะ</span><span class="en-colloc">lift a table</span></button><button aria-label="播放搭配詞：จองโต๊ะ" aria-pressed="false" class="colloc-chip" data-thai="จองโต๊ะ" type="button"><span class="thai">จองโต๊ะ</span><span class="en-colloc">reserve a table</span></button></div></td><td><div class="triad"><div class="thai">ช่วยยกโต๊ะให้หน่อยค่ะ</div><div class="roman">chûai yók dtó hâi nɔ̀i khâ</div><div class="eng">Please help lift the table.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Furniture" data-colloc='[{"thai": "ยกโต๊ะ", "en": "lift a table"}, {"thai": "จองโต๊ะ", "en": "reserve a table"}]' data-eng="table" data-ex-eng="Please help lift the table." data-ex-rom="chûai yók dtó hâi nɔ̀i khâ" data-ex-thai="ช่วยยกโต๊ะให้หน่อยค่ะ" data-grammar='&lt;span&gt;桌子；搬動、訂位時都常用。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ตัว" aria-pressed="false" class="classifier-audio-pill" data-thai="ตัว" title="點擊播放量詞" type="button"&gt;ตัว&lt;/button&gt;&lt;span class="classifier-roman"&gt;dtua&lt;/span&gt;&lt;/span&gt;' data-rom="dtó" data-thai="โต๊ะ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">น้ำผึ้ง</div><div class="roman">náam-phʉ̂ng</div><div class="eng">honey</div></div></td><td>Ingredient</td><td><span>可加在飲料、優格或食物裡。</span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ใส่น้ำผึ้ง" aria-pressed="false" class="colloc-chip" data-thai="ใส่น้ำผึ้ง" type="button"><span class="thai">ใส่น้ำผึ้ง</span><span class="en-colloc">add honey</span></button><button aria-label="播放搭配詞：ชาน้ำผึ้ง" aria-pressed="false" class="colloc-chip" data-thai="ชาน้ำผึ้ง" type="button"><span class="thai">ชาน้ำผึ้ง</span><span class="en-colloc">honey tea</span></button></div></td><td><div class="triad"><div class="thai">ขอน้ำผึ้งหน่อยค่ะ</div><div class="roman">khɔ̌ɔ náam-phʉ̂ng nɔ̀i khâ</div><div class="eng">Could I have some honey?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Ingredient" data-colloc='[{"thai": "ใส่น้ำผึ้ง", "en": "add honey"}, {"thai": "ชาน้ำผึ้ง", "en": "honey tea"}]' data-eng="honey" data-ex-eng="Could I have some honey?" data-ex-rom="khɔ̌ɔ náam-phʉ̂ng nɔ̀i khâ" data-ex-thai="ขอน้ำผึ้งหน่อยค่ะ" data-grammar="&lt;span&gt;可加在飲料、優格或食物裡。&lt;/span&gt;" data-rom="náam-phʉ̂ng" data-thai="น้ำผึ้ง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ร้านนวด</div><div class="roman">ráan nûat</div><div class="eng">massage shop</div></div></td><td>Place</td><td><span>按摩店；也可說 ไปนวด = go get a massage.</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ร้าน" aria-pressed="false" class="classifier-audio-pill" data-thai="ร้าน" title="點擊播放量詞" type="button">ร้าน</button><span class="classifier-roman">ráan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปร้านนวด" aria-pressed="false" class="colloc-chip" data-thai="ไปร้านนวด" type="button"><span class="thai">ไปร้านนวด</span><span class="en-colloc">go to a massage shop</span></button><button aria-label="播放搭配詞：นวดน้ำมัน" aria-pressed="false" class="colloc-chip" data-thai="นวดน้ำมัน" type="button"><span class="thai">นวดน้ำมัน</span><span class="en-colloc">oil massage</span></button></div></td><td><div class="triad"><div class="thai">ร้านนวดนี้ดีค่ะ</div><div class="roman">ráan nûat níi dii khâ</div><div class="eng">This massage shop is good.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Place" data-colloc='[{"thai": "ไปร้านนวด", "en": "go to a massage shop"}, {"thai": "นวดน้ำมัน", "en": "oil massage"}]' data-eng="massage shop" data-ex-eng="This massage shop is good." data-ex-rom="ráan nûat níi dii khâ" data-ex-thai="ร้านนวดนี้ดีค่ะ" data-grammar='&lt;span&gt;按摩店；也可說 ไปนวด = go get a massage.&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ร้าน" aria-pressed="false" class="classifier-audio-pill" data-thai="ร้าน" title="點擊播放量詞" type="button"&gt;ร้าน&lt;/button&gt;&lt;span class="classifier-roman"&gt;ráan&lt;/span&gt;&lt;/span&gt;' data-rom="ráan nûat" data-thai="ร้านนวด" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห้อง</div><div class="roman">hɔ̂ɔng</div><div class="eng">room</div></div></td><td>Room / place</td><td><span>房間的核心詞，也可接用途組成複合詞。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button">ห้อง</button><span class="classifier-roman">hɔ̂ɔng</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ในห้อง" aria-pressed="false" class="colloc-chip" data-thai="ในห้อง" type="button"><span class="thai">ในห้อง</span><span class="en-colloc">in the room</span></button><button aria-label="播放搭配詞：เข้าห้อง" aria-pressed="false" class="colloc-chip" data-thai="เข้าห้อง" type="button"><span class="thai">เข้าห้อง</span><span class="en-colloc">go into the room</span></button></div></td><td><div class="triad"><div class="thai">ห้องนี้เย็นมากค่ะ</div><div class="roman">hɔ̂ɔng níi yen mâak khâ</div><div class="eng">This room is very cool.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Room / place" data-colloc='[{"thai": "ในห้อง", "en": "in the room"}, {"thai": "เข้าห้อง", "en": "go into the room"}]' data-eng="room" data-ex-eng="This room is very cool." data-ex-rom="hɔ̂ɔng níi yen mâak khâ" data-ex-thai="ห้องนี้เย็นมากค่ะ" data-grammar='&lt;span&gt;房間的核心詞，也可接用途組成複合詞。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button"&gt;ห้อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;hɔ̂ɔng&lt;/span&gt;&lt;/span&gt;' data-rom="hɔ̂ɔng" data-thai="ห้อง" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห้องเรียน</div><div class="roman">hɔ̂ɔng-riian</div><div class="eng">classroom</div></div></td><td>Room / place</td><td><span>ห้อง + เรียน = 教室。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button">ห้อง</button><span class="classifier-roman">hɔ̂ɔng</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ในห้องเรียน" aria-pressed="false" class="colloc-chip" data-thai="ในห้องเรียน" type="button"><span class="thai">ในห้องเรียน</span><span class="en-colloc">in the classroom</span></button><button aria-label="播放搭配詞：เข้าห้องเรียน" aria-pressed="false" class="colloc-chip" data-thai="เข้าห้องเรียน" type="button"><span class="thai">เข้าห้องเรียน</span><span class="en-colloc">enter the classroom</span></button></div></td><td><div class="triad"><div class="thai">ช่วยเปิดไฟในห้องเรียนหน่อยค่ะ</div><div class="roman">chûai bpə̀ət fai nai hɔ̂ɔng-riian nɔ̀i khâ</div><div class="eng">Please turn on the light in the classroom.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Room / place" data-colloc='[{"thai": "ในห้องเรียน", "en": "in the classroom"}, {"thai": "เข้าห้องเรียน", "en": "enter the classroom"}]' data-eng="classroom" data-ex-eng="Please turn on the light in the classroom." data-ex-rom="chûai bpə̀ət fai nai hɔ̂ɔng-riian nɔ̀i khâ" data-ex-thai="ช่วยเปิดไฟในห้องเรียนหน่อยค่ะ" data-grammar='&lt;span&gt;ห้อง + เรียน = 教室。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button"&gt;ห้อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;hɔ̂ɔng&lt;/span&gt;&lt;/span&gt;' data-rom="hɔ̂ɔng-riian" data-thai="ห้องเรียน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห้องนอน</div><div class="roman">hɔ̂ɔng-nɔɔn</div><div class="eng">bedroom</div></div></td><td>Room / place</td><td><span>ห้อง + นอน = 臥室。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button">ห้อง</button><span class="classifier-roman">hɔ̂ɔng</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ในห้องนอน" aria-pressed="false" class="colloc-chip" data-thai="ในห้องนอน" type="button"><span class="thai">ในห้องนอน</span><span class="en-colloc">in the bedroom</span></button><button aria-label="播放搭配詞：ห้องนอนร้อน" aria-pressed="false" class="colloc-chip" data-thai="ห้องนอนร้อน" type="button"><span class="thai">ห้องนอนร้อน</span><span class="en-colloc">the bedroom is hot</span></button></div></td><td><div class="triad"><div class="thai">ห้องนอนร้อนค่ะ</div><div class="roman">hɔ̂ɔng-nɔɔn rɔ́ɔn khâ</div><div class="eng">The bedroom is hot.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Room / place" data-colloc='[{"thai": "ในห้องนอน", "en": "in the bedroom"}, {"thai": "ห้องนอนร้อน", "en": "the bedroom is hot"}]' data-eng="bedroom" data-ex-eng="The bedroom is hot." data-ex-rom="hɔ̂ɔng-nɔɔn rɔ́ɔn khâ" data-ex-thai="ห้องนอนร้อนค่ะ" data-grammar='&lt;span&gt;ห้อง + นอน = 臥室。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button"&gt;ห้อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;hɔ̂ɔng&lt;/span&gt;&lt;/span&gt;' data-rom="hɔ̂ɔng-nɔɔn" data-thai="ห้องนอน" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ห้องน้ำ</div><div class="roman">hɔ̂ɔng-náam</div><div class="eng">bathroom / toilet</div></div></td><td>Room / place</td><td><span>泰文日常最常用的「洗手間／廁所」。</span><span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button">ห้อง</button><span class="classifier-roman">hɔ̂ɔng</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปห้องน้ำ" aria-pressed="false" class="colloc-chip" data-thai="ไปห้องน้ำ" type="button"><span class="thai">ไปห้องน้ำ</span><span class="en-colloc">go to the bathroom</span></button><button aria-label="播放搭配詞：ห้องน้ำอยู่ที่ไหน" aria-pressed="false" class="colloc-chip" data-thai="ห้องน้ำอยู่ที่ไหน" type="button"><span class="thai">ห้องน้ำอยู่ที่ไหน</span><span class="en-colloc">where is the bathroom</span></button></div></td><td><div class="triad"><div class="thai">ห้องน้ำอยู่ที่ไหนคะ</div><div class="roman">hɔ̂ɔng-náam yùu thîi-nǎi khá</div><div class="eng">Where is the bathroom?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Room / place" data-colloc='[{"thai": "ไปห้องน้ำ", "en": "go to the bathroom"}, {"thai": "ห้องน้ำอยู่ที่ไหน", "en": "where is the bathroom"}]' data-eng="bathroom / toilet" data-ex-eng="Where is the bathroom?" data-ex-rom="hɔ̂ɔng-náam yùu thîi-nǎi khá" data-ex-thai="ห้องน้ำอยู่ที่ไหนคะ" data-grammar='&lt;span&gt;泰文日常最常用的「洗手間／廁所」。&lt;/span&gt;&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ห้อง" aria-pressed="false" class="classifier-audio-pill" data-thai="ห้อง" title="點擊播放量詞" type="button"&gt;ห้อง&lt;/button&gt;&lt;span class="classifier-roman"&gt;hɔ̂ɔng&lt;/span&gt;&lt;/span&gt;' data-rom="hɔ̂ɔng-náam" data-thai="ห้องน้ำ" type="button">♡ 收藏</button></td></tr></tbody></table></div></div><h3>Action Verbs</h3>
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
@@ -730,7 +518,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </div>
 </div>
 <table>
-<thead><tr><th>Sentence</th><th>Use</th></tr></thead>
+<thead><tr><th>Sentence</th><th>情境</th></tr></thead>
 <tbody>
 <tr>
 <td><div class="triad"><div class="thai">ช่วยนวดเบา ๆ หน่อยค่ะ</div><div class="roman">chûai nûat bao-bao nɔ̀i khâ</div><div class="eng">Please massage more gently.</div></div></td>
@@ -839,7 +627,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <tr>
 <td>請說慢一點</td>
 <td><div class="triad"><div class="thai">พูดช้า ๆ หน่อยค่ะ</div><div class="roman">phûut cháa-cháa nɔ̀i khâ</div><div class="eng">Please speak slowly.</div></div></td>
-<td><div class="triad"><div class="thai">พูดช้าลงนิดนึงได้ไหมคะ</div><div class="roman">phûut cháa long nít-nʉng dâai mái khá</div><div class="eng">Could you speak a little slower?</div></div></td>
+<td><div class="triad"><div class="thai">พูดช้าลงนิดนึงได้ไหมคะ</div><div class="roman">phûut cháa long nít-nʉ̀ng dâai mái khá</div><div class="eng">Could you speak a little slower?</div></div></td>
 <td><span class="thai">นิดนึง</span> 很口語，語氣柔和。</td>
 </tr>
 <tr>
@@ -1226,7 +1014,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </div>
 </details>
 </section>
-<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">พูดเบา ไม่ได้ยินค่ะ</div><div class="roman">phûut bao, mâi dâai-yin khâ</div><div class="eng">You speak softly; I cannot hear.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">พูดอีกทีสิคะ</div><div class="roman">phûut ìik thii sì khá</div><div class="eng">Please say it one more time.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ช่วยเปิดประตูให้หน่อยได้ไหมคะ</div><div class="roman">chûai bpə̀ət bprà-dtuu hâi nɔ̀i dâai mái khá</div><div class="eng">Could you please help open the door for me?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ทำอาหารเองค่ะ</div><div class="roman">tham aa-hǎan eeng khâ</div><div class="eng">I cook by myself.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ขอโทษค่ะ ฉันไม่ได้ยิน</div><div class="roman">khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin</div><div class="eng">Sorry, I cannot hear you.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ช่วยพูดอีกทีได้ไหมคะ</div><div class="roman">chûai phûut ìik thii dâai mái khá</div><div class="eng">Could you say it again, please?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">ช่วยพูดดังขึ้นนิดหน่อยค่ะ</div><div class="roman">chûai phûut dang khʉ̂n nít-nɔ̀i khâ</div><div class="eng">Please speak a little louder.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">เพลงดังไป ช่วยเบาลงหน่อยค่ะ</div><div class="roman">phleeng dang bpai, chûai bao long nɔ̀i khâ</div><div class="eng">The music is too loud. Please turn it down.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ช่วยเปิดประตูให้หน่อยค่ะ</div><div class="roman">chûai bpə̀ət bprà-dtuu hâi nɔ̀i khâ</div><div class="eng">Please help open the door for me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ช่วยปิดไฟให้หน่อยค่ะ</div><div class="roman">chûai bpìt fai hâi nɔ̀i khâ</div><div class="eng">Please turn off the light for me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>情境</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">พูดเบา ไม่ได้ยินค่ะ</div><div class="roman">phûut bao, mâi dâai-yin khâ</div><div class="eng">You speak softly; I cannot hear.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">พูดอีกทีสิคะ</div><div class="roman">phûut ìik thii sì khá</div><div class="eng">Please say it one more time.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ช่วยเปิดประตูให้หน่อยได้ไหมคะ</div><div class="roman">chûai bpə̀ət bprà-dtuu hâi nɔ̀i dâai mái khá</div><div class="eng">Could you please help open the door for me?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">ทำอาหารเองค่ะ</div><div class="roman">tham aa-hǎan eeng khâ</div><div class="eng">I cook by myself.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ขอโทษค่ะ ฉันไม่ได้ยิน</div><div class="roman">khɔ̌ɔ-thôot khâ, chǎn mâi dâai-yin</div><div class="eng">Sorry, I cannot hear you.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ช่วยพูดอีกทีได้ไหมคะ</div><div class="roman">chûai phûut ìik thii dâai mái khá</div><div class="eng">Could you say it again, please?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">ช่วยพูดดังขึ้นนิดหน่อยค่ะ</div><div class="roman">chûai phûut dang khʉ̂n nít-nɔ̀i khâ</div><div class="eng">Please speak a little louder.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">เพลงดังไป ช่วยเบาลงหน่อยค่ะ</div><div class="roman">phleeng dang bpai, chûai bao long nɔ̀i khâ</div><div class="eng">The music is too loud. Please turn it down.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">ช่วยเปิดประตูให้หน่อยค่ะ</div><div class="roman">chûai bpə̀ət bprà-dtuu hâi nɔ̀i khâ</div><div class="eng">Please help open the door for me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ช่วยปิดไฟให้หน่อยค่ะ</div><div class="roman">chûai bpìt fai hâi nɔ̀i khâ</div><div class="eng">Please turn off the light for me.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
 <script>
   function openTab(event, tabId) {
     const contents = document.querySelectorAll('.tab-content');
@@ -1381,64 +1169,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', render);
 })();
 </script>
-<script id="book1-collocations-audio-script">
-(function () {
-  var activeButton = null;
-  function thaiVoice() {
-    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
-    var voices = window.speechSynthesis.getVoices() || [];
-    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
-           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
-  }
-  function reset(button) {
-    if (!button) return;
-    button.classList.remove('speaking');
-    button.setAttribute('aria-pressed', 'false');
-  }
-  function speak(button) {
-    var text = (button.dataset.thai || '').trim();
-    if (!text) return;
-    if (!('speechSynthesis' in window)) {
-      alert('此瀏覽器不支援語音合成。');
-      return;
-    }
-    var synth = window.speechSynthesis;
-    if (activeButton === button && synth.speaking) {
-      synth.cancel();
-      reset(button);
-      activeButton = null;
-      return;
-    }
-    synth.cancel();
-    reset(activeButton);
-    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
-    var utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'th-TH';
-    utterance.rate = 0.82;
-    var voice = thaiVoice();
-    if (voice) utterance.voice = voice;
-    button.classList.add('speaking');
-    button.setAttribute('aria-pressed', 'true');
-    activeButton = button;
-    utterance.onend = utterance.onerror = function () {
-      reset(button);
-      if (activeButton === button) activeButton = null;
-    };
-    try {
-      synth.resume();
-      synth.speak(utterance);
-    } catch (error) {
-      reset(button);
-      activeButton = null;
-    }
-  }
-  document.addEventListener('click', function (event) {
-    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
-    if (!button) return;
-    event.preventDefault();
-    event.stopPropagation();
-    speak(button);
-  });
+<script id="book1-final-classifier-audio-script">
+(function(){
+  var active=null;
+  function reset(btn){if(!btn)return;btn.classList.remove('speaking');btn.setAttribute('aria-pressed','false');}
+  function thaiVoice(){var v=(window.speechSynthesis&&speechSynthesis.getVoices)?speechSynthesis.getVoices():[];return v.find(function(x){return x.lang==='th-TH';})||v.find(function(x){return /^th(?:-|_)/i.test(x.lang||'');})||null;}
+  function speak(btn){var text=(btn.dataset.thai||'').trim();if(!text||!window.speechSynthesis)return;var s=speechSynthesis;if(active===btn&&s.speaking){s.cancel();reset(btn);active=null;return;}s.cancel();reset(active);document.querySelectorAll('button.colloc-chip.speaking,button.classifier-audio-pill.speaking').forEach(reset);var u=new SpeechSynthesisUtterance(text);u.lang='th-TH';u.rate=.82;var v=thaiVoice();if(v)u.voice=v;btn.classList.add('speaking');btn.setAttribute('aria-pressed','true');active=btn;u.onend=u.onerror=function(){reset(btn);if(active===btn)active=null;};try{s.resume();s.speak(u);}catch(e){reset(btn);active=null;}}
+  function target(e){return e.target&&e.target.closest?e.target.closest('button.colloc-chip[data-thai],button.classifier-audio-pill[data-thai]'):null;}
+  document.addEventListener('click',function(e){var b=target(e);if(!b)return;e.preventDefault();e.stopPropagation();speak(b);});
+  document.addEventListener('keydown',function(e){var b=target(e);if(!b||(e.key!=='Enter'&&e.key!==' '))return;e.preventDefault();e.stopPropagation();speak(b);});
 })();
-</script></body>
+</script>
+</body>
 </html>

@@ -357,253 +357,41 @@
       .bubble { max-width: 100%; }
     }
   </style>
-<style id="book1-content-rebuild-style">
-/* ── Book 1 content rebuild layer ───────────────────── */
-#vocab .vocab-scroll,.top10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
-#vocab .vocab-scroll table{min-width:1040px;table-layout:fixed;margin:0}
-#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:23%}
-#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:12%}
-#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:23%}
-#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:25%}
+<style id="book1-final-standard-style">
+/* Book 1 final standard: one vocabulary system, one classifier component, resilient tablet layout */
+.triad .thai::before,.triad .roman::before,.triad .eng::before{content:none!important}
+#vocab .vocab-scroll{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}
+#vocab .vocab-scroll table{width:100%;min-width:1120px!important;table-layout:fixed;margin:0!important}
+#vocab .vocab-scroll th:nth-child(1),#vocab .vocab-scroll td:nth-child(1){width:20%}
+#vocab .vocab-scroll th:nth-child(2),#vocab .vocab-scroll td:nth-child(2){width:10%}
+#vocab .vocab-scroll th:nth-child(3),#vocab .vocab-scroll td:nth-child(3){width:27%}
+#vocab .vocab-scroll th:nth-child(4),#vocab .vocab-scroll td:nth-child(4){width:19%}
 #vocab .vocab-scroll th:nth-child(5),#vocab .vocab-scroll td:nth-child(5){width:17%}
-.vocab-group-title{margin:30px 0 8px;padding-top:18px;border-top:.5px solid var(--line);font-size:17px}
-.vocab-group-title:first-of-type{border-top:0;padding-top:0}
-.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
-.colloc-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:.5px solid rgba(22,163,74,.25);background:var(--green-soft);border-radius:999px;line-height:1.25}
-.colloc-chip .thai{font-size:14px;font-weight:600}.en-colloc{font-size:11px;color:var(--muted)}
-#supplement .supplement-section{margin:26px 0 0;padding-top:24px;border-top:.5px solid var(--line)}
-#supplement .supplement-section:first-child{margin-top:0;padding-top:0;border-top:0}
-#supplement .supplement-section-title{margin:0 0 14px;padding-bottom:8px;border-bottom:.5px solid var(--line);font-size:18px}
-#supplement .vocab-scroll table{min-width:760px}
-.top10-scroll table{min-width:720px}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}
-.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
-.tip.yellow{border-left-color:#ca8a04;background:rgba(234,179,8,.15)}
+#vocab .vocab-scroll th:nth-child(6),#vocab .vocab-scroll td:nth-child(6){width:7%;min-width:88px}
+#vocab .favorite-col,#vocab .fav-cell{text-align:center!important;vertical-align:middle!important;white-space:nowrap;padding-left:7px!important;padding-right:7px!important}
+#vocab .fav-btn{border:.5px solid rgba(220,38,38,.30);border-radius:999px;padding:5px 8px;background:rgba(220,38,38,.07);color:#b91c1c;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.16s ease}
+#vocab .fav-btn:hover{background:rgba(220,38,38,.14);transform:translateY(-1px)}
+#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16);border-color:rgba(202,138,4,.40);color:#854d0e}
+.colloc-cell{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0;align-items:flex-start}
+button.colloc-chip{display:inline-flex!important;align-items:center!important;gap:6px!important;border:.5px solid rgba(22,163,74,.24)!important;background:rgba(22,163,74,.10)!important;color:var(--text)!important;border-radius:999px!important;padding:5px 9px!important;margin:3px 3px 3px 0!important;cursor:pointer!important;line-height:1.35!important;font:inherit!important;text-align:left!important;touch-action:manipulation}
+button.colloc-chip:hover,button.colloc-chip:focus-visible{background:rgba(22,163,74,.16)!important;border-color:rgba(22,163,74,.32)!important;outline:none!important}
+button.colloc-chip.speaking{background:rgba(22,163,74,.18)!important;border-color:rgba(22,163,74,.42)!important}
+.colloc-chip .thai{display:inline!important;font-size:15px!important;font-weight:600!important;line-height:1.25!important}.colloc-chip .en-colloc{display:inline!important;font-size:12px!important;color:var(--muted)!important;line-height:1.2!important}
+/* official classifier display in Grammar Notes */
+#vocab .classifier-note.classifier-inline{margin-top:7px;padding-top:7px;border-top:.5px dashed var(--line);display:flex!important;flex-wrap:wrap;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+#vocab .classifier-label{font-weight:700;color:var(--muted)}
+button.classifier-audio-pill{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;gap:5px;border:.5px solid rgba(124,58,237,.32);background:var(--purple-soft);color:#5b21b6;border-radius:999px;padding:4px 9px;margin:0;font:inherit;font-size:13px;font-weight:800;line-height:1.25;cursor:pointer;touch-action:manipulation}
+button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible,button.classifier-audio-pill.speaking{background:rgba(124,58,237,.18);border-color:rgba(124,58,237,.48);outline:none}
+.classifier-roman{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;color:var(--muted);font-size:12px}.classifier-sep{color:var(--muted)}
+/* Top 10 always scrolls inside its tab instead of expanding the page */
+#top10{overflow:hidden}.top10-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 24px;border-radius:12px}.top10-scroll table{min-width:720px;margin:0!important}.top10-scroll td:nth-child(1){width:52px}.top10-scroll td:nth-child(3){width:28%}.priority{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-soft);color:#9a3412;border:.5px solid rgba(249,115,22,.35);font-weight:800}
+/* Favorites must never force a page-wide horizontal overflow */
+#favorites{overflow:hidden}.favorites-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;min-width:0}.favorite-card{min-width:0;overflow-wrap:anywhere;word-break:break-word;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card)}.favorite-card *{min-width:0}.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;overflow-wrap:anywhere}.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}.favorite-category{margin-top:8px}.label.practical{background:var(--green-soft);color:#15803d;border:.5px solid rgba(22,163,74,.3)}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);overflow-wrap:anywhere}.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px}.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px}.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);grid-column:1/-1}.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32)}.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none}.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px}.favorite-speak{margin-left:0}
 .muted{color:var(--muted)}
-@media(max-width:720px){#vocab .vocab-scroll table{min-width:980px}.tab-content{padding:16px}}
-</style><style id="book1-book2-vocab-pattern">
-/* ── Book 2 reference pattern: clean triads, click-to-hear collocations, 6-column vocabulary ── */
-.triad .thai::before,
-.triad .roman::before,
-.triad .eng::before { content:none !important; }
-
-#vocab .vocab-scroll{
-  width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;
-  margin:14px 0 24px; border-radius:12px;
-}
-#vocab .vocab-scroll table{
-  width:100%; min-width:1120px !important; table-layout:fixed; margin:0 !important;
-}
-#vocab .vocab-scroll th:nth-child(1), #vocab .vocab-scroll td:nth-child(1){width:20%;}
-#vocab .vocab-scroll th:nth-child(2), #vocab .vocab-scroll td:nth-child(2){width:9%;}
-#vocab .vocab-scroll th:nth-child(3), #vocab .vocab-scroll td:nth-child(3){width:17%;}
-#vocab .vocab-scroll th:nth-child(4), #vocab .vocab-scroll td:nth-child(4){width:28%;}
-#vocab .vocab-scroll th:nth-child(5), #vocab .vocab-scroll td:nth-child(5){width:18%;}
-#vocab .vocab-scroll th:nth-child(6), #vocab .vocab-scroll td:nth-child(6){width:8%; min-width:90px;}
-
-#vocab .favorite-col, #vocab .fav-cell{
-  text-align:center !important; vertical-align:middle !important; white-space:nowrap;
-  padding-left:7px !important; padding-right:7px !important;
-}
-#vocab .fav-btn{
-  border:.5px solid rgba(220,38,38,.30); border-radius:999px; padding:5px 8px;
-  background:rgba(220,38,38,.07); color:#b91c1c; font:inherit; font-size:11.5px;
-  font-weight:700; cursor:pointer; white-space:nowrap; transition:.16s ease;
-}
-#vocab .fav-btn:hover{background:rgba(220,38,38,.14); transform:translateY(-1px);}
-#vocab .fav-btn.is-favorite{background:rgba(234,179,8,.16); border-color:rgba(202,138,4,.40); color:#854d0e;}
-
-.classifier-note{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  font-size:12px; color:var(--muted);
-}
-.colloc-cell{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; align-items:flex-start;}
-.colloc-chip{
-  display:inline-flex !important; align-items:center !important; justify-content:center !important;
-  gap:6px !important; border:.5px solid rgba(22,163,74,.24) !important;
-  background:rgba(22,163,74,.10) !important; color:var(--text) !important;
-  border-radius:999px !important; padding:5px 9px !important; margin:3px 3px 3px 0 !important;
-  cursor:pointer !important; line-height:1.35 !important; font:inherit !important; text-align:left !important;
-  box-shadow:none !important; transform:none !important; animation:none !important;
-}
-.colloc-chip:hover,.colloc-chip:focus-visible{
-  background:rgba(22,163,74,.16) !important; border-color:rgba(22,163,74,.32) !important;
-  transform:none !important; animation:none !important; outline:none !important;
-}
-.colloc-chip.speaking{background:rgba(22,163,74,.18) !important; border-color:rgba(22,163,74,.42) !important;}
-.colloc-chip .thai{display:inline !important; font-size:15px !important; font-weight:600 !important; color:var(--text) !important; line-height:1.25 !important;}
-.colloc-chip .en-colloc{display:inline !important; font-size:12px !important; color:var(--muted) !important; line-height:1.2 !important;}
-
-#favorites .favorites-intro{color:var(--muted);font-size:13px;margin:0 0 14px;}
-.favorites-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.favorite-card{position:relative;border:.5px solid var(--line);border-radius:16px;padding:15px;background:var(--card);}
-.favorite-card .favorite-thai{font-size:20px;font-weight:700;display:flex;align-items:center;gap:7px;margin-bottom:2px;}
-.favorite-card .roman{display:block;margin-bottom:2px}.favorite-card .eng{display:block}
-.favorite-category{margin-top:8px}.favorite-example{margin-top:10px;padding:10px;border:.5px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.42);}
-.favorite-example-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.favorite-example .thai{display:flex;align-items:center;gap:6px}.favorite-example .roman,.favorite-example .eng{margin-top:2px;}
-.remove-fav{margin-top:12px;border:0;background:transparent;color:#b91c1c;padding:5px 0;cursor:pointer;font:inherit;font-size:12px;}
-.empty-state{border:.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--muted);text-align:center;background:rgba(255,255,255,.35);}
-.fav-expand{margin-top:12px;border:.5px solid var(--line);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.32);}
-.fav-expand>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12px;font-weight:700;color:var(--muted);user-select:none;}
-.fav-expand>summary::-webkit-details-marker{display:none}.fav-expand>summary::before{content:"▸ "}.fav-expand[open]>summary::before{content:"▾ "}
-.fav-expand-body{padding:2px 12px 12px}.fav-expand-section{margin-top:10px}.fav-expand-section:first-child{margin-top:0}
-.fav-expand-title{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
-.fav-expand-usage{font-size:13px;line-height:1.6}.fav-expand-colloc{display:flex;flex-wrap:wrap;gap:6px;}
-.favorite-speak{margin-left:0;}
-@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:720px){
-  #vocab .vocab-scroll table{min-width:1120px !important;}
-  #vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px;}
-  .favorites-list{grid-template-columns:1fr;}
-}
-</style><style id="book1-semantic-refinement-style">
-/* ── Semantic refinement: real collocation buttons ── */
-button.colloc-chip{
-  -webkit-appearance:none !important;
-  appearance:none !important;
-  font:inherit !important;
-  text-align:left !important;
-  touch-action:manipulation;
-  user-select:none;
-}
-button.colloc-chip:focus-visible{
-  outline:2px solid rgba(22,163,74,.55) !important;
-  outline-offset:2px;
-}
-</style><style id="book1-classifier-audio-refine-style">
-/* ── Classifier refinement: keep only useful, speakable classifier cues ── */
-#vocab .classifier-note.classifier-short{
-  margin-top:7px; padding-top:7px; border-top:.5px dashed var(--line);
-  display:flex; flex-wrap:wrap; align-items:center; gap:6px; color:var(--muted); font-size:12px;
-}
-#vocab .classifier-label{font-weight:700; color:var(--muted);}
-button.classifier-audio-pill{
-  appearance:none; -webkit-appearance:none; display:inline-flex; align-items:center; gap:5px;
-  border:.5px solid rgba(124,58,237,.32); background:var(--purple-soft); color:#5b21b6;
-  border-radius:999px; padding:4px 9px; margin:0; font:inherit; font-size:13px; font-weight:800;
-  line-height:1.25; cursor:pointer; transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-button.classifier-audio-pill:hover,button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.48); outline:none; transform:translateY(-1px);
-}
-button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-color:rgba(124,58,237,.56);}
-#classifiers .classifier-chip{display:none !important;}
+@media(max-width:1000px){.favorites-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){#vocab .vocab-scroll table{min-width:1120px!important}#vocab .vocab-scroll th,#vocab .vocab-scroll td{padding:8px}.favorites-list{grid-template-columns:minmax(0,1fr)}.top10-scroll table{min-width:700px}}
 </style>
-<style id="book1-vocab-classifier-detail-style">
-/* ── Vocabulary classifier detail｜Book 2-style compact triad cue ── */
-#vocab .classifier-note.classifier-detail{
-  margin-top:7px;
-  padding-top:7px;
-  border-top:.5px dashed var(--line);
-  display:grid;
-  gap:3px;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.35;
-}
-#vocab .classifier-label{
-  color:var(--muted);
-  font-weight:700;
-}
-#vocab .classifier-entries{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-#vocab .classifier-entry{
-  min-width:0;
-  display:grid;
-  gap:1px;
-}
-#vocab button.classifier-audio-pill{
-  appearance:none;
-  -webkit-appearance:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:5px;
-  width:max-content;
-  max-width:100%;
-  border:.5px solid rgba(124,58,237,.34);
-  background:var(--purple-soft);
-  color:#5b21b6;
-  border-radius:999px;
-  padding:4px 9px;
-  margin:0;
-  font:inherit;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.2;
-  cursor:pointer;
-  touch-action:manipulation;
-  transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-#vocab button.classifier-audio-pill:hover,
-#vocab button.classifier-audio-pill:focus-visible{
-  background:rgba(124,58,237,.18);
-  border-color:rgba(124,58,237,.52);
-  outline:none;
-  transform:translateY(-1px);
-}
-#vocab button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.25);
-  border-color:rgba(124,58,237,.60);
-}
-#vocab .classifier-audio-icon{font-size:11px; line-height:1;}
-#vocab .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:11.5px;
-}
-#vocab .classifier-eng{font-size:11.5px;color:var(--muted);}
-/* Classifier lessons keep the concept inside their own table, not duplicated as purple pills in Vocabulary. */
-#classifiers .classifier-chip{display:none !important;}
-</style>
-<style id="book1-vocab-classifier-inline-style">
-/* Vocabulary classifier format｜量詞：ใบ bai */
-#vocab .classifier-note.classifier-inline{
-  display:inline-flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:4px;
-  margin:7px 0 0;
-  padding:0;
-  border:0;
-  background:transparent;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.45;
-}
-#vocab .classifier-inline .classifier-label{font-weight:700;color:var(--muted);}
-#vocab .classifier-inline button.classifier-audio-pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:1px 6px;
-  margin:0;
-  border:.5px solid rgba(124,58,237,.34);
-  border-radius:999px;
-  background:var(--purple-soft);
-  color:#5b21b6;
-  font:inherit;
-  font-weight:800;
-  line-height:1.35;
-  cursor:pointer;
-}
-#vocab .classifier-inline button.classifier-audio-pill:hover,
-#vocab .classifier-inline button.classifier-audio-pill:focus-visible,
-#vocab .classifier-inline button.classifier-audio-pill.speaking{
-  background:rgba(124,58,237,.20);
-  border-color:rgba(124,58,237,.50);
-  outline:none;
-}
-#vocab .classifier-inline .classifier-roman{
-  color:var(--muted);
-  font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  font-size:12px;
-}
-#vocab .classifier-inline .classifier-sep{color:var(--muted);padding:0 1px;}
-</style></head>
+</head>
 <body>
 <div class="container">
 <section class="hero">
@@ -628,7 +416,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="mini-title">How did you come?</div>
 <div class="triad">
 <div class="thai">คุณมาประเทศไทยยังไงคะ</div>
-<div class="roman">khun maa bbprà-thêet thai yang-ngai khá</div>
+<div class="roman">khun maa bprà-thêet thai yang-ngai khá</div>
 <div class="eng">How did you come to Thailand?</div>
 </div>
 </div>
@@ -636,7 +424,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="mini-title">By plane</div>
 <div class="triad">
 <div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div>
-<div class="roman">maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ</div>
+<div class="roman">maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div>
 <div class="eng">I came to Thailand by plane.</div>
 </div>
 </div>
@@ -672,7 +460,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">เครื่องบิน</div><div class="roman">khrʉ̂ang-bin</div><div class="eng">airplane</div></div></td><td>交通工具</td><td>教材第一個新交通工具，常用於「來泰國」。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button">ลำ</button><span class="classifier-roman">lam</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มาโดยเครื่องบิน" aria-pressed="false" class="colloc-chip" data-thai="มาโดยเครื่องบิน" type="button"><span class="thai">มาโดยเครื่องบิน</span><span class="en-colloc">come by plane</span></button></div></td><td><div class="triad"><div class="thai">ฉันมาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">chǎn maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "มาโดยเครื่องบิน", "en": "come by plane"}]' data-eng="airplane" data-ex-eng="I came to Thailand by plane." data-ex-rom="chǎn maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ" data-ex-thai="ฉันมาประเทศไทยโดยเครื่องบินค่ะ" data-grammar='教材第一個新交通工具，常用於「來泰國」。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button"&gt;ลำ&lt;/button&gt;&lt;span class="classifier-roman"&gt;lam&lt;/span&gt;&lt;/span&gt;' data-rom="khrʉ̂ang-bin" data-thai="เครื่องบิน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เครื่องบิน</div><div class="roman">khrʉ̂ang-bin</div><div class="eng">airplane</div></div></td><td>交通工具</td><td>教材第一個新交通工具，常用於「來泰國」。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button">ลำ</button><span class="classifier-roman">lam</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มาโดยเครื่องบิน" aria-pressed="false" class="colloc-chip" data-thai="มาโดยเครื่องบิน" type="button"><span class="thai">มาโดยเครื่องบิน</span><span class="en-colloc">come by plane</span></button></div></td><td><div class="triad"><div class="thai">ฉันมาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "มาโดยเครื่องบิน", "en": "come by plane"}]' data-eng="airplane" data-ex-eng="I came to Thailand by plane." data-ex-rom="chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ" data-ex-thai="ฉันมาประเทศไทยโดยเครื่องบินค่ะ" data-grammar='教材第一個新交通工具，常用於「來泰國」。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button"&gt;ลำ&lt;/button&gt;&lt;span class="classifier-roman"&gt;lam&lt;/span&gt;&lt;/span&gt;' data-rom="khrʉ̂ang-bin" data-thai="เครื่องบิน" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถทัวร์</div><div class="roman">rót-thua</div><div class="eng">tour bus / coach bus</div></div></td><td>交通工具</td><td>長途巴士，不是一般市區公車。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถทัวร์" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถทัวร์" type="button"><span class="thai">ขึ้นรถทัวร์</span><span class="en-colloc">get on a coach bus</span></button></div></td><td><div class="triad"><div class="thai">ไปต่างจังหวัดโดยรถทัวร์ค่ะ</div><div class="roman">bpai dtàang jang-wàt dooi rót-thua khâ</div><div class="eng">I go to another province by coach bus.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขึ้นรถทัวร์", "en": "get on a coach bus"}]' data-eng="tour bus / coach bus" data-ex-eng="I go to another province by coach bus." data-ex-rom="bpai dtàang jang-wàt dooi rót-thua khâ" data-ex-thai="ไปต่างจังหวัดโดยรถทัวร์ค่ะ" data-grammar='長途巴士，不是一般市區公車。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót-thua" data-thai="รถทัวร์" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถไฟ</div><div class="roman">rót-fai</div><div class="eng">train</div></div></td><td>交通工具</td><td>一般火車。和 BTS/MRT 不同。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ขบวน" aria-pressed="false" class="classifier-audio-pill" data-thai="ขบวน" title="點擊播放量詞" type="button">ขบวน</button><span class="classifier-roman">khà-buan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถไฟ" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถไฟ" type="button"><span class="thai">ขึ้นรถไฟ</span><span class="en-colloc">take a train</span></button></div></td><td><div class="triad"><div class="thai">ไปเชียงใหม่โดยรถไฟค่ะ</div><div class="roman">bpai Chiang Mai dooi rót-fai khâ</div><div class="eng">I go to Chiang Mai by train.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขึ้นรถไฟ", "en": "take a train"}]' data-eng="train" data-ex-eng="I go to Chiang Mai by train." data-ex-rom="bpai Chiang Mai dooi rót-fai khâ" data-ex-thai="ไปเชียงใหม่โดยรถไฟค่ะ" data-grammar='一般火車。和 BTS/MRT 不同。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ขบวน" aria-pressed="false" class="classifier-audio-pill" data-thai="ขบวน" title="點擊播放量詞" type="button"&gt;ขบวน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khà-buan&lt;/span&gt;&lt;/span&gt;' data-rom="rót-fai" data-thai="รถไฟ" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถไฟฟ้า</div><div class="roman">rót-fai-fáa</div><div class="eng">electric train / skytrain</div></div></td><td>交通工具</td><td>曼谷常用來指 BTS，也可泛指電車。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ขบวน" aria-pressed="false" class="classifier-audio-pill" data-thai="ขบวน" title="點擊播放量詞" type="button">ขบวน</button><span class="classifier-roman">khà-buan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถไฟฟ้า" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถไฟฟ้า" type="button"><span class="thai">ขึ้นรถไฟฟ้า</span><span class="en-colloc">take the skytrain</span></button></div></td><td><div class="triad"><div class="thai">ไปห้างโดยรถไฟฟ้าค่ะ</div><div class="roman">bpai hâang dooi rót-fai-fáa khâ</div><div class="eng">I go to the mall by skytrain.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขึ้นรถไฟฟ้า", "en": "take the skytrain"}]' data-eng="electric train / skytrain" data-ex-eng="I go to the mall by skytrain." data-ex-rom="bpai hâang dooi rót-fai-fáa khâ" data-ex-thai="ไปห้างโดยรถไฟฟ้าค่ะ" data-grammar='曼谷常用來指 BTS，也可泛指電車。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ขบวน" aria-pressed="false" class="classifier-audio-pill" data-thai="ขบวน" title="點擊播放量詞" type="button"&gt;ขบวน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khà-buan&lt;/span&gt;&lt;/span&gt;' data-rom="rót-fai-fáa" data-thai="รถไฟฟ้า" type="button">♡ 收藏</button></td></tr>
@@ -680,7 +468,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <tr><td><div class="triad"><div class="thai">รถเมล์</div><div class="roman">rót mee</div><div class="eng">bus</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學，Day 9 用於「上車/下車」。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถเมล์" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถเมล์" type="button"><span class="thai">ขึ้นรถเมล์</span><span class="en-colloc">get on a bus</span></button></div></td><td><div class="triad"><div class="thai">ฉันขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ</div><div class="roman">chǎn khʉ̂n rót mee thîi bpâai rót mee khâ</div><div class="eng">I get on the bus at the bus stop.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขึ้นรถเมล์", "en": "get on a bus"}]' data-eng="bus" data-ex-eng="I get on the bus at the bus stop." data-ex-rom="chǎn khʉ̂n rót mee thîi bpâai rót mee khâ" data-ex-thai="ฉันขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學，Day 9 用於「上車/下車」。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót mee" data-thai="รถเมล์" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถแอร์</div><div class="roman">rót ɛɛ</div><div class="eng">air-conditioned bus</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถแอร์" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถแอร์" type="button"><span class="thai">ขึ้นรถแอร์</span><span class="en-colloc">take an air-conditioned bus</span></button></div></td><td><div class="triad"><div class="thai">รถแอร์เร็วไหมคะ</div><div class="roman">rót ɛɛ rew mái khá</div><div class="eng">Is the air-conditioned bus fast?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขึ้นรถแอร์", "en": "take an air-conditioned bus"}]' data-eng="air-conditioned bus" data-ex-eng="Is the air-conditioned bus fast?" data-ex-rom="rót ɛɛ rew mái khá" data-ex-thai="รถแอร์เร็วไหมคะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót ɛɛ" data-thai="รถแอร์" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถแท็กซี่</div><div class="roman">rót thɛ́k-sîi</div><div class="eng">taxi</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นั่งรถแท็กซี่" aria-pressed="false" class="colloc-chip" data-thai="นั่งรถแท็กซี่" type="button"><span class="thai">นั่งรถแท็กซี่</span><span class="en-colloc">take a taxi</span></button></div></td><td><div class="triad"><div class="thai">กลับบ้านโดยรถแท็กซี่ค่ะ</div><div class="roman">glàp bâan dooi rót thɛ́k-sîi khâ</div><div class="eng">I go home by taxi.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "นั่งรถแท็กซี่", "en": "take a taxi"}]' data-eng="taxi" data-ex-eng="I go home by taxi." data-ex-rom="glàp bâan dooi rót thɛ́k-sîi khâ" data-ex-thai="กลับบ้านโดยรถแท็กซี่ค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót thɛ́k-sîi" data-thai="รถแท็กซี่" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">รถตุ๊กตุ๊ก</div><div class="roman">rót túk-túk</div><div class="eng">tuk-tuk</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學。觀光常見，價格要先問。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นั่งรถตุ๊กตุ๊ก" aria-pressed="false" class="colloc-chip" data-thai="นั่งรถตุ๊กตุ๊ก" type="button"><span class="thai">นั่งรถตุ๊กตุ๊ก</span><span class="en-colloc">take a tuk-tuk</span></button></div></td><td><div class="triad"><div class="thai">ใครชอบนั่งรถตุ๊กตุ๊กคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót túk-túk khá</div><div class="eng">Who likes taking tuk-tuks?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "นั่งรถตุ๊กตุ๊ก", "en": "take a tuk-tuk"}]' data-eng="tuk-tuk" data-ex-eng="Who likes taking tuk-tuks?" data-ex-rom="khrai chɔ̂ɔp nâng rót túk-túk khá" data-ex-thai="ใครชอบนั่งรถตุ๊กตุ๊กคะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學。觀光常見，價格要先問。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót túk-túk" data-thai="รถตุ๊กตุ๊ก" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">รถตุ๊กตุ๊ก</div><div class="roman">rót dtúk-dtúk</div><div class="eng">tuk-tuk</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學。觀光常見，價格要先問。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นั่งรถตุ๊กตุ๊ก" aria-pressed="false" class="colloc-chip" data-thai="นั่งรถตุ๊กตุ๊ก" type="button"><span class="thai">นั่งรถตุ๊กตุ๊ก</span><span class="en-colloc">take a tuk-tuk</span></button></div></td><td><div class="triad"><div class="thai">ใครชอบนั่งรถตุ๊กตุ๊กคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót dtúk-dtúk khá</div><div class="eng">Who likes taking tuk-tuks?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "นั่งรถตุ๊กตุ๊ก", "en": "take a tuk-tuk"}]' data-eng="tuk-tuk" data-ex-eng="Who likes taking tuk-tuks?" data-ex-rom="khrai chɔ̂ɔp nâng rót dtúk-dtúk khá" data-ex-thai="ใครชอบนั่งรถตุ๊กตุ๊กคะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學。觀光常見，價格要先問。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót dtúk-dtúk" data-thai="รถตุ๊กตุ๊ก" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">รถ</div><div class="roman">rót</div><div class="eng">car / vehicle</div></div></td><td>交通工具</td><td>泛指車。搭配 <span class="thai">ขับ</span> 表示開車。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขับรถ" aria-pressed="false" class="colloc-chip" data-thai="ขับรถ" type="button"><span class="thai">ขับรถ</span><span class="en-colloc">drive a car</span></button></div></td><td><div class="triad"><div class="thai">ฉันขับรถไปทำงานค่ะ</div><div class="roman">chǎn khàp rót bpai tham-ngaan khâ</div><div class="eng">I drive to work.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขับรถ", "en": "drive a car"}]' data-eng="car / vehicle" data-ex-eng="I drive to work." data-ex-rom="chǎn khàp rót bpai tham-ngaan khâ" data-ex-thai="ฉันขับรถไปทำงานค่ะ" data-grammar='泛指車。搭配 &lt;span class="thai"&gt;ขับ&lt;/span&gt; 表示開車。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="rót" data-thai="รถ" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">เรือ</div><div class="roman">rʉa</div><div class="eng">boat</div></div></td><td>交通工具</td><td>Day 9 新增。曼谷河運、碼頭情境實用。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button">ลำ</button><span class="classifier-roman">lam</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ลงเรือ" aria-pressed="false" class="colloc-chip" data-thai="ลงเรือ" type="button"><span class="thai">ลงเรือ</span><span class="en-colloc">get on / board a boat</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นเรือที่ท่าเรือค่ะ</div><div class="roman">khʉ̂n rʉa thîi thâa-rʉa khâ</div><div class="eng">I board the boat at the pier.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ลงเรือ", "en": "get on / board a boat"}]' data-eng="boat" data-ex-eng="I board the boat at the pier." data-ex-rom="khʉ̂n rʉa thîi thâa-rʉa khâ" data-ex-thai="ขึ้นเรือที่ท่าเรือค่ะ" data-grammar='Day 9 新增。曼谷河運、碼頭情境實用。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：ลำ" aria-pressed="false" class="classifier-audio-pill" data-thai="ลำ" title="點擊播放量詞" type="button"&gt;ลำ&lt;/button&gt;&lt;span class="classifier-roman"&gt;lam&lt;/span&gt;&lt;/span&gt;' data-rom="rʉa" data-thai="เรือ" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">มอเตอร์ไซค์</div><div class="roman">mɔɔ-dtəə-sai</div><div class="eng">motorcycle</div></div></td><td>交通工具</td><td><span class="label review">Review</span> Day 8 已學。Day 9 加入 <span class="thai">ขี่</span>。<span class="classifier-note classifier-inline"><span class="classifier-label">量詞：</span><button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button">คัน</button><span class="classifier-roman">khan</span></span></td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขี่มอเตอร์ไซค์" aria-pressed="false" class="colloc-chip" data-thai="ขี่มอเตอร์ไซค์" type="button"><span class="thai">ขี่มอเตอร์ไซค์</span><span class="en-colloc">ride a motorcycle</span></button></div></td><td><div class="triad"><div class="thai">เขาขี่มอเตอร์ไซค์เร็วค่ะ</div><div class="roman">khǎo khìi mɔɔ-dtəə-sai rew khâ</div><div class="eng">He rides a motorcycle fast.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通工具" data-colloc='[{"thai": "ขี่มอเตอร์ไซค์", "en": "ride a motorcycle"}]' data-eng="motorcycle" data-ex-eng="He rides a motorcycle fast." data-ex-rom="khǎo khìi mɔɔ-dtəə-sai rew khâ" data-ex-thai="เขาขี่มอเตอร์ไซค์เร็วค่ะ" data-grammar='&lt;span class="label review"&gt;Review&lt;/span&gt; Day 8 已學。Day 9 加入 &lt;span class="thai"&gt;ขี่&lt;/span&gt;。&lt;span class="classifier-note classifier-inline"&gt;&lt;span class="classifier-label"&gt;量詞：&lt;/span&gt;&lt;button aria-label="播放量詞：คัน" aria-pressed="false" class="classifier-audio-pill" data-thai="คัน" title="點擊播放量詞" type="button"&gt;คัน&lt;/button&gt;&lt;span class="classifier-roman"&gt;khan&lt;/span&gt;&lt;/span&gt;' data-rom="mɔɔ-dtəə-sai" data-thai="มอเตอร์ไซค์" type="button">♡ 收藏</button></td></tr>
@@ -691,33 +479,33 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">ขึ้น</div><div class="roman">khʉ̂n</div><div class="eng">get on / go up</div></div></td><td>交通動詞</td><td>用於上車、上 BTS、上巴士。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้าที่สถานีอโศกค่ะ</div><div class="roman">khʉ̂n rót-fai-fáa thîi sà-thǎa-nii Asok khâ</div><div class="eng">I get on the skytrain at Asok station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc="[]" data-eng="get on / go up" data-ex-eng="I get on the skytrain at Asok station." data-ex-rom="khʉ̂n rót-fai-fáa thîi sà-thǎa-nii Asok khâ" data-ex-thai="ขึ้นรถไฟฟ้าที่สถานีอโศกค่ะ" data-grammar="用於上車、上 BTS、上巴士。" data-rom="khʉ̂n" data-thai="ขึ้น" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ลง</div><div class="roman">long</div><div class="eng">get off / go down</div></div></td><td>交通動詞</td><td>用於下車、下 BTS、下船。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ลงรถไฟฟ้าที่สถานีสยามค่ะ</div><div class="roman">long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ</div><div class="eng">I get off the skytrain at Siam station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc="[]" data-eng="get off / go down" data-ex-eng="I get off the skytrain at Siam station." data-ex-rom="long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ" data-ex-thai="ลงรถไฟฟ้าที่สถานีสยามค่ะ" data-grammar="用於下車、下 BTS、下船。" data-rom="long" data-thai="ลง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">นั่ง</div><div class="roman">nâng</div><div class="eng">sit / take a vehicle</div></div></td><td>交通動詞</td><td>搭乘交通工具常用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">นั่งแท็กซี่ไปสนามบินค่ะ</div><div class="roman">nâng thɛ́k-sîi bpai sà-nǎam-bin khâ</div><div class="eng">I take a taxi to the airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc="[]" data-eng="sit / take a vehicle" data-ex-eng="I take a taxi to the airport." data-ex-rom="nâng thɛ́k-sîi bpai sà-nǎam-bin khâ" data-ex-thai="นั่งแท็กซี่ไปสนามบินค่ะ" data-grammar="搭乘交通工具常用。" data-rom="nâng" data-thai="นั่ง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ขับ</div><div class="roman">khàp</div><div class="eng">drive</div></div></td><td>交通動詞</td><td>主要用於開車。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขับรถ</div><div class="roman">khàp rót</div><div class="eng">drive a car</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc="[]" data-eng="drive" data-ex-eng="drive a car" data-ex-rom="khàp rót" data-ex-thai="ขับรถ" data-grammar="主要用於開車。" data-rom="khàp" data-thai="ขับ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ขี่</div><div class="roman">khìi</div><div class="eng">ride</div></div></td><td>交通動詞</td><td>用於騎機車、腳踏車，也可指騎乘。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขี่จักรยาน</div><div class="roman">khìi jàk-grà-yaan</div><div class="eng">ride a bicycle</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc="[]" data-eng="ride" data-ex-eng="ride a bicycle" data-ex-rom="khìi jàk-grà-yaan" data-ex-thai="ขี่จักรยาน" data-grammar="用於騎機車、腳踏車，也可指騎乘。" data-rom="khìi" data-thai="ขี่" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">เดิน</div><div class="roman">dəən</div><div class="eng">walk</div></div></td><td>移動動詞</td><td>不搭交通工具，走路。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">เดินไปโรงเรียนค่ะ</div><div class="roman">dəən bpai roong-riian khâ</div><div class="eng">I walk to school.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="移動動詞" data-colloc="[]" data-eng="walk" data-ex-eng="I walk to school." data-ex-rom="dəən bpai roong-riian khâ" data-ex-thai="เดินไปโรงเรียนค่ะ" data-grammar="不搭交通工具，走路。" data-rom="dəən" data-thai="เดิน" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">เร็ว</div><div class="roman">rew</div><div class="eng">fast</div></div></td><td>形容詞</td><td>和 <span class="thai">ช้า</span> 相反。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">รถไฟฟ้าเร็วค่ะ</div><div class="roman">rót-fai-fáa rew khâ</div><div class="eng">The skytrain is fast.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="形容詞" data-colloc="[]" data-eng="fast" data-ex-eng="The skytrain is fast." data-ex-rom="rót-fai-fáa rew khâ" data-ex-thai="รถไฟฟ้าเร็วค่ะ" data-grammar='和 &lt;span class="thai"&gt;ช้า&lt;/span&gt; 相反。' data-rom="rew" data-thai="เร็ว" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ช้า</div><div class="roman">cháa</div><div class="eng">slow</div></div></td><td>形容詞</td><td>和 <span class="thai">เร็ว</span> 相反。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">รถเมล์ช้าค่ะ</div><div class="roman">rót mee cháa khâ</div><div class="eng">The bus is slow.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="形容詞" data-colloc="[]" data-eng="slow" data-ex-eng="The bus is slow." data-ex-rom="rót mee cháa khâ" data-ex-thai="รถเมล์ช้าค่ะ" data-grammar='和 &lt;span class="thai"&gt;เร็ว&lt;/span&gt; 相反。' data-rom="cháa" data-thai="ช้า" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สนามบิน</div><div class="roman">sà-nǎam-bin</div><div class="eng">airport</div></div></td><td>交通地點</td><td>包含 Suvarnabhumi 和 Don Mueang。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขึ้นเครื่องบินที่สนามบินค่ะ</div><div class="roman">khʉ̂n khrʉ̂ang-bin thîi sà-nǎam-bin khâ</div><div class="eng">I board the plane at the airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc="[]" data-eng="airport" data-ex-eng="I board the plane at the airport." data-ex-rom="khʉ̂n khrʉ̂ang-bin thîi sà-nǎam-bin khâ" data-ex-thai="ขึ้นเครื่องบินที่สนามบินค่ะ" data-grammar="包含 Suvarnabhumi 和 Don Mueang。" data-rom="sà-nǎam-bin" data-thai="สนามบิน" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สุวรรณภูมิ</div><div class="roman">sù-wan-ná-phuum</div><div class="eng">Suvarnabhumi Airport</div></div></td><td>機場名稱</td><td>曼谷主要國際機場。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ไปสนามบินสุวรรณภูมิค่ะ</div><div class="roman">bpai sà-nǎam-bin Sù-wan-ná-phuum khâ</div><div class="eng">I’m going to Suvarnabhumi Airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="機場名稱" data-colloc="[]" data-eng="Suvarnabhumi Airport" data-ex-eng="I’m going to Suvarnabhumi Airport." data-ex-rom="bpai sà-nǎam-bin Sù-wan-ná-phuum khâ" data-ex-thai="ไปสนามบินสุวรรณภูมิค่ะ" data-grammar="曼谷主要國際機場。" data-rom="sù-wan-ná-phuum" data-thai="สุวรรณภูมิ" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ดอนเมือง</div><div class="roman">dɔɔn-mʉang</div><div class="eng">Don Mueang Airport</div></div></td><td>機場名稱</td><td>曼谷另一個機場。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ไปสนามบินดอนเมืองค่ะ</div><div class="roman">bpai sà-nǎam-bin Dɔɔn-mʉang khâ</div><div class="eng">I’m going to Don Mueang Airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="機場名稱" data-colloc="[]" data-eng="Don Mueang Airport" data-ex-eng="I’m going to Don Mueang Airport." data-ex-rom="bpai sà-nǎam-bin Dɔɔn-mʉang khâ" data-ex-thai="ไปสนามบินดอนเมืองค่ะ" data-grammar="曼谷另一個機場。" data-rom="dɔɔn-mʉang" data-thai="ดอนเมือง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สถานีขนส่ง</div><div class="roman">sà-thǎa-nii khǒn-sòng</div><div class="eng">bus terminal</div></div></td><td>交通地點</td><td>長途巴士站。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขึ้นรถทัวร์ที่สถานีขนส่งค่ะ</div><div class="roman">khʉ̂n rót-thua thîi sà-thǎa-nii khǒn-sòng khâ</div><div class="eng">I get on the coach bus at the bus terminal.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc="[]" data-eng="bus terminal" data-ex-eng="I get on the coach bus at the bus terminal." data-ex-rom="khʉ̂n rót-thua thîi sà-thǎa-nii khǒn-sòng khâ" data-ex-thai="ขึ้นรถทัวร์ที่สถานีขนส่งค่ะ" data-grammar="長途巴士站。" data-rom="sà-thǎa-nii khǒn-sòng" data-thai="สถานีขนส่ง" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สถานี</div><div class="roman">sà-thǎa-nii</div><div class="eng">station</div></div></td><td>交通地點</td><td>BTS、MRT、火車站都可用。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ลงรถไฟฟ้าที่สถานีสยามค่ะ</div><div class="roman">long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ</div><div class="eng">I get off the skytrain at Siam station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc="[]" data-eng="station" data-ex-eng="I get off the skytrain at Siam station." data-ex-rom="long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ" data-ex-thai="ลงรถไฟฟ้าที่สถานีสยามค่ะ" data-grammar="BTS、MRT、火車站都可用。" data-rom="sà-thǎa-nii" data-thai="สถานี" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ป้ายรถเมล์</div><div class="roman">bpâai rót mee</div><div class="eng">bus stop</div></div></td><td>交通地點</td><td>上公車地點。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ</div><div class="roman">khʉ̂n rót mee thîi bpâai rót mee khâ</div><div class="eng">I get on the bus at the bus stop.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc="[]" data-eng="bus stop" data-ex-eng="I get on the bus at the bus stop." data-ex-rom="khʉ̂n rót mee thîi bpâai rót mee khâ" data-ex-thai="ขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ" data-grammar="上公車地點。" data-rom="bpâai rót mee" data-thai="ป้ายรถเมล์" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ท่าเรือ</div><div class="roman">thâa-rʉa</div><div class="eng">pier</div></div></td><td>交通地點</td><td>搭船地點。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ขึ้นเรือที่ท่าเรือค่ะ</div><div class="roman">khʉ̂n rʉa thîi thâa-rʉa khâ</div><div class="eng">I board the boat at the pier.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc="[]" data-eng="pier" data-ex-eng="I board the boat at the pier." data-ex-rom="khʉ̂n rʉa thîi thâa-rʉa khâ" data-ex-thai="ขึ้นเรือที่ท่าเรือค่ะ" data-grammar="搭船地點。" data-rom="thâa-rʉa" data-thai="ท่าเรือ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ขึ้น</div><div class="roman">khʉ̂n</div><div class="eng">get on / go up</div></div></td><td>交通動詞</td><td>用於上車、上 BTS、上巴士。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขึ้นรถไฟฟ้า" aria-pressed="false" class="colloc-chip" data-thai="ขึ้นรถไฟฟ้า" type="button"><span class="thai">ขึ้นรถไฟฟ้า</span><span class="en-colloc">get on the skytrain</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้าที่สถานีอโศกค่ะ</div><div class="roman">khʉ̂n rót-fai-fáa thîi sà-thǎa-nii Asok khâ</div><div class="eng">I get on the skytrain at Asok station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc='[{"thai": "ขึ้นรถไฟฟ้า", "en": "get on the skytrain"}]' data-eng="get on / go up" data-ex-eng="I get on the skytrain at Asok station." data-ex-rom="khʉ̂n rót-fai-fáa thîi sà-thǎa-nii Asok khâ" data-ex-thai="ขึ้นรถไฟฟ้าที่สถานีอโศกค่ะ" data-grammar="用於上車、上 BTS、上巴士。" data-rom="khʉ̂n" data-thai="ขึ้น" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ลง</div><div class="roman">long</div><div class="eng">get off / go down</div></div></td><td>交通動詞</td><td>用於下車、下 BTS、下船。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ลงรถเมล์" aria-pressed="false" class="colloc-chip" data-thai="ลงรถเมล์" type="button"><span class="thai">ลงรถเมล์</span><span class="en-colloc">get off the bus</span></button></div></td><td><div class="triad"><div class="thai">ลงรถไฟฟ้าที่สถานีสยามค่ะ</div><div class="roman">long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ</div><div class="eng">I get off the skytrain at Siam station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc='[{"thai": "ลงรถเมล์", "en": "get off the bus"}]' data-eng="get off / go down" data-ex-eng="I get off the skytrain at Siam station." data-ex-rom="long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ" data-ex-thai="ลงรถไฟฟ้าที่สถานีสยามค่ะ" data-grammar="用於下車、下 BTS、下船。" data-rom="long" data-thai="ลง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">นั่ง</div><div class="roman">nâng</div><div class="eng">sit / take a vehicle</div></div></td><td>交通動詞</td><td>搭乘交通工具常用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：นั่งแท็กซี่" aria-pressed="false" class="colloc-chip" data-thai="นั่งแท็กซี่" type="button"><span class="thai">นั่งแท็กซี่</span><span class="en-colloc">take a taxi</span></button></div></td><td><div class="triad"><div class="thai">นั่งแท็กซี่ไปสนามบินค่ะ</div><div class="roman">nâng thɛ́k-sîi bpai sà-nǎam-bin khâ</div><div class="eng">I take a taxi to the airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc='[{"thai": "นั่งแท็กซี่", "en": "take a taxi"}]' data-eng="sit / take a vehicle" data-ex-eng="I take a taxi to the airport." data-ex-rom="nâng thɛ́k-sîi bpai sà-nǎam-bin khâ" data-ex-thai="นั่งแท็กซี่ไปสนามบินค่ะ" data-grammar="搭乘交通工具常用。" data-rom="nâng" data-thai="นั่ง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ขับ</div><div class="roman">khàp</div><div class="eng">drive</div></div></td><td>交通動詞</td><td>主要用於開車。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขับรถ" aria-pressed="false" class="colloc-chip" data-thai="ขับรถ" type="button"><span class="thai">ขับรถ</span><span class="en-colloc">drive a car</span></button></div></td><td><div class="triad"><div class="thai">ขับรถ</div><div class="roman">khàp rót</div><div class="eng">drive a car</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc='[{"thai": "ขับรถ", "en": "drive a car"}]' data-eng="drive" data-ex-eng="drive a car" data-ex-rom="khàp rót" data-ex-thai="ขับรถ" data-grammar="主要用於開車。" data-rom="khàp" data-thai="ขับ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ขี่</div><div class="roman">khìi</div><div class="eng">ride</div></div></td><td>交通動詞</td><td>用於騎機車、腳踏車，也可指騎乘。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขี่มอเตอร์ไซค์" aria-pressed="false" class="colloc-chip" data-thai="ขี่มอเตอร์ไซค์" type="button"><span class="thai">ขี่มอเตอร์ไซค์</span><span class="en-colloc">ride a motorcycle</span></button></div></td><td><div class="triad"><div class="thai">ขี่จักรยาน</div><div class="roman">khìi jàk-grà-yaan</div><div class="eng">ride a bicycle</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通動詞" data-colloc='[{"thai": "ขี่มอเตอร์ไซค์", "en": "ride a motorcycle"}]' data-eng="ride" data-ex-eng="ride a bicycle" data-ex-rom="khìi jàk-grà-yaan" data-ex-thai="ขี่จักรยาน" data-grammar="用於騎機車、腳踏車，也可指騎乘。" data-rom="khìi" data-thai="ขี่" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เดิน</div><div class="roman">dəən</div><div class="eng">walk</div></div></td><td>移動動詞</td><td>不搭交通工具，走路。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เดินไป" aria-pressed="false" class="colloc-chip" data-thai="เดินไป" type="button"><span class="thai">เดินไป</span><span class="en-colloc">walk there</span></button></div></td><td><div class="triad"><div class="thai">เดินไปโรงเรียนค่ะ</div><div class="roman">dəən bpai roong-riian khâ</div><div class="eng">I walk to school.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="移動動詞" data-colloc='[{"thai": "เดินไป", "en": "walk there"}]' data-eng="walk" data-ex-eng="I walk to school." data-ex-rom="dəən bpai roong-riian khâ" data-ex-thai="เดินไปโรงเรียนค่ะ" data-grammar="不搭交通工具，走路。" data-rom="dəən" data-thai="เดิน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เร็ว</div><div class="roman">rew</div><div class="eng">fast</div></div></td><td>形容詞</td><td>和 <span class="thai">ช้า</span> 相反。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：เร็วมาก" aria-pressed="false" class="colloc-chip" data-thai="เร็วมาก" type="button"><span class="thai">เร็วมาก</span><span class="en-colloc">very fast</span></button></div></td><td><div class="triad"><div class="thai">รถไฟฟ้าเร็วค่ะ</div><div class="roman">rót-fai-fáa rew khâ</div><div class="eng">The skytrain is fast.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="形容詞" data-colloc='[{"thai": "เร็วมาก", "en": "very fast"}]' data-eng="fast" data-ex-eng="The skytrain is fast." data-ex-rom="rót-fai-fáa rew khâ" data-ex-thai="รถไฟฟ้าเร็วค่ะ" data-grammar='和 &lt;span class="thai"&gt;ช้า&lt;/span&gt; 相反。' data-rom="rew" data-thai="เร็ว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ช้า</div><div class="roman">cháa</div><div class="eng">slow</div></div></td><td>形容詞</td><td>和 <span class="thai">เร็ว</span> 相反。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ช้า ๆ" aria-pressed="false" class="colloc-chip" data-thai="ช้า ๆ" type="button"><span class="thai">ช้า ๆ</span><span class="en-colloc">slowly</span></button></div></td><td><div class="triad"><div class="thai">รถเมล์ช้าค่ะ</div><div class="roman">rót mee cháa khâ</div><div class="eng">The bus is slow.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="形容詞" data-colloc='[{"thai": "ช้า ๆ", "en": "slowly"}]' data-eng="slow" data-ex-eng="The bus is slow." data-ex-rom="rót mee cháa khâ" data-ex-thai="รถเมล์ช้าค่ะ" data-grammar='和 &lt;span class="thai"&gt;เร็ว&lt;/span&gt; 相反。' data-rom="cháa" data-thai="ช้า" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สนามบิน</div><div class="roman">sà-nǎam-bin</div><div class="eng">airport</div></div></td><td>交通地點</td><td>包含 Suvarnabhumi 和 Don Mueang。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปสนามบิน" aria-pressed="false" class="colloc-chip" data-thai="ไปสนามบิน" type="button"><span class="thai">ไปสนามบิน</span><span class="en-colloc">go to the airport</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นเครื่องบินที่สนามบินค่ะ</div><div class="roman">khʉ̂n khrʉ̂ang-bin thîi sà-nǎam-bin khâ</div><div class="eng">I board the plane at the airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc='[{"thai": "ไปสนามบิน", "en": "go to the airport"}]' data-eng="airport" data-ex-eng="I board the plane at the airport." data-ex-rom="khʉ̂n khrʉ̂ang-bin thîi sà-nǎam-bin khâ" data-ex-thai="ขึ้นเครื่องบินที่สนามบินค่ะ" data-grammar="包含 Suvarnabhumi 和 Don Mueang。" data-rom="sà-nǎam-bin" data-thai="สนามบิน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สุวรรณภูมิ</div><div class="roman">sù-wan-ná-phuum</div><div class="eng">Suvarnabhumi Airport</div></div></td><td>機場名稱</td><td>曼谷主要國際機場。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สนามบินสุวรรณภูมิ" aria-pressed="false" class="colloc-chip" data-thai="สนามบินสุวรรณภูมิ" type="button"><span class="thai">สนามบินสุวรรณภูมิ</span><span class="en-colloc">Suvarnabhumi Airport</span></button></div></td><td><div class="triad"><div class="thai">ไปสนามบินสุวรรณภูมิค่ะ</div><div class="roman">bpai sà-nǎam-bin Sù-wan-ná-phuum khâ</div><div class="eng">I’m going to Suvarnabhumi Airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="機場名稱" data-colloc='[{"thai": "สนามบินสุวรรณภูมิ", "en": "Suvarnabhumi Airport"}]' data-eng="Suvarnabhumi Airport" data-ex-eng="I’m going to Suvarnabhumi Airport." data-ex-rom="bpai sà-nǎam-bin Sù-wan-ná-phuum khâ" data-ex-thai="ไปสนามบินสุวรรณภูมิค่ะ" data-grammar="曼谷主要國際機場。" data-rom="sù-wan-ná-phuum" data-thai="สุวรรณภูมิ" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ดอนเมือง</div><div class="roman">dɔɔn-mʉang</div><div class="eng">Don Mueang Airport</div></div></td><td>機場名稱</td><td>曼谷另一個機場。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สนามบินดอนเมือง" aria-pressed="false" class="colloc-chip" data-thai="สนามบินดอนเมือง" type="button"><span class="thai">สนามบินดอนเมือง</span><span class="en-colloc">Don Mueang Airport</span></button></div></td><td><div class="triad"><div class="thai">ไปสนามบินดอนเมืองค่ะ</div><div class="roman">bpai sà-nǎam-bin Dɔɔn-mʉang khâ</div><div class="eng">I’m going to Don Mueang Airport.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="機場名稱" data-colloc='[{"thai": "สนามบินดอนเมือง", "en": "Don Mueang Airport"}]' data-eng="Don Mueang Airport" data-ex-eng="I’m going to Don Mueang Airport." data-ex-rom="bpai sà-nǎam-bin Dɔɔn-mʉang khâ" data-ex-thai="ไปสนามบินดอนเมืองค่ะ" data-grammar="曼谷另一個機場。" data-rom="dɔɔn-mʉang" data-thai="ดอนเมือง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สถานีขนส่ง</div><div class="roman">sà-thǎa-nii khǒn-sòng</div><div class="eng">bus terminal</div></div></td><td>交通地點</td><td>長途巴士站。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปสถานีขนส่ง" aria-pressed="false" class="colloc-chip" data-thai="ไปสถานีขนส่ง" type="button"><span class="thai">ไปสถานีขนส่ง</span><span class="en-colloc">go to the bus terminal</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นรถทัวร์ที่สถานีขนส่งค่ะ</div><div class="roman">khʉ̂n rót-thua thîi sà-thǎa-nii khǒn-sòng khâ</div><div class="eng">I get on the coach bus at the bus terminal.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc='[{"thai": "ไปสถานีขนส่ง", "en": "go to the bus terminal"}]' data-eng="bus terminal" data-ex-eng="I get on the coach bus at the bus terminal." data-ex-rom="khʉ̂n rót-thua thîi sà-thǎa-nii khǒn-sòng khâ" data-ex-thai="ขึ้นรถทัวร์ที่สถานีขนส่งค่ะ" data-grammar="長途巴士站。" data-rom="sà-thǎa-nii khǒn-sòng" data-thai="สถานีขนส่ง" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สถานี</div><div class="roman">sà-thǎa-nii</div><div class="eng">station</div></div></td><td>交通地點</td><td>BTS、MRT、火車站都可用。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：สถานีรถไฟฟ้า" aria-pressed="false" class="colloc-chip" data-thai="สถานีรถไฟฟ้า" type="button"><span class="thai">สถานีรถไฟฟ้า</span><span class="en-colloc">skytrain station</span></button></div></td><td><div class="triad"><div class="thai">ลงรถไฟฟ้าที่สถานีสยามค่ะ</div><div class="roman">long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ</div><div class="eng">I get off the skytrain at Siam station.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc='[{"thai": "สถานีรถไฟฟ้า", "en": "skytrain station"}]' data-eng="station" data-ex-eng="I get off the skytrain at Siam station." data-ex-rom="long rót-fai-fáa thîi sà-thǎa-nii Sà-yǎam khâ" data-ex-thai="ลงรถไฟฟ้าที่สถานีสยามค่ะ" data-grammar="BTS、MRT、火車站都可用。" data-rom="sà-thǎa-nii" data-thai="สถานี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ป้ายรถเมล์</div><div class="roman">bpâai rót mee</div><div class="eng">bus stop</div></div></td><td>交通地點</td><td>上公車地點。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：รอที่ป้ายรถเมล์" aria-pressed="false" class="colloc-chip" data-thai="รอที่ป้ายรถเมล์" type="button"><span class="thai">รอที่ป้ายรถเมล์</span><span class="en-colloc">wait at the bus stop</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ</div><div class="roman">khʉ̂n rót mee thîi bpâai rót mee khâ</div><div class="eng">I get on the bus at the bus stop.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc='[{"thai": "รอที่ป้ายรถเมล์", "en": "wait at the bus stop"}]' data-eng="bus stop" data-ex-eng="I get on the bus at the bus stop." data-ex-rom="khʉ̂n rót mee thîi bpâai rót mee khâ" data-ex-thai="ขึ้นรถเมล์ที่ป้ายรถเมล์ค่ะ" data-grammar="上公車地點。" data-rom="bpâai rót mee" data-thai="ป้ายรถเมล์" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ท่าเรือ</div><div class="roman">thâa-rʉa</div><div class="eng">pier</div></div></td><td>交通地點</td><td>搭船地點。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปท่าเรือ" aria-pressed="false" class="colloc-chip" data-thai="ไปท่าเรือ" type="button"><span class="thai">ไปท่าเรือ</span><span class="en-colloc">go to the pier</span></button></div></td><td><div class="triad"><div class="thai">ขึ้นเรือที่ท่าเรือค่ะ</div><div class="roman">khʉ̂n rʉa thîi thâa-rʉa khâ</div><div class="eng">I board the boat at the pier.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="交通地點" data-colloc='[{"thai": "ไปท่าเรือ", "en": "go to the pier"}]' data-eng="pier" data-ex-eng="I board the boat at the pier." data-ex-rom="khʉ̂n rʉa thîi thâa-rʉa khâ" data-ex-thai="ขึ้นเรือที่ท่าเรือค่ะ" data-grammar="搭船地點。" data-rom="thâa-rʉa" data-thai="ท่าเรือ" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">โดย</div><div class="roman">dooi</div><div class="eng">by / via</div></div></td><td>Preposition</td><td>交通方式前可用，較完整、偏中性。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：โดยรถไฟฟ้า" aria-pressed="false" class="colloc-chip" data-thai="โดยรถไฟฟ้า" type="button"><span class="thai">โดยรถไฟฟ้า</span><span class="en-colloc">by skytrain</span></button><button aria-label="播放搭配詞：โดยเครื่องบิน" aria-pressed="false" class="colloc-chip" data-thai="โดยเครื่องบิน" type="button"><span class="thai">โดยเครื่องบิน</span><span class="en-colloc">by plane</span></button></div></td><td><div class="triad"><div class="thai">ฉันมาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Preposition" data-colloc='[{"thai": "โดยรถไฟฟ้า", "en": "by skytrain"}, {"thai": "โดยเครื่องบิน", "en": "by plane"}]' data-eng="by / via" data-ex-eng="I came to Thailand by plane." data-ex-rom="chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ" data-ex-thai="ฉันมาประเทศไทยโดยเครื่องบินค่ะ" data-grammar="交通方式前可用，較完整、偏中性。" data-rom="dooi" data-thai="โดย" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">ขับรถ</div><div class="roman">khàp rót</div><div class="eng">drive</div></div></td><td>Verb phrase</td><td>自己開車用；搭乘他人的車不能說自己開。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ขับรถไปทำงาน" aria-pressed="false" class="colloc-chip" data-thai="ขับรถไปทำงาน" type="button"><span class="thai">ขับรถไปทำงาน</span><span class="en-colloc">drive to work</span></button><button aria-label="播放搭配詞：ขับรถเอง" aria-pressed="false" class="colloc-chip" data-thai="ขับรถเอง" type="button"><span class="thai">ขับรถเอง</span><span class="en-colloc">drive oneself</span></button></div></td><td><div class="triad"><div class="thai">วันนี้พ่อขับรถมาค่ะ</div><div class="roman">wan-níi phɔ̂ɔ khàp rót maa khâ</div><div class="eng">Dad drove here today.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "ขับรถไปทำงาน", "en": "drive to work"}, {"thai": "ขับรถเอง", "en": "drive oneself"}]' data-eng="drive" data-ex-eng="Dad drove here today." data-ex-rom="wan-níi phɔ̂ɔ khàp rót maa khâ" data-ex-thai="วันนี้พ่อขับรถมาค่ะ" data-grammar="自己開車用；搭乘他人的車不能說自己開。" data-rom="khàp rót" data-thai="ขับรถ" type="button">♡ 收藏</button></td></tr><tr><td><div class="triad"><div class="thai">กลับบ้าน</div><div class="roman">glàp bâan</div><div class="eng">go home</div></div></td><td>Verb phrase</td><td>日常高頻固定短語。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：กลับบ้านด้วยรถไฟฟ้า" aria-pressed="false" class="colloc-chip" data-thai="กลับบ้านด้วยรถไฟฟ้า" type="button"><span class="thai">กลับบ้านด้วยรถไฟฟ้า</span><span class="en-colloc">go home by BTS</span></button><button aria-label="播放搭配詞：กลับบ้านก่อน" aria-pressed="false" class="colloc-chip" data-thai="กลับบ้านก่อน" type="button"><span class="thai">กลับบ้านก่อน</span><span class="en-colloc">go home first</span></button></div></td><td><div class="triad"><div class="thai">ฉันกลับบ้านด้วยรถไฟฟ้าค่ะ</div><div class="roman">chǎn glàp bâan dûai rót-fai-fáa khâ</div><div class="eng">I go home by BTS.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "กลับบ้านด้วยรถไฟฟ้า", "en": "go home by BTS"}, {"thai": "กลับบ้านก่อน", "en": "go home first"}]' data-eng="go home" data-ex-eng="I go home by BTS." data-ex-rom="chǎn glàp bâan dûai rót-fai-fáa khâ" data-ex-thai="ฉันกลับบ้านด้วยรถไฟฟ้าค่ะ" data-grammar="日常高頻固定短語。" data-rom="glàp bâan" data-thai="กลับบ้าน" type="button">♡ 收藏</button></td></tr></tbody>
 </table></div>
 <h3>People &amp; Relationship Words</h3>
 <div class="vocab-scroll"><table>
 <thead><tr><th>Thai / Romanization / English</th><th>Category</th><th>Grammar Notes</th><th>Collocations</th><th>Example Sentence</th><th class="favorite-col">收藏</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">ใคร</div><div class="roman">khrai</div><div class="eng">who</div></div></td><td>Question word</td><td>可問「誰喜歡……」、「跟誰來……」。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">ใครชอบนั่งรถไฟฟ้าคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót-fai-fáa khá</div><div class="eng">Who likes taking the skytrain?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Question word" data-colloc="[]" data-eng="who" data-ex-eng="Who likes taking the skytrain?" data-ex-rom="khrai chɔ̂ɔp nâng rót-fai-fáa khá" data-ex-thai="ใครชอบนั่งรถไฟฟ้าคะ" data-grammar="可問「誰喜歡……」、「跟誰來……」。" data-rom="khrai" data-thai="ใคร" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">คนเดียว</div><div class="roman">khon diaw</div><div class="eng">alone / by oneself</div></div></td><td>人際 / 回答</td><td>回答「一個人來」。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มาคนเดียวค่ะ</div><div class="roman">maa khon diaw khâ</div><div class="eng">I came alone.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際 / 回答" data-colloc="[]" data-eng="alone / by oneself" data-ex-eng="I came alone." data-ex-rom="maa khon diaw khâ" data-ex-thai="มาคนเดียวค่ะ" data-grammar="回答「一個人來」。" data-rom="khon diaw" data-thai="คนเดียว" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">เพื่อน</div><div class="roman">phʉ̂an</div><div class="eng">friend</div></div></td><td>人際</td><td>可搭配 <span class="thai">กับ</span>。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มากับเพื่อนค่ะ</div><div class="roman">maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc="[]" data-eng="friend" data-ex-eng="I came with a friend." data-ex-rom="maa gàp phʉ̂an khâ" data-ex-thai="มากับเพื่อนค่ะ" data-grammar='可搭配 &lt;span class="thai"&gt;กับ&lt;/span&gt;。' data-rom="phʉ̂an" data-thai="เพื่อน" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">แฟน</div><div class="roman">fɛɛn</div><div class="eng">boyfriend / girlfriend / partner</div></div></td><td>人際</td><td>泰文 <span class="thai">แฟน</span> 可指男女朋友或伴侶。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มากับแฟนค่ะ</div><div class="roman">maa gàp fɛɛn khâ</div><div class="eng">I came with my partner.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc="[]" data-eng="boyfriend / girlfriend / partner" data-ex-eng="I came with my partner." data-ex-rom="maa gàp fɛɛn khâ" data-ex-thai="มากับแฟนค่ะ" data-grammar='泰文 &lt;span class="thai"&gt;แฟน&lt;/span&gt; 可指男女朋友或伴侶。' data-rom="fɛɛn" data-thai="แฟน" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">สามี</div><div class="roman">sǎa-mii</div><div class="eng">husband</div></div></td><td>人際</td><td>正式關係詞。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มากับสามีค่ะ</div><div class="roman">maa gàp sǎa-mii khâ</div><div class="eng">I came with my husband.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc="[]" data-eng="husband" data-ex-eng="I came with my husband." data-ex-rom="maa gàp sǎa-mii khâ" data-ex-thai="มากับสามีค่ะ" data-grammar="正式關係詞。" data-rom="sǎa-mii" data-thai="สามี" type="button">♡ 收藏</button></td></tr>
-<tr><td><div class="triad"><div class="thai">ภรรยา</div><div class="roman">phan-rá-yaa</div><div class="eng">wife</div></div></td><td>人際</td><td>正式關係詞。</td><td><span class="muted">—</span></td><td><div class="triad"><div class="thai">มากับภรรยาครับ</div><div class="roman">maa gàp phan-rá-yaa khráp</div><div class="eng">I came with my wife.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc="[]" data-eng="wife" data-ex-eng="I came with my wife." data-ex-rom="maa gàp phan-rá-yaa khráp" data-ex-thai="มากับภรรยาครับ" data-grammar="正式關係詞。" data-rom="phan-rá-yaa" data-thai="ภรรยา" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ใคร</div><div class="roman">khrai</div><div class="eng">who</div></div></td><td>Question word</td><td>可問「誰喜歡……」、「跟誰來……」。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกับใคร" aria-pressed="false" class="colloc-chip" data-thai="ไปกับใคร" type="button"><span class="thai">ไปกับใคร</span><span class="en-colloc">go with whom</span></button></div></td><td><div class="triad"><div class="thai">ใครชอบนั่งรถไฟฟ้าคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót-fai-fáa khá</div><div class="eng">Who likes taking the skytrain?</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Question word" data-colloc='[{"thai": "ไปกับใคร", "en": "go with whom"}]' data-eng="who" data-ex-eng="Who likes taking the skytrain?" data-ex-rom="khrai chɔ̂ɔp nâng rót-fai-fáa khá" data-ex-thai="ใครชอบนั่งรถไฟฟ้าคะ" data-grammar="可問「誰喜歡……」、「跟誰來……」。" data-rom="khrai" data-thai="ใคร" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">คนเดียว</div><div class="roman">khon diaw</div><div class="eng">alone / by oneself</div></div></td><td>人際 / 回答</td><td>回答「一個人來」。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปคนเดียว" aria-pressed="false" class="colloc-chip" data-thai="ไปคนเดียว" type="button"><span class="thai">ไปคนเดียว</span><span class="en-colloc">go alone</span></button></div></td><td><div class="triad"><div class="thai">มาคนเดียวค่ะ</div><div class="roman">maa khon diaw khâ</div><div class="eng">I came alone.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際 / 回答" data-colloc='[{"thai": "ไปคนเดียว", "en": "go alone"}]' data-eng="alone / by oneself" data-ex-eng="I came alone." data-ex-rom="maa khon diaw khâ" data-ex-thai="มาคนเดียวค่ะ" data-grammar="回答「一個人來」。" data-rom="khon diaw" data-thai="คนเดียว" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">เพื่อน</div><div class="roman">phʉ̂an</div><div class="eng">friend</div></div></td><td>人際</td><td>可搭配 <span class="thai">กับ</span>。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกับเพื่อน" aria-pressed="false" class="colloc-chip" data-thai="ไปกับเพื่อน" type="button"><span class="thai">ไปกับเพื่อน</span><span class="en-colloc">go with friends</span></button></div></td><td><div class="triad"><div class="thai">มากับเพื่อนค่ะ</div><div class="roman">maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc='[{"thai": "ไปกับเพื่อน", "en": "go with friends"}]' data-eng="friend" data-ex-eng="I came with a friend." data-ex-rom="maa gàp phʉ̂an khâ" data-ex-thai="มากับเพื่อนค่ะ" data-grammar='可搭配 &lt;span class="thai"&gt;กับ&lt;/span&gt;。' data-rom="phʉ̂an" data-thai="เพื่อน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">แฟน</div><div class="roman">fɛɛn</div><div class="eng">boyfriend / girlfriend / partner</div></div></td><td>人際</td><td>泰文 <span class="thai">แฟน</span> 可指男女朋友或伴侶。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกับแฟน" aria-pressed="false" class="colloc-chip" data-thai="ไปกับแฟน" type="button"><span class="thai">ไปกับแฟน</span><span class="en-colloc">go with one’s partner</span></button></div></td><td><div class="triad"><div class="thai">มากับแฟนค่ะ</div><div class="roman">maa gàp fɛɛn khâ</div><div class="eng">I came with my partner.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc='[{"thai": "ไปกับแฟน", "en": "go with one’s partner"}]' data-eng="boyfriend / girlfriend / partner" data-ex-eng="I came with my partner." data-ex-rom="maa gàp fɛɛn khâ" data-ex-thai="มากับแฟนค่ะ" data-grammar='泰文 &lt;span class="thai"&gt;แฟน&lt;/span&gt; 可指男女朋友或伴侶。' data-rom="fɛɛn" data-thai="แฟน" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">สามี</div><div class="roman">sǎa-mii</div><div class="eng">husband</div></div></td><td>人際</td><td>正式關係詞。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกับสามี" aria-pressed="false" class="colloc-chip" data-thai="ไปกับสามี" type="button"><span class="thai">ไปกับสามี</span><span class="en-colloc">go with one’s husband</span></button></div></td><td><div class="triad"><div class="thai">มากับสามีค่ะ</div><div class="roman">maa gàp sǎa-mii khâ</div><div class="eng">I came with my husband.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc='[{"thai": "ไปกับสามี", "en": "go with one’s husband"}]' data-eng="husband" data-ex-eng="I came with my husband." data-ex-rom="maa gàp sǎa-mii khâ" data-ex-thai="มากับสามีค่ะ" data-grammar="正式關係詞。" data-rom="sǎa-mii" data-thai="สามี" type="button">♡ 收藏</button></td></tr>
+<tr><td><div class="triad"><div class="thai">ภรรยา</div><div class="roman">phan-rá-yaa</div><div class="eng">wife</div></div></td><td>人際</td><td>正式關係詞。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：ไปกับภรรยา" aria-pressed="false" class="colloc-chip" data-thai="ไปกับภรรยา" type="button"><span class="thai">ไปกับภรรยา</span><span class="en-colloc">go with one’s wife</span></button></div></td><td><div class="triad"><div class="thai">มากับภรรยาครับ</div><div class="roman">maa gàp phan-rá-yaa khráp</div><div class="eng">I came with my wife.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="人際" data-colloc='[{"thai": "ไปกับภรรยา", "en": "go with one’s wife"}]' data-eng="wife" data-ex-eng="I came with my wife." data-ex-rom="maa gàp phan-rá-yaa khráp" data-ex-thai="มากับภรรยาครับ" data-grammar="正式關係詞。" data-rom="phan-rá-yaa" data-thai="ภรรยา" type="button">♡ 收藏</button></td></tr>
 <tr><td><div class="triad"><div class="thai">มากับ</div><div class="roman">maa gàp</div><div class="eng">come with</div></div></td><td>Verb phrase</td><td>表示與某人一起來。</td><td><div class="colloc-cell"><button aria-label="播放搭配詞：มากับเพื่อน" aria-pressed="false" class="colloc-chip" data-thai="มากับเพื่อน" type="button"><span class="thai">มากับเพื่อน</span><span class="en-colloc">come with a friend</span></button><button aria-label="播放搭配詞：มากับครอบครัว" aria-pressed="false" class="colloc-chip" data-thai="มากับครอบครัว" type="button"><span class="thai">มากับครอบครัว</span><span class="en-colloc">come with family</span></button></div></td><td><div class="triad"><div class="thai">ฉันมากับเพื่อนค่ะ</div><div class="roman">chǎn maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td><td class="fav-cell"><button aria-pressed="false" class="fav-btn" data-cat="Verb phrase" data-colloc='[{"thai": "มากับเพื่อน", "en": "come with a friend"}, {"thai": "มากับครอบครัว", "en": "come with family"}]' data-eng="come with" data-ex-eng="I came with a friend." data-ex-rom="chǎn maa gàp phʉ̂an khâ" data-ex-thai="ฉันมากับเพื่อนค่ะ" data-grammar="表示與某人一起來。" data-rom="maa gàp" data-thai="มากับ" type="button">♡ 收藏</button></td></tr></tbody>
 </table></div>
 </section><section class="tab-content" id="supplement"><h2>Supplement｜本課延伸整理</h2><div class="supplement-section"><h3 class="supplement-section-title">交通動詞對照｜不是每個「去」都一樣</h3><table><thead><tr><th>動詞</th><th>核心畫面</th><th>最常搭配</th></tr></thead><tbody><tr><td>ขึ้น</td><td>進入交通工具</td><td>BTS、公車、船</td></tr><tr><td>ลง</td><td>離開交通工具</td><td>下一站、目的地</td></tr><tr><td>ขับ</td><td>自己操作車輛</td><td>汽車、機車</td></tr><tr><td>นั่ง</td><td>作為乘客搭乘</td><td>計程車、BTS、公車</td></tr></tbody></table></div></section>
@@ -736,7 +524,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <thead><tr><th>Question</th><th>Answer</th><th>Chinese Explanation</th></tr></thead>
 <tbody>
 <tr>
-<td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bbprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td>
+<td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td>
 <td><div class="triad"><div class="thai">มาโดยเครื่องบินค่ะ</div><div class="roman">maa dooi khrʉ̂ang-bin khâ</div><div class="eng">I came by plane.</div></div></td>
 <td>問「怎麼來」。</td>
 </tr>
@@ -762,9 +550,9 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </div>
 </div>
 <table>
-<thead><tr><th>Sentence</th><th>Use</th></tr></thead>
+<thead><tr><th>Sentence</th><th>情境</th></tr></thead>
 <tbody>
-<tr><td><div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>入境/旅行。</td></tr>
+<tr><td><div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>入境/旅行。</td></tr>
 <tr><td><div class="triad"><div class="thai">ไปห้างโดยรถไฟฟ้าค่ะ</div><div class="roman">bpai hâang dooi rót-fai-fáa khâ</div><div class="eng">I go to the mall by skytrain.</div></div></td><td>曼谷日常。</td></tr>
 <tr><td><div class="triad"><div class="thai">กลับบ้านโดยรถแท็กซี่ค่ะ</div><div class="roman">glàp bâan dooi rót thɛ́k-sîi khâ</div><div class="eng">I go home by taxi.</div></div></td><td>回家。</td></tr>
 </tbody>
@@ -845,12 +633,12 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <thead><tr><th>Question</th><th>Answer</th><th>Alone</th></tr></thead>
 <tbody>
 <tr>
-<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bbprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
+<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
 <td><div class="triad"><div class="thai">มากับเพื่อนค่ะ</div><div class="roman">maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td>
 <td><div class="triad"><div class="thai">มาคนเดียวค่ะ</div><div class="roman">maa khon diaw khâ</div><div class="eng">I came alone.</div></div></td>
 </tr>
 <tr>
-<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bbprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
+<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
 <td><div class="triad"><div class="thai">มากับแฟนค่ะ</div><div class="roman">maa gàp fɛɛn khâ</div><div class="eng">I came with my partner.</div></div></td>
 <td><div class="triad"><div class="thai">ไม่ได้มากับใครค่ะ มาคนเดียวค่ะ</div><div class="roman">mâi dâai maa gàp khrai khâ, maa khon diaw khâ</div><div class="eng">I didn’t come with anyone. I came alone.</div></div></td>
 </tr>
@@ -871,7 +659,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <tbody>
 <tr>
 <td>問怎麼來泰國</td>
-<td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bbprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td>
+<td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td>
 <td><div class="triad"><div class="thai">มาไทยยังไงคะ</div><div class="roman">maa thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td>
 <td>口語常省略 <span class="thai">ประเทศ</span>，說 <span class="thai">มาไทย</span>。</td>
 </tr>
@@ -895,7 +683,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </tr>
 <tr>
 <td>問跟誰來</td>
-<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bbprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
+<td><div class="triad"><div class="thai">คุณมาประเทศไทยกับใครคะ</div><div class="roman">khun maa bprà-thêet thai gàp khrai khá</div><div class="eng">Who did you come to Thailand with?</div></div></td>
 <td><div class="triad"><div class="thai">มากับใครคะ</div><div class="roman">maa gàp khrai khá</div><div class="eng">Who did you come with?</div></div></td>
 <td>情境已清楚時，口語可縮短。</td>
 </tr>
@@ -936,7 +724,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </table>
 <h3>2. Airport / Bus Terminal / Pier</h3>
 <table>
-<thead><tr><th>Situation</th><th>Sentence</th><th>Use</th></tr></thead>
+<thead><tr><th>Situation</th><th>Sentence</th><th>情境</th></tr></thead>
 <tbody>
 <tr>
 <td>去機場</td>
@@ -1120,7 +908,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="bubble-wrap">
 <div class="bubble a">
 <span class="speaker a">Friend A</span>
-<div class="triad"><div class="thai">ใครชอบนั่งรถตุ๊กตุ๊กคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót túk-túk khá</div><div class="eng">Who likes taking tuk-tuks?</div></div>
+<div class="triad"><div class="thai">ใครชอบนั่งรถตุ๊กตุ๊กคะ</div><div class="roman">khrai chɔ̂ɔp nâng rót dtúk-dtúk khá</div><div class="eng">Who likes taking tuk-tuks?</div></div>
 </div>
 <div class="bubble b">
 <span class="speaker b">Friend B</span>
@@ -1210,11 +998,11 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <h3>B. Translation Practice</h3>
 <details>
 <summary>1. How did you come to Thailand?</summary>
-<div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bbprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div>
+<div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div>
 </details>
 <details>
 <summary>2. I came to Thailand by plane.</summary>
-<div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div>
+<div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div>
 </details>
 <details>
 <summary>3. Where do I get on the BTS?</summary>
@@ -1242,7 +1030,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 <div class="triad"><div class="thai">ลงที่สถานีสยามค่ะ</div><div class="roman">long thîi sà-thǎa-nii Sà-yǎam khâ</div><div class="eng">I get off at Siam station.</div></div>
 </details>
 <details>
-<summary>3. Teacher asks: คุณมาประเทศไทยกับใครคะ / khun maa bbprà-thêet thai gàp khrai khá / Who did you come to Thailand with?</summary>
+<summary>3. Teacher asks: คุณมาประเทศไทยกับใครคะ / khun maa bprà-thêet thai gàp khrai khá / Who did you come to Thailand with?</summary>
 <div class="triad"><div class="thai">มาคนเดียวค่ะ</div><div class="roman">maa khon diaw khâ</div><div class="eng">I came alone.</div></div>
 </details>
 <h3>D. Mini Role-play</h3>
@@ -1261,7 +1049,7 @@ button.classifier-audio-pill.speaking{background:rgba(124,58,237,.24); border-co
 </div>
 </details>
 </section>
-<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>Use</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bbprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bbprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้า / ลงรถไฟฟ้า</div><div class="roman">khʉ̂n rót-fai-fáa / long rót-fai-fáa</div><div class="eng">get on the skytrain / get off the skytrain</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">มากับใครคะ</div><div class="roman">maa gàp khrai khá</div><div class="eng">Who did you come with?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ฉันมาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้าที่สถานีนี้ค่ะ</div><div class="roman">khʉ̂n rót-fai-fáa thîi sà-thǎa-nii níi khâ</div><div class="eng">Get on the BTS at this station.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">ลงสถานีหน้าค่ะ</div><div class="roman">long sà-thǎa-nii nâa khâ</div><div class="eng">Get off at the next station.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">ฉันมากับเพื่อนค่ะ</div><div class="roman">chǎn maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">วันนี้พ่อขับรถมาค่ะ</div><div class="roman">wan-níi phɔ̂ɔ khàp rót maa khâ</div><div class="eng">Dad drove here today.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ฉันกลับบ้านด้วยรถไฟฟ้าค่ะ</div><div class="roman">chǎn glàp bâan dûai rót-fai-fáa khâ</div><div class="eng">I go home by BTS.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
+<section class="tab-content" id="top10"><h2>Top 10｜今天先會的 10 句</h2><p class="subtitle">先把這十句念順、能換其中一個詞，再回頭擴充 Vocabulary。</p><div class="vocab-scroll top10-scroll"><table><thead><tr><th>#</th><th>Thai / Romanization / English</th><th>情境</th></tr></thead><tbody><tr><td><span class="priority">1</span></td><td><div class="triad"><div class="thai">คุณมาประเทศไทยยังไงคะ</div><div class="roman">khun maa bprà-thêet thai yang-ngai khá</div><div class="eng">How did you come to Thailand?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">2</span></td><td><div class="triad"><div class="thai">มาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">3</span></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้า / ลงรถไฟฟ้า</div><div class="roman">khʉ̂n rót-fai-fáa / long rót-fai-fáa</div><div class="eng">get on the skytrain / get off the skytrain</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">4</span></td><td><div class="triad"><div class="thai">มากับใครคะ</div><div class="roman">maa gàp khrai khá</div><div class="eng">Who did you come with?</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">5</span></td><td><div class="triad"><div class="thai">ฉันมาประเทศไทยโดยเครื่องบินค่ะ</div><div class="roman">chǎn maa bprà-thêet thai dooi khrʉ̂ang-bin khâ</div><div class="eng">I came to Thailand by plane.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">6</span></td><td><div class="triad"><div class="thai">ขึ้นรถไฟฟ้าที่สถานีนี้ค่ะ</div><div class="roman">khʉ̂n rót-fai-fáa thîi sà-thǎa-nii níi khâ</div><div class="eng">Get on the BTS at this station.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">7</span></td><td><div class="triad"><div class="thai">ลงสถานีหน้าค่ะ</div><div class="roman">long sà-thǎa-nii nâa khâ</div><div class="eng">Get off at the next station.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">8</span></td><td><div class="triad"><div class="thai">ฉันมากับเพื่อนค่ะ</div><div class="roman">chǎn maa gàp phʉ̂an khâ</div><div class="eng">I came with a friend.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">9</span></td><td><div class="triad"><div class="thai">วันนี้พ่อขับรถมาค่ะ</div><div class="roman">wan-níi phɔ̂ɔ khàp rót maa khâ</div><div class="eng">Dad drove here today.</div></div></td><td>先練成能直接說出口的完整句。</td></tr><tr><td><span class="priority">10</span></td><td><div class="triad"><div class="thai">ฉันกลับบ้านด้วยรถไฟฟ้าค่ะ</div><div class="roman">chǎn glàp bâan dûai rót-fai-fáa khâ</div><div class="eng">I go home by BTS.</div></div></td><td>先練成能直接說出口的完整句。</td></tr></tbody></table></div></section><section class="tab-content" id="favorites"><h2>♥｜收藏字卡</h2><p class="favorites-intro">收藏會儲存在目前瀏覽器。點 Vocabulary 表格右側的「♡ 收藏」即可加入。</p><div class="favorites-list" id="favoritesList"></div></section></div>
 <script>
   function openTab(event, tabId) {
     const contents = document.querySelectorAll('.tab-content');
@@ -1416,64 +1204,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', render);
 })();
 </script>
-<script id="book1-collocations-audio-script">
-(function () {
-  var activeButton = null;
-  function thaiVoice() {
-    if (!window.speechSynthesis || !window.speechSynthesis.getVoices) return null;
-    var voices = window.speechSynthesis.getVoices() || [];
-    return voices.find(function (voice) { return voice.lang === 'th-TH'; }) ||
-           voices.find(function (voice) { return /^th(?:-|_)/i.test(voice.lang || ''); }) || null;
-  }
-  function reset(button) {
-    if (!button) return;
-    button.classList.remove('speaking');
-    button.setAttribute('aria-pressed', 'false');
-  }
-  function speak(button) {
-    var text = (button.dataset.thai || '').trim();
-    if (!text) return;
-    if (!('speechSynthesis' in window)) {
-      alert('此瀏覽器不支援語音合成。');
-      return;
-    }
-    var synth = window.speechSynthesis;
-    if (activeButton === button && synth.speaking) {
-      synth.cancel();
-      reset(button);
-      activeButton = null;
-      return;
-    }
-    synth.cancel();
-    reset(activeButton);
-    document.querySelectorAll('button.colloc-chip.speaking, button.classifier-audio-pill.speaking').forEach(reset);
-    var utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'th-TH';
-    utterance.rate = 0.82;
-    var voice = thaiVoice();
-    if (voice) utterance.voice = voice;
-    button.classList.add('speaking');
-    button.setAttribute('aria-pressed', 'true');
-    activeButton = button;
-    utterance.onend = utterance.onerror = function () {
-      reset(button);
-      if (activeButton === button) activeButton = null;
-    };
-    try {
-      synth.resume();
-      synth.speak(utterance);
-    } catch (error) {
-      reset(button);
-      activeButton = null;
-    }
-  }
-  document.addEventListener('click', function (event) {
-    var button = event.target.closest && event.target.closest('button.colloc-chip[data-thai], button.classifier-audio-pill[data-thai]');
-    if (!button) return;
-    event.preventDefault();
-    event.stopPropagation();
-    speak(button);
-  });
+<script id="book1-final-classifier-audio-script">
+(function(){
+  var active=null;
+  function reset(btn){if(!btn)return;btn.classList.remove('speaking');btn.setAttribute('aria-pressed','false');}
+  function thaiVoice(){var v=(window.speechSynthesis&&speechSynthesis.getVoices)?speechSynthesis.getVoices():[];return v.find(function(x){return x.lang==='th-TH';})||v.find(function(x){return /^th(?:-|_)/i.test(x.lang||'');})||null;}
+  function speak(btn){var text=(btn.dataset.thai||'').trim();if(!text||!window.speechSynthesis)return;var s=speechSynthesis;if(active===btn&&s.speaking){s.cancel();reset(btn);active=null;return;}s.cancel();reset(active);document.querySelectorAll('button.colloc-chip.speaking,button.classifier-audio-pill.speaking').forEach(reset);var u=new SpeechSynthesisUtterance(text);u.lang='th-TH';u.rate=.82;var v=thaiVoice();if(v)u.voice=v;btn.classList.add('speaking');btn.setAttribute('aria-pressed','true');active=btn;u.onend=u.onerror=function(){reset(btn);if(active===btn)active=null;};try{s.resume();s.speak(u);}catch(e){reset(btn);active=null;}}
+  function target(e){return e.target&&e.target.closest?e.target.closest('button.colloc-chip[data-thai],button.classifier-audio-pill[data-thai]'):null;}
+  document.addEventListener('click',function(e){var b=target(e);if(!b)return;e.preventDefault();e.stopPropagation();speak(b);});
+  document.addEventListener('keydown',function(e){var b=target(e);if(!b||(e.key!=='Enter'&&e.key!==' '))return;e.preventDefault();e.stopPropagation();speak(b);});
 })();
-</script></body>
+</script>
+</body>
 </html>
